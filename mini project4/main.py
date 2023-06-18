@@ -19,7 +19,7 @@ def main():
     # current =0.0
 
     while True:
-        # Display menu options
+        # Display menu options     
         print("\n")
         print("1. Deposit")
         print("2. Withdraw")
