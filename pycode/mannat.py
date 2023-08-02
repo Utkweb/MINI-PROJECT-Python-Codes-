@@ -472,3 +472,281 @@
 # set1.update(set2)
 
 # print(set1)
+
+
+# dictionary    key values
+
+# dict1= {
+#     'brand':'Mercdez',
+#     'model':'C200',
+#     'year':2019,
+#     'color':['red','blue','black']
+# }
+
+# # get() - it is used to get the value of the specified key
+
+# # x = dict1.get('color')
+
+# x = dict1.keys()
+# print(x)
+
+# get() : it is used to get the value of the specified key
+
+# dict1=dict(brand='Mercdez',model='C200',year=2019,color=['red','blue','black'])
+
+# print(dict1)
+
+# values() - it is used to get the values of the dictionary
+
+# car = {
+#     "brand": "Ford",
+#     "model": "Mustang",
+#     "year":1964
+# }
+# car.clear()
+# print(car)
+
+# x = car.items()
+# print(x)
+
+# # car["color"] = "white"
+# # print(x)
+
+# update()
+
+
+# car = {
+#     "brand": "Ford",
+#     "model": "Mustang",
+#     "year":1964
+# }
+
+# car1 = car.copy()
+
+# for x in car.values():
+#     print(x)
+    
+    
+# nested dictionaries
+
+
+# data structure 
+
+# list/array : [1,2,3,4,5,6,7,8,9,10]
+
+# linear search()
+
+# 7
+
+
+# def linear_Search(arr,element):
+#     for i in arr:
+#         if arr[i] == element:
+#             return i
+#     return -1
+
+# # main function 
+# arr = [1,2,3,4,5,6,7,8,9,10]
+# element = int(input("Enter a number: "))
+# print(linear_Search(arr,element))
+
+
+# def swap1(arr):
+#     arr[0],arr[-1]= arr[-1],arr[0]
+#     return arr
+
+# main function
+# 4
+
+
+# def binary_Search(arr,x):
+#     start = 0
+#     end = len(arr)-1
+#     if start<=end:
+#         mid = (start+end)//2
+#         if arr[mid]<x:
+#             start = mid+1
+#         elif arr[mid]>x:
+#             end = mid-1
+#         else:
+#             return mid
+#     return -1
+
+# # main function
+# arr= [1,2,3,4,5,6,7,8,9,10]
+# x = int(input("Enter a number: "))
+# result = binary_Search(arr,x)
+# if result!=-1:
+#     print("Element is present at index",str(result))
+# else:
+#     print("Element is not present in the array")
+
+
+# Nested Loops : 
+    
+# for i in range(1,6):
+#     for j in range(1,6):
+#         print(j)
+#     print('')
+
+# 1
+# 1 2
+# 1 2 3
+# 1 2 3 4
+# 1 2 3 4 5
+
+# rows = int(input("Enter the number of rows: "))
+# for i in range(1,rows+1):
+#     for j in range(1,i+1):
+#         print(i,end=" ")
+#     print('')
+    
+    
+
+# a = 10 
+# print(type(a))
+
+
+# arr = [10,19,24,56,75,51]
+# n = len(arr)
+
+# sum = 0 
+# for i in range(0,n):
+#     sum+= arr[i] 
+
+# print("The sum of the elements in an array is: ",sum)
+
+
+# Sorting : bubble sort, insertion sort 
+
+
+# bubble sorted
+
+# def bubble_sort(arr,n):
+#     for i in range(0,n-1):
+#         for j in range(0,n-i-1):
+#             if arr[j]>arr[j+1]:
+#                 arr[j],arr[j+1]= arr[j+1],arr[j]
+                
+# # main function
+# arr = [10,19,14,52,38,71]
+# n = len(arr)
+# print("Sorted array : ")
+# bubble_sort(arr,n)
+# for i in range(0,n):
+#     print(arr[i],end=" ")
+
+
+# Local Scope and Global Scope
+
+# c = 20 # //global scope
+
+# def add(a,b):
+#     # //local scope
+#     return a+b+c
+
+# a = int(input("Enter a number: "))
+# b = int(input("Enter a number: "))
+# print(add(a,b))
+
+# local scope : inside a function
+# global scope : outside a function
+
+
+# Modules and Packages :
+    
+#     Modules : A file containing a set of functions you want to include in your application.
+    
+# from module1 import person1
+
+
+# print(person1["nam+e"])
+
+
+# import datetime
+
+# x = datetime.datetime.now()
+
+# print(x.month)
+# print(x.strftime("%A"))
+
+
+# x = min(45,15,82)
+# print(x)
+
+# abs() - returns the absolute value of a number
+# pow(base, exponent) - returns the value of x to the power of y
+# sqrt()-
+
+# import math 
+
+# x = math.pi
+# print(x)
+
+# split() - splits a string into a list
+
+
+# s= "Welcome to python"
+# n = s.split(" ")
+
+# Sorting :
+    
+# insertion sort
+
+# def insertion_sort(arr):
+#     for i in range(1,len(arr)):      #5
+#         key = arr[i]                 # key = 5
+#         # sorted list
+#         j = i-1                       # j = 0 
+#         while j>=0 and key<arr[j]:
+#             arr[j+1]=arr[j]
+#             j = j-1
+#         arr[j+1]=key
+        
+# data = [5,9,1,4,3]
+# print("Unsorted list",data)
+# insertion_sort(data)
+# print("Sorted list",data)
+
+
+
+# Recursion/ Recursive Function:- 
+
+
+# def greet():
+    
+#     print( "Welcome Mannat!")
+#     greet()
+
+# # main function
+# greet()
+
+# 1. Direct Recursion
+# 2. Indirect Recursion
+
+
+# def functionA():
+#     print("Function A")
+#     functionB() 
+# def functionB():
+#     print("Function B")
+#     functionA()
+    
+# # main function
+# functionA()
+
+# def sum(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return n+sum(n-1)
+
+# # main function
+# n = int(input("Enter a number: ")) #n =4
+# print(sum(n))
+
+# Mannat
+
+# tannaM
+
+# factorial 

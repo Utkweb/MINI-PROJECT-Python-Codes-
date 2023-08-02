@@ -118,3 +118,102 @@ input
 #     statements
 # else:
 #     statements
+
+
+# num = 8
+
+# if num>10:
+#     print("Number is greater than 10")
+# else:
+#     print("Number is less than 10")
+    
+
+# num = int(input("Enter a number: "))
+# if num%2 == 0:
+#     print("Number is even")
+# else:
+#     print("Number is odd")
+
+# a = 19
+# b = 42
+
+# the 42 is greater than 19
+
+# a = int(input("Enter a 1st number:"))
+
+
+# if a>b and a>c:
+#     print("a is greater than b and c")
+# elif b>a and b>c:
+#     print("b is greater than a and c")
+# else:
+#     print("c is greater than a and b")
+
+
+# a = int(input("Enter a number: "))
+# b = int(input("Enter a number: "))
+# print(a+b) 
+
+# loops - for loop, while loop
+
+# for i in range(start,end,step):
+#     statements
+
+# for i in range(1,11):
+#     print(i)
+
+
+
+# I love three subjects - Maths, Science and English
+
+
+
+
+# piggy_bank = 0
+# for i in range(1,11):
+#     piggy_bank = piggy_bank + i
+# print(piggy_bank)
+
+# count_even = 0
+# count_odd = 0
+# for i in range(1,11):
+#     if i%2 == 0:
+#         count_even = count_even + 1    #count_even = 2
+#     else:
+#         count_odd = count_odd + 1      #count_odd = 2
+# print("Even numbers are: ",count_even)
+# print("Odd numbers are: ",count_odd)
+
+# 8 X 1 = 8
+# 8 X 2 = 16
+
+num = int(input("Enter a number: "))  
+for i in range(1,11):
+    print(num,"X",i,"=",num*i)
+    
+
+ 
+
+
+
+
+
+    
+    
+    
+
+# n = 2024
+
+# 1 2 3 
+
+# a = 5
+# b = 4
+
+# if a>b:
+#     # a = a+b
+#     # b = a-b
+#     # a = a-b
+#     a,b = b,a
+#     print(a,b)
+
+

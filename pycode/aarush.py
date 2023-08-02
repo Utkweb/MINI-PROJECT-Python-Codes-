@@ -111,7 +111,24 @@ this is a multi line comment '''
 # print("The average of the three numbers are : ",(a+b+c)/3)
 
 
-a = int(input("Enter the first number : "))
-b = int(input("Enter the second number : "))
+# a = int(input("Enter the first number : "))
+# b = int(input("Enter the second number : "))
 
-print("The addition of the two numbers are : ",a+b) 
+# print("The addition of the two numbers are : ",a+b) 
+
+# if statement
+# if else statement
+# if elif else statement
+
+# a = 2
+# if a>10:
+#     print("a is greater than 10")
+# else:
+#     print("a is less than 10")
+
+
+# for i in range(start,stop,step):
+#     statements
+
+for i in range(1,11):
+    print("aarush lakhani ")

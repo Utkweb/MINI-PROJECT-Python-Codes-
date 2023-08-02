@@ -257,7 +257,7 @@
 # l=[16,19,11,15,10,12,14]
 # n=len(l)
 # for i in range(1,n):
-#     temp=l[i]
+#     temp=l[i]   //temp = 19
 #     j=i-1
 #     while(j>=0 and l[j]>temp):
 #         l[j+1]=l[j]
@@ -580,3 +580,240 @@
 # lst1 = "hello"
 # lst2 = list((x.upper(),len(x)) for x in lst1)
 # print(lst2)
+
+# def duplicates(arr):
+#     n = len(arr)
+#     repeat = []
+#     for i in range(n):
+#         k = i+1
+#         for j in range(k,n):
+#             if arr[i]==arr[j] and arr[i] not in repeat:
+#                 repeat.append(arr[i])
+#     return repeat
+
+
+# list1=list(map(int,input("Enter the array: ").split()))
+# print(duplicates(list1))
+                
+
+# def freq(A, element):
+#     cnt = A.count(element)
+#     return cnt
+
+# # main function 
+# A = list(map(int,input("Enter the array: ").split()))
+# element = int(input("Enter the element to be searched: "))
+# print("The frequency of the element is: ",freq(A,element))
+
+
+
+# def K_min(l,k):
+#     l1=sorted(l)
+#     return l1[k-1]
+# def k_max(l,k):
+#     n = len(l)
+#     l1=sorted(l)
+#     return l1[n-k]
+# # main function
+# l = list(map(int,input("Enter the array: ").split()))
+# k = int(input("Enter the value of k: "))
+# print("The maximum kth element is: ",k_max(l,k))
+# print("The minimum kth element is: ",K_min(l,k))
+
+# def K_min(l, k):
+#     sorted_l = sorted(l)
+#     return sorted_l[k - 1]
+
+# def k_max(l, k):
+#     sorted_l = sorted(l)
+#     return sorted_l[-k]
+
+# # main function
+# l = list(map(int, input("Enter the array: ").split()))
+# k = int(input("Enter the value of k: "))
+# print("The maximum kth element is: ", k_max(l, k))
+# print("The minimum kth element is: ", K_min(l, k))
+
+
+# def FindPos(AR, item):
+#     size = len(AR)
+#     if item < AR[0]:
+#         return 0
+#     else:
+#         pos = -1
+#     for i in range(size - 1):
+#         if item >= AR[i] and item < AR[i + 1]:
+#             pos = i + 1
+#             break  
+#     if pos == -1 and i<=size -1:
+#         pos = size
+#     return pos
+# def Shift(AR, pos):
+#     AR.append(None)
+#     size = len(AR)
+#     print(size)
+    
+#     i = size - 1
+#     while i >= pos:
+#         AR[i] = AR[i - 1]
+#         i = i - 1
+
+# myList = [10, 20, 30, 40, 50]
+# print("Before Insertion: ", myList)
+# ITEM = int(input("Enter the item to be inserted: "))
+# position = FindPos(myList, ITEM)
+# Shift(myList, position)
+# myList[position] = ITEM
+# print("After Insertion: ", myList)
+
+# # import bisect
+
+# # mylist = [10, 20, 30, 40, 50]
+# # print("Before Insertion: ", mylist)
+# # item = int(input("Enter the item to be inserted: "))
+# # ind = bisect.bisect(mylist, item)
+# # bisect.insort(mylist, item)
+
+# # print("The item has to be inserted at index",ind)
+# # print(mylist)
+
+
+
+# # def bi_search(arr,key,n):
+# #     start=0
+# #     end=n-1
+# #     while start<=end:
+# #         mid=(start+end)//2
+# #         if key==arr[mid]:
+# #             return mid
+# #         elif key>arr[mid]:
+# #             start=mid+1
+# #         elif key<arr[mid]:
+# #             end=mid-1
+# #     return False
+
+# # #main_function
+# # mylist=[10,20,30,40,50]
+# # n = len(mylist)
+# # print("the list in sorted order is: ",mylist)
+# # item=int(input("Enter the item to be searched: "))
+# # posi=bi_search(mylist,item,n)
+
+# # if posi:
+# #     del mylist[posi]
+# #     print("The item is deleted from the list: ",mylist) 
+# # else:
+# #     print("Sorry! The item is not found in the list")
+
+# # import bisect
+
+# # mylist = [10, 20, 30, 40, 50]
+# # print("Before deletion: ", mylist)
+# # item = int(input("Enter the item to be deleted: "))
+# # ind = bisect.bisect(mylist, item)
+
+# # if ind:
+# #     del mylist[ind]
+# #     print("The item is deleted from the list: ",mylist) 
+# # else:
+# #     print("Sorry! The item is not found in the list")
+
+# # import bisect
+
+# # mylist = [10, 20, 30, 40, 50]
+# # print("Before deletion: ", mylist)
+# # item = int(input("Enter the item to be deleted: "))
+# # ind = bisect.bisect_left(mylist, item)
+
+# # if ind < len(mylist) and mylist[ind] == item:
+# #     del mylist[ind]
+# #     print("The item is deleted from the list: ", mylist)
+# # else:
+# #     print("Sorry! The item is not found in the list")
+
+
+# mylist = [10, 20, 30, 40, 50]
+# n = len(mylist)
+# for i in range(0,n):
+#     print("Element",i+1,"is at index",mylist[i])
+
+
+# def display(lst,r,c):
+#     for i in range(r):
+#         for j in range(c):
+#             print(lst[i][j],end=" ")
+
+
+
+
+# lst = []
+# r = int(input("Enter the number of rows: "))
+# c = int(input("Enter the number of columns: "))
+# for i in range(r):
+#     row = []
+#     for j in range(c):
+#         elem = int(input("Element"+str(i)+","+str(j)+":"))  
+#         row.append(elem)
+#     lst.append(row)
+# print("List craeted is : ",lst)
+
+# display(lst,r,c)
+
+# print(lst[2))
+
+# Indirect Recursion: A function calling another function and that function calling the first function is called Indirect Recursion.
+
+# def A():
+#     B()
+# def B():
+#     A()
+
+# Direct Recursion: A function calling itself is called Direct Recursion.
+
+# def A():
+#     A()
+
+
+# def functA():
+#     print("I am in functA")
+#     functA()
+# def functB():
+#     print   ("I am in functB")
+#     functA()
+
+# functA()
+
+#  0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610
+ 
+
+# first = 0
+# second = 1
+# nextnum = first + second   # 5
+
+# first = second  # 2
+# second = nextnum  # 3
+
+
+# def fibo(n):
+#     first = 0
+#     second = 1
+#     print(first,second,end=" ")
+#     for i in range(n-2):
+#         nextnum = first + second
+#         print(nextnum,end=" ")
+#         first = second
+#         second = nextnum
+# # main function
+# n = int(input("Enter the number of terms: "))
+# fibo(n)
+
+
+def sum(n):
+    if n ==1:
+        return 1
+    else:
+        return n +sum(n-1)
+
+# main function
+n = int(input("Enter the number of terms: "))
+print("The sum of first",n,"natural numbers is",sum(n))

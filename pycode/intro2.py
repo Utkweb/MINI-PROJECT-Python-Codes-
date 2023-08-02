@@ -2,7 +2,7 @@ import turtle
 
 # Setup the turtle screen
 screen = turtle.Screen()
-screen.bgcolor("white")
+screen.bgcolor("yellow")
 
 # Create a turtle instance
 pen = turtle.Turtle()
