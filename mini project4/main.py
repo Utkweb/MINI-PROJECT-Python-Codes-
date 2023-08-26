@@ -25,10 +25,12 @@ def main():
         print("2. Withdraw")
         print("3. See current balance")
         print("4. Exit")
-
+        print("\n")
+        
+        # Get user's choice
         choice = get_integer("Enter your choice (1-4):", min_val=1, max_val=4)
 
-
+        
         if choice == 1:
             # Deposit
             print("Deposit")

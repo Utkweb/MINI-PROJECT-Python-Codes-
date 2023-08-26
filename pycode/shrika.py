@@ -187,20 +187,23 @@ input
 # 8 X 1 = 8
 # 8 X 2 = 16
 
-num = int(input("Enter a number: "))  
-for i in range(1,11):
-    print(num,"X",i,"=",num*i)
+# num = int(input("Enter a number: "))  
+# for i in range(1,11):
+#     print(num,"X",i,"=",num*i)
     
 
- 
+# 0 1 1 2 3 5 8 13 21 34 55 89 144
 
+# first = 0
+# second = 1
 
+# print(first,second,end=" ")
 
-
-
-    
-    
-    
+# for i in range(7):
+#     result = first + second    
+#     print(result, end= " ")     
+#     first = second              
+#     second = result                 
 
 # n = 2024
 
@@ -216,4 +219,35 @@ for i in range(1,11):
 #     a,b = b,a
 #     print(a,b)
 
+# while Loop:
+
+# for i in range(start,end,step):
+#     statements
+    
+# 0 1 2 3 4 5 6 7 8 9 10
+
+# i = 0
+# while i>=10:
+#     print(i)
+    
+#     i = i+1
+    
+# 2 4 6 8 10 12 14 16 18 20
+
+
+
+# 1. "Sunday"
+# 2. "Monday"
+# 3. "Tuesday"
+# 4. "Wednesday"
+# 5. "Thursday"
+# 6. "Friday"
+# 7. "Saturday"
+
+
+# strings:
+
+# name = "Shrika Aella"
+      
+# print(name[1])
 

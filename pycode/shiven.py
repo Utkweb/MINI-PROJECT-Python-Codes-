@@ -102,4 +102,78 @@
 # elif age==18:
 #     print("You are eligible to vote")
 # else:
-#     print("You are not eligible to vote")    
+#     print("You are not eligible to vote")   
+
+
+# 1. Sunday
+# 2. Monday
+# 3. Tuesday
+# 4. Wednesday 
+
+
+# loops : for loop, while loop
+
+# for loop: 
+    
+# syntax:
+    
+# for i in range(start, stop, step):
+#     statement
+
+
+# Shiven 
+
+# 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30
+
+
+# piggy_bank = 0
+# for i in range(0,11):
+#     print(i) 
+
+    
+    
+# 2 to 30
+# 1 to 27 
+
+
+
+# 2x1 = 2
+# 2x2 = 4
+# 2x3 = 6
+# 2x4 = 8
+# 2x5 = 10
+# 2x6 = 12
+# 2x7 = 14
+# 2x8 = 16
+# 2x9 = 18
+# 2x10 = 20
+
+
+
+# num = int(input("Enter a number of which you want the table of ?: "))
+
+# print("The table of ",num,"is: ")
+# print(" \n")
+# for i in range(1,11):
+#     print(num,"X",i,"=",num*i)
+#           8  X 1 = 8
+
+# while loop
+
+# for i in range(start,end,step):
+    
+    
+# intialization
+# while condition:
+#     statement
+#     increment/decrement
+
+
+# nested loops;-
+
+for i in range(1,4):
+    for j in range(1,i+1):
+        print("*",end=" ")
+    print("\n")
+    
+

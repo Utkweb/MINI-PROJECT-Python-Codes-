@@ -56,3 +56,24 @@
 # def print_series(n):
 #     for i in range(1,n+1):
     
+
+# Modules : 
+
+# import moduletest
+
+# moduletest.greet("Ayra")
+
+# 1 2 3 4 5 6 7 8 9 10
+# if i %2 ==0:
+#     sum+=i
+
+def even_sum(n):
+    sum = 0
+    for i in range(1,n+1):
+        if i %2 ==0:
+            sum+=i
+    print(sum)
+
+# main function
+n = int(input("enter a number till where you want the sum of even numbers : ")) 
+even_sum(n)

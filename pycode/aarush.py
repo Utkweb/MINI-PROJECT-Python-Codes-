@@ -130,5 +130,56 @@ this is a multi line comment '''
 # for i in range(start,stop,step):
 #     statements
 
-for i in range(1,11):
-    print("aarush lakhani ")
+# for i in range(1,11,2):
+#     print(i)
+    
+# # 0 2 4 6 8 10 12 14 16 18 20
+
+
+# piggy_bank = 0
+# for i in range(1,11):
+#     piggy_bank = piggy_bank+i
+# print(piggy_bank)
+
+
+# 8*1 = 8
+# 8*2 = 16
+# 8*3 = 24
+
+
+# num = int(input("Enter the number :"))
+# ans = 1
+
+# print("The table of",num,"is :")
+# for i in range(1,11):
+#     print(num,"x",i,"=",num*i)
+
+
+import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("yellow")
+
+# Create a turtle instance
+pen = turtle.Turtle()
+pen.speed(2)  # Set the drawing speed
+
+# Draw the base of the house
+pen.penup()
+pen.goto(-100, -100)
+pen.pendown()
+pen.forward(200)
+pen.left(90)
+pen.forward(200)
+pen.left(90)
+pen.forward(200)
+pen.left(90)
+pen.forward(200)
+pen.left(90)
+
+
+# Hide the turtle
+pen.hideturtle()
+
+# Exit on click
+turtle.done()

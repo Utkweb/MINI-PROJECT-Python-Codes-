@@ -808,12 +808,176 @@
 # fibo(n)
 
 
-def sum(n):
-    if n ==1:
-        return 1
-    else:
-        return n +sum(n-1)
+# def sum(n):
+#     if n ==1:
+#         return 1
+#     else:
+#         return n +sum(n-1)
 
+# # main function
+# n = int(input("Enter the number of terms: "))
+# print("The sum of first",n,"natural numbers is",sum(n))
+
+
+# def is_prime(n, i=2):
+#     if n <= 2:
+#         return True 
+#     if n % i == 0:
+#         return False
+#     if i * i > n:
+#         return True
+#     return is_prime(n, i + 1)
+
+# n = int(input("Enter the number: "))
+# if is_prime(n):
+#     print("The number is prime")
+# else:
+#     print("The number is not prime")
+
+
+# def multiply(x, y):
+#     if x == 0 or y == 0:
+#         return 0
+    
+#     if y > 0:
+#         return x + multiply(x, y - 1)
+#     else:
+#         return -x + multiply(x, y + 1)
+    
+# # main function 
+
+# x = int(input("Enter the first number: "))
+# y = int(input("Enter the second number: "))
+# print("The product of",x,"and",y,"is",multiply(x, y))
+
+
+# def isempty(stk):
+#     if stk ==[]:
+#         return True
+#     else:
+#         return False
+
+# def Push(stk,item):
+#     stk.append(item)
+#     top=len(stk)-1
+    
+
+        
+ 
+# def Peek(stk):
+#     if isempty(stk):
+#         return "Underflow"
+#     else:
+#         top = len(stk) -1 
+#         return stk[top]
+
+# def display(stk):
+#     if isempty(stk):
+#         print("Stack Empty!")
+#     else:
+#         top = len(stk)-1
+#         print(stk[top],"<-top")
+#         for i in range(top-1,-1,-1):
+#             print(stk[i])
+            
+# stack = []
+# top = None
+# while True :
+#     print("Stack operations ")
+#     print("1. Push")
+#     print("2. Pop")
+#     print("3. Peek")
+#     print("4. Display")
+#     print("5. Exit")
+    
+#     ch = int(input("Enter your choice (1-5)"))
+#     if ch == 1:
+#         item = input("Enter Item : ")
+#         Push(stack,item)
+#     elif ch == 2:
+#         item = Pop(stack)
+#         if item == "Underflow":
+#             print("Empty")
+#         else:
+#             print("Popped item : ",str(item)*2)
+#     elif ch == 3:    
+#         item = Peek(stack)
+#         if item == "Underflow":
+#             print("Empty")
+#         else:
+#             print("Topmost item",item)
+#     elif ch == 4:
+#         display(stack)
+#     elif ch == 5:
+#         break
+#     else:
+#         print("Please make the correct choice !")
+    
+        
+        
+# print("\n"*100)
+
+
+# def isHappyNumber(num):    
+#     rem = sum = 0;    
+        
+#     #Calculates the sum of squares of digits    
+#     while(num > 0):    
+#         rem = num%10;    
+#         sum = sum + (rem*rem);    
+#         num = num//10;    
+#     return sum;    
+        
+# num = 82;    
+# result = num;    
+     
+# while(result != 1 and result != 4):    
+#     result = isHappyNumber(result);    
+     
+# #Happy number always ends with 1    
+# if(result == 1):    
+#     print(str(num) + " is a happy number");    
+# #Unhappy number ends in a cycle of repeating numbers which contain 4    
+# elif(result == 4):    
+#     print(str(num) + " is not a happy number");   
+
+
+# def fibo(n):
+#     if n==0:
+#         return 0
+#     elif n==1:
+#         return 1
+#     else:
+#         return fibo(n-1)+fibo(n-2)
+
+# # main function
+# n = int(input("Enter the number of terms: "))
+# print("The fibonacci series is: ")
+# for i in range(n):
+#     print(fibo(i))
+
+
+# def rev(sq,n):
+#     if n > 0:
+#         k = len(sq)-n
+#         rev(sq,n-1)
+#         print(sq[k],end=" ")
+#     elif n == 0:
+#         return
+    
 # main function
-n = int(input("Enter the number of terms: "))
-print("The sum of first",n,"natural numbers is",sum(n))
+
+
+
+
+def Pop(stk):
+        item = stk.pop()
+        if len(stk) == 0:
+            top =None
+        else:
+            top = len(stk)-1
+            
+            return item
+stack = ['a','b','c','d','e']
+item = Pop(stack)
+print("Popped item : ",item)

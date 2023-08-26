@@ -750,3 +750,338 @@
 # tannaM
 
 # factorial 
+
+# def reverse(name):
+#     if len(name) == 0:
+#         return 
+#     temp = name[0]    #TANNAM
+#     reverse(name[1:])
+#     print(temp,end="")
+
+# name = input("Enter a name: ")
+# reverse(name)
+
+
+# def fibo(n):
+#     if n == 1:
+#         return 0
+#     elif n == 2:
+#         return 1
+#     else:
+#         return fibo(n-1)+fibo(n-2)
+               
+    
+# # main function
+# n = int(input("Enter a number: "))
+# print(fibo(n))
+
+
+
+# classes and objects :
+    
+# class - blueprint of an object
+# object : it is an instance of class
+
+# a = 10
+# print(type(a))
+
+
+# Python is an object oriented programming language.
+# A class is like an object constructor, or a "blueprint" for creating objects.
+
+
+# create a class:
+
+# keyword class:
+
+# class Person:
+#     age = 18 
+#     name = "Mannat"
+    
+# p1 = Person()
+# p2 = Person()
+# print(p1.age)
+# print(p2.name)
+
+
+
+# _init_(self) 
+
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+        
+#     def __str__(self):
+#         return f"{self.name} {self.age}"
+
+# p1 = Person("Mannat",18)
+# p2 = Person("Weather",50)
+# p3 = Person("Staingo",20)
+# p4 = Person("Ture",50)
+
+# print("Person 1")
+# print(p1)
+
+# print("Person 2")
+# print(p2.name)
+# print(p2.age)
+# print("Person 3")
+
+# print(p3.name)
+# print(p3.age)
+# print("Person 4")
+
+# print(p4.name)
+# print(p4.age)
+
+
+
+
+
+# def display(lst,rows,cols):
+#     for i in range(rows):
+#         for j in range(cols):
+#             print(lst[i][j],end=" ")
+#         print()
+
+# def sum_of_boundary_elements(lst, rows, cols):
+#     sum = 0
+#     for i in range(rows):
+#         for j in range(cols):
+#             if(i == 0):
+#                 sum+=lst[i][j]
+#             elif( i == rows-1):
+#                 sum+=lst[i][j]
+#             elif(j == 0):
+#                 sum+=lst[i][j]
+#             elif(j == cols-1):
+#                 sum+=lst[i][j]
+#     return sum
+
+
+
+# lst = []
+# rows = int(input("Enter the number of rows: "))
+# cols = int(input("Enter the number of columns: "))
+# for i in range(rows):
+#     row = []
+#     for j in range(cols):
+#         elem = int(input("Enter the element: "))
+#         row.append(elem)
+#     lst.append(row)
+
+# display(lst,rows,cols)
+# print("Sum of boundary elements: ",sum_of_boundary_elements(lst,rows,cols))
+
+
+
+
+# database =  SQL database
+
+# Structured Query Language
+
+# mysql-connector-python - pip install mysql-connector-python
+
+
+# host = "localhost",
+# user = "root",
+# password = "",
+
+
+# import mysql.connector
+
+# mydatabase = mysql.connector.connect(
+#     host = "localhost",
+#     username="root",
+#     password=""
+# )
+
+# print(mydatabase)
+
+# mycursor =  mydatabase.cursor()
+
+# mycursor.execute("DROP DATABASE IF EXISTS login_system")
+# print("Database deleted successfully")
+
+# mycursor.execute("CREATE DATABASE login_system")
+# print("Database created successfully")
+
+
+# from tkinter import *
+
+# m = Tk()
+# m.title("My first GUI")
+# Label(m,text="First Name").grid(row=0)
+# Label(m,text="Last Name").grid(row=1)
+
+# e1 = Entry(m)
+# e2 = Entry(m)
+
+# e1.grid(row=0,column=1)
+# e2.grid(row=1,column=1)
+
+# mainloop()
+
+ 
+
+
+# m.mainloop()
+
+
+
+# activeBackground
+# activeForeground
+# bg
+# command
+# font
+# image
+# width
+# height
+
+
+# from tkinter import *
+
+# m = Tk()
+# menu = Menu(m)
+
+# m.config(menu=menu) 
+# filemenu = Menu(menu)
+# menu.add_cascade(label="File",menu=filemenu)
+# filemenu.add_command(label="New text file")
+# filemenu.add_command(label="New file")
+# filemenu.add_command(label="New Window")
+# filemenu.add_separator()
+# filemenu.add_command(label="Open File")
+# filemenu.add_command(label="Exit",command=m.quit)
+
+# mainloop()
+
+# File Handling :
+    
+# open()
+
+# readme.txt
+
+# r - read mode
+# a - append mode
+# w - write mode
+# x - create file 
+
+# t - text
+
+# f = open("readme.txt","rt")
+# print(f.read())
+
+
+
+
+# matplot lib
+
+# pip install matplotlib
+
+# import matplotlib.pyplot as plt
+# import numpy as np 
+
+# x_axis = np.array([0,5])
+# y_axis = np.array([0,200])
+
+# plt.plot(x_axis,y_axis)
+# plt.show()
+
+
+import tkinter
+import mysql.connector
+
+# Connect to the database
+
+conn = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password=""
+)
+
+cur = conn.cursor(buffered=True)
+
+try:
+    cur.execute("use registration")
+except:
+    cur.execute("create database registration")
+    cur.execute("use registration")
+
+try:
+    cur.execute("describe register")
+except:
+    cur.execute("create table register(id int primary key auto_increment, fname varchar(20), lname varchar(20), age int, email varchar(20), mobile varchar(20))")
+
+def Registration():
+    fname = e1.get()
+    lname = e2.get()
+    age = e3.get()
+    email = e4.get()
+    mobile = e5.get()
+    
+    query = "insert into register(fname,lname,age,email,mobile) values (%s,%s,%s,%s,%s)"
+    values = (fname, lname, age, email, mobile)
+    
+    try:
+        cur.execute(query, values)
+        conn.commit()
+        print("Data inserted successfully!")
+    except Exception as e:
+        print("Error:", e)
+        conn.rollback()
+
+win = tkinter.Tk()
+win.geometry("600x600")
+win.title("Registration Form")
+
+l1 = tkinter.Label(win, text="First Name")
+l2 = tkinter.Label(win, text="Last Name")
+l3 = tkinter.Label(win, text="Age")
+l4 = tkinter.Label(win, text="Email")
+l5 = tkinter.Label(win, text="Mobile No.")
+
+l1.grid(row=1, column=1)
+l2.grid(row=2, column=1)
+l3.grid(row=3, column=1)
+l4.grid(row=4, column=1)
+l5.grid(row=5, column=1)
+
+e1 = tkinter.Entry(win)
+e2 = tkinter.Entry(win)
+e3 = tkinter.Entry(win)
+e4 = tkinter.Entry(win)
+e5 = tkinter.Entry(win)
+
+e1.grid(row=1, column=2)
+e2.grid(row=2, column=2)
+e3.grid(row=3, column=2)
+e4.grid(row=4, column=2)
+e5.grid(row=5, column=2)
+
+submit_button = tkinter.Button(win, text="Submit", command=Registration)
+submit_button.grid(row=6, column=2)
+
+win.mainloop()
+
+
+
+
+# get post put delete
+
+# CRUD
+
+
+def main():
+    1. Open Acc 
+    2. Deposit Amount
+    3. Withdraw Amount
+    4. Balance 
+    5. Customer details 
+    6. Close an account 
+
+
+if choice == 1:
+    openacc()
