@@ -67,13 +67,69 @@
 # if i %2 ==0:
 #     sum+=i
 
-def even_sum(n):
-    sum = 0
-    for i in range(1,n+1):
-        if i %2 ==0:
-            sum+=i
-    print(sum)
+# def even_sum(n):
+#     sum = 0
+#     for i in range(1,n+1):
+#         if i %2 ==0:
+#             sum+=i
+#     print(sum)
 
-# main function
-n = int(input("enter a number till where you want the sum of even numbers : ")) 
-even_sum(n)
+# # main function
+# n = int(input("enter a number till where you want the sum of even numbers : ")) 
+# even_sum(n)
+
+
+# list, tuple, set, dictionary
+
+# 1. list - mutable, ordered, duplicates allowed []
+
+# list1 = [1, 2,3 ,4, 5, 6, 7, 8, 9, 10]
+
+# print(list1[2:7])
+
+# list1 = [1,2.5, "Ayra", True, 54,88]
+# list1.append("Humza")
+# print(list1)
+
+# list1 = [1,4,9]
+
+# add
+
+# 8
+# 7
+# 6
+# 5
+
+# append() - adds an element at the end of the list
+
+# insert()- adds an element at a specific index
+
+
+# list1 = [4,9,5,8,7,3]
+# list1.insert(2,8)
+
+# print(list1)
+
+# remove() - removes the specified element
+# pop() - removes the specified index
+
+# del () - deletes the list
+
+# thislist = ["apple", "banana", "cherry"]
+# thislist.pop(2)
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# for i in thislist:
+#     print(i)
+# print(len())
+
+# sorting - ascending, descending
+
+# 1 5 4 9 8 7 6 3 2
+
+thislist = [1,5,4,9,8,7,6,3,2]
+thislist.sort(reverse = True)
+print(thislist)
+
+thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]

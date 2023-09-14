@@ -169,11 +169,67 @@
 #     increment/decrement
 
 
-# nested loops;-
-
-for i in range(1,4):
-    for j in range(1,i+1):
-        print("*",end=" ")
-    print("\n")
     
+# while condition:
+#     statement
+#     increment/decrement
+
+# i = 1
+# while i<=10:
+#     print(i)
+#     i = i+1
+
+
+
+# num = int(input("Enter the number you wanna reverse : "))   
+# sum = 0
+# while num!=0:
+    
+#     rem = num%10              
+#     sum = sum*10 +rem         
+#     num = num//10             
+    
+# print("The reverse of the number is: ",sum)
+
+
+
+
+
+# print(3//10)
+
+
+
+
+# num = int(input("Enter the number to check whether a number is palindrome or not: "))
+# temp = num
+# sum = 0
+# while num!=0:
+#     rem = num%10
+#     sum = sum*10 + rem
+#     num = num//10
+
+# if sum == temp:
+#     print("The number is palindrome")
+# else:
+#     print("The number is not palindrome")
+
+# Nested Loops : 
+    
+for i in range(1,6):
+    for j in range(1,i+1): 
+        print("*",end=" ")
+    print()
+
+
+# 1
+# 1 2
+# 1 2 3
+# 1 2 3 4
+# 1 2 3 4 5
+
+# *
+# **
+# ***
+# ****
+# *****
 

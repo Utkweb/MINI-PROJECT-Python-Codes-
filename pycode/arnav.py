@@ -46,9 +46,48 @@
 
 # Perimeter of rectangle = 2*(length + breadth)
 
-length = 9
-breadth = 6
-print("Perimeter of Rectangle :",2*(length+breadth))
+# length = 9
+# breadth = 6
+# print("Perimeter of Rectangle :",2*(length+breadth))
 
 
+
+
+
+# if condition:
+#     statement1
+#     statement2
+    
+# a = 10 
+# b = 20 
+
+
+# if a>b:
+#     print("a is greater than b")
+# else:
+#     print("b is greater than a")
+
+# person_age = 19
+# if person_age>=18:
+#     print("You are eligible to vote")
+# else:
+#     print("You are not eligible to vote")
+
+# if elif else statements
+# if condition:
+#     statement1
+# elif condition:
+#     statement2
+# elif condition:
+#     statement3
+# else:
+#     statement4
+
+# num = int(input("Enter a number:"))
+# if num>0:
+#     print("The number is positive")
+# elif num<0:
+#     print("The number is negative")
+# else:
+#     print("The number is zero")
 

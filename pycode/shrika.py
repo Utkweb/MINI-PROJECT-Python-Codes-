@@ -38,7 +38,7 @@
 
 # print(64//8)
 
-input 
+# input 
 
 
 
@@ -174,6 +174,8 @@ input
 #     piggy_bank = piggy_bank + i
 # print(piggy_bank)
 
+
+
 # count_even = 0
 # count_odd = 0
 # for i in range(1,11):
@@ -245,9 +247,119 @@ input
 # 7. "Saturday"
 
 
-# strings:
-
+# strings: 
 # name = "Shrika Aella"
-      
-# print(name[1])
+        
+# print(name[])
 
+# num1 = int(input("Enter a first number: "))
+# num2 = int(input("Enter a second number: "))
+
+# choice = (input("""
+#                    A. Addition
+#                    B. Subtraction
+#                    C. Multiplication
+#                    D. Division 
+#                    """))
+
+# if choice == "A":
+#     print("Addition",num1+num2)
+# elif choice == "B":
+#     print("Subtraction",num1-num2)
+# elif choice == "C":
+#     print("Multiplication",num1*num2)
+# elif choice == "D":
+#     print("Division",num1/num2)
+# else:
+#     print("Invalid choice")
+
+
+# 2 4 6 8 10 12 14 16 18 20
+
+
+# num = 598
+# num = int(input("Enter a number you want to reverse: "))
+# sum = 0
+# while(num!=0):
+#     rem = num%10      #rem = 5
+#     sum = sum*10+ rem   #sum = 89*10+5 = 895
+#     num = num//10            #num = 59  
+# print(sum)
+    
+
+# 1
+# 12
+# 123
+# 1234
+# 12345
+
+# Week 1:
+    
+#     day 1
+#     day 2
+#     day 3
+#     day 4
+#     day 5
+#     day 6
+#     day 7
+
+# week 2:
+#     day 1
+#     day 2
+#     day 3
+#     day 4
+#     day 5
+#     day 6
+#     day 7
+    
+
+# nested loops :-
+
+# num = 10 #global variable
+# for i in range(1,6):
+#     num1 = 19 //local variable
+    
+#     for j in range(1,i+1):
+#         print(i,end=" ")
+#     print()
+
+# print(num1)
+
+# global scope/global variable
+# local scope/local variable
+
+
+# 1
+# 1 2
+# 1 2 3
+
+# *
+# **
+# ***
+# ****
+# *****
+
+
+# 1
+# 2 2
+# 3 3 3
+# 4 4 4 4
+# 5 5 5 5 5        
+
+# 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+
+# Fibonacci series:-
+
+# num1 = 0
+# num2 = 1
+# result = 0
+# print(num1,num2,end=" ")
+# for i in range(1,16):
+#     result = num1 + num2
+#     print(result,end=" ")
+#     num1 = num2    
+#     num2 = result 
+
+a = "2.0"
+# print(type(a))
