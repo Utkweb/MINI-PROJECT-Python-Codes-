@@ -128,8 +128,70 @@
 
 # 1 5 4 9 8 7 6 3 2
 
-thislist = [1,5,4,9,8,7,6,3,2]
-thislist.sort(reverse = True)
-print(thislist)
+# thislist = [1,5,4,9,8,7,6,3,2]
+# thislist.sort(reverse = True)
+# print(thislist)
 
-thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+# thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+
+# if "apple" in thislist:
+#     print("True")
+# else:
+#     print("False")
+
+# updating a list
+
+# list1 = ["apple", "banana", "cherry"]
+
+# for x in list1:
+#     print(x)
+
+# join a list
+
+# list1 = [1,2,3,4,5]
+# list2 = [6,7,8,9,10]
+
+# list3 = list1+list2
+
+# print(list3)
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+# print(fruits[4])
+
+# Tuple
+
+# it is immutable, ordered, duplicates allowed
+# tuple are writtend in ()
+
+# tuple1 = (1,2,3,4,5,6,7,8,9,10)
+
+# tuple1=("apple",)
+# print(type(tuple1))
+
+# tuple1 = (1,2,3,4,5,6,7,8,9,10)
+
+# print(tuple1[3:7])
+
+# updating a tuple
+
+# x = ("apple", "banana", "cherry")
+
+
+# y = list(x)
+
+# y[1] = "kiwi"
+
+# x = tuple(y)
+# print(x)
+
+
+
+
+
+
+
+
+
+    
+

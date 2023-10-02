@@ -215,10 +215,10 @@
 
 # Nested Loops : 
     
-for i in range(1,6):
-    for j in range(1,i+1): 
-        print("*",end=" ")
-    print()
+# for i in range(1,6):
+#     for j in range(1,i+1): 
+#         print(i,end=" ")
+#     print()
 
 
 # 1
@@ -232,4 +232,34 @@ for i in range(1,6):
 # ***
 # ****
 # *****
+
+
+# 1
+# 2 2
+# 3 3 3
+# 4 4 4 4
+# 5 5 5 5 5
+
+
+# piggy_bank = 0
+# for i in range(1,101):
+#     piggy_bank+=i
+# print("The summation of numbers from 1 to 100 are : ",piggy_bank)
+
+
+# revision :
+    
+    # loops: for loop, while loop
+    
+    
+    # for loop:
+    #     syntax:
+    #         for i in range(start,stop,step):
+    #             statement
+    
+# num = int(input("Enter a number of which the multiplication table you want ?: "))
+# for i in range(1,11):
+#     print(num,"X",i,"=",num*i)
+                
+                
 

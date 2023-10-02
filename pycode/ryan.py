@@ -225,4 +225,124 @@
 
 # 123 -->  321
 # 345 -->  543
+
+# Random generator - random module
+
+# import math 
+
+# print(math.sqrt(25))
+
+# Random Module - it is a module that is used to generate random numbers.
+
+# pip install name_of_module
+
+# import random
+
+# num = random.randint(1,11)
+# print(num)
+
+
+# randint(start, end) - it is a function that is used to generate random integer numbers.
+# randrange(start, end, step) - it is a function that is used to generate random integer numbers.
+
+# randrange(1,11,3)
+
+# 1 4 7 10
+
+# Random Genrator Game:- 
+
+# import random
+
+# # starting point
+# start = int(input("Enter the lower bound: "))
+
+# # ending point
+# end = int(input("Enter the upper bound: "))
+
+# num = random.randint(start,end)
+
+# print("You have only 5 chances to guess the number.")
+
+# count =0
+
+# while count<5:
+#     print("Chance: ",count+1)
+#     guess = int(input("Enter your guess:"))
     
+#     count+=1
+    
+#     if guess == num:
+#         print("Congratulations! You guessed the number right.")
+#     elif guess<num:
+#         print("Your guess is too low.")
+#     elif guess>num:
+#         print("Your guess is too high.")
+#     else:
+#         print("Invalid Input.")
+
+
+# Type casting: - it is a process of converting one data type to another data type.
+
+# 1. implicit 
+# 2. explicit
+# int --> float
+# float --> int
+# int --> str
+# str --> int
+# str --> float
+# float --> str
+
+# a = 4
+# print("Before the casting",type(a))  
+
+# # type casting
+# b = str(a)
+    
+# print("After the casting",type(b))  
+# print(b)
+
+
+# a = 4.5   -> str
+# name = "R" ->int
+# num =20 -> float
+
+# name = "R"
+# print("Before the casting",type(name))
+
+# # type casting
+# num = int(name)
+
+# print("After the casting",type(num))
+# print(num)
+
+# type caste to integer from string 
+
+# n = "20"
+# print("Before the casting",type(n))
+
+# # type casting
+# num = int(n)
+
+# print("After the casting",type(num))
+# print(num)
+
+# Strings - it is a sequence of characters enclosed within single quotes or double quotes or triple quotes.
+
+# 'hello' "hello" '''hello'''
+
+# name = "Ryan"
+# print(name)
+
+# multiline string
+# sent = '''
+
+
+
+
+# '''
+
+# index - it is a position of a character in a string.
+
+# name = "Ryan Joseph"
+
+# print(name[5:])

@@ -361,5 +361,108 @@
 #     num1 = num2    
 #     num2 = result 
 
-a = "2.0"
+# a = "2.0"
 # print(type(a))
+
+
+# nested Loops:
+    
+# for var in range(start,end,step):
+#     for var in range(start,end,step):
+#         statements
+#     statements
+
+# for i in range(1,6):
+#     for j in range(1,i+1):
+#         print(j,end=" ")
+#     print()
+
+
+# Week 1:
+#     day 1
+#     day 2
+#     day 3
+#     day 4
+#     day 5
+#     day 6
+#     day 7
+# week 2:
+#     day 1
+
+
+# import math
+
+# num = int(input("Enter a number of which you want to find the square root of : "))
+# print(math.sqrt(num))
+
+# math.sqrt -> it is a predefined function that is used to find the square root of a number.
+
+# num = int(input("Enter a number of which you want to find the square root of : "))
+# print(num**(0.5))
+
+
+# a = float(input("Enter first side: "))
+# b = float(input("Enter second side: "))
+# c = float(input("Enter third side: "))
+
+# s = (a+b+c)/2
+
+# area = (s*(s-a)*(s-b)*(s-c))**(0.5)
+# print("The area of the triangle is: ",area)
+
+# import random
+
+# print(random.randint(1,10))
+
+# number guessing game 
+
+import random
+
+print("Welcome to the number guessing game")
+print("You have 10 chances to guess the number")
+print("The number is between 1 to 10")
+num = random.randint(1,20)     
+guess = None
+
+for i in range(1,10):
+    guess = int(input("Enter a number: "))
+    if guess>num:
+        print("Your guess is too high")
+    elif guess<num:
+        print("Your guess is too low")
+    if guess == num:
+        print("You guessed it right")
+        break
+    else:
+        print("You guessed it wrong")
+        print("You have",9-i,"chances left")
+        print("Try again")
+    
+    
+    
+# *
+# **
+# ***
+# ****
+# *****
+
+# 1
+# 12
+# 123
+# 1234
+# 12345
+
+# 1
+# 22
+# 333
+# 4444
+# 55555
+
+#     *
+#    **
+#   ***
+#  ****
+# *****
+ 
+
+# diamond pattern 
