@@ -61,57 +61,113 @@ pen.hideturtle()
 turtle.done()
 
 
-# import turtle as t
+import turtle as t
 
-# # Set up the turtle screen
-# t.speed(0)
-# t.hideturtle()
-# t.bgcolor("lightblue")
+# Set up the turtle screen
+t.speed(0)
+t.hideturtle()
+t.bgcolor("lightblue")
 
-# # Define a function to draw a circle
-# def draw_circle(x, y, radius, color):
-#     t.penup()
-#     t.goto(x, y - radius)
-#     t.pendown()
-#     t.fillcolor(color)
-#     t.begin_fill()
-#     t.circle(radius)
-#     t.end_fill()
+# Define a function to draw a circle
+def draw_circle(x, y, radius, color):
+    t.penup()
+    t.goto(x, y - radius)
+    t.pendown()
+    t.fillcolor(color)
+    t.begin_fill()
+    t.circle(radius)
+    t.end_fill()
 
-# # Define a function to draw a rectangle
-# def draw_rectangle(x, y, width, height, color):
-#     t.penup()
-#     t.goto(x - width/2, y - height/2)
-#     t.pendown()
-#     t.fillcolor(color)
-#     t.begin_fill()
-#     for _ in range(2):
-#         t.forward(width)
-#         t.left(90)
-#         t.forward(height)
-#         t.left(90)
-#     t.end_fill()
+# Define a function to draw a rectangle
+def draw_rectangle(x, y, width, height, color):
+    t.penup()
+    t.goto(x - width/2, y - height/2)
+    t.pendown()
+    t.fillcolor(color)
+    t.begin_fill()
+    for _ in range(2):
+        t.forward(width)
+        t.left(90)
+        t.forward(height)
+        t.left(90)
+    t.end_fill()
 
-# # Draw Shinchan's head
-# draw_circle(0, 0, 50, "pink")
+# Draw Shinchan's head
+draw_circle(0, 0, 50, "pink")
 
-# # Draw Shinchan's eyes
-# draw_circle(-20, 10, 5, "white")
-# draw_circle(20, 10, 5, "white")
-# draw_circle(-20, 10, 2, "black")
-# draw_circle(20, 10, 2, "black")
+# Draw Shinchan's eyes
+draw_circle(-20, 10, 5, "white")
+draw_circle(20, 10, 5, "white")
+draw_circle(-20, 10, 2, "black")
+draw_circle(20, 10, 2, "black")
 
-# # Draw Shinchan's mouth
-# t.penup()
-# t.goto(-15, -10)
-# t.pendown()
-# t.right(90)
-# t.circle(15, 180)
+# Draw Shinchan's mouth
+t.penup()
+t.goto(-15, -10)
+t.pendown()
+t.right(90)
+t.circle(15, 180)
 
-# # Draw Shinchan's cheeks
-# draw_circle(-35, -10, 7, "rosybrown")
-# draw_circle(35, -10, 7, "rosybrown")
+# Draw Shinchan's cheeks
+draw_circle(-35, -10, 7, "rosybrown")
+draw_circle(35, -10, 7, "rosybrown")
 
-# # Hide the turtle and display the result
-# t.hideturtle()
-# t.done()
+# Hide the turtle and display the result
+t.hideturtle()
+t.done()
+
+
+
+# import turtle
+
+# # Set up the turtle
+# turtle.speed(0)
+# turtle.bgcolor("white")
+
+# # Draw Spider Body
+# turtle.penup()
+# turtle.goto(0, -50)
+# turtle.pendown()
+# turtle.color("red")
+# turtle.begin_fill()
+# turtle.circle(50)
+# turtle.end_fill()
+
+
+# # Draw Spider Legs
+# turtle.color("black")
+# for i in range(8):
+#     turtle.penup()
+#     turtle.goto(0, -50)
+#     turtle.pendown()
+#     turtle.setheading(i * 45 - 22.5)
+#     turtle.forward(70)
+#     turtle.backward(70)
+
+# # Draw Spider Eyes
+# turtle.penup()
+# turtle.goto(-20, 20)
+# turtle.pendown()
+# turtle.color("white")
+# turtle.begin_fill()
+# turtle.circle(5)
+# turtle.end_fill()
+
+# turtle.penup()
+# turtle.goto(20, 20)
+# turtle.pendown()
+# turtle.begin_fill()
+# turtle.circle(5)
+# turtle.end_fill()
+
+# # Draw Spider Mask
+# turtle.penup()
+# turtle.goto(-20, 15)
+# turtle.pendown()
+# turtle.color("black")
+# turtle.setheading(-60)
+# turtle.circle(20, 120)
+
+# # Hide turtle and display the result
+# turtle.hideturtle()
+# turtle.done()

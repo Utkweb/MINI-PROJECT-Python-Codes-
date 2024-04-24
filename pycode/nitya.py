@@ -970,14 +970,384 @@
 
 
 
-def Pop(stk):
-        item = stk.pop()
-        if len(stk) == 0:
-            top =None
-        else:
-            top = len(stk)-1
+# def Pop(stk):
+#         item = stk.pop()
+#         if len(stk) == 0:
+#             top =None
+#         else:
+#             top = len(stk)-1
             
-            return item
-stack = ['a','b','c','d','e']
-item = Pop(stack)
-print("Popped item : ",item)
+#             return item
+# stack = ['a','b','c','d','e']
+# item = Pop(stack)
+# print("Popped item : ",item)
+
+
+
+# def prime(num):
+#     count = 0
+#     for i in range(1,num+1):
+#         if num%i==0:
+#             count+=1
+#     if count == 2:
+#         print("It is a prime number")
+#     else:
+#         print("It's not a prime number ")
+    
+# # main function2
+# num = int(input("Enter a number : "))
+# prime(num)
+
+
+# def fibonacci(ran):
+#     f1 = 0
+#     f2 = 1
+#     print(f1,f2,end=" ")
+    
+#     for i in range(0,ran-2):
+#         result = f1+f2
+#         print(result, end =" ")
+#         f1 = f2
+#         f2 = result
+# # main function 
+
+# ran = int(input("How many fibonacci no. you have to print?"))
+# fibonacci(ran)
+
+# def palin(num):
+#     rev =0
+#     while num!=0:
+#         rem = num%10
+#         rev = rev*10+rem
+#         num = num//10
+#     return rev
+
+# # main function
+# num = int(input("Enter a number to check whther a number is a palindrome or not  :"))
+
+# if num == palin(num):
+#     print("It is a palindrome number")
+# else:
+#     print("it's not a plaindrome number")
+
+
+# def armstrong(num):
+#     rev =0
+#     while num!=0:
+#         rem = num%10
+#         rev = rev+rem**3
+#         num = num//10
+#     return rev
+
+# # main function
+# num = int(input("Enter a number to check whther a number is a palindrome or not  :"))
+
+# if num == armstrong(num):
+#     print("It is a armstrong number")
+# else:
+#     print("it's not a armstrong number")
+
+# def sum_of_digits(num):
+#     sum =0
+#     while num!=0:
+#         rem = num%10
+#         sum = sum+rem
+#         num = num//10
+#     return sum
+
+# # main function
+# num = int(input("Enter a number to check whther a number is a palindrome or not  :"))
+
+# print(sum_of_digits(num))
+
+
+# Create database db_name;
+
+# create database if not exists db_name;
+
+
+# use db_name;
+
+# show database;
+
+
+# Python 
+
+# data types:
+
+# 1. numeric
+# 2. string
+# 3. Boolean
+# 4. list
+# 5. tuple
+# 6. set
+# 7. dictionary
+
+# arithmeitc operator: +,-,*,/,%,//,**
+
+
+# a = int(input("Enter the first number : "))
+# b = int(input("Enter the second number : "))
+# sum = 0
+
+# for i in range(1,b+1):
+    
+#     sum = sum+a
+#     if(sum == 9):
+#         continue
+    
+# print(sum)  
+
+# for i in range(1, 11):
+#     if i == 9:
+#         continue  
+#     print(i)
+
+
+# for i in range(1,6):
+#     for j in range(1,6):
+#         print(i," | ",j)
+#     print()
+
+
+# for i in range(1,11):
+#     for j in range(1,11):
+#         print(i*j,end= "\t")
+#     print()
+
+# c = 0
+# for x in range(10):
+#     for y in range(5):
+#         c+=1
+# print(c)
+
+# word ="lamp"
+
+# print(word[::-1])
+
+
+
+# word = input("Enter the word : ")
+
+# result = word[-1]+word[1:-1]+word[0]
+
+# print(result)
+
+
+
+# cnt,cnt1=0,0
+# str1 = input("Enter the string : ")
+# for i in str1:
+#     if i in ('a','e','i','o','u'):
+#         cnt = cnt+1
+#     else:
+#         cnt1 = cnt1+1
+
+# print("The number of vowels in the string is : ",cnt)
+# print("The number of consonants in the string is : ",cnt1)
+
+# 12252019
+
+# date = input("Enter the date in the format mmddyyyy : ")
+
+# month = int(date[:2])
+# day   = date[2:4]
+# year  = date[4:]
+
+# list1 = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
+# result = list1[month-1]+" "+day+", "+year
+
+# print(result)
+
+
+# ph = [1,2,3,4,5,6,7,8,9,0]
+
+# ph.insert(3,'-')
+# ph.insert(6,'-')
+
+# for i in ph:
+#     print(i,end="")
+
+
+# l = [3,1,4]
+# M = [1,5,9]
+
+# for i in range(len(l)):
+#     N = l[i]+M[i]
+#     print(N)
+
+# list1 = []
+
+# a,b=0,1
+
+# for i in range(10):
+#     list1.append(a)
+#     a = a+b
+#     a,b = b,a
+    
+# print(tuple(list1))
+    
+
+# word = ["working","with","functions"]
+
+# max_word = len(word[0])
+
+# for i in word[1:]:
+#     if len(i)>max_word:
+#         max_word = i
+
+# print(max_word)
+
+# n = 8
+
+# def pri():
+#     n = 9
+#     return n
+
+# print(pri())
+
+
+
+# def length(str1):
+#     count = 0
+    
+#     for i in str1:
+#         count+=1
+#     return count
+
+# #main function
+# str1 = "Python"
+# print(length(str1))
+
+
+# def nthroot(x,n=2):
+#     return 1/(x**n)
+
+# x = int(input("Enter the value of x : "))
+# print("The value of 1/x^n is : ",nthroot(x))
+
+# def buuble_sort(arr):
+    
+#     n = len(arr)
+#     for i in range(0,n):
+#         for j in range(0,n-i-1):
+#             if arr[j]>arr[j+1]:
+#                 arr[j],arr[j+1]=arr[j+1],arr[j]
+    
+#     return arr
+
+# l1 = [64, 34, 25, 12, 22, 11, 90]
+# print(buuble_sort(l1))
+    
+    
+# def insertion_sort(arr):
+#     n = len(arr)
+    
+#     for i in range(1,n):
+#         key = arr[i]
+        
+#         j = i-1
+        
+#         if j>=0 and key<arr:
+#             arr[j+1]=arr[j]
+#             j = j-1
+#         else:
+#             arr[j+1]=key
+#     return arr
+
+# arr=
+
+# f = open("nitya.txt",'r')
+
+# for x in f:
+#     print(x)
+
+
+
+# f = open("nitya.txt",'r')
+# print(f.readlines())
+
+# # f.write("Nitya aaj aayi hai !!")
+
+# f.close()
+
+# # f = open("nitya.txt",'r')
+
+# # for x in f:
+# #     print(x)
+
+# import os 
+
+# os.remove("nitya.txt")
+
+# import os
+# if os.path.exists("nitya.txt"):
+#   os.remove("nitya.txt")
+# else:
+#   print("The file does not exist")
+
+
+# def print(n):
+#     print()
+
+
+# def sum(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return n*sum(n-1)
+    
+# n = int(input("Enter the number : "))
+
+# print("The factorial of first",n,"natural numbers is : ",sum(n))
+
+
+# arr = [10, 15, 19, 28, 57]
+# key = int(input("Enter a number: "))
+# found = False  # Variable to keep track of whether the key is found
+
+# for i in range(len(arr)):
+#     if arr[i] == key:
+#         print("Found")
+#         found = True
+#         break  # Exit the loop once the key is found
+
+# if not found:
+#     print("Not found")
+
+
+# lst = [i*2 for i in range(1,6)]
+
+# print(lst)
+
+
+# lst = []
+# for i in range(1,6):
+#     lst.append(i)
+    
+# print(lst)
+
+
+# import bisect
+
+# lst =[10,20,30,40,50,60,70]
+
+# item = int(input("Enter a number  : "))
+
+# ind = bisect.bisect(lst,item)
+# bisect.insort(lst,item)
+
+
+
+# print(ind)
+# print(lst)
+
+# lst = [[1,2],[9,8],[3,4]]
+
+# for i in range(len(lst)):
+#     for j in range(len(lst[i])):
+#         print(lst[i][j],end = " ")
+#     print()

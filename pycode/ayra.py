@@ -186,12 +186,540 @@
 # print(x)
 
 
+# find the length of the tuple
+# x = ("mango", "banana", "cherry")
+# print(len(x))
+
+# x = ("apple", "banana", "cherry")
+# tuple1 = (1,2,3,4,5,6,7,8,9,10)
+# tuple2 = (True, False, False)
 
 
 
+# tuple1  = ("apple", "banana", "cherry")
+
+# y = list(tuple1)
+# y.remove("banana")
+
+# tuple1 = tuple(y)
+
+# print(tuple1)
+
+# 341 -->  143
+
+# num = int(input("enter a number: "))   341
+# sum = 0
+
+# while num!=0:
+#     rem = num%10          
+#     sum = sum*10 + rem    
+#     num = num//10        
+    
+# print(sum)
+
+
+# 155 = 1+5+5 =11
+
+
+# num = int(input("enter a number: "))
+# sum = 0
+# while(num!=0):
+#     rem = num%10   #rem =1%10 = 1
+#     sum = sum+(rem**3)    #sum = 0+27 = 27 +125 =152+1 = 153
+#     num = num//10      #num =15
+
+# if (sum == num):
+#     print("Armstrong number")
+# else:
+#     print("Not an Armstrong number")
+
+
+# 153%10 = 3
+
+# 153//10 = 15
+
+# 15//10=1
+
+# 153 = 1^3+5^3+3^3 = 1 + 125 + 27 = 153
+
+# 121 = 1^3+2^3+1^3 = 1+8+1 = 10
+
+# 0,1,153,370,371,407
+
+
+# tuples : it is immutable
 
 
 
+# tuple1 = (1,2,"Ayra",True, 5.5, 1,2,3,4,5,6,7,8,9,10)
+# print(len(tuple1))
 
+
+# factorial program 
+
+# num = int(input("enter a number: "))    #num =7
+# result = 1
+
+# for i in range(1,num+1):
+#     result = result * i
+# print(result)
+
+# num = 6
+
+# 6*5*4*3*2*1 = 720
+
+# Prime Number
+
+# 5 - 1,5
+# 11 - 1,11
+
+
+# num = int(input("enter a number: "))    #num =11
+# count = 0
+# for i in range(1,num+1):
+#     if num%i ==0:
+#         count= count+1
+        
+# if count ==2:
+#     print("Prime number")
+# else:
+#     print("Not a prime number")
     
 
+
+# 1,2,3,4,5,6,7,8,9,10,11
+
+
+# sum = 0
+
+# for i in range(1,21):
+#     if i%2==0:
+#         sum=sum+i
+# print(sum)
+
+    
+# num = int(input("enter a number: "))
+# for i in range(1,11):
+#     print(num*i)
+
+
+# set 
+
+
+# a =[1,2,3,4,5,6,7,8,9,10]
+
+# target = 6
+
+
+# a = [14,15,18,19,50,44]
+
+# for i in range(0,len(a)):
+#     if a[i] == 50:
+#         print("Our value is at : ",i)
+#         break
+
+
+# a = [14,15,18,19,50,44,18,19,78,56,22,34,100]
+
+
+# a[0],a[len(a)-1]=a[len(a)-1],a[0]
+
+# print(a)
+
+
+
+
+
+# 10 11 12 13 14 15 16 17 18 19 20
+
+
+# x = 16
+
+
+
+# import random
+
+# lower_limit = int(input("Enter the lower limit: "))
+
+# upper_limit = int(input("Enter the upper limit: "))
+
+# x = random.randint(lower_limit,upper_limit)
+
+# print("You've only 8 chances to guess the number")
+
+# count = 0
+
+# while count<8:
+#     count= count+1
+#     guess = int(input("Guess the number :"))
+    
+#     if x == guess:
+#         print("Congratulations you did it in ",count," try")
+#         break
+#     elif x>guess:
+#         print("You guessed too small")
+#     elif x<guess:
+#         print("You guessed too high")
+
+# if count>=8:
+#     print("Game Over !")
+
+
+# OOPS - Object Oriented Programming
+
+# class myclass:
+#     no_of_students = 9
+#     standard = 6
+#     board_colours = "black and white"
+
+# p1 = myclass()
+# print(p1.no_of_students)
+# print(p1.standard)
+# print(p1.board_colours)
+
+
+# __init__() - constructor
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+        
+# p1 = Person("Ayra", 20)
+# p2 = Person("Humza", 18)
+# print(p1.name)
+# print(p1.age)
+
+# print(p2.name)
+# print(p2.age)
+
+
+# if 
+
+# if else
+
+# if elif else
+
+# syntax og if elif else
+
+# if condition:
+#     statement
+# elif condition:
+#     statement
+# elif condition:
+#     statement
+# elif condition:
+#     statement
+# else:
+#     statement
+
+
+# choice = int(input('''
+                   
+#                    1. Addition
+#                      2. Subtraction
+#                         3. Multiplication
+#                             4. Division
+#                             5. Exit
+                            
+#                             Enter your choice : '''))
+# a = int(input("Enter first number : "))
+# b = int(input("Enter second number : "))
+
+# if choice == 1:
+#     print(a)
+# elif choice == 2:
+#     print(a-b)
+# elif choice == 3:
+#     print(a*b)
+# elif choice == 4:
+#     print(a//b)
+# else:
+#     print("Invalid Choice")
+
+
+
+# rotate an array
+
+# no. of rotations = 3
+
+# input :
+# 1 2 3 4 5
+# no. of rotations = 3
+
+# output:
+# 3 4 5 1 2
+
+
+# array = [1,2,3,4,5]
+# no_of_rotations = 3
+
+# n = len(array) //5
+# no_of_rotations = no_of_rotations % n
+# rotate_array = array[-no_of_rotations:]+array[:-no_of_rotations]
+
+# print(rotate_array)
+
+
+# print(3%5)
+
+
+# 12321 = 12321
+
+# palindrome
+
+# num = int(input("enter a number: "))   #num = 12321
+# sum = 0
+# temp = num
+# while num!=0:
+#     rem = num%10
+#     sum = sum*10 + rem
+#     num = num//10
+# if temp == sum:
+#     print("Palindrome")
+# else:
+#     print("Not a palindrome")
+
+
+# fibonacci series
+
+# 0 1 1 2 3 5 8 13 21 34 55 89 144 233 377
+
+# num = int(input("enter a number: "))   #num = 10
+# a = 0
+# b = 1
+# print(a)
+# print(b)
+# for i in range(2,num):
+#     c = a+b
+#     print(c)
+    
+#     a = b
+#     b = c
+
+# num = int(input("enter first number: "))
+# num1 = int(input("enter second number: "))
+# num2 = int(input("enter third number: "))
+
+# if(a>b and a>c):
+#     print("a is the largest number")
+# elif(b>a and b>c):
+#     print("b is the largest number")
+# else:
+#     print("c is the largest number")
+
+
+# remove duplicates from a list
+
+# list1 = [1, 2, 3, 4, 2, 3, 5]
+# list2 = [1,2,3,4]
+
+# for i in list1:
+#     if i not in list2:
+#         list2.append(i)
+# print(list2)
+
+
+# [4,9,8,7,5,6]
+
+# grading system
+
+# student_score = int(input("enter the score of the student: "))
+# if student_score>=95:
+#     print("A+")
+# elif student_score>=90:
+#     print("A")
+# elif student_score>=80:
+#     print("B")
+# elif student_score>=70:
+#     print("C")
+# elif student_score>=60:
+#     print("D")
+# else:
+#     print("F")
+
+
+# def prime(n):
+#     for i in range(2,n):
+#         if n%i==0:
+#             return False
+#     return True
+
+# start = int(input("enter the start number: "))
+# end = int(input("enter the end number: "))
+
+# sum = 0
+
+# for i in range(start,end+1):
+#     if prime(i):
+#         sum = sum+i
+        
+# print("Sum of prime numbers:",sum)
+        
+    
+
+
+# tkinter -> it is a standard python interface to the Tk GUI toolkit. 
+# It allows developers to create graphical user interfaces
+
+# import tkinter as tk
+
+# root = tk.Tk()
+
+# b1 = tk.Button(root,text="click me",fg="blue")
+# b1.pack()
+
+# root.mainloop()
+
+
+
+
+# len(name_of)
+
+
+# from tkinter import *
+
+# expression =""
+
+
+# def press(num):
+#     global expression
+    
+#     expression = expression + str(num)
+#     equation.set(expression)
+    
+# def equalpress():
+#     try:
+#         global expression
+#         total = str(eval(expression))
+#         equation.set(total)
+#         expression = ""
+#     except:
+#         equation.set("error")
+#         expression = ""
+
+        
+# def clear():
+#     global expression
+#     expression=""
+#     equation.set("")
+    
+# if __name__ =="__main__":
+#     gui = Tk()
+    
+#     gui.title("Simple Calculator")
+#     gui.geometry("270x150")
+#     equation = StringVar()
+    
+#     # 6+4
+#     expression_field = Entry(gui,textvariable = equation)
+    
+#     expression_field.grid(columnspan = 4,ipadx = 70)
+    
+#     b1 = Button(gui,text='1',fg = 'white',bg='green',command= lambda: press(1),height=1,width=7)
+#     b1.grid(row=2,column=0)
+#     b2 = Button(gui,text='2',fg = 'white',bg='green',command= lambda: press(2),height=1,width=7)
+#     b2.grid(row=2,column=1)
+#     b3 = Button(gui,text='3',fg = 'white',bg='green',command= lambda: press(3),height=1,width=7)
+#     b3.grid(row=2,column=2)
+#     b4 = Button(gui,text='4',fg = 'white',bg='green',command= lambda: press(4),height=1,width=7)
+#     b4.grid(row=3,column=0)
+#     b5 = Button(gui,text='5',fg = 'white',bg='green',command= lambda: press(5),height=1,width=7)
+#     b5.grid(row=3,column=1)
+#     b6 = Button(gui,text='6',fg = 'white',bg='green',command= lambda: press(6),height=1,width=7)
+#     b6.grid(row=3,column=2)
+#     b7 = Button(gui,text='7',fg = 'white',bg='green',command= lambda: press(7),height=1,width=7)
+#     b7.grid(row=4,column=0)
+#     b8 = Button(gui,text='8',fg = 'white',bg='green',command= lambda: press(8),height=1,width=7)
+#     b8.grid(row=4,column=1)
+#     b9 = Button(gui,text='9',fg = 'white',bg='green',command= lambda: press(9),height=1,width=7)
+#     b9.grid(row=4,column=2)
+#     b0 = Button(gui,text='0',fg = 'white',bg='green',command= lambda: press(0),height=1,width=7)
+#     b0.grid(row=5,column=0)
+    
+#     plus = Button(gui,text='+',fg = 'white',bg='green',command= lambda: press('+'),height=1,width=7)
+#     plus.grid(row=2,column=3)
+    
+#     minus = Button(gui,text='-',fg = 'white',bg='green',command= lambda: press('-'),height=1,width=7)
+#     minus.grid(row=3,column=3)
+    
+#     multiply = Button(gui,text='*',fg = 'white',bg='green',command= lambda: press('*'),height=1,width=7)
+#     multiply.grid(row=4,column=3)
+    
+#     divide = Button(gui,text='/',fg = 'white',bg='green',command= lambda: press('/'),height=1,width=7)
+#     divide.grid(row=5,column=3)
+    
+#     equal = Button(gui,text='=',fg = 'white',bg='green',command=equalpress,height=1,width=7)
+#     equal.grid(row=5,column=2)
+    
+#     clear = Button(gui,text='C',fg = 'white',bg='green',command= clear,height=1,width=7)
+#     clear.grid(row=5,column=1)
+    
+#     decimal = Button(gui,text='.',fg = 'white',bg='green',command= lambda: press('.'),height=1,width=7)
+#     decimal.grid(row=6,column=0)
+    
+    
+    
+    
+#     gui.mainloop()
+    
+    
+    
+# lambda : it is a keyword in python which is used to make an anonymous function
+
+# x = lambda a:a+10
+
+# x(5)
+
+
+
+# import tkinter as tk 
+
+# def ctof():
+#     try:
+#         celsius = float(e1.get())
+#         fahrenheit = (celsius*9/5)+32
+#         result.config(text=f"Answer : {fahrenheit} °F")
+#     except ValueError:
+#         result.config(text="Enter a valid number")
+    
+# def ftoc():
+#     try:
+#         fahrenheit = float(e1.get())
+#         celsius = (fahrenheit-32)*5/9
+#         result.config(text=f"Answer : {celsius} °C")
+#     except ValueError:
+#         result.config(text="Enter a valid number")
+        
+
+
+# root = tk.Tk()
+# root.title("Temperature Convertor")
+
+# l1 = tk.Label(root,text="Temperature Conversion App")
+# l1.grid(row=0,columnspan = 3,padx=20,pady =20)
+
+# #input field
+# e1 = tk.Entry(root,width = 20)
+# e1.grid(row=1,column =0,padx=20,pady=20)
+
+# b1 = tk.Button(root,text = "Convert to Fahrenheit",fg = "white",bg="green",command=ctof)
+# b1.grid(row=1,column=1,padx=20,pady=20)
+
+# b2 = tk.Button(root,text="Convert to Celsius",fg="white",bg="green",command=ftoc)
+# b2.grid(row=1,column =2,padx=20,pady=20)
+
+
+# result_frame = tk.Frame(root, bd=4, relief=tk.GROOVE)
+# result_frame.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
+
+# # display our result
+# result = tk.Label(result_frame,text="",borderwidth=20,font=("Comic Sans MS", 20,"bold"))
+# result.grid(padx=20,pady=20)
+
+
+
+
+
+
+# root.mainloop()

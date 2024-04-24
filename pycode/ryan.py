@@ -342,7 +342,191 @@
 # '''
 
 # index - it is a position of a character in a string.
+                    # -1
+# name = "Ryan Joseph"
+        #   012345678910
+
+# print(name[5:])
+
+
+
+# name = "Ryan Joseph"
+# print(len(name))
 
 # name = "Ryan Joseph"
 
-# print(name[5:])
+# 123  321
+
+# num = input("Enter a number: ")
+# print(num[::-1])
+
+# num = int(input("Enter a number : "))
+# cnt = 1
+# sub = (num+1)//2
+# for i in range(2,sub+1):
+#         if num%i == 0:
+#                 cnt+=1
+
+# if cnt == 1:
+#         print("Prime")
+# else:
+#         print("Not Prime")
+        
+# Brute Force
+# Optimal Approach
+
+
+# 123%10 = 3
+
+
+# Sum of digits of a number: -
+
+# 123 = 1+2+3 = 6
+
+# num = int(input("Enter a number: "))
+
+
+# pseudo code:-
+
+# 1. take input from user and store in num
+# 2. initialize sum = 0
+# 3. while num>0:
+# 4.     rem = num%10
+# 5.     sum = sum + rem
+# 6.     num = num//10
+# 7. print(sum)
+
+# num = int(input("Enter a number: "))   #12
+# sum = 0
+# while num!=0:
+#         rem = num%10    #rem =1
+#         sum = sum+rem   #sum=5+1 =6
+#         num = num//10   #num =1
+# print(sum)              #6
+
+# 121   121  --> palindrome
+# 123   321  --> not palindrome
+
+# 153 = 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153  --> armstrong number
+
+
+
+# num = 123
+
+# type casting
+# num  = 123
+# num1 = str(num)
+# num1 = num1[::-1]
+# num = int(num1)
+# print(num)
+
+# list 
+# tuple
+# set
+# dictionary
+
+# list : - it is a collection of elements enclosed within square brackets and separated by commas.
+
+# list1 =["Apples",1,10.5,True,8,10.5]
+# print(list1[0:3])
+
+# ordered
+# indexed
+# mutable
+# duplicate values
+# uodation
+# deletion
+
+# len()
+# print(len(list1))
+
+# list1 = ["ryan","joseph"]
+# list2 =[1,2,3,4,5,6,7,8,9,10]
+# list3 = [True,False,True,False,True,False,True,False,True,False]
+# list4 = [10.5,20.5,30.5,40.5,50.5,60.5,70.5,80.5,90.5,100.5]
+
+# type()
+# print(list1[2:])
+
+# slicing :
+
+# WAP to interchange the first and last element of a list.
+
+# test = ["Apples",1,10.5,True,8,10.5]
+
+# test[0],test[5] = test[5],test[0]
+
+# print(test)
+
+# geeksforgeeks
+# gfg
+
+
+# input:
+# a = 5
+# b = 9
+
+
+# output: 
+# a = 9
+# b = 5
+
+# a = 5
+# b = 9
+
+# a,b = b,a
+
+# a = a+b
+# b = a-b
+# a = a-b
+
+
+# if 5>2:
+
+# test = ["Apples",1,10.5,True,8,10.5]
+# if "Apples" not in test:
+#     print("NO")
+# else:   
+#         print("YES")
+
+        
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# if "cherry" in fruits:
+#         print("Yes, 'cherry' is in the fruits list")
+
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+# fruits[0:3] = "Guava"
+# print(fruits)
+
+# insert() - it is a  built- in function that is used to insert an element at a particular index in a list.
+# append() - it is a built-in function that is used to add an element at the end of the list.
+# extend() - it is a built-in function that is used to add multiple elements at the end of the list.
+# remove() - it is a built-in function that is used to remove an element from the list.
+
+# fruits.insert(1,"Guava")
+# fruits.append("Guava")
+# print(fruits)
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# for i in fruits:
+#         print(i)
+
+
+# lastname = ["Singh","Kumar","Sharma","Gupta","Joseph"]
+# firstname = ["Garv","Ryan","Rahul","Rohan","Raj"]
+
+# firstname.extend(lastname)
+
+# print(firstname)
+
+
+# static 
+# dynamic
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# fruits.pop()
+# print(fruits)
+
+# python sort list

@@ -134,12 +134,475 @@
 
 
 
-def add():
-    print("Hello, How are you?")
-    print("Hello, How are you?") 
+# def add():
+#     print("Hello, How are you?")
+#     print("Hello, How are you?") 
+
+
+# # main function
+# add()
+
+
+# a+b
+
+# operators and operands
+
+# print("Anvi")
+
+
+# Type casting :-
+
+
+# a = 10.5
+# print(type(a))
+
+# Data types: - 
+
+# 1. int   # 1,2,3,4,5,6,7,8,9,10
+# 2. float  # 1.2, 2.3, 3.4, 4.5
+# 3. str      # "Anvi", "Shiven", "Rahul"
+# 4. bool     # True, False
+# 5. list
+# 6. tuple
+# 7. dict
+# 8. set
+
+
+# isGreet = True
+# if isGreet == False:
+#     print("Hello, How are you?")
+# else:
+#     print("Bye, Take care")
+    
+
+
+# a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(a[3:7])
+
+# a = 9
+# b = 3
+# print(a%b)
+
+# // # floor division
+# % # modulus
+
+
+
+# type casting : - 
+
+# a = 10
+# b = str(a)
+
+# print(b)
+# print(type(b))
+
+
+# print(type(a))
+
+# num = 321 # 123
+# print(num%10)
+
+# for i in range(1,11,2):
+#     print(i)
+
+# operators and operands
+
+# a = int(input("Enter a number: "))  2
+# b = int(input("Enter a number: "))   3
+
+# if a+b > 10:
+#     print("TO high")
+# else:
+#     print("Too low")
+
+# Pseudo code:- 
+
+# 1. two variables a and b
+# 2. take input from user and store in a and so in b
+# 3. check if a+b is greater than 10
+# 4. if yes, print "Too high"
+# 5. else, print "Too low"
+
+# truth table of AND operator: -
+
+# a   b   not(a or b)
+# 0   0     1
+# 0   1     0
+# 1   0     0
+# 1   1     0
+
+
+
+# a = 10
+# print(type(a))
+
+# int 
+# float
+# string
+# boolean
+
+# list 
+# tuples
+# dictionary
+# set
+
+# list1 =["Apples",1,10.5,True]
+# list1.insert(1,"Mangoes")
+# print(list1)
+
+
+# for i in range(1,11,2):
+#     print(i,end=" ")
+
+# age = int(input("Enter your age: "))
+# if age>=18:
+#     print("You are eligible for driving the car")
+# else:
+#     print("You are not eligible for driving the car")
+
+
+# 189
+
+# print(189%10)
+
+
+
+# a = "141"
+# b = "Nidhi"
+# print(b*3)
+
+
+
+
+
+# a = 10
+# b = 5
+# print('''
+#       1. Addition
+#       2. Subtraction
+#       3. Multiplication
+#       4. Division
+#         ''')
+# num = int(input("Enter your choice: "))
+
+# if num ==1:
+#     print(a+b)
+# elif num ==2:
+#     print(a-b)
+# elif num ==3:
+#     print(a*b)
+# elif num ==4:
+#     print(a//b)
+# else:
+#     print("Invalid choice")
+
+
+
+
+
+# a = 9
+# b = 10
+
+# print(a/b)
+
+# % # modulus
+
+
+# 5%2 = 1
+
+
+
+# a  = True/False   #boolean   -> bool
+# a = 10.2      #float
+# a = "Anvi"    #string
+# a = 10        #int
+
+# a = False
+
+# print(type(a))
+
+
+# 1 2 3 4 5 6 7 8 9 10
+
+# loops: - for, while
+
+# for i in range(1,11):
+#     print(i,end=" ")
+
+
+
+
+
+
+# firstname = True/1
+# surname = False/0
+
+# print(firstname+surname)
+
+
+
+
+# Boolean Table  of Or operator: -
+
+# a   b   a or b
+
+# 0   0     0
+# 0   1     1
+# 1   0     1
+# 1   1     1
+
+
+
+
+
 
 
 # main function
-add()
 
+
+# print(5%2)
+
+# a = 1204889
+# if a%2==0:
+#     print("Even")
+# else:
+#     print("Odd")
+    
+
+
+
+
+# Python-
+
+# print("Hello Devan, How are you?")
+
+# java-
+
+# class Devan{
+#     public static void main(String args[]){
+#         System.out.println("Hello Devan, How are you?");
+#     }
+# }
+
+# a = 10
+# b = >10
+# print(a<b)
+
+
+
+# 1 2 3 4 5 6 7 8 9 10
+
+# for i in range(1,11,2):
+#     print(i,end =" ")
+
+
+# if else statement - /
+
+# age = int(input("Enter your age: "))
+# if age>=18:
+#     print("You are eligible for driving the car")
+# else:
+#     print("You are not eligible for driving the car")
+
+
+
+# a = 10
+# b = 7
+
+# # string formatting
+# print("The multiplication of two numbers are : ",a*b)
+
+
+# print(10+5)
+
+
+
+
+# print("Hello, how r u ?", end=" ")
+# print("Welcome to the world of python")
+
+
+
+
+# variables:
+    
+# a = "Abdullah"
+
+# integers  -infinity to +infinity
+# String   - "Abdullah"
+
+
+# a = 9
+
+# print(a)
+
+# a+b
+
+
+# operators: - +
+# operands: -a,b
+
+
+# a = 9
+# b = 10
+
+# print(a+b)
+
+
+
+
+
+# fname = "Aamir"
+# lname = "Rana"
+# print(fname,lname)
+
+
+# int
+# long
+# float
+# double
+
+# print(15+19)
+
+
+# any number - int
+# any number with decimal - float
+# any word or sentence - string
+
+
+# name = "Eshaal"
+
+# print(name)
+
+# import matplotlib.pyplot as plt
+
+# # Sample data
+# x = [1, 2, 3, 4, 5]
+# y = [2, 4, 6, 8, 10]
+
+# # Create a line plot
+# plt.plot(x, y, label='Sample Line')
+
+# # Add labels and title
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+# plt.title('Simple Line Plot')
+
+# # Add a legend
+# plt.legend()
+
+# # Display the plot
+# plt.show()
+
+
+
+
+
+# num = "7"
+# num1 = 16.4
+
+# # we are checking the type of num variable
+# print(type(num))
+# print(type(num1))
+
+# type() -> int, float, str, bool
+
+
+# python data types:-
+# Integer -> any values in numbers without decimals 
+# Float -> 1.2,10.5, 11.6
+# String -> "Anvi", "Shiven", "Rahul"
+
+
+
+
+
+
+
+# print("Welcome to the class of Python, Ahana Iyer!!!")
+
+
+# print(156*8795)
+
+# a = 10
+# b = 20
+# print(a+b)
+
+
+# a = 10
+# print(type(a))
+
+# type() - > int, float, str, bool
+
+
+# data types :- 
+
+# 1. int -> (-ve numbers to +ve numbers)
+# 2. float -> decimal numbers(10.5, 11.6)
+# 3. string -> "Anvi", "Shiven", "Rahul"
+# 4. boolean -> True, False 0,1
+
+
+# //
+# /
+
+
+
+# 25/3 = 8.333333333333333
+
+# 25//3 = 8
+
+
+# 1 2 3 4 5 6 7 8 9 10
+
+# for x in range(10):
+#     print(x)
+
+# syntax:
+    
+# for variable in range(start,stop,step):
+#     statements
+
+# for x in range(1,11):
+#     print(x,end = " ")
+
+
+# a = 10
+# print(type(a))
+
+
+# arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+# arr = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+
+# dictionalry 
+
+
+# tuples i can't change the values -> type casting
+
+# type casting -> changing the data type of a variable
+
+# 1) implicit type casting
+# 2) explicit type casting
+
+# order -> int -> float -> string -> boolean
+
+
+
+# a = 10.5
+# b = int(a)
+# print(b)
+
+# input 
+
+# a = 10
+# b = 20
+
+# output
+
+# a = 20
+# b = 10
 

@@ -139,6 +139,30 @@
 
 
 
+#include<stdio.h>
+int main(){
+    int arr[] = {20,40,80,60};
+    for(int i =0;i<=3;i++){
+        printf("%d\n", arr[i]);
+    }
+
+
+
+    return 0;
+}
+
+// arrays: 
+
+// arr[2];
+            //  0  1  2  3
+// indexing:
+
+
+1. Write a program to add the numbers in an array.
+2. Write a program to find the index of a particular number.
+
+
+
 
 
 

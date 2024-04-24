@@ -120,6 +120,66 @@ print(type(d))"""
 # print(num)
 
 
+# random module -> it is used to generate the random numbers
+# pip install name_of_the_module
+
+# import random
+
+# lower = int(input("Enter the lower bound: "))
+# upper = int(input("Enter the upper bound: "))
+
+# x = random.randint(lower,upper);
+
+# print("You have only 5 chances to guess the number.")
+
+# count = 0
+
+# while count<5:
+#     count+=1
+    
+#     guess = int(input("Enter your guess: "))
+    
+#     if x == guess:
+#         print("Congratulations! You guessed the number in ",count," chances.")
+#         break
+#     elif x>guess:
+#         print("Your guess is too low.")
+#     else:
+#         print("Your guess is too high.")
+# if count>=5:
+#     print("You lost the game.")
+
+# yummy
+# hellen('a','r','c')
+
+# string 
+
+# name = "siridemandiamamaidnamediris"
+#         0123456789
+ 
+# indexes :
+
+# positive indexing  0 to last
+# negative indexing  -1 to last
+# slicing
+
+# print(name[5:])
+# print(name[::-1])
+
+# if name == name[::-1]:
+#     print("Palindrome")
+# else:
+#     print("Not a palindrome")
+
+
+
+
+
+
+
+
+        
+
 
 
 

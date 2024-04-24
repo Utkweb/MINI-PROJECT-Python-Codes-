@@ -5,11 +5,6 @@ class Money:
 
 
 # getter setter
-
-
-
-
-
     def get_dollars(self):
         return self.dollars   
     # result=0
