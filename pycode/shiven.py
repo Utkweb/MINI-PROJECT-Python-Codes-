@@ -738,42 +738,95 @@
 # scissor rock = rock wins
 # scissor paper = scissor wins
 
-import random
+# import random
 
 
-def get_user():
-    user = str(input("Enter your choice (rock/paper/scissor) : ")).lower()
-    while user not in ['rock','paper','scissor']:
-        print("Invalid choice")
-        user = str(input("Enter your choice (rock/paper/scissor) : ")).lower()
-    return user
+# def get_user():
+#     user = str(input("Enter your choice (rock/paper/scissor) : ")).lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid choice")
+#         user = str(input("Enter your choice (rock/paper/scissor) : ")).lower()
+#     return user
 
-def get_bot():
-    return random.choice(['rock','paper','scissor'])
+# def get_bot():
+#     return random.choice(['rock','paper','scissor'])
 
-def win(user_choice,bot_choice,name):
-    if user_choice == bot_choice:
-        return "It's a tie"
-    elif    (user_choice == 'rock' and bot_choice == 'scissor') or \
-            (user_choice == 'paper' and bot_choice == 'rock')or \
-            (user_choice == 'scissor' and bot_choice=='paper'):
-            return f"{name} wins 👍"
-    else:
-        return "Bot wins"
+# def win(user_choice,bot_choice,name):
+#     if user_choice == bot_choice:
+#         return "It's a tie"
+#     elif    (user_choice == 'rock' and bot_choice == 'scissor') or \
+#             (user_choice == 'paper' and bot_choice == 'rock')or \
+#             (user_choice == 'scissor' and bot_choice=='paper'):
+#             return f"{name} wins 👍"
+#     else:
+#         return "Bot wins"
     
-def play():
-    print("Welcome to the game of rock paper scissor")
-    name = input("Enter your name : ")
-    while True:
-        user_choice = get_user()
-        bot_choice = get_bot()
-        print(f"User choice : {user_choice}")
-        print(f"Bot choice : {bot_choice}")
-        print(win(user_choice,bot_choice,name))
-        play_again = str(input("Do you want to play again (yes/no) : ")).lower()
-        if play_again!='yes':
-            print("Thanks for playing the game!!!")
-            break
+# def play():
+#     print("Welcome to the game of rock paper scissor")
+#     name = input("Enter your name : ")
+#     while True:
+#         user_choice = get_user()
+#         bot_choice = get_bot()
+#         print(f"User choice : {user_choice}")
+#         print(f"Bot choice : {bot_choice}")
+#         print(win(user_choice,bot_choice,name))
+#         play_again = str(input("Do you want to play again (yes/no) : ")).lower()
+#         if play_again!='yes':
+#             print("Thanks for playing the game!!!")
+#             break
     
 
-play()
+# play()
+
+
+# OOPS:
+
+# 1. Its abbreviated as Object Oriented Programming System.
+# 2. It is a programming paradigm that uses objects and classes in programming.
+
+# Objects : It is an instance of a class.
+
+# Class : It is a blueprint of an object.
+
+# create a class:-
+
+# class Student:
+#     name = "Shiven"
+#     age = 12
+
+# # create an object:-
+
+# s1 = Student()
+# print(s1.age,s1.name)
+
+
+# __init__() -> It is a special method in python which is used to initialize the object of a class.
+# self -> It is a reference variable that refers to the current object.
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+# p1 = Person("Shiven",18)
+# p2 = Person("Nitya",19)
+
+# print(p1.name,p1.age)
+# print(p2.name,p2.age)
+
+
+# __str__() -> It is a special method in python which is used to return the string representation of the object.
+
+
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def __str__(self):
+        return f"{self.name} is {self.age} years old"
+
+p1 = Person("Shiven",18)
+p2 = Person("Nitya",19)
+
+print(p1)
+print(p2)

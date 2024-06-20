@@ -687,40 +687,264 @@
 # paper and scissor - winner is scissor
 
 
-import random
+# import random
 
-def user_choice():
-    user = input("Enter your choice (rock,paper or scissor): ").lower()
-    while user not in ['rock','paper','scissor']:
-        print("Invalid Choice. Please enter a valid choice")
-        user = input("Enter your choice (rock,paper or scissor): ").lower()
-    return user
+# def user_choice():
+#     user = input("Enter your choice (rock,paper or scissor): ").lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid Choice. Please enter a valid choice")
+#         user = input("Enter your choice (rock,paper or scissor): ").lower()
+#     return user
 
-def computer_choice():
-    return random.choice(['rock','paper','scissor'])
+# def computer_choice():
+#     return random.choice(['rock','paper','scissor'])
 
-def win(user_choice,computer_choice):
-    if user_choice == computer_choice:
-        return "It's a tie"
-    elif(user_choice == 'rock' and computer_choice == 'scissor') or \
-        (user_choice == 'scissor' and computer_choice == 'paper') or \
-        (user_choice == 'paper' and computer_choice == 'rock'):
-            return "The user has won !!!!!"
-    else:
-        return "The bot has won !!!!!"
+# def win(user_choice,computer_choice):
+#     if user_choice == computer_choice:
+#         return "It's a tie"
+#     elif(user_choice == 'rock' and computer_choice == 'scissor') or \
+#         (user_choice == 'scissor' and computer_choice == 'paper') or \
+#         (user_choice == 'paper' and computer_choice == 'rock'):
+#             return "The user has won !!!!!"
+#     else:
+#         return "The bot has won !!!!!"
     
-def play_game():
-    print("Welcome to the Rock, Paper and Scissor Game !!!!!1")
-    while True:
-        user = user_choice()
-        computer = computer_choice()
-        print(f"User choice: {user}")
-        print(f"Computer choice: {computer}")
-        print(win(user,computer))
-        play_again = input("Do you want to play again? (yes/no): ").lower()
-        if play_again != 'yes':
-            print("Thanks for Playing !!!")
-            break
+# def play_game():
+#     print("Welcome to the Rock, Paper and Scissor Game !!!!!1")
+#     while True:
+#         user = user_choice()
+#         computer = computer_choice()
+#         print(f"User choice: {user}")
+#         print(f"Computer choice: {computer}")
+#         print(win(user,computer))
+#         play_again = input("Do you want to play again? (yes/no): ").lower()
+#         if play_again != 'yes':
+#             print("Thanks for Playing !!!")
+#             break
         
         
-play_game()
+# play_game()
+
+
+# import tkinter
+# import random
+
+# timeleft = 30
+# points = 0
+# colors = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
+# current_color_index = 0
+
+
+# def startGame(event=None):
+#     if timeleft == 30:
+#         countdown()
+#     nextcolor()
+
+# def nextcolor():
+#     global timeleft
+#     global points
+#     global current_color_index
+    
+#     if timeleft > 0:
+#         e.focus_set()
+#         if e.get().lower() == colors[current_color_index].lower():
+#             points = points+1
+#         e.delete(0,tkinter.END)
+#         random.shuffle(colors)
+#         current_color_index = random.randint(0,len(colors)-1)
+        
+#         label.config(fg=str(colors[current_color_index]),text=colors[random.randint(0,len(colors)-1)])
+#         score.config(text="Score :  "+str(points),font=('Georgia',15),fg='green')
+# def countdown():
+#     global timeleft
+#     if timeleft > 0:
+#         timeleft = timeleft - 1
+#         time.config(text="Time Left : "+str(timeleft),fg='red',font=('Georgia','15'))
+#         time.after(1000,countdown)
+
+# # create a gui window
+
+# root = tkinter.Tk()
+# root.title("The Colour Guessing Gameshow! 🎮")
+
+# root.geometry('400x375')
+
+# l1 = tkinter.Label(root,text='''Welcome to the one and only, Colour Guessing Gameshow! 
+#                    To win your prize, you must type in the colour of the word, and not the word itself. 
+#         Ready? Let's go!''',font=('Georgia',20))
+# l1.pack()
+
+# score = tkinter.Label(root,text="Press 'Enter' to start the game",font=('Georgia',15),fg='green')
+# score.pack()
+
+# time = tkinter.Label(root,text="Time Left : "+str(timeleft),fg='red',font=('Georgia','15'))
+# time.pack()
+
+
+# label = tkinter.Label(root,font=('Georgia',50))
+# label.pack()
+
+# e = tkinter.Entry(root)
+# e.pack()
+
+# e.bind('<Return>',startGame)
+
+# e.focus_set()
+
+
+# root.mainloop()
+
+# Python List : it used to store item in a single variable
+
+# List,Tuple,Set,Dictionary
+
+
+# to identify of list - []
+
+# list = [ 1, 2, 4 ,8 ,9 ,5 ,3 ,7, 6, 10]
+# print(list[-1])
+
+
+# cars = ['BMW','Mercedes','Toyota','Honda']
+# print(cars[1:3])
+
+
+# thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# print(thislist[4:])
+
+# thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+# print(thislist[-4:-1])
+
+
+# add a element in a list:
+    
+# 1. append() -> the fucntion helps you to add the element at the last of the list.
+# 2. insert() -> the function helps you to add the element at the desired location.
+
+# ice_cream = ['choclate','vanilla','strawberry','mintchoclatechip']
+# ice_cream.append('butterscotch')
+
+# print(ice_cream)
+
+# ice_cream = ['choclate','vanilla','strawberry','mintchoclatechip']
+# ice_cream.insert(2,'butterscotch')
+
+# print(ice_cream)
+
+
+# thislist = ["apple", "banana", "cherry"]
+# thislist.insert(1, "orange")
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# thislist.append("orange")
+# print(thislist)
+
+# ice_cream = ['choclate','vanilla','strawberry','mintchoclatechip']
+# for x in ice_cream:
+#     print(x)
+
+# ice_cream = ['choclate','vanilla','strawberry','mintchoclatechip','orange']
+# print(len(ice_cream))
+
+
+# sum = 0
+# number = [11,22,33,44,55]
+# for x in number:
+#     sum = sum+x
+
+# print(f"The sum of elements in the list are : {sum}")
+
+
+# number = [11,22,33,44,55]
+
+# result = min(number)
+
+# print(f"The minimum element in a list is : {result}")
+
+
+# we = [78,89,150,47,85,56,77]
+
+# result = max(we)
+
+# print(f"The largest cry in this list is {result}")
+
+# print("You: Coding, can you give me the amount of elements?")
+# print("Coding: Sure. It's 5.")
+
+
+
+
+
+# tuple : - It stores multiple items in a single variable 
+
+# A tuple is immmutable
+# A tuple is a collection which is orderable and unchangeable 
+# Tuple are written within the round brackets. ()
+
+
+# tuple1 = (1,4,8,9,6)
+# print(tuple1[2])
+
+
+# type casting - it changes the data type of one variable to another
+
+# cars = ("BMW","Mercedes","Honda")
+# y = list(cars)
+# y[1] = "Nissan"
+
+# cars = tuple(y)
+
+# print(cars)
+
+# cars = ("BMW","Mercedes","Honda")
+# for i in cars:
+#     print(i)
+
+
+# access elements using the range
+
+# cars = ("BMW","Mercedes","Honda")
+
+# for i in range(len(cars)):
+#     print(cars[i])
+
+# join the tuples:
+
+# tuple1 = ('a','b','c')
+
+
+# print(tuple1*4)
+
+
+# arr = (2,4,2,12,5,8,9,1,1,4,2,9)
+# print(arr.count(2))
+# print(arr.index(12))
+
+# Write a Python program to check if the element 5 exists in the tuple my_tuple = (1, 2, 3, 4, 5, 6).
+
+# my_tuple = (1, 2, 3, 4, 5, 6)
+
+# if 5 in my_tuple:
+#     print("Element 5 exists in the tuple")
+
+# my_tuple = (1, 2, 3, 4, 5, 6)
+
+# for i in my_tuple:
+#     if i == 5:
+#         print("Element 5 exists")
+#         break
+#     else:
+#         print("No it doesn't exists ")
+
+# Given the tuple my_tuple = (1, 2, 3, 2, 1, 2), write a Python program to count the number of times
+# the element 2 appears in the tuple.
+
+# my_tuple = (1, 2, 3, 2, 1, 2,9,3,5,7,9)
+# print(my_tuple.count(9))
+
+
+# Given the tuple my_tuple = (10, 20, 30, 40, 50), write a Python program to find the index of the element 30.
+
+# my_tuple = (10, 20, 30, 40, 50)
+# print(my_tuple.index(30))

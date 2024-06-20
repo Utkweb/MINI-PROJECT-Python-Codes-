@@ -271,7 +271,41 @@
 
 # myList = ["banana","cherry","banana","cherry"]
 
-# if "apple" in myList:
+# if "apple" not in myList:
 #     print("Yes it's present")
 # else:
 #     print("No it's not present")
+
+# .lower() -> it converts the string into lowercase    ANVI.lower() = anvi
+
+
+
+
+# name = "Anvi"
+# print(name)
+
+# name = "Anvi"
+# print(name[::-1])
+
+
+# .append()-> It adds up the elements/item at the last of the list.
+# .insert()-> It adds up the elements/item at the required position of user.
+
+# l2 = ["Audi","Mercedes","Toyota","Honda"]
+# l2.insert(2,"BMW")
+
+
+# print(l2)
+
+
+# thislist = ["apple", "banana", "cherry"]
+# thislist.append("orange")
+# print(thislist)
+
+# thislist = ["apple", "banana", "cherry"]
+# for x in thislist:
+#     print(x)
+
+thislist = ["apple", "banana", "cherry"]
+for i in range(len(thislist)):
+    print(thislist[i])

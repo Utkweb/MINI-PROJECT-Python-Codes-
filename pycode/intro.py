@@ -95,3 +95,44 @@
 #     return -1
 
 
+
+# print("Welcome to the class of Python Programming Language Will how you feel?")
+
+
+# a = 10
+# b = 20
+# print(a+b)
+
+# a=3
+# b=2
+# print(a%b)
+
+
+
+# a+b
+
+# operands and operators
+
+
+# 1. Addition +
+# 2. Subtraction -
+# 3. Multiplication *
+# 4. Division /
+# 5. Modulus %
+# 6. Exponentiation **
+# 7. Floor Division //
+
+# base = 4
+# power = 3
+
+# print(base**power)
+
+
+
+
+# a = 10
+# b = 20
+
+# print(a+b)
+
+

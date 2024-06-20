@@ -328,48 +328,143 @@
 # PAPER SCISSORS = SCISSORS WINS
 
 
-import random
+# import random
 
-def user_choice():
-    user = input("Enter your choice (rock/paper/scissor):").lower()
-    while user not in ['rock','paper','scissor']:
-        print("Invalid Choice. Please enter a valid choice ( rock, paper, scissor)")
-        user = input("Enter your choice (rock/paper/scissor):").lower()
-    return user
+# def user_choice():
+#     user = input("Enter your choice (rock/paper/scissor):").lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid Choice. Please enter a valid choice ( rock, paper, scissor)")
+#         user = input("Enter your choice (rock/paper/scissor):").lower()
+#     return user
 
-def bot_choice():
-    return random.choice(['rock','paper','scissor'])
+# def bot_choice():
+#     return random.choice(['rock','paper','scissor'])
 
-def win(user_choice ,bot_choice):
-    if user_choice == bot_choice:
-        return "TIE"
-    elif (user_choice == 'rock' and bot_choice == 'scissor') or \
-        (user_choice == 'scissor' and bot_choice == 'paper') or \
-        (user_choice == 'paper' and bot_choice == 'rock'):
-            return "User Wins"
-    else:
-        return "Bot Wins"
+# def win(user_choice ,bot_choice):
+#     if user_choice == bot_choice:
+#         return "TIE"
+#     elif (user_choice == 'rock' and bot_choice == 'scissor') or \
+#         (user_choice == 'scissor' and bot_choice == 'paper') or \
+#         (user_choice == 'paper' and bot_choice == 'rock'):
+#             return "User Wins"
+#     else:
+#         return "Bot Wins"
 
-def play_game():
-    print("Welcome to the Rock Paper Scissor Game")
-    while True:
-        user = user_choice()
-        bot = bot_choice()
+# def play_game():
+#     print("Welcome to the Rock Paper Scissor Game")
+#     while True:
+#         user = user_choice()
+#         bot = bot_choice()
         
-        print(f"User choice: {user}")
-        print(f"Bot choice: {bot}")
-        print(win(user,bot))
-        play = input("Do you want to play again? (yes/no):").lower()
-        if play!="yes":
-            print("Thanks for playing the game")
-            break
+#         print(f"User choice: {user}")
+#         print(f"Bot choice: {bot}")
+#         print(win(user,bot))
+#         play = input("Do you want to play again? (yes/no):").lower()
+#         if play!="yes":
+#             print("Thanks for playing the game")
+#             break
         
-play_game()
+# play_game()
 
 
 
 
-if user == bot:
-    print("The User wins")
-else:
-    print("You lose!!!")
+# if user == bot:
+#     print("The User wins")
+# else:
+#     print("You lose!!!")
+
+
+# tkinter - A module that helps you to make the desktop applications
+
+# import tkinter
+
+
+# root = tkinter.Tk()
+
+# l1 = tkinter.Label(root,text="Arnav Jetly",fg="red")
+# l1.grid(row=0,column=0)
+
+
+# root.mainloop()
+
+
+# import time
+# import random
+# fishing = True
+# a = b = c = d = e = 0 #define multiple variables as same thing
+# print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+# print ("Welcome to Lake Tocowaga")
+# print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+# time.sleep(1)
+# name = input("What is your name fisherman?")
+# answer = input("Would you like to go fishing, " + name + "?")
+# if answer.lower() == "no":
+#     fishing == False
+# while fishing == True:    
+#     time.sleep(1)
+#     answer = input("Throw out your line, or go home?")
+#     if answer == "go home":
+#         fishing = False
+#         er = float(e / (a + b + c + d))
+#         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+#         print("Thanks for playing " + name + "!")
+#         print("You caught:", str(a), "cod, ", str(b), "salmon, ", str(c), "shark, ", str(d), "wildfish. \nEfficiency Rate: ", str(er), ".")
+#     else:
+#         t = random.randrange(1, 7)
+#         if t == 1:
+#             a += 1
+#             print("You caught a cod!")
+#         elif t == 2:
+#             b += 1
+#             print("You caught a salmon!")
+#         elif t == 3:
+#             c += 1
+#             print("You caught a shark!")
+#         elif t == 4:
+#             d += 1
+#             print("You caught a wildfish!")
+#         elif t >= 5:
+#             e += 1
+#             print("You caught nothing!")
+
+
+
+
+
+# import tkinter
+
+# # create a gui window
+# root = tkinter.Tk()
+
+
+# root.title("the gaaaammmmeeee")
+
+# root.geometry("1000x1000")
+
+# label = tkinter.Label(root,text="Hey what's up?",font=('Courier',40))
+# label.pack()
+
+
+
+# root.mainloop()
+
+
+
+# list : it is used to store multiple items in a single variable.
+# list is one of the important data types in python.
+# It is identified [].
+#it is mutable
+
+# example of list:
+    
+# lst = ['apple','mango','grapes','banana','kiwi']
+# print(type(lst))
+
+# print(lst)
+
+
+# how we can find the lenght of the list?
+
+lst = ['apple','mango','grapes','banana','kiwi']
+print(len(lst))

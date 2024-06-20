@@ -517,7 +517,7 @@
 # strip -> removes the white spaces from the string
 
 
-# name = "   Utkarsh       "
+# name = "     Utkarsh       "
 # print(name.strip())
 
 # replace -> replaces the string with the new string
@@ -598,3 +598,264 @@
 
 # else:
 #     bot wins
+
+
+
+
+# import random
+
+
+# def user_choice():
+#     user = input("Enter your choice ['rock','paper','scissor']").lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid choice!!!!!!!")
+#         user = input("Enter your choice ['rock','paper','scissor']").lower()
+#     return user
+
+# def bot_choice():
+#     return random.choice(['rock','paper','scissor'])
+
+# def win(user_choice,bot_choice):
+#     if user_choice == bot_choice:
+#         return "TIE"
+#     elif (user_choice == 'rock' and bot_choice == 'scissor') or \
+#     (user_choice =='scissor' and bot_choice == 'paper' ) or \
+#         (user_choice == 'paper' and bot_choice=='rock'):
+#             return "User Wins"
+#     else:
+#         return "Bot Wins"
+    
+# print("Welcome to the Rock Paper Scissor Game")
+# score = 0
+# while True:
+#     user = user_choice()
+#     bot = bot_choice()
+    
+#     print("User choice is :",user)
+#     print("Bot choice is :",bot)
+    
+#     result = win(user,bot)
+    
+#     if result == 'User Wins':
+#         score = score+1
+    
+    
+#     print(score)
+        
+    
+    
+#     play = input("Do you wanna play again ? (yes/no)").lower()
+#     if play != 'yes':
+#         print("Thanks for playing the game!")
+#         break
+
+
+
+# arrays  : 
+    
+# 1. list
+# 2. tuple
+# 3. dictionary
+# 4. set
+
+
+# List : It is represented by [].
+
+# example : cars = ['BMW','Toyota','Mercedes','Honda']
+# List are mutable.
+# List can have multiple duplicate items
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# print(cars)
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# print(cars[2])
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# print(type(cars))
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# cars[3] = 'Audi'
+
+# print(cars)
+
+
+# Membership Operators
+
+# in - it tells you whether a particular items that you are searching for is present in a list or not.
+# not in - 
+
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+
+# if 'BMW' in cars:
+#     print('Yes')
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+
+# cars[1:3] = ['Maruti','Ferrari']
+
+# print(cars)
+
+# insert - it add
+# append - 
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# cars.insert(2,'Ferrari')
+
+# print(cars)
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+# # cars.remove('Mercedes')
+# cars.pop()
+# print(cars)
+
+    # cars = ['BMW','Toyota','Mercedes','Honda']
+    # cars.clear()
+
+    # print(cars)
+    
+
+# loop list:
+
+# cars = ['BMW','Toyota','Mercedes','Honda']
+
+# for x in cars:
+#     print(x)
+
+
+# sum = 0
+# lst = [10,9,3,2,1]
+# for x in lst:
+#     sum = sum+x
+    
+# print("The sum of all elements in a list", sum)
+
+# lst = [10,9,14,2,71]
+# min = lst[0]
+
+# for x in lst[1:]:
+#     if x<min:
+#         min = x
+
+# print(min)
+
+
+# max = lst[0]
+
+# for x in lst[1:]:
+#     if x<max:
+#         max = x
+
+# print(max)
+
+
+# lst = [10,9,14,2,71]
+# for x in lst:
+#     print(x)
+
+# for i in range(start,end,step):
+
+# lst = [10,9,14,2,71]
+
+# for i in range(len(lst)-1,-1,-1):
+#     print(lst[i],end=" ")
+    
+# sorting - 
+
+# 1. bubble sort : - 
+
+# arr = [64, 34, 25, 12, 22, 11, 90]
+
+# # j = 0 
+
+# # arr[j] = 64
+# # arr[j+1] = 34
+
+# n = len(arr)   #7
+
+# for i in range(n):
+#     for j in range(0,n-i-1):
+#         if arr[j] > arr[j+1]:
+#             arr[j],arr[j+1] = arr[j+1],arr[j]
+
+
+# print(arr)
+
+
+# arr = [2,4,2,12,5,8,9,1,1,4,2,9]
+
+# # # empty list
+# l1 = []
+
+# i = 0
+
+# while i < len(arr):
+#     if arr[i] in l1:
+#         arr.remove(arr[i])
+#     else:
+#         l1.append(arr[i])
+#         i = i+1
+# print(arr)
+
+
+# You need to understand the bubble sort and write it approximately 5 times.
+
+
+# l1 = ["aaryaki","utkarsh"]
+# l1[1]= "mukherjee"
+
+# print(l1)
+
+
+# tuples are immutable.
+# they are identified by ().
+# syntax:
+
+# t1 = ("apples","pineapple")
+# t1[1] = "Watermelon"
+
+# print(t1)
+
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+# print(thistuple[:4])
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+# print(thistuple[2:])
+
+# type casting : - It changes the datatype of a particular variables
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+# print(thistuple)
+
+# l1 = list(thistuple)
+# l1[-3] = "watermelon"
+
+# thistuple = tuple(l1)
+
+# print(thistuple)
+
+
+# t1 = (1,2,3)
+# t2 = ('a','b','c')
+
+# print(t1+t2)
+
+
+# loops with tuples:
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+# for i in thistuple:
+#     print(i)
+
+
+# t1 = ("aaryaki","mukherjee")
+# print(t1*5)
+
+
+# count() -> 
+# index() ->
+
+t1 = (1,2,3,4,2,4,5,8,9,0)
+print(t1.index(9))

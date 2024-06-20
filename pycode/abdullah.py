@@ -167,4 +167,194 @@
     
     
 # print("Factorial of",num,"is",fact)
+
+
+# syntax:
     
+    
+# while condition:
+#     statements
+
+# i = 10
+
+# while i>=1:
+#     print(i,end= " ")
+#     i= i -1
+    
+    
+# 10 1
+
+
+# Python Strings - Strings are sentences, name, etc.
+# and they are enclosed by inverted commas
+
+# name = "Abdullah"
+# print(name)
+
+
+# how we can take the input of string?
+
+# name = str(input("Enter the name of the person  : "))
+# print(name)
+
+
+# multi lines strings
+
+# sentence = '''1.
+# 2.
+# 3.
+# 4.
+
+# '''
+
+# sentence = "He is called 'Johnny"
+
+# print(sentence[-3])
+
+# slicing :- it divides the sentence or the string in two slides according to the user.
+
+# name = "Abdullah"
+
+# print(name[0:4])
+
+
+# b = "Hello, World!"
+# print(b[5:9])
+
+# Modifying String 
+
+# name = "ABDULLAH"
+# print(name.lower())
+
+
+# sentence = "   hello my name is Utkarsh Singh   "
+# print(sentence.strip())
+
+# replace a string
+
+# a = "Hello World!"
+# print(a.replace("H","J"))
+
+
+# Sure! Here are some easy coding questions related to string manipulation without directly using the predefined functions `lower`, `upper`, `replace`, and `strip`. You can solve these problems using basic string operations and loops.
+
+# ### 1. Convert a String to Lowercase
+# Write a function that converts all uppercase letters in a given string to lowercase without using the `lower()` function.
+
+# **Example:**
+# ```python
+# Input: "Hello World"
+# Output: "hello world"
+# ```
+
+# ### 2. Convert a String to Uppercase
+# Write a function that converts all lowercase letters in a given string to uppercase without using the `upper()` function.
+
+# **Example:**
+# ```python
+# Input: "Hello World"
+# Output: "HELLO WORLD"
+# ```
+
+# ### 3. Replace All Occurrences of a Substring
+# Write a function that replaces all occurrences of a given substring in a string with another substring without using the `replace()` function.
+
+# **Example:**
+# ```python
+# Input: ("Hello World", "World", "Universe")
+# Output: "Hello Universe"
+# ```
+
+# ### 4. Strip Leading and Trailing Whitespace
+# Write a function that removes leading and trailing whitespace from a string without using the `strip()` function.
+
+# **Example:**
+# ```python
+# Input: "   Hello World   "
+# Output: "Hello World"
+# ```
+
+# ### Sample Solutions
+
+# Here are some sample solutions for these problems:
+
+# #### 1. Convert a String to Lowercase
+# ```python
+# def to_lowercase(s):
+#     result = ''
+#     for char in s:
+#         if 'A' <= char <= 'Z':
+#             result += chr(ord(char) + 32)
+#         else:
+#             result += char
+#     return result
+
+# # Test
+# print(to_lowercase("Hello World"))  # Output: "hello world"
+# ```
+
+# #### 2. Convert a String to Uppercase
+# ```python
+# def to_uppercase(s):
+#     result = ''
+#     for char in s:
+#         if 'a' <= char <= 'z':
+#             result += chr(ord(char) - 32)
+#         else:
+#             result += char
+#     return result
+
+# # Test
+# print(to_uppercase("Hello World"))  # Output: "HELLO WORLD"
+# ```
+
+# #### 3. Replace All Occurrences of a Substring
+# ```python
+# def replace_substring(s, old, new):
+#     result = ''
+#     i = 0
+#     while i < len(s):
+#         if s[i:i+len(old)] == old:
+#             result += new
+#             i += len(old)
+#         else:
+#             result += s[i]
+#             i += 1
+#     return result
+
+# # Test
+# print(replace_substring("Hello World", "World", "Universe"))  # Output: "Hello Universe"
+# ```
+
+# #### 4. Strip Leading and Trailing Whitespace
+# ```python
+# def strip_whitespace(s):
+#     start = 0
+#     end = len(s) - 1
+    
+#     while start <= end and s[start] == ' ':
+#         start += 1
+#     while end >= start and s[end] == ' ':
+#         end -= 1
+        
+#     return s[start:end+1]
+
+# # Test
+# print(strip_whitespace("   Hello World   "))  # Output: "Hello World"
+# ```
+
+# Feel free to try these out and modify them as needed!
+
+
+
+# concatenation 
+
+# s1="hey"
+# s2="buddy"
+
+# print(s1+s2)
+
+# replication 
+
+s2="buddy"
+print(s2*4)

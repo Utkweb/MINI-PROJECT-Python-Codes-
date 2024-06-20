@@ -723,3 +723,66 @@
 
 
 # root.mainloop()
+
+
+import tkinter
+import random 
+
+timeleft = 30
+points = 0
+colors = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
+current_color_index = 0
+def startgame(event = None):
+    if timeleft == 30:
+        countdown()
+
+def nextColor():
+    global timeleft
+    global points
+    global current_color_index
+    if timeleft>0:
+        e.focus_set()
+        if e.get().lower() == colors[current_color_index].lower():
+            points = points + 1
+            feedback.config(text="Correct!",fg='green')
+        
+    
+def countdown():
+    global timeleft
+    if timeleft>0:
+        timeleft = timeleft-1
+        time.config(text= "Time left : "+str(timeleft))
+        time.after(1000,countdown)
+    else:
+        label.config(text="Time's Up!!!!!",font=('Georgia',40))
+        feedback.config(text="Final Score : "+str(points),font=('Georgia',20))
+    
+    
+
+# create a gui window
+root = tkinter.Tk()
+
+root.title("Color Game")
+root.geometry('375x200')
+
+l1 = tkinter.Label(root,text="Type the color of the words not the word text!",font=('Georgia',20))
+l1.pack()
+
+score = tkinter.Label(root,text="Press enter to start",font=('Georgia',20))
+score.pack()
+
+time = tkinter.Label(root,text="Time left : " +str(timeleft),font=('Arial',15),fg='red',bg='yellow')
+time.pack()
+
+label = tkinter.Label(root)
+label.pack()
+
+feedback = tkinter.Label(root,text="",fg= "black")
+feedback.pack()
+
+e = tkinter.Entry(root)
+e.pack()
+
+e.bind('<Return>',startgame)
+e.focus_set()
+root.mainloop()

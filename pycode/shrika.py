@@ -1575,78 +1575,532 @@ arr = ["Shrika","Aella","Utkweb"]
 
 # print(mycursor.rowcount, "record inserted")
 
-import tkinter
-import mysql.connector
+# import tkinter
+# import mysql.connector
 
-# Connect to the database
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password=""
-)
+# # Connect to the database
+# conn = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password=""
+# )
 
-cur = conn.cursor(buffered=True)
+# cur = conn.cursor(buffered=True)
 
-# Exceptional handling
-try:
-    cur.execute("use registration")
-except:
-    cur.execute("create database registration")
-    cur.execute("use registration")
+# # Exceptional handling
+# try:
+#     cur.execute("use registration")
+# except:
+#     cur.execute("create database registration")
+#     cur.execute("use registration")
 
-try:
-    cur.execute("describe users")
-except:
-    cur.execute("create table users(id int primary key auto_increment, firstname varchar(50), lastname varchar(50), age int(10), email varchar(50), phone varchar(50))")
+# try:
+#     cur.execute("describe users")
+# except:
+#     cur.execute("create table users(id int primary key auto_increment, firstname varchar(50), lastname varchar(50), age int(10), email varchar(50), phone varchar(50))")
 
-def Registration():
-    fname = e1.get()
-    lname = e2.get()
-    age = e3.get()
-    email = e4.get()
-    phone = e5.get()
+# def Registration():
+#     fname = e1.get()
+#     lname = e2.get()
+#     age = e3.get()
+#     email = e4.get()
+#     phone = e5.get()
 
-    query = "insert into users (firstname, lastname, age, email, phone) values (%s,%s,%s,%s,%s)"
-    values = (fname, lname, age, email, phone)
+#     query = "insert into users (firstname, lastname, age, email, phone) values (%s,%s,%s,%s,%s)"
+#     values = (fname, lname, age, email, phone)
 
-    try:
-        cur.execute(query, values)
-        conn.commit()  # Commit changes
-        print("Data inserted successfully")
-    except Exception as e:
-        print("Error:", e)
-        conn.rollback()
+#     try:
+#         cur.execute(query, values)
+#         conn.commit()  # Commit changes
+#         print("Data inserted successfully")
+#     except Exception as e:
+#         print("Error:", e)
+#         conn.rollback()
 
-win = tkinter.Tk()
-win.geometry("600x600")
-win.title("User Registration")
+# win = tkinter.Tk()
+# win.geometry("600x600")
+# win.title("User Registration")
 
-l1 = tkinter.Label(win, text="First Name")
-l1.grid(row=1, column=1)
-e1 = tkinter.Entry(win)
-e1.grid(row=1, column=2)
+# l1 = tkinter.Label(win, text="First Name")
+# l1.grid(row=1, column=1)
+# e1 = tkinter.Entry(win)
+# e1.grid(row=1, column=2)
 
-l2 = tkinter.Label(win, text="Last Name")
-l2.grid(row=2, column=1)
-e2 = tkinter.Entry(win)
-e2.grid(row=2, column=2)
+# l2 = tkinter.Label(win, text="Last Name")
+# l2.grid(row=2, column=1)
+# e2 = tkinter.Entry(win)
+# e2.grid(row=2, column=2)
 
-l3 = tkinter.Label(win, text="Age")
-l3.grid(row=3, column=1)
-e3 = tkinter.Entry(win)
-e3.grid(row=3, column=2)
+# l3 = tkinter.Label(win, text="Age")
+# l3.grid(row=3, column=1)
+# e3 = tkinter.Entry(win)
+# e3.grid(row=3, column=2)
 
-l4 = tkinter.Label(win, text="Email")
-l4.grid(row=4, column=1)
-e4 = tkinter.Entry(win)
-e4.grid(row=4, column=2)
+# l4 = tkinter.Label(win, text="Email")
+# l4.grid(row=4, column=1)
+# e4 = tkinter.Entry(win)
+# e4.grid(row=4, column=2)
 
-l5 = tkinter.Label(win, text="Phone number")
-l5.grid(row=5, column=1)
-e5 = tkinter.Entry(win)
-e5.grid(row=5, column=2)
+# l5 = tkinter.Label(win, text="Phone number")
+# l5.grid(row=5, column=1)
+# e5 = tkinter.Entry(win)
+# e5.grid(row=5, column=2)
 
-b1 = tkinter.Button(win, text="Submit", fg="blue", bg="red", command=Registration)
-b1.grid(row=6, column=1)
+# b1 = tkinter.Button(win, text="Submit", fg="blue", bg="red", command=Registration)
+# b1.grid(row=6, column=1)
 
-win.mainloop()
+# win.mainloop()
+
+
+
+# import tkinter
+# import random
+
+# colors = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
+# points = 0
+# timeleft = 30
+# current_color_index = 0
+
+# def startGame(event=None):
+#     if timeleft == 30:
+#         countdown()
+#     nextColor()
+
+# def nextColor():
+#     global points
+#     global timeleft
+#     global current_color_index
+    
+#     if timeleft > 0:
+#         e.focus_set()
+#         if e.get().lower() == colors[current_color_index].lower():
+#             points += 1
+#         e.delete(0, tkinter.END)
+#         random.shuffle(colors)
+#         current_color_index = random.randint(0, len(colors)-1)
+        
+#         label.config(fg=str(colors[current_color_index]), text=colors[random.randint(0, len(colors)-1)])
+#         score.config(text="Score : " + str(points))
+
+# def countdown():
+#     global timeleft
+    
+#     if timeleft > 0:
+#         timeleft -= 1
+#         time.config(text="Time left : " + str(timeleft))
+#         time.after(1000, countdown)
+
+# # create a gui window
+# root = tkinter.Tk()
+# root.title("Color Game")
+# root.geometry("375x200")
+
+# l1 = tkinter.Label(root, text="Type in the color of the words and not the word text")
+# l1.pack()
+
+# score = tkinter.Label(root, text="Press enter to start")
+# score.pack()
+
+# time = tkinter.Label(root, text="Time left : " + str(timeleft))
+# time.pack()
+
+# label = tkinter.Label(root)
+# label.pack()
+
+# e = tkinter.Entry(root)
+# e.pack()
+# e.bind('<Return>', startGame)
+
+# e.focus_set()
+# root.mainloop()
+
+
+# import mysql.connector
+# from mysql.connector import Error
+
+# def create_connection():
+#     try:
+#         conn = mysql.connector.connect(
+#             host="localhost",
+#             user="root",
+#             password=""
+#         )
+#         if conn.is_connected():
+#             print("Successfully connected to MySQL")
+#         return conn
+#     except Error as e:
+#         print(f"Error connecting to MySQL: {e}")
+#         return None
+
+# def create_database(cur):
+#     try:
+#         cur.execute("CREATE DATABASE IF NOT EXISTS bank_management")
+#         cur.execute("USE bank_management")
+#         print("Database created or exists already")
+#     except Error as e:
+#         print(f"Error creating database: {e}")
+
+# def create_tables(cur):
+#     try:
+#         cur.execute("""
+#             CREATE TABLE IF NOT EXISTS account (
+#                 name VARCHAR(255),
+#                 account_no VARCHAR(20) PRIMARY KEY,
+#                 DOB DATE,
+#                 address VARCHAR(255),
+#                 contact_no VARCHAR(15),
+#                 balance DECIMAL(10,2)
+#             )
+#         """)
+
+#         cur.execute("""
+#             CREATE TABLE IF NOT EXISTS amount (
+#                 account_no VARCHAR(20) PRIMARY KEY,
+#                 name VARCHAR(255),
+#                 balance DECIMAL(10,2),
+#                 FOREIGN KEY (account_no) REFERENCES account(account_no)
+#             )
+#         """)
+#         print("Tables created or exist already")
+#     except Error as e:
+#         print(f"Error creating tables: {e}")
+
+# def OpenAcc(cur, conn):
+#     name = input('Enter your name: ')
+#     acc_no = input('Enter your account number: ')
+#     DOB = input('Enter your date of birth: ')
+#     address = input('Enter your address: ')
+#     contact_no = input('Enter your phone number: ')
+#     opening_bal = int(input('Enter your opening balance: '))
+
+#     account_values = (name, acc_no, DOB, address, contact_no, opening_bal)
+#     account_query = "INSERT INTO account (name, account_no, DOB, address, contact_no, balance) VALUES (%s, %s, %s, %s, %s, %s)"
+
+#     amount_values = (acc_no, name, opening_bal)
+#     amount_query = "INSERT INTO amount (account_no, name, balance) VALUES (%s, %s, %s)"
+
+#     try:
+#         cur.execute(account_query, account_values)
+#         cur.execute(amount_query, amount_values)
+#         conn.commit()
+#         print('Account opened successfully!')
+#     except Error as e:
+#         print(f"Error opening account: {e}")
+#     main(cur, conn)
+
+# def DepositAmt(cur, conn):
+#     amount = int(input('Enter the amount you want to deposit: '))
+#     acc_no = input('Enter your account number: ')
+
+#     amount_query = "SELECT balance FROM amount WHERE account_no = %s"
+#     d1 = (acc_no,)
+    
+#     try:
+#         cur.execute(amount_query, d1)
+#         result = cur.fetchone()
+#         if result:
+#             t = result[0] + amount
+#             update_query = "UPDATE amount SET balance = %s WHERE account_no = %s"
+#             d2 = (t, acc_no)
+#             cur.execute(update_query, d2)
+#             conn.commit()
+#             print('Amount deposited successfully!')
+#         else:
+#             print('Account not found!')
+#     except Error as e:
+#         print(f"Error depositing amount: {e}")
+#     main(cur, conn)
+
+# def WithdrawAmt(cur, conn):
+#     amount = int(input('Enter the amount you want to withdraw: '))
+#     acc_no = input('Enter your account number: ')
+
+#     amount_query = "SELECT balance FROM amount WHERE account_no = %s"
+#     d1 = (acc_no,)
+    
+#     try:
+#         cur.execute(amount_query, d1)
+#         result = cur.fetchone()
+#         if result:
+#             balance = result[0]
+#             if balance >= amount:
+#                 t = balance - amount
+#                 update_query = "UPDATE amount SET balance = %s WHERE account_no = %s"
+#                 d2 = (t, acc_no)
+#                 cur.execute(update_query, d2)
+#                 conn.commit()
+#                 print('Amount withdrawn successfully!')
+#             else:
+#                 print('Insufficient balance!')
+#         else:
+#             print('Account not found!')
+#     except Error as e:
+#         print(f"Error withdrawing amount: {e}")
+#     main(cur, conn)
+
+# def Balance(cur):
+#     account = input('Enter your account number: ')
+#     balance_query = 'SELECT balance FROM amount WHERE account_no = %s'
+#     d1 = (account,)
+    
+#     try:
+#         cur.execute(balance_query, d1)
+#         result = cur.fetchone()
+#         if result:
+#             print('Your balance for account:', account, 'is', result[0])
+#         else:
+#             print('Account not found!')
+#     except Error as e:
+#         print(f"Error checking balance: {e}")
+#     main(cur, conn)
+
+# def display_details(cur):
+#     account = input("Enter your account number: ")
+#     display_query = 'SELECT * FROM account WHERE account_no = %s'
+#     d1 = (account,)
+    
+#     try:
+#         cur.execute(display_query, d1)
+#         result = cur.fetchone()
+#         if result:
+#             print('Account Details:')
+#             print('Name:', result[0])
+#             print('Account Number:', result[1])
+#             print('DOB:', result[2])
+#             print('Address:', result[3])
+#             print('Contact Number:', result[4])
+#             print('Balance:', result[5])
+#         else:
+#             print('Account not found!')
+#     except Error as e:
+#         print(f"Error displaying details: {e}")
+#     main(cur, conn)
+
+# def CloseAcc(cur, conn):
+#     acc_no = input("Enter your account number: ")
+#     delete_query = 'DELETE FROM account WHERE account_no = %s'
+#     delete2_query = 'DELETE FROM amount WHERE account_no = %s'
+#     d1 = (acc_no,)
+    
+#     try:
+#         cur.execute(delete_query, d1)
+#         cur.execute(delete2_query, d1)
+#         conn.commit()
+#         print('Your account has been deleted')
+#     except Error as e:
+#         print(f"Error closing account: {e}")
+#     main(cur, conn)
+
+# def main(cur, conn):
+#     print('''
+#     1. Open Account
+#     2. Deposit Amount
+#     3. Withdraw Amount
+#     4. View Balance 
+#     5. Customer details 
+#     6. Close an account''')
+#     choice = int(input('What action would you like to complete? / For exit press 0 '))
+
+#     if choice == 1:
+#         OpenAcc(cur, conn)
+#     elif choice == 2:
+#         DepositAmt(cur, conn)
+#     elif choice == 3:
+#         WithdrawAmt(cur, conn)
+#     elif choice == 4:
+#         Balance(cur)
+#     elif choice == 5:
+#         display_details(cur)
+#     elif choice == 6:
+#         CloseAcc(cur, conn)
+#     else:
+#         print('Thank you for using our service')
+#         cur.close()
+#         conn.close()
+
+# if __name__ == "__main__":
+#     conn = create_connection()
+#     if conn:
+#         cur = conn.cursor(buffered=True)
+#         create_database(cur)
+#         create_tables(cur)
+#         main(cur, conn)
+#     else:
+#         print("Failed to connect to the database.")
+
+
+
+
+# Python Lambda : - it is called as anonymous function.
+# syntax : 
+
+# lambda arguments : expression
+
+# def x(c):
+#     return c**2
+
+# print(x(4))
+
+
+
+# x = lambda a: a**2
+# print(x(4))
+
+# x = lambda a,b:a+b
+# print(x(3,5))
+
+# def myfunc(n):
+#     return lambda a:a*n
+
+
+# Classes and Objects 
+
+
+# -> Python is an Object Oriented Programming Language 
+
+# create a class
+
+# class Class1:
+#     age = 18
+#     name = "Shrika"
+
+# # create a object
+
+# obj1 = Class1()
+# obj2 = Class1()
+# print(obj1.age)
+# print(obj2.name)
+
+
+# My name is Utkarsh Singh
+# I am teacher of computer science
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+
+# p1 = Person("Utkarsh",21)
+
+# print(p1.name)
+# print(p1.age)
+
+
+# Note: The __init__() function is called automatically every time the class is being used to create a new object.
+
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#     def __str__(self):
+#         return f"{self.name} | {self.age}"
+
+# p1 = Person("Utkarsh",21)
+
+# print(p1)
+
+
+# Hello my name is Shrika and I'm this many years ago.
+
+
+# Python Inheritance : 
+
+
+
+# base class -> parent class
+# derived class -> child class
+
+# base class (parent class)
+# class Animal:
+#     def __init__(self,name):
+#         self.name = name
+#     def speak(self):
+#         print("Hey ")
+
+# # derived class (child class)
+# class Dog(Animal):
+#     def speak(self):
+#         return f"{self.name} says woof!"
+
+# # creating an object
+
+# dog = Dog("Buddy")
+
+
+# # call the speaking the method
+# print(dog.speak())
+
+
+
+# Python Iterators:
+
+# __iter__()
+# __next__()
+
+# list,tuple,set,dictionary are all iteratable objects
+
+
+# t1 = ('toyato','honda','audi','bmw')
+
+# ans = iter(t1)
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+
+
+# name = "Shrika"
+
+# ans = iter(name)
+
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+# print(next(ans))
+
+
+# class n1:
+#     def __iter__(self):
+#         self.a = 1
+#         return self
+    
+#     def __next__(self):
+#         x = self.a
+#         self.a+=1
+#         return x
+    
+# obj1 = n1()
+# t1 = iter(obj1)
+
+# print(next(t1))
+# print(next(t1))
+# print(next(t1))
+# print(next(t1))
+# print(next(t1))
+# print(next(t1))
+# print(next(t1))
+
+# StopIteration() -> It prevents the iteration to go on forever.
+
+
+
+class n1:
+    def __iter__(self):
+        self.a = 1
+        return self
+    
+    def __next__(self):
+        if self.a <=100:
+            x = self.a
+            self.a+=1
+            return x
+        else:
+            raise StopIteration
+    
+obj1 = n1()
+t1 = iter(obj1)
+
+for i in t1:
+    print(i)

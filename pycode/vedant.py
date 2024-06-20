@@ -336,3 +336,268 @@
 # list1.insert(3,"chervolett")
 
 # print(list1)
+
+# Delete the element in the list?
+
+# list1 = ["tesla","Honda","Nissan","Jeep","Ford"]
+# # list1.remove("tesla")
+# list1.pop(2)
+
+# print(list1)
+
+
+# if you want to find out the length of the list how can you find it?
+
+# list1 = ["tesla","Honda","Nissan","Jeep","Ford"]
+# print(len(list1))
+
+# the list constructor :-
+
+# list1 = list(("tesla","Honda","Nissan","Jeep","Ford"))
+# print(type(list1))
+
+
+# list1 = ["tesla","Honda","Nissan","Jeep","Ford"]
+
+
+# check if item exists or not :-
+
+# list1 = ["tesla","Honda","Nissan","Jeep","Ford"]
+
+# if "Benz" in list1:
+#     print("Yes, 'Benz' is in the list")
+# else:
+#     print("The car brand is not in the list")
+
+# Membership Operators:
+
+# in - Returns True if a sequence with the specified value is present in the object
+# not in - Returns True if a sequence with the specified value is not present in the object
+
+
+# Sorting
+
+# thislist = ["orange", "mango", "kiwi", "pineapple", "banana"]
+# thislist.sort()
+# print(thislist)
+
+
+# thislist = ["banana", "Orange", "Kiwi", "cherry"]
+# thislist.reverse()
+# print(thislist)
+
+
+
+
+# import random
+
+# def user_choice():
+#     user = input("Enter your choice from ('rock','paper','scissor') : ").lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid choice!!!!")
+#         user = input("Enter your choice from ('rock','paper','scissor') : ").lower()
+#     return user
+
+# def bot_choice():
+#     return random.choice(['rock','paper','scissor'])
+
+# def win(user_choice,bot_choice):
+#     if user_choice == bot_choice:
+#         return ""Tie
+#     elif (user_choice == 'rock' and bot_choice == 'scissor') or \
+#         (user_choice == 'scissor' and bot_choice == 'paper') or \
+#             (user_choice == 'paper' and bot_choice == 'rock'):
+#                 return "User Wins"
+#     else:
+#         return "Bot Wins"
+    
+# def play_game():
+#     print("Welcome to the Game of Rock, Paper & Scissor : ")
+#     while True:
+#         user = user_choice()
+#         bot = bot_choice()
+        
+#         print(f"User choice : {user}")
+#         print(f"Bot Choice : {bot}")
+        
+#         print(win(user,bot))
+#         play = input("Do you wanna play the game again (yes/no) : " ).lower()
+#         if play!='yes':
+#             print("Thanks for playing up the game !!!!!!!!!")
+#             break
+# play_game()
+
+# Funtions :-A function is block of code which only runs when it is called.
+
+# print("Welcome ot the class Vedant")
+
+# defining a function   
+# def square(a):
+    
+#     print(f"Square of the number is : {a**2}")
+    
+# # calling a function
+# a = int(input("Enter the number : "))
+# square(a)
+
+
+# def my_function(f):
+#   print(f + " Refsnes")
+
+
+# my_function("Emil")
+# my_function("Tobias")
+# my_function("Linus")
+
+
+# def my_function(fname, lname):
+#   print(fname + " " + lname)
+
+# my_function("Emil", "Refsnes")
+
+# def my_function(child3, child2, child1):
+#   print("The youngest child is " + child3)
+
+# my_function(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+
+# def my_function(country = "Norway"):
+#   print("I am from " + country)
+
+# my_function("Sweden")
+# my_function("India")
+# my_function()
+# my_function("Brazil")
+
+
+# def my_function(x):
+#   return 5 * x
+
+# print(my_function(3))
+# print(my_function(5))
+# print(my_function(9))
+
+
+# parameters and arguments
+
+
+# defining a function 
+# def add(a,b):
+#     return a+b
+
+# # calling a function
+# a = int(input("Enter the value of a : "))
+# b = int(input("Enter the value of b : "))
+
+# print(f"Addition of two numbers is : {add(a,b)}")
+
+
+# Lambda -  A lambda is a small anonymous function 
+
+
+# Syntax:
+
+# lambda arguments: expression
+
+# x = lambda a,b : a+b
+
+# print(x(5,6))
+
+
+
+# tuple: they are also used to store multiple values
+# tuple is immutable
+# A tuple is a collection which is ordered and unchangeable
+# tuple are written with round brackets ().
+
+# thistuple = ('UNO','Mercedes','ferrari')
+# print(type(thistuple))
+
+
+# how you can find the length of the tuple?
+# thistuple = ('UNO','Mercedes','ferrari')
+# print(len(thistuple))
+
+# tuple1 = ('vedant',)
+# print(type(tuple1))
+
+# tuple1 = ("apple","banana","cherry")
+# tuple2 = (1,5,7,9,5)
+# tuple3 = (True,False,True)
+
+
+# tuple1 = ("abc", 34, True, 40, "male")
+# print(tuple1[-1])
+
+# how we can slice up the tuple?
+
+# tuple1 = ("apple","banana","cherry","orange","kiwi","melon","mango")
+# print(tuple1[2:])
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+# print(thistuple[-4:-1])
+
+
+# type casting : it badically converts the variable from one data type to another
+
+# x = ("apple","banana","cherry")
+# y = list(x)
+# y[1] = "mango"
+# x=tuple(y)
+# print(x)
+
+
+# x = ("apple","banana","cherry")
+# for i in x:
+#     print(i)
+
+# x = ("apple","banana","cherry")
+# for i in range(len(x)):
+#     print(x[i])
+
+
+# join the tuples:
+
+
+# tuple2 = ('A','B','C')
+
+
+
+# print(tuple2*3)
+
+# count() - it helps you to tell the frequency of a particular element that you have asked for.
+
+# thistuple = (1, 3, 7, 8, 7, 5, 4, 6, 8, 5)
+
+# print(thistuple.count(5))
+
+# index() - it basically helps us to know the index of a particular element
+
+# thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+
+# print(thistuple.index("kiwi"))
+
+# set , dictionaries
+
+
+# list : it is indentified by []. it is mutable. 
+# tuple : it is identified by (). it is immutable.
+
+# reversing up a string
+
+# name = "Vedant"
+# print(name[::-1])
+
+# firstname = "Vedant"
+# lastname = "Goswami"
+
+# # concatention
+# print(firstname+lastname)
+
+l1 = [1,-8,9,-4,7,8,-2,-3,6,4,8,10]
+
+sum = 0 
+for i in l1:
+    if i > 0:
+        sum = sum + i
+
+print(f"The sum of all positive numbers in the list is : {sum}")

@@ -283,17 +283,90 @@
 
 
 
-import turtle
+# import turtle
 
-turtle.forward(150)
-turtle.right(90)
-turtle.forward(80)
-turtle.right(90)
-turtle.forward(150)
-turtle.right(90)
-turtle.forward(80)
-
-
-turtle.mailoop()
+# turtle.forward(150)
+# turtle.right(90)
+# turtle.forward(80)
+# turtle.right(90)
+# turtle.forward(150)
+# turtle.right(90)
+# turtle.forward(80)
 
 
+# turtle.mailoop()
+
+
+# import turtle 
+
+# t = turtle.Turtle()
+
+
+# t.speed(1)
+
+# for _ in range(2):
+#     t.forward(200)
+#     t.left(120)
+# t.forward(200)
+
+
+# turtle.done()
+
+
+# import turtle
+
+# # Create a turtle object
+# t = turtle.Turtle()
+
+# # Draw the obtuse triangle
+# side_length = 100
+# angle = 120  # Angle for an obtuse triangle
+# t.forward(side_length)  # Draw the first side
+# t.left(angle)  # Turn left
+# t.forward(side_length)  # Draw the second side
+# t.left(angle)  # Turn left
+# t.forward(side_length)  # Draw the third side
+
+# # Close the turtle graphics window
+# turtle.done()
+
+
+
+
+import random 
+
+def user_choice():
+    user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
+    while user not in ['rock','paper','scissor']:
+        print("Invalid choice")
+        user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
+    return user
+    
+def bot_choice():
+    return random.choice(['rock','paper','scissor'])
+
+def winner(user_choice,bot_choice):
+    if user_choice == bot_choice:
+        return "It's a TIE"
+    elif (user_choice == 'rock' and bot_choice == 'scissor') or \
+        (user_choice == 'scissor' and bot_choice == 'paper') or \
+        (user_choice == 'paper' and bot_choice == 'rock'):
+            return "User wins"
+    else:
+        return "Bot wins"
+
+def play_game():
+    print("Welcome to the Rock Paper and Scissor Game!!!!!!!!")
+    while True:
+        user = user_choice()
+        bot = bot_choice()
+        
+        print(f"User Choice : {user}")
+        print(f"Bot Choice : {bot}")
+        print(winner(user,bot))
+        play = input("do you wanna play the game again? (yes/no) : ").lower()
+        if play!='yes':
+            print("Thanks for playing up the game")
+            break
+        
+play_game()
