@@ -818,15 +818,23 @@
 # __str__() -> It is a special method in python which is used to return the string representation of the object.
 
 
-class Person:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
-    def __str__(self):
-        return f"{self.name} is {self.age} years old"
+# class Person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+#     def __str__(self):
+#         return f"{self.name} is {self.age} years old"
 
-p1 = Person("Shiven",18)
-p2 = Person("Nitya",19)
+# p1 = Person("Shiven",18)  //object creation 
+# p2 = Person("Nitya",19)
 
-print(p1)
-print(p2)
+# print(p1)
+# print(p2)
+
+
+# Create a class name as Car with the following attributes:
+
+# 1. brand
+# 2. model
+# 3. year
+# 4. price

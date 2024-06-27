@@ -136,3 +136,39 @@
 # print(a+b)
 
 
+
+
+
+# print("Welcome to the class of Python Programming Language Will how you feel?")
+
+
+# variables: It is used to store data values.
+
+
+# a = 10
+# print(a)
+
+# defining multiple variables
+# l1 = [1,2,3,4,5,6,7,8,9,10]
+# print(l1[1:5])
+# print(l1[1:5:2])
+# l1.append(11)
+
+# a = 10.650
+
+# data types: It helps to store different types of data.
+
+# 1. Integers (int): It is used to store whole numbers.
+# 2. Float (float): It is used to store decimal numbers.
+# 3. String (str): It is used to store characters.
+# 4. boolean (bool): It is used to store True or False.
+
+# a = 10 (int)
+# b = 10.5 (float)
+# c = "Python" (str)
+# d = True (bool)
+
+# Operators and operands:
+
+
+# a+b

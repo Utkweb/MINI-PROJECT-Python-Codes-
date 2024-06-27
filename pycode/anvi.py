@@ -306,6 +306,45 @@
 # for x in thislist:
 #     print(x)
 
-thislist = ["apple", "banana", "cherry"]
-for i in range(len(thislist)):
-    print(thislist[i])
+# thislist = ["apple", "banana", "cherry"]
+# for i in range(len(thislist)):
+#     print(thislist[i])
+
+
+import random
+
+def getuser_choice():
+    choices = ['rock','paper','scissors']
+    user_choice = input("Enter your choice (rock,paper,scissors): ").lower()
+    while user_choice not in choices:
+        print("Invalid choice. Please try again.")
+        user_choice = input("Enter your choice (rock,paper,scissors): ").lower()
+    return user_choice
+
+def getcomputer_choice():
+    choices = ['rock','paper','scissors']
+    computer_choice = random.choice(choices)
+    return computer_choice
+
+def check_winner(user_choice,computer_choice):
+    if user_choice == computer_choice:
+        return "It's a tie!!!"
+    elif (user_choice == 'rock' and computer_choice == 'scissors') or \
+    (user_choice == 'scissors' and computer_choice == 'paper') or \
+    (user_choice == 'paper' and computer_choice == 'rock'):
+        return "User's win!!!"
+    else:
+        return "Computer's win!!!"
+    
+def play_game():
+    print("Welcome to the Rock-Paper-Scissors Game!")
+    user = getuser_choice()
+    computer = getcomputer_choice()
+    print(f"User's choice: {user}")
+    print(f"Computer's choice: {computer}")
+    
+    result = check_winner(user,computer)
+
+    print(result)
+
+play_game()

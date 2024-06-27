@@ -725,64 +725,120 @@
 # root.mainloop()
 
 
-import tkinter
-import random 
+# import tkinter
+# import random 
 
-timeleft = 30
-points = 0
-colors = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
-current_color_index = 0
-def startgame(event = None):
-    if timeleft == 30:
-        countdown()
+# timeleft = 30
+# points = 0
+# colors = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
+# current_color_index = 0
+# def startgame(event = None):
+#     if timeleft == 30:
+#         countdown()
 
-def nextColor():
-    global timeleft
-    global points
-    global current_color_index
-    if timeleft>0:
-        e.focus_set()
-        if e.get().lower() == colors[current_color_index].lower():
-            points = points + 1
-            feedback.config(text="Correct!",fg='green')
+# def nextColor():
+#     global timeleft
+#     global points
+#     global current_color_index
+#     if timeleft>0:
+#         e.focus_set()
+#         if e.get().lower() == colors[current_color_index].lower():
+#             points = points + 1
+#             feedback.config(text="Correct!",fg='green')
         
     
-def countdown():
-    global timeleft
-    if timeleft>0:
-        timeleft = timeleft-1
-        time.config(text= "Time left : "+str(timeleft))
-        time.after(1000,countdown)
-    else:
-        label.config(text="Time's Up!!!!!",font=('Georgia',40))
-        feedback.config(text="Final Score : "+str(points),font=('Georgia',20))
+# def countdown():
+#     global timeleft
+#     if timeleft>0:
+#         timeleft = timeleft-1
+#         time.config(text= "Time left : "+str(timeleft))
+#         time.after(1000,countdown)
+#     else:
+#         label.config(text="Time's Up!!!!!",font=('Georgia',40))
+#         feedback.config(text="Final Score : "+str(points),font=('Georgia',20))
     
     
 
-# create a gui window
-root = tkinter.Tk()
+# # create a gui window
+# root = tkinter.Tk()
 
-root.title("Color Game")
-root.geometry('375x200')
+# root.title("Color Game")
+# root.geometry('375x200')
 
-l1 = tkinter.Label(root,text="Type the color of the words not the word text!",font=('Georgia',20))
-l1.pack()
+# l1 = tkinter.Label(root,text="Type the color of the words not the word text!",font=('Georgia',20))
+# l1.pack()
 
-score = tkinter.Label(root,text="Press enter to start",font=('Georgia',20))
-score.pack()
+# score = tkinter.Label(root,text="Press enter to start",font=('Georgia',20))
+# score.pack()
 
-time = tkinter.Label(root,text="Time left : " +str(timeleft),font=('Arial',15),fg='red',bg='yellow')
-time.pack()
+# time = tkinter.Label(root,text="Time left : " +str(timeleft),font=('Arial',15),fg='red',bg='yellow')
+# time.pack()
 
-label = tkinter.Label(root)
-label.pack()
+# label = tkinter.Label(root)
+# label.pack()
 
-feedback = tkinter.Label(root,text="",fg= "black")
-feedback.pack()
+# feedback = tkinter.Label(root,text="",fg= "black")
+# feedback.pack()
 
-e = tkinter.Entry(root)
-e.pack()
+# e = tkinter.Entry(root)
+# e.pack()
 
-e.bind('<Return>',startgame)
-e.focus_set()
-root.mainloop()
+# e.bind('<Return>',startgame)
+# e.focus_set()
+# root.mainloop()
+
+
+# data types:
+
+# 1. int
+# 2. float
+# 3. str
+# 4. bool
+5 # 5. list
+# 6. tuple
+# 7. set
+# 8. dictionary
+
+# list: it is a collection of items. It is mutable, ordered, duplicates allowed
+
+# Some list examples:
+
+# list1 = [1,2,3,4,5,6,7,8,9,10]
+# list2 = [1,2.5,"Ayra",True,54,88]
+# list3 = [1,4,9]
+
+# cars = ["Ford", "Volvo", "BMW", "Audi", "Mercedes", "Toyota", "Honda", "Hyundai", "Kia", "Maruti"]
+ 
+# cars[-1]= "Acura"
+# print(cars)
+
+# concatenation
+
+# list1 = [1,2,3,4,5]
+# list2 = [6,7,8,9,10]
+
+# print(list1+list2)
+
+# replication
+
+# name = "Ayra "
+# print(name*10)
+
+# adding up the element in the list:
+
+# 1. append() - adds an element at the end of the list
+
+
+# 2. insert() - adds an element at a specific index
+
+
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+# fruits.append("Orange")
+# fruits.insert(2,"Orange")
+
+# print(fruits)
+
+
+# names = ["Ayra","Humza","Anvi","Nidhi","Riya"]
+
+# you need to count the number of names starting with a vowel

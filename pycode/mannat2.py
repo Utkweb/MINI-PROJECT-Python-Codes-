@@ -8,6 +8,7 @@ conn = mysql.connector.connect(
     database = 'bank_management'
     )
 
+# Check if the connection is successful
 cur = conn.cursor(buffered=True) 
 
 def OpenAcc():

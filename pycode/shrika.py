@@ -2086,21 +2086,99 @@ arr = ["Shrika","Aella","Utkweb"]
 
 
 
-class n1:
-    def __iter__(self):
-        self.a = 1
-        return self
+# class n1:
+#     def __iter__(self):
+#         self.a = 1
+#         return self
     
-    def __next__(self):
-        if self.a <=100:
-            x = self.a
-            self.a+=1
-            return x
-        else:
-            raise StopIteration
+#     def __next__(self):
+#         if self.a <=100:
+#             x = self.a
+#             self.a+=1
+#             return x
+#         else:
+#             raise StopIteration
     
-obj1 = n1()
-t1 = iter(obj1)
+# obj1 = n1()
+# t1 = iter(obj1)
 
-for i in t1:
-    print(i)
+# for i in t1:
+#     print(i)
+
+
+# Polymorphism - It is a way to perform a single task in different ways.
+
+# poly = many
+# morph = forms
+
+# len()
+
+
+# String/
+
+# name = "Shrika Aella"
+# print(len(name))
+
+
+# list 
+
+# l1 =["mercedes","BMW","toyato","lamborghini","audi"]
+# print(len(l1))
+
+# class Car:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("Drive")
+
+# class Boat:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("Sail!")
+# class Plane:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("Fly!")
+
+# # create an object
+
+# c1 = Car("BMW","X5")
+# b1 = Boat("Yamaha","F300")
+# p1 = Plane("Airbus","A380")
+
+# for x in (c1,b1,p1):
+#     x.move()
+
+
+
+class Instrument:
+  def __init__(self, brand, model):
+    self.brand = brand
+    self.model = model
+
+  def play(self):
+    raise NotImplementedError("Subclass must implement abstract method")
+
+class Guitar(Instrument):
+  def play(self):
+    return 
+
+class Piano(Instrument):
+  def play(self):
+    print(f"{self.brand} {self.model}: Tinkle!")
+
+class Drum(Instrument):
+  def play(self):
+    print(f"{self.brand} {self.model}: Boom!")
+
+guitar1 = Guitar("Fender", "Stratocaster")  # Create a Guitar class
+piano1 = Piano("Yamaha", "U3")              # Create a Piano class
+drum1 = Drum("Pearl", "Export")             # Create a Drum class
+
+for instrument in (guitar1, piano1, drum1):
+  instrument.play()

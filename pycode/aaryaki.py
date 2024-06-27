@@ -857,5 +857,80 @@
 # count() -> 
 # index() ->
 
-t1 = (1,2,3,4,2,4,5,8,9,0)
-print(t1.index(9))
+# t1 = (1,2,3,4,2,4,5,8,9,0)
+# print(t1.index(9))
+
+
+# Python Sets : It is represented by {}.
+
+# A set is a collection which is unordered, unchangeable and unindexed.
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+# print(l1)
+
+# s1 = {"Mercedez",1,10.5,True}
+
+# How to find the length?
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+# print(len(l1))
+
+# Access items
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+# for i in l1:
+#     print(i)
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+
+# print("pineapple" not in l1)
+
+# add items
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+# l1.add("pineapple")
+
+
+# print(l1)
+
+# to add items from another set into the current set, use the update() method.
+
+# l1  = {"apples","apples","mango","banana","kiwi"}
+# l2 = ["pineapple","watermelon","kiwi","banana","banana"]
+
+# l1.update(l2)
+
+# print(l1)
+
+# l1  = {"apples","mango","kiwi"}
+# l1.remove("banana")
+
+# print(l1)
+
+# remove() - removes the specified item
+# discard() - removes the specified item but if the item is not present in the set, it will not throw an error.
+
+
+# clear() - empties the set
+
+# l1  = {"apples","mango","kiwi","banana","pineapple","watermelon","kiwi","banana","banana"}
+
+# del l1
+
+# print(l1)
+
+# JavaScript cool projects :
+
+# 1. To do list
+# 2. Weather app
+# 3. Calculator
+# 4. Quiz app
+# 5. Chat app
+
+
+# celsiuis to fahrenheit conversion
+
+
+# def c_to_f(temp):
+
+# fahrenheit to celsius conversion
