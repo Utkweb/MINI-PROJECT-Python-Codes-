@@ -356,5 +356,44 @@
 
 # replication 
 
-s2="buddy"
-print(s2*4)
+# s2="buddy"
+# print(s2*4)
+
+
+# import random
+
+# a = random.randint(1,10)
+
+# print(a)
+
+
+
+# modules is a library and books are as modules name.
+
+
+# Number guessing game
+
+import random
+
+secret = random.randint(1,20)
+
+print("I am thinking of a number between 1 and 20")
+
+print("You have only 5 chances to guess the number")
+
+for i in range(1,6):
+    guess  = int(input("Enter the number  : "))
+
+    if guess == secret:
+        print("Congratulations! You have guessed the number in",i,"attempts")
+        break
+    elif guess < secret:
+        print("Your guess is too low")
+    elif guess > secret:
+        print("Your guess is too high")
+    else:
+        print("Invalid Choice ")
+    
+if guess != secret:
+    print("Sorry! You have not guessed the number. The number was",secret)
+ 

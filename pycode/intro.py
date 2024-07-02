@@ -172,3 +172,17 @@
 
 
 # a+b
+
+
+
+# Python : -
+
+# It is very easy to learn 
+# It is used in multiple ways
+# it is multi purpose programming language 
+
+
+# print("Welcome to the class of Python programming!!")
+
+
+

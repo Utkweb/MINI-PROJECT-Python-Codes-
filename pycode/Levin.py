@@ -171,3 +171,12 @@
 # print(f"The reversed number is: {ans}")
 
 # 153 = 1^3+5^3+3^3 = 153
+
+
+# Python Nested Loops :
+
+
+for i in range(1,5):
+    for j in range(1,5):
+        print(j,end=" ")
+    print()

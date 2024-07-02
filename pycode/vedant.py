@@ -593,11 +593,29 @@
 # # concatention
 # print(firstname+lastname)
 
-l1 = [1,-8,9,-4,7,8,-2,-3,6,4,8,10]
+# l1 = [1,-8,9,-4,7,8,-2,-3,6,4,8,10]
 
-sum = 0 
-for i in l1:
-    if i > 0:
-        sum = sum + i
+# sum = 0 
+# for i in l1:
+#     if i > 0:
+#         sum = sum + i
 
-print(f"The sum of all positive numbers in the list is : {sum}")
+# print(f"The sum of all positive numbers in the list is : {sum}")
+
+
+# 10 9 8 7 6 5 4 3 2 1
+
+
+# syntax:
+
+# for variable_name in range(start,end,step):
+#     statements
+
+# for i in range(10,0,-1):
+#     print(i,end=" ")
+
+# 0 5 10 15 20 25 30 35 40 45 50
+sum =0 
+for i in range(1,51):
+    sum = sum+i
+print(sum)

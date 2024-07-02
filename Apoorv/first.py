@@ -55,14 +55,25 @@
 #     statements
 # else:
 #  
-a=input("enter first number;")
+# a=input("enter first number;")
 
-b=input("enter second number:")
+# b=input("enter second number:")
 
-print("the addition of two number is" ,a+b)
-print("the subtraction of two numbers is",a-b)
-print("the multiplication of two numbers is",a*b)
-print("the division of two numbers is", a/b)
-print("the modulus of two numbers is" ,a%b)
-print("the exponent of two numbers is ",a**b)
-print("end of all the calculations")
+# print("the addition of two number is" ,a+b)
+# print("the subtraction of two numbers is",a-b)
+# print("the multiplication of two numbers is",a*b)
+# print("the division of two numbers is", a/b)
+# print("the modulus of two numbers is" ,a%b)
+# print("the exponent of two numbers is ",a**b)
+# print("end of all the calculations")
+
+#program to check if it is a leap year or not
+
+# a=int(input("enter the year: '"))
+# if a%4==0:
+#     print("it is a leap year")
+# else:
+#     print("it is not a leap year")
+    
+
+# a=input("enter your name:")

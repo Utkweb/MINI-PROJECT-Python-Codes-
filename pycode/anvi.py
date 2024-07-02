@@ -338,13 +338,28 @@ def check_winner(user_choice,computer_choice):
     
 def play_game():
     print("Welcome to the Rock-Paper-Scissors Game!")
-    user = getuser_choice()
-    computer = getcomputer_choice()
-    print(f"User's choice: {user}")
-    print(f"Computer's choice: {computer}")
-    
-    result = check_winner(user,computer)
 
-    print(result)
+    user_score = 0
+    computer_score = 0
+    while True:
+        user = getuser_choice()
+        computer = getcomputer_choice()
+        print(f"User's choice: {user}")
+        print(f"Computer's choice: {computer}")
+        result = check_winner(user,computer)
+
+        if result == "User's win!!!":
+            user_score += 1
+        elif result == "Computer's win!!!":
+            computer_score += 1
+        else:
+            pass
+
+        print(f"Current Score -> User: {user_score}, Computer: {computer_score}")
+        play_again = input("Do you want to play again? (yes/no): ").lower()
+        if play_again != 'yes':
+            break
+    print(f"Final Score -> User: {user_score}, Computer: {computer_score}")
+    print("Thanks for playing the game!")
 
 play_game()

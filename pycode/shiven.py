@@ -838,3 +838,20 @@
 # 2. model
 # 3. year
 # 4. price
+
+
+class Person: #parent class
+    def __init__(self,fname,lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        return f"My name is {self.firstname} {self.lastname}"
+    
+class Student(Person): #child class
+    def printname(self):
+        return f"My name is {self.firstname} {self.lastname} and I am a student"
+
+# object creation
+x = Student("Shiven","Patel")
+print(x.printname())

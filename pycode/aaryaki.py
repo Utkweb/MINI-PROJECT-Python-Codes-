@@ -934,3 +934,85 @@
 # def c_to_f(temp):
 
 # fahrenheit to celsius conversion
+
+
+# Type casting : -
+
+# t1 = ("aaryaki","mukherjee")
+# l1 = list(t1)
+
+
+
+# 345 -> 543
+
+# num = 345
+
+# s1 = str(num)
+
+# print(s1[::-1])
+
+
+# Dictionaries : - 
+
+
+
+# name = "Lily",
+# age = 18,
+# city = "Delhi".
+
+
+# It is ordered, changeable and do not allow duplicates.
+
+
+# d1 = {
+#     "name":"Aaryaki",
+#     "age":20,
+#     "city":"Delhi",
+#     "city":"San Fransico"
+# }
+
+# print(d1)
+
+# print(len(d1))
+
+
+# d1 = {
+#     "name":"Aaryaki",
+#     "age":20,
+#     "city":"San Fransico",
+#     "hobbies":["singing","dancing","reading"],
+# }
+
+# x = d1.values()
+# print(x)
+
+# print(d1["hobbies"][0:2])
+
+# print(type(d1))   
+
+# d1 = {
+#     "name":"Aaryaki",
+#     "age":20,
+#     "city":"Delhi",
+    
+# }
+
+# # print(d1["name"])
+# x = d1.get("name")
+
+# print(x)
+
+# get() -> It help to get the value of a particular key.
+
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+
+# car["color"] = "orange"
+
+# print(car)
+
+x = car.keys()
+print(x)

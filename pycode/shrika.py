@@ -2156,29 +2156,32 @@ arr = ["Shrika","Aella","Utkweb"]
 
 
 
-class Instrument:
-  def __init__(self, brand, model):
-    self.brand = brand
-    self.model = model
+# class Instrument:
+#   def __init__(self, brand, model):
+#     self.brand = brand
+#     self.model = model
 
-  def play(self):
-    raise NotImplementedError("Subclass must implement abstract method")
+#   def play(self):
+#     raise NotImplementedError("Subclass must implement abstract method")
 
-class Guitar(Instrument):
-  def play(self):
-    return 
+# class Guitar(Instrument):
+#   def play(self):
+#     return 
 
-class Piano(Instrument):
-  def play(self):
-    print(f"{self.brand} {self.model}: Tinkle!")
+# class Piano(Instrument):
+#   def play(self):
+#     print(f"{self.brand} {self.model}: Tinkle!")
 
-class Drum(Instrument):
-  def play(self):
-    print(f"{self.brand} {self.model}: Boom!")
+# class Drum(Instrument):
+#   def play(self):
+#     print(f"{self.brand} {self.model}: Boom!")
 
-guitar1 = Guitar("Fender", "Stratocaster")  # Create a Guitar class
-piano1 = Piano("Yamaha", "U3")              # Create a Piano class
-drum1 = Drum("Pearl", "Export")             # Create a Drum class
+# guitar1 = Guitar("Fender", "Stratocaster")  # Create a Guitar class
+# piano1 = Piano("Yamaha", "U3")              # Create a Piano class
+# drum1 = Drum("Pearl", "Export")             # Create a Drum class
 
-for instrument in (guitar1, piano1, drum1):
-  instrument.play()
+# for instrument in (guitar1, piano1, drum1):
+#   instrument.play()
+
+
+
