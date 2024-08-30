@@ -615,7 +615,379 @@
 #     print(i,end=" ")
 
 # 0 5 10 15 20 25 30 35 40 45 50
-sum =0 
-for i in range(1,51):
-    sum = sum+i
-print(sum)
+# sum =0 
+# for i in range(1,51):
+#     sum = sum+i
+# print(sum)
+
+# List - it is used to store multiple values in a single variable.
+
+# list is mutable.
+# it is represented by [].
+
+# l1 = [1,2,3,4,5,6,7,8,9,10]
+# l2 = ["Vedant","Utkarsh","Vishal","Vikas","Vivek"]
+# l3 = [1.54,2.45,3.45,4.56,5.67]
+# l4 = [True,False,True,False]
+# l5 = [1,2,3,4,5,6,7,8,9,10,"Vedant","Utkarsh","Vishal","Vikas","Vivek",1.54,2.45,3.45,4.56,5.67,True,False,True,False]
+
+
+# How we can access the data in the list?
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# print(cars[1])
+
+# slicing - it is used to get the subset of the list.
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# print(cars[1:3])
+
+# Change the value in the list
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# cars[1] = "Mercedes"
+
+# print(cars)
+
+# Add a new item in the list
+
+# append() - it is used to add an element at the end of the list.
+# insert() - it is used to add an element at a specific index.
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# cars.append("Mercedes")
+
+# print(cars)
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+
+# cars.insert(2,"Mercedes")
+
+# print(cars)
+
+# Delete the element in the list
+
+# remove() - it is used to remove the element from the list.
+# pop() - it is used to remove the element from the list.
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# cars.pop(2)
+
+# print(cars)
+
+
+# if you wanna find out the length of the list how can you find it?
+
+# cars = ["Ford", "Volvo", "BMW", "Toyota"]
+# print(len(cars))
+
+# names = ["Anvi","Levin","Nidhi","Arnav","Utkarsh"]
+
+
+# Nested Loops:
+
+# for rows in range(1,6):
+#     for columns in range(1,6):
+#         print("*",end=" ")
+#     print()
+
+# 1 2 3 4
+# 1 2 3 4
+# 1 2 3 4
+# 1 2 3 4
+
+# 1 1 1 1 1
+# 2 2 2 2 2
+# 3 3 3 3 3
+# 4 4 4 4 4
+# 5 5 5 5 5
+
+
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * *
+# * * * * * 
+
+# 1
+# 1 2
+# 1 2 3
+# 1 2 3 4
+# 1 2 3 4 5
+
+# for i in range(1,6):
+#     for j in range(1,i+1):
+#         print(i,end=" ")
+#     print()
+
+# 1
+# 2 2
+# 3 3 3
+# 4 4 4 4
+# 5 5 5 5 5
+
+# num = 1
+# for i in range(1,4):
+#     for j in range(1,i+1):
+#         print(num,end= " ")
+#         num +=1
+#     print()
+# 1
+# 2 3
+# 4 5 6
+# 7 8 9 10
+
+
+# Sorting algorithms :-
+
+
+# 1. Ascending order
+# 2. Descending order
+
+# Techniques of sorting:-
+
+# 1. Bubble sort
+
+
+# def bubble_sort(lst):
+#     for x in range(len(lst)-1,0,-1):
+#         for y in range(x):
+#             if lst[y] > lst[y+1]:
+#                 lst[y],lst[y+1] = lst[y+1],lst[y]
+
+#     return lst
+
+# lst = [15,5,20,35,2,42,67,17,8,9]
+# print("Unsorted list :",lst)
+
+# print("Sorted list :",bubble_sort(lst))
+
+# def bs(arr, target):
+#     l, r = 0, len(arr) - 1
+
+#     while l <= r:
+#         mid = l + (r - l) // 2
+
+#         if arr[mid] == target:
+#             return mid
+#         elif arr[mid] < target:
+#             l = mid + 1
+#         else:
+#             r = mid - 1
+#     return -1
+
+# arr = [53, 64, 73, 85, 87, 91, 93, 97]
+# target = 90
+
+# index = bs(arr, target)
+# if index != -1:
+#     print("Element found at index", index)
+# else:
+#     print("Element not found")
+
+
+# Insertion sort - it is a simple sorting algorithm that builds the final sorted array one item at a time.
+
+
+# def IS(arr):
+#     # Traverse through 1 to len(arr)
+#     for i in range(1,len(arr)):
+#         key = arr[i]
+#         j = i -1
+
+#         while j>=0 and key < arr[j]:
+#             arr[j+1] = arr[j]
+#             j -= 1
+#         arr[j+1] = key
+#     return arr
+
+# arr = [14,46,43,27,57,41,45,21,70]
+
+# print("Unsorted list :",arr)
+
+# print("Sorted list :",IS(arr))
+
+# GUI - Graphical User Interface
+
+# from tkinter import *
+
+# root = Tk()
+
+# root.title("Vedant's GUI")
+# root.geometry("400x400")
+
+# l1 = Label(root,text="Sign Up",font=("Arial",20))
+# l1.pack()
+
+# l2 = Label(root,text="Name ",font=('Arial',10))
+# l2.pack()
+
+# e1 = Entry(root)
+# e1.pack()
+
+# b1 = Button(root,text="Submit",fg='white',bg='green',font=('Arial',12))
+# b1.pack()
+
+# root.mainloop()
+
+
+
+# First Name
+# Last Name
+# Email
+# Pasword
+# Confirm Password
+
+# Submit
+
+
+
+# from tkinter import *
+
+# root = Tk()
+
+# root.title("Calculator")
+# root.geometry("300x300")
+
+# t1 =Text(root,height=2,width=45)
+# t1.grid(row=0,column=0,columnspan=3)
+
+# l1 = Button(root,text="1",height = 2,width = 8,fg="black",bg="white")
+# l1.grid(row=2,column=0)
+
+# l2 = Button(root,text="2",height = 2,width = 8,fg="black",bg="white")
+# l2.grid(row=2,column=1)
+
+# l3 = Button(root,text="3",height = 2,width = 8,fg="black",bg="white")
+# l3.grid(row=2,column=2)
+
+# l4 = Button(root,text="4",height = 2,width = 8,fg="black",bg="white")
+# l4.grid(row=3,column=0)
+
+# l5 = Button(root,text="5",height = 2,width = 8,fg="black",bg="white")
+# l5.grid(row=3,column=1)
+
+# l6 = Button(root,text="6",height = 2,width = 8,fg="black",bg="white")
+# l6.grid(row=3,column=2)
+
+# l7 = Button(root,text="7",height = 2,width = 8,fg="black",bg="white")
+# l7.grid(row=4,column=0)
+
+# l8 = Button(root,text="8",height = 2,width = 8,fg="black",bg="white")
+# l8.grid(row=4,column=1)
+
+# l9 = Button(root,text="9",height = 2,width = 8,fg="black",bg="white")
+# l9.grid(row=4,column=2)
+
+# root.mainloop()
+
+
+# import tkinter as tk 
+
+
+# temp = tk.Tk()
+# temp.title("Temperature Converter")
+
+
+# def ftoc():
+#     f = temp1.get()
+#     c = (5/9) * (float(f) - 32)
+#     temp2["text"] = f'{round(c, 2)}\N{DEGREE CELSIUS}'
+
+
+# frame = tk.Frame(temp)
+# frame.grid(row=0, column=0, padx=10)
+
+
+# temp1 = tk.Entry(frame, width=10)
+# temp1.grid(row=0, column=0)
+
+
+# f_label = tk.Label(frame, text="\N{DEGREE FAHRENHEIT}")
+# f_label.grid(row=0, column=1)
+
+
+# button = tk.Button(temp, text="\N{RIGHTWARDS BLACK ARROW}", command=ftoc)
+# button.grid(row=0, column=1, pady=10)
+
+
+# temp2 = tk.Label(temp, text="\N{DEGREE CELSIUS}")
+# temp2.grid(row=0, column=2, padx=10)
+
+
+# temp.mainloop()
+
+
+
+
+# def find_max(l1):
+#     max = l1[0]
+
+#     for i in l1:
+#         if i > max:
+#             max = i
+#     return max
+
+# l1 = [1,2,3,4,5,25,84,7,8,9,10]
+# print("The maximum value in a list :",find_max(l1))
+
+
+# sqaures = {i:i**2 for i in range(1,6)}
+
+
+# for key,value in sqaures.items():
+#     print(f"{key} : {value}")
+
+
+# def is_palindrome(str1):
+#     if str1.lower() == str1[::-1].lower():
+#         return "Yes, it is a palindrome"
+#     return "No, it is not a palindrome"
+
+# str1 = "Malayalam"
+
+# print(is_palindrome(str1))
+
+
+# student_scores = [("Vedant", 40), ("Utkarsh", 0), ("Vishal", 70), ("Vikas", 60), ("Vivek", 50)]
+
+# sorted_ss = sorted(student_scores,key=lambda x : x[1],reverse=True)
+
+# for student,scores in sorted_ss:
+#     print(f"{student} : {scores}")
+
+
+# import tkinter as tk
+
+# def button_click():
+#     label.config(text="Button Clicked")
+
+# root = tk.Tk()
+# root.title("Example")
+
+# root.geometry("400x400")
+
+# label = tk.Label(root,text="")
+
+# button = tk.Button(root,text="Click Me",command = button_click)
+
+# label.pack(pady = 20)
+# button.pack(pady = 20)
+
+# root.mainloop()
+
+
+
+# Module - mysql.connector
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="",
+    database="utkarsh"
+)
+
+if mydb.is_connected():
+    print("Connected to the database")

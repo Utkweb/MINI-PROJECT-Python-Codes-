@@ -1004,15 +1004,143 @@
 
 # get() -> It help to get the value of a particular key.
 
-car = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964
-}
+# car = {
+#     "brand": "Ford",
+#     "model": "Mustang",
+#     "year": 1964
+# }
 
 # car["color"] = "orange"
 
 # print(car)
 
-x = car.keys()
-print(x)
+# x = car.keys()
+# print(x)
+
+
+# GUI - Graphical User Interface
+
+# Tkinter() - It is a standard GUI library for Python.
+
+
+# import tkinter
+# root = tkinter.Tk()
+
+
+
+# root.mainloop()
+
+# Tkinter Widgets 
+
+# 1. Label - It is used to display text or image on the screen.
+
+# import tkinter
+
+# from tkinter import *
+
+# root = Tk()
+# root.title('AK GUI')
+# t1 = Label(root,text="Welcome Aaryaki!!!",bg="red",fg="yellow",font=("Arial",20))
+# t2 = Button(root,text="Click Me!",font=("Arial",20))
+# t4 = Label(root,text="Enter your name : ")
+# t3 = Entry(root)
+# t1.pack()
+# t2.pack()
+# t4.pack()
+# t3.pack()
+
+# root.mainloop()
+
+# from tkinter import *
+
+
+# root = Tk()
+# root.title("Calculator")
+# root.geometry("270x150")
+# root.configure(background="light green")
+
+# equation = StringVar()
+
+# expression_field = Entry(root,textvariable=equation)
+# expression_field.grid(row=0,columnspan=2)
+
+# b1 = Button(root,text='3',fg='black',bg='white',height=1,width=7)
+# b1.grid(row=1,column = 0)
+# b2 = Button(root,text='4',fg='black',bg='white',height=1,width=7)
+# b2.grid(row=1,column = 1)
+
+
+# plus = Button(root,text='+',fg='black',bg='white',height=1,width=7)
+# plus.grid(row=1,column = 2)
+# plus = Button(root,text='=',fg='black',bg='white',height=1,width=7)
+# plus.grid(row=1,column = 3)
+
+# root.mainloop()
+
+
+# from tkinter import *
+# from tkinter import messagebox
+
+# def add_task():
+#     task = expression_field.get()
+#     if task != "":
+#         task_count = list_box.size()+1
+#         numbered_task = f"{task_count}. {task}"
+#         list_box.insert(END,numbered_task)
+#         expression_field.delete(0,END)  # clear the entry field
+#     else:
+#         messagebox.showwarning("warning","Please enter a task")
+
+# def delete_task():
+#     try:
+#         task_index = list_box.curselection()[0]
+#         list_box.delete(task_index)
+#         for i in range(list_box.size()):
+#             task_text = list_box.get(i).split(".",1)[1]
+#             list_box.delete(i)
+#             list_box.insert(i,f"{i+1}. {task_text}")
+#     except IndexError:
+#         messagebox.showwarning("Warning","Please select a task to delete")
+
+
+# root = Tk()
+# root.title('todolist')
+# root.geometry("450x450")
+# root.configure(bg = '#C8A2C8')
+
+# t1 = Label(root,text="Welcome to the To Do List",bg="pink",fg="black",font=("Arial",20))
+# t1.pack(pady=20)
+# frame_task = Frame(root)
+# frame_task.pack()
+
+
+
+# list_box = Listbox(frame_task,
+#                    height=10,
+#                    width=50,
+#                    bg='beige',
+#                    fg='black',
+#                    borderwidth=1)
+
+# list_box.pack(pady=20)
+# scrollbar = Scrollbar(frame_task)
+# scrollbar.pack(pady=20, fill=Y)
+
+# list_box.config(yscrollcommand=scrollbar.set)
+# scrollbar.config(command=list_box.yview)
+
+
+# expression_field = Entry(root, text='',width =50)
+
+# expression_field.pack(pady=20)
+
+# b1 = Button(root,text='add task', fg='black', bg='white', height=1,width=7,command=add_task)
+
+# b1.pack(pady=20)
+# b2 = Button(root,text='delete task', fg='black', bg='white', height=1,width=7,command=delete_task)
+
+# b2.pack(pady=20)
+# root.mainloop()
+
+# 1. Gym
+# 2. 

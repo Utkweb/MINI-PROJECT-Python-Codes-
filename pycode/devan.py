@@ -333,40 +333,227 @@
 
 
 
-import random 
+# import random 
 
-def user_choice():
-    user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
-    while user not in ['rock','paper','scissor']:
-        print("Invalid choice")
-        user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
-    return user
+# def user_choice():
+#     user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
+#     while user not in ['rock','paper','scissor']:
+#         print("Invalid choice")
+#         user = input("Enter your choice between ('rock','paper','scissor') : ").lower()
+#     return user
     
-def bot_choice():
-    return random.choice(['rock','paper','scissor'])
+# def bot_choice():
+#     return random.choice(['rock','paper','scissor'])
 
-def winner(user_choice,bot_choice):
-    if user_choice == bot_choice:
-        return "It's a TIE"
-    elif (user_choice == 'rock' and bot_choice == 'scissor') or \
-        (user_choice == 'scissor' and bot_choice == 'paper') or \
-        (user_choice == 'paper' and bot_choice == 'rock'):
-            return "User wins"
-    else:
-        return "Bot wins"
+# def winner(user_choice,bot_choice):
+#     if user_choice == bot_choice:
+#         return "It's a TIE"
+#     elif (user_choice == 'rock' and bot_choice == 'scissor') or \
+#         (user_choice == 'scissor' and bot_choice == 'paper') or \
+#         (user_choice == 'paper' and bot_choice == 'rock'):
+#             return "User wins"
+#     else:
+#         return "Bot wins"
 
-def play_game():
-    print("Welcome to the Rock Paper and Scissor Game!!!!!!!!")
-    while True:
-        user = user_choice()
-        bot = bot_choice()
+# def play_game():
+#     print("Welcome to the Rock Paper and Scissor Game!!!!!!!!")
+#     while True:
+#         user = user_choice()
+#         bot = bot_choice()
         
-        print(f"User Choice : {user}")
-        print(f"Bot Choice : {bot}")
-        print(winner(user,bot))
-        play = input("do you wanna play the game again? (yes/no) : ").lower()
-        if play!='yes':
-            print("Thanks for playing up the game")
-            break
+#         print(f"User Choice : {user}")
+#         print(f"Bot Choice : {bot}")
+#         print(winner(user,bot))
+#         play = input("do you wanna play the game again? (yes/no) : ").lower()
+#         if play!='yes':
+#             print("Thanks for playing up the game")
+#             break
         
-play_game()
+# play_game()
+
+
+# Function to check if a number is prime
+# def is_prime(n):
+#     if n <= 1:
+#         return False
+#     for i in range(2, int(n**0.5) + 1):
+#         if n % i == 0:
+#             return False
+#     return True
+
+# # Get the interval from the user
+# start = int(input("Enter the start of the interval: "))
+# end = int(input("Enter the end of the interval: "))
+
+# print(f"Prime numbers between {start} and {end} are:")
+
+# for num in range(start, end + 1):
+#     if is_prime(num):
+#         print(num)
+
+
+# We are going to be learn about some data types in python
+
+
+# List : List is a collection of items in a particular order. It is mutable and it is represented by square brackets []
+
+
+# l1 = [1,2,3,4,5,6,7,8,9,10]
+# print(l1)
+
+# l1 = ['Will','Devan','John','Mike','Tom','Jerry','Harry','Sam','Dean','Castiel']
+# l2 = [1,2,3,4,5,6,7,8,9,10]
+# l3 = [1.1,2.2,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.10]
+# l4 = [True,False,True,False,True,False,True,False,True,False]
+# l5 = ['Will',1,2.2,True]
+
+
+# lst = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+# print(lst[10])
+
+
+# Basic Access:
+
+# 1. Given the list my_list = [10, 20, 30, 40, 50], what is the output of my_list[2]?  # 30
+# 2. Given the list fruits = ['apple', 'banana', 'cherry', 'date'], what is the output of fruits[0]? # apple
+
+# Negative Indexing:
+
+# 1. For the list numbers = [5, 10, 15, 20, 25], what is the output of numbers[-1]? # 25
+# 2. Given letters = ['a', 'b', 'c', 'd', 'e'], what is the output of letters[-3]? # c
+
+# Good!!
+
+
+# Slicing 
+
+# cars = ['audi', 'bmw', 'ford', 'toyota', 'tesla', 'volvo','lamborghini','ferrari','mercedes','jaguar']
+
+# print(cars[0::2])
+
+
+# start:end:step
+
+
+# Slicing:
+
+# 1. Given my_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], what is the output of my_list[2:5]? # [2,3,4]
+# 2. If colors = ['red', 'green', 'blue', 'yellow', 'purple'], what is the output of colors[1:4]? # ['green','blue','yellow']
+
+
+# Step in Slicing:
+
+# 1. For the list data = [1, 2, 3, 4, 5, 6, 7, 8, 9], what is the output of data[::2]? # [1,3,5,7,9] 
+# 2. Given nums = [10, 20, 30, 40, 50, 60, 70, 80], what is the output of nums[1:7:2]? # [20,40,60]
+
+# Good Job !!
+
+# Combining Access Methods:J
+
+# 1. What is the output of my_list[-3:][1] for my_list = [100, 200, 300, 400, 500]? # 400
+
+# [300,400,500]
+
+# 2. Given alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g'], what is the output of alphabet[2:5][-1]? # 
+
+
+# cars = ['audi', 'bmw', 'ford', 'toyota', 'tesla', 'volvo']
+# cars.append('lamborghini')
+
+# print(cars)
+
+# cars[-4] = "transfomer"
+
+# print(cars)
+
+
+# cars = ['audi', 'bmw', 'ford', 'toyota', 'tesla', 'volvo']
+# cars.insert(0,'lamborghini')
+
+# print(cars)
+
+
+# Python GUI Application (GUI - Graphical User Interface)
+# tkinter - library in python which is used to create GUI applications
+
+
+# import tkinter as tk
+# from tkinter import ttk
+# from tkinter import messagebox
+
+
+
+# window = tk.Tk()
+# window.title("Todo Application")
+
+
+# frame_task = tk.Frame(window)
+# frame_task.pack()
+
+# listbox = tk.Listbox(
+#     frame_task,
+#     height=10,
+#     width=50,
+#     bg="cyan",
+#     fg="black",
+#     font=("Helvetica", 16),
+#     borderwidth=1,
+# )
+# listbox.pack(side=tk.LEFT)
+
+# scrollbar = tk.Scrollbar(frame_task)
+# scrollbar.pack(side=tk.RIGHT, fill = tk.Y)
+
+# listbox.config(yscrollcommand=scrollbar.set)
+# scrollbar.config(command=listbox.yview)
+
+# window.mainloop()
+
+
+
+# tkinter 
+
+# from tkinter import *
+
+# root = Tk()
+
+# root.title("Devan's Application")
+# root.configure(bg='#FF00FF')
+# root.geometry('400x300')
+
+# label = Label(root,text="Sign Up!!!",fg='white',bg='#FF00FF',font=('Merriweather',20))
+# label.pack(pady=20)
+
+# name_label  = Label(root,text="Name ",fg='white',bg='#FF00FF')
+# name_label.pack(pady = 10)
+
+
+# name_entry = Entry(root)
+# name_entry.pack(pady=10)
+
+# root.mainloop()
+
+
+
+
+from tkinter import *
+root = Tk()
+root.title("Devan's ipad")
+root.configure(bg='#FF00FF')
+root.geometry('400x1000')
+label =Label(root,text="sign in O_O",fg='white',bg='#FF00FF',font=('Merriweather',20))
+label.pack(pady=20)
+name_label = Label(root,text="name",fg='white',bg='#FF00FF')
+name_label.pack(pady=10)
+
+name_entry = Entry(root)
+name_entry.pack(pady=10)
+
+email_label = Label(root,text='email',fg='white',bg='#FF00FF')
+email_label.pack(pady=10)
+
+email_entry = Entry(root)
+email_entry.pack(pady=10)
+
+
+root.mainloop()

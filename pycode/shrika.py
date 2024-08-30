@@ -2185,3 +2185,155 @@ arr = ["Shrika","Aella","Utkweb"]
 
 
 
+
+# class Shape:
+#     def area(self):
+#         pass
+
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
+    
+#     def area(self):
+#         print(f"Circle area: {3.14 * self.radius ** 2}")
+
+# class Rectangle(Shape):
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+    
+#     def area(self):
+#         print(f"Rectangle area: {self.width * self.height}")
+
+# # Demonstrating polymorphism
+# shapes = [Circle(5), Rectangle(4, 6)]
+
+# for shape in shapes:
+#     shape.area()
+
+
+
+
+# SignUp Page 
+
+
+# Firstname
+# Lastname
+# Email
+# password
+
+# Submit
+
+
+
+
+# import mysql.connector
+# from tkinter import *
+# from tkinter import messagebox
+
+# def Save2base():
+#     first_name = e1.get()
+#     last_name = e2.get()
+#     email = e3.get()
+#     password = e4.get()
+
+#     conn = mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="",
+#         database="Utkarsh"
+#     )
+
+#     cursor = conn.cursor()
+#     cursor.execute('''CREATE TABLE IF NOT EXISTS user (
+#         id INT AUTO_INCREMENT PRIMARY KEY,
+#         first_name VARCHAR(255) NOT NULL,
+#         last_name VARCHAR(255) NOT NULL,
+#         email VARCHAR(255) NOT NULL,
+#         password VARCHAR(255) NOT NULL)
+#     ''')
+
+#     cursor.execute('''INSERT INTO user (first_name, last_name, email, password)
+#                       VALUES (%s, %s, %s, %s)''', (first_name, last_name, email, password))
+
+#     conn.commit()
+#     cursor.close()
+#     conn.close()
+
+#     e1.delete(0, END)
+#     e2.delete(0, END)
+#     e3.delete(0, END)
+#     e4.delete(0, END)
+
+# def login():
+#     email = le1.get()
+#     password = le2.get()
+
+#     conn = mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="",
+#         database="Utkarsh"
+#     )
+
+#     cursor = conn.cursor()
+#     cursor.execute('''SELECT * FROM user WHERE email=%s AND password=%s''', (email, password))
+#     result = cursor.fetchone()
+
+#     if result:
+#         messagebox.showinfo("Login", "Login Successful!")
+#         open_new_page()
+#     else:
+#         messagebox.showerror("Login", "Invalid email or password")
+
+#     conn.close()
+
+# def open_new_page():
+#     new_page = Toplevel(root)
+#     new_page.title("New Page")
+#     Label(new_page, text="Welcome to the new page!", font=("arial", 25)).pack()
+
+# # Creating the main application window
+# root = Tk()
+# root.title("Management System")
+
+# # Signup form
+# signup_frame = Frame(root)
+# signup_frame.pack(pady=10)
+
+# Label(signup_frame, text="First Name", fg='red', bg='blue', font=("arial", 25)).grid(row=0, column=0)
+# e1 = Entry(signup_frame)
+# e1.grid(row=0, column=1)
+
+# Label(signup_frame, text="Last Name", fg='red', bg='blue', font=("arial", 25)).grid(row=1, column=0)
+# e2 = Entry(signup_frame)
+# e2.grid(row=1, column=1)
+
+# Label(signup_frame, text="Email", fg='red', bg='blue', font=("arial", 25)).grid(row=2, column=0)
+# e3 = Entry(signup_frame)
+# e3.grid(row=2, column=1)
+
+# Label(signup_frame, text="Password", fg='red', bg='blue', font=("arial", 25)).grid(row=3, column=0)
+# e4 = Entry(signup_frame, show='*')
+# e4.grid(row=3, column=1)
+
+# Button(signup_frame, text="Sign Up", fg='blue', bg='red', font=("arial", 35), command=Save2base).grid(row=4, column=0, columnspan=2)
+
+# # Login form
+# login_frame = Frame(root)
+# login_frame.pack(pady=10)
+
+# Label(login_frame, text="Email", fg='red', bg='blue', font=("arial", 25)).grid(row=0, column=0)
+# le1 = Entry(login_frame)
+# le1.grid(row=0, column=1)
+
+# Label(login_frame, text="Password", fg='red', bg='blue', font=("arial", 25)).grid(row=1, column=0)
+# le2 = Entry(login_frame, show='*')
+# le2.grid(row=1, column=1)
+
+# Button(login_frame, text="Login", fg='blue', bg='red', font=("arial", 35), command=login).grid(row=2, column=0, columnspan=2)
+
+# # Running the main event loop
+# root.mainloop()
+
+

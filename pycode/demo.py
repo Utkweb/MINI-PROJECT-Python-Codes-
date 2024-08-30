@@ -612,3 +612,102 @@
 
 
 
+
+
+# Python :
+
+# 1. Python is a high-level, interpreted, interactive and object-oriented scripting language.
+
+
+# print("Welcome to the class of Python")
+
+# Data types : 
+
+# 1. Integer(int) -> It stores whole numbers, 1,2,3,4,5
+# 2. Float(float) -> it stores decimal values, 10.5, 11.6
+# 3. String(str) -> "Anvi", "Shiven", "Rahul","Welcome to the class",'a','b'
+# 4. Boolean(bool) -> True, False, 0,1
+# 5. List 
+# 6. Tuple
+# 7. Dictionary
+# 8. Set
+
+# Desktop Application 
+# Web Application
+# Mobile Application
+# Data Science
+# Machine Learning
+# Artificial Intelligence
+# Moules or libaries in python:- OpenCV
+# Django framework - web development 
+
+
+
+# a = 10
+# b = 20
+
+# print(a+b)
+
+# s = "Nipun"
+# print(s[::-1])
+
+# array : 
+
+# 1. list
+# 2. tuple
+# 3. dictionary
+# 4. set
+
+
+
+# l1 = ('tom', 'jerry', 'micky', 'minnie')
+
+# print(l1)
+
+# t1 = list(l1)
+
+# t1[0] = 'donald'
+
+# l1 = tuple(t1)
+
+# print(l1)
+
+
+# s1 = {1,2,3,4,2,3,2,32,1}
+# print(s1[0])
+
+
+
+
+# type casting = changing the data type of a variable
+
+# OOPS = Object Oriented Programming System
+
+# four pillars :
+
+# 1. Inheritance - 
+# 2. Polymorphism 
+# 3. Encapsulation
+# 4. Abstraction
+
+
+
+
+
+# in the variable we can store numbers, alphabets,words,special characters and many more
+
+# a = 7
+# b = 9
+# name = "Kareena"
+
+# c = 7.0258
+# flag = True
+
+# Data types :
+
+# 1. int -> 1,2,3,4,5,6,7,8,9,10
+# 2. float -> 1.2, 2.3, 3.4, 4.5
+# 3. str -> "Anvi", "Shiven", "Rahul"
+# 4. bool -> True, False
+
+# opencv

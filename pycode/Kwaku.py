@@ -100,3 +100,36 @@
 # b = 3
 
 # print(a%b)
+
+# Conditional Statements:
+
+# 1. if statement : it is used to check a condition.
+
+# syntax:
+
+# if condition:
+#     statements
+
+# age = 19
+# if age > 18:
+#     print("You are eligible for driving!!")
+
+# 2. if else statement : it is used to check the condition and execute the block of code when the condition is True and another block of code when the condition is False.
+
+# syntax:
+
+# if condition:
+#     statements
+# else:
+#     statements
+
+# age = 16
+# if age > 18:
+#     print("You are eligible for driving!!")
+# else:
+#     print("You are not eligible for driving!!")
+
+a = 8
+b = 15
+
+

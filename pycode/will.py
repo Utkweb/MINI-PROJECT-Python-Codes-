@@ -60,3 +60,132 @@
 # b = 15
 
 # print("Addition of a & b is : ",a+b)
+
+
+
+# % => remainder of the division 
+# // => in terms of whole number
+# / => it means we get the answer in terms of decimal numbers
+
+# Conditional Statements : 
+
+# We are having 3 types of conditional statements in python :
+
+# 1. if statement - It is used to check a condition and execute a block of code if the condition is True
+
+# syntax:
+
+# if condition:
+#     # block of code
+
+# age = 17
+# if age>18:
+#     print("You are an adult")
+
+# 2. if else statement - 
+
+# syntax:
+
+# if conditions:
+    # block of code
+# else:
+    # block of code
+
+
+# age = 17
+# if age>18:
+#     print("You are an adult")
+# else:
+#     print("You are a kid")
+
+# You have to take to values and check which one is greater.
+
+# 3. if elif else statements
+
+
+# syntax:
+
+
+# if condition:
+    # block of code
+# elif condition:
+    # block of code
+# else:
+    # block of code
+
+# num = 0
+# if num > 0:
+#     print("Positive Number")
+# elif num < 0:
+#     print("Negative Number")
+# else:
+#     print("Zero")
+
+
+# age = 18
+# if age>18:
+#     print("You are an adult")
+# elif age == 18:
+#     print("You are a teenager")
+# else:
+#     print("You are a kid")
+
+
+# Loops :
+
+# Two type of loops in python :
+
+# 1. for loop
+
+# syntax:
+
+# for variable_name in range(start,end,step):
+    # block of code
+
+# for number5 in range(1,1001,1):
+#     print(number5,". Will")
+
+
+# 2. while loop
+
+
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+# print("Will")
+
+# 5 10 15 20 25 30 35 40 45 50
+
+# for number8 in range(5,51,5):
+#     print(number8)
+
+
+# 10 20 30 40 50 60 70 80 90 100
+
+# 10 9 8 7 6 5 4 3 2 1
+
+# 1 2 3 4 5 6 7 8 9 10 = 55
+
+# for i in range(1,11):
+#     print(i+1)
+
+
+# 1+2+3+4+5+6+7+8+9+10 = 55
+# 1 - 50 = 
+
+# count = 0
+# for i in range(1,51):
+#     if i%2 == 0:
+#         count = count + 1
+
+# print("The even number total count is :",count)
+
+# 1 - 150 
+
+# you need to add all the even numbers from 1 - 150

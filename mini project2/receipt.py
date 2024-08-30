@@ -13,7 +13,7 @@ class Receipt:
         receipt_str = "Receipt"
         receipt_str += f"{'':<20} {datetime.datetime.now():%Y-%m-%d %H:%M:%S.%f}\n"
 
-        receipt_str += "-" * 40 + "\n"
+        receipt_str += "-" * 40 + "\n" # 40 dashes
         for item in self.__purchases:
             receipt_str +=item.itemToString() + "\n"
         receipt_str += "-" * 40 + "\n"

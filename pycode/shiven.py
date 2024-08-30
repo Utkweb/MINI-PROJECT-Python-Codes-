@@ -840,18 +840,212 @@
 # 4. price
 
 
-class Person: #parent class
-    def __init__(self,fname,lname):
-        self.firstname = fname
-        self.lastname = lname
+# class Person: #parent class
+#     def __init__(self,fname,lname):
+#         self.firstname = fname
+#         self.lastname = lname
 
-    def printname(self):
-        return f"My name is {self.firstname} {self.lastname}"
+#     def printname(self):
+#         return f"My name is {self.firstname} {self.lastname}"
     
-class Student(Person): #child class
-    def printname(self):
-        return f"My name is {self.firstname} {self.lastname} and I am a student"
+# class Student(Person): #child class
+#     def printname(self):
+#         return f"My name is {self.firstname} {self.lastname} and I am a student"
 
-# object creation
-x = Student("Shiven","Patel")
-print(x.printname())
+# # object creation
+# x = Student("Shiven","Patel")
+# print(x.printname())
+
+# Python iterators => it is an object that contains a countable number of values.
+
+# iter(), __next__()
+
+# cars = ["BMW","Audi","Mercedes","Toyota"]
+
+# ans = iter(cars)
+
+# next(ans)
+# next(ans)
+# print(next(ans))
+
+# name = "Shiven"
+
+# ans = iter(name)
+
+# print(next(ans))
+
+
+# Polymorphism : 
+
+
+
+# class Car:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("The car is moving")
+
+# class Boat:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("The boat is sailing")
+# class Bike:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+#     def move(self):
+#         print("The bike is riding")
+
+# c1 = Car("Ford","Mustang")
+# b1 = Boat("Titanic","Titanic")
+# b2 = Bike("KTM","Duke")
+
+# for x in (c1,b1,b2):
+#     x.move()
+
+
+# Scope of variables:
+
+# Local Variable - that can be accessed only within the function.
+# def print1():
+#     global a
+    
+#     a = 10
+#     print(a)
+
+# print(a)
+
+# print1()
+
+# Global Variable - that can be accessed anywhere in the program.
+
+# a = 10
+
+# def print1():
+#     print(a)
+
+# print(a)
+
+# print1()
+
+
+# global - It is a keyword used to declare a global variable.
+
+# def print1():
+#     global a
+#     a = 10
+#     print(a)
+
+# print1()
+
+# print(a)
+
+
+# import mysql.connector
+
+# mydb = mysql.connector.connect(
+
+#     host="localhost",
+#     user="root",
+#     password=""
+# )
+
+# mycursor = mydb.cursor()
+# if mycursor.execute("CREATE DATABASE Utkarsh"):
+#     print("Database created successfully")
+# else:
+#     print("Database already exists")
+
+
+from tkinter import * 
+import mysql.connector
+
+def save_to_db():
+    first_name = e2.get()
+    last_name = e3.get()
+    phone = e4.get()
+    postcode = e5.get()
+    country = e6.get()
+
+    # connect database
+    mydb = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password="",
+        database = "Utkarsh"
+    )
+
+    cursor = mydb.cursor()
+
+    cursor.execute('''
+    CREATE TABLE IF NOT EXISTS users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        first_name VARCHAR(255),
+        last_name VARCHAR(255),
+        phone VARCHAR(255),
+        postcode VARCHAR(255),
+        country VARCHAR(255)
+    );
+    ''')
+
+    cursor.execute('''
+    INSERT INTO users (first_name, last_name, phone, postcode, country)
+    VALUES (%s, %s, %s, %s, %s)
+    ''', (first_name, last_name, phone, postcode, country))
+
+    mydb.commit()
+    mydb.close()
+
+    print("Data Saved Successfully!!!")
+
+root = Tk()
+root.title("User Registration")
+root.geometry("370x220")
+
+l1 = Label(root, text="User Registration", font=("bold", 20), fg="blue", bg="Light blue")
+l1.grid(row=0, column=2)
+
+l2 = Label(root, text="First Name")
+l2.grid(row=2, column=1)
+e2 = Entry(root)
+e2.grid(row=2, column=2)
+
+l3 = Label(root, text="Last Name")
+l3.grid(row=3, column=1)
+e3 = Entry(root)
+e3.grid(row=3, column=2)
+
+l4 = Label(root, text="Phone")
+l4.grid(row=4, column=1)
+e4 = Entry(root)
+e4.grid(row=4, column=2)
+
+l5 = Label(root, text="Postcode")
+l5.grid(row=5, column=1)
+e5 = Entry(root)
+e5.grid(row=5, column=2)
+
+l6 = Label(root, text="Country")
+l6.grid(row=6, column=1)
+e6 = Entry(root)
+e6.grid(row=6, column=2)
+
+l7 = Button(root, text="Save Changes", fg="white", bg="green", command=save_to_db)
+l7.grid(row=7, column=4)
+
+root.mainloop()
+
+
+# first Name 
+# last name 
+# email 
+# phone 
+
+# city
+# country 
+# state
+
+

@@ -109,26 +109,104 @@
 # print (a//c)
 
 
+# Conditional statements : It is used to perform the operations based on the conditions.
+
+# 1. if statement : It is used to execute the block of code when the condition is True.
+
+# Syntax:
+
+# if condition:
+    # block of code
+
+
+# age = 19
+# if age>18:
+#     print("You are eligible for driving!!!")
+
+# 2. if-else statement : It is used to execute the block of code when the condition is True and another block of code when the condition is False.
+
+# age = 18
+# if age>18:
+#     print("You are eligible for driving!!!")
+# else:
+#     print("You are not eligible for driving!!!")
+
+# 3. if elif else: It is used to execute the block of code based on the multiple conditions.
+
+# if condition:
+#     block of code
+# elif condition:
+#     block of code
+# else:
+#     block of code
+
+# age = 15
+# if age>18:
+#     print("You are eligible for driving!!!")
+# elif age == 18:
+#     print("You are eligible for driving!!!")
+# else:
+#     print("You are not eligible for driving!!!")
+
+
+# age = 15
+# if age>18:
+#     print("you are eligable for driving")
+# elif age == 18:
+#      print ("you are eligable for driving")
+# else:
+#      print ("you are not  eligable for driving")
+
+
+# a = 5
+# b = 51
+# if a>b:
+#     print("a is greater than b")
+# elif a == b:
+#     print ("a is equal to b")
+# else:
+#     print ("a is less than b")
+
+# num = 16
+# if num%2==0:
+#     print("Even Number!!!")
+# else:
+#     print("Odd Number!!!")
 
 
 
 
 
+# If we want to check positive or negative number
+
+# a = 16
+# if a > 0:
+#     print("Positive Number!!!")
+# else:
+#     print("Negative Number!!!")
+
+
+# loops: It is used to execute the block of code multiple times.
+
+# 1. for loop : It is used to iterate over the sequence.
+
+# Syntax:
+
+# for variable_name in range(start,end,step):
+#     block of code
+
+# for i in range(1,11,1):
+#     print(i)
+    
+# 2. while loop : It is used to execute the block of code until the condition is True.
 
 
 
+num = int(input("Enter the number of which you want the multiplication table of : "))
+
+for i in range(1,11):
+    print(num," X ",i," = ",num*i)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 8 * 1 = 8
+# 8 * 2 = 16

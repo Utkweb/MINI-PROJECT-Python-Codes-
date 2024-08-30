@@ -842,3 +842,271 @@
 # names = ["Ayra","Humza","Anvi","Nidhi","Riya"]
 
 # you need to count the number of names starting with a vowel
+
+
+# List : Collections of item 
+
+# 1. Mutable  - we can change ,modify, update the elements
+# 2. Ordered - it maintains the order of the elements
+# 3. Duplicates allowed - it allows the duplicates
+# 4. It is represented in []
+
+# example of list :
+
+# list1 = [1,2,3,4,5,6,7,8,9,10] (we can store integers)
+# list2 = [1,2.5,"Ayra",True,54,88] (we can store different data types)
+# list3 = ["apple", "banana", "cherry", "kiwi", "mango"] (we can store strings)
+
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# print(l1)
+
+# if i wanna access the element in the list 
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# print(l1[-1])
+
+# slicing - breaking the list into pieces
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# print(l1[::-1])  # reverse the list
+
+
+# s1 = "Humza"
+# print(s1[::-1])  # reverse the string
+
+# append() - it adds an element at the end of the list
+# adds an element at the particular 
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# # l1.append("raspberry")
+# l1.insert(3,"raspberry")
+
+# print(l1)
+
+# remove() - removes the specified element
+# pop() - removes the specified index
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# l1.remove("apple")
+# l1.pop()
+
+# print(l1)
+
+# del - deletes the list
+
+# l1 = ["apple", "banana", "cherry", "kiwi", "mango"]
+# del l1
+
+# print(l1)
+
+# will access the elements of the list using for loop
+
+# cars = ["Ford", "Volvo", "BMW", "Audi", "Mercedes", "Toyota"]
+
+# for i in range(0,len(cars)):
+#     print(i+1,".",cars[i])
+
+# apps = ["Facebook", "Instagram", "Whatsapp", "Snapchat", "Linkedin", "Telegram", "Pinterest"]
+
+# for i in apps:
+#     print(i)
+
+# Tuples : It is a collection of items. That ae immutable,ordered, allow duplicate values
+# 
+# It is represented by ().
+
+# t1 = ("apple", "banana", "cherry", "kiwi", "mango")
+
+
+# # type casting
+# l1 = list(t1)
+# l1[2] = "orange"
+# t1 = tuple(l1)
+# print(l1)
+
+# t1 = ("apple", "banana", "cherry", "kiwi", "mango")
+# print("banana" not in t1)
+
+
+# Memebership operators : in, not in
+
+# joining tuples
+
+# t1 = (1,2,3,4,5)
+# t2 = ('a','b','c','d','e')
+
+# print(t1+t2)
+
+# replication
+
+# t1 = (1,2,3,4,5)
+# print(t1*2)
+
+# t1 = (78,89,57,29,96,55)
+
+# we need to find largest element in the tuple
+# we need to find smallest element in the tuple
+# we need to swap the first and last element in the tuple
+
+# t = (78,89,57,29,96,55)
+
+# t1 = list(t)
+
+# temp = t1[0]
+# t1[0] = t1[-1]
+# t1[-1] = temp
+
+# print(t1)
+
+
+# social_apps = ["FacebooF", "InstI", "W", "Snapchat", "Linkedin", "TelegraT", "P"]
+# ans = []
+
+# for x in social_apps:
+#     if len(x) >= 2 and x[0] == x[-1]:
+#         ans.append(x)
+
+# print(ans)
+
+
+# Sets: It is a collection of items. It is unordered, unindexed, no duplicates allowed
+# -> It is represented by {}
+
+
+# s1 = ['apple', 'banana', 'cherry', 'kiwi', 'mango', 'apple', 'banana', 'cherry', 'kiwi', 'mango']
+# print(set(s1))
+
+# how you can access the elements if the it doens't allow to do so with index - loops
+
+# s1 = {'apple', 'cherry', 'kiwi', 'mango'}
+
+# adding a item 
+
+# s1 = {'apple', 'cherry', 'kiwi', 'mango'}
+# s1.add("banana")
+
+# print(s1)
+
+
+
+# thisset = {"apple", "banana", "cherry"}
+# tropical = {"pineapple", "mango", "papaya"}
+
+# thisset.update(tropical)
+
+# print(thisset)
+
+
+# for removing item from the set = remove(), discard(), pop(), clear(), del()
+
+
+# Join sets - union(), update(), intersection_update(), symmetric_difference_update(), difference_update()
+
+
+# dictionaries - it is a collection of items. It is unordered, mutable, indexed, no duplicates allowed
+
+# -> It is represented by {}
+
+# d1 = {
+#     'name' : 'Ayra',
+#     'age' : 20,
+#     'city' : 'Delhi',
+#     'country' : 'India',
+#     'country' : 'USA'
+# }
+
+# print(d1['name'])
+
+
+# key -> It is the name of the item
+# value -> It is the value of the item
+
+# Coding Problems related to dictionaries
+
+# 1. Write a Python program to sum all the items in a dictionary.
+
+# d1 = {
+#     'a' : 100,
+#     'b' : 200,
+#     'c' : 300,
+#     'd' : 400
+# }
+
+# sum = 0
+
+# for i in d1.values():
+#     sum = sum+i
+
+# print(f'Sum of all the items in the dictionary is : {sum}')
+
+# 2. Write a Python program to multiply all the items in a dictionary.
+
+# 3. Write a Python program to remove a key from a dictionary.
+
+# d1 = {
+#     'a' : 100,
+#     'b' : 200,
+#     'c' : 300,
+#     'd' : 400
+# }
+
+
+# def count_characters(name):
+#     char_count = {}
+
+#     for char in name:
+#         if char in char_count:
+#             char_count[char] +=1
+#         else:
+#             char_count[char] = 1
+    
+#     return char_count
+
+
+# name = "utkarsh"
+# print(f"Count of characters in the name {name} is : {count_characters(name)}")
+
+
+# mississippi
+
+# word = str(input("Enter the word: "))
+
+# m = 0
+# i = 1,4,7,10
+# s = 2,3,5,6
+# p = 8,9
+
+
+# def character_position(s):
+#     position_dict = {}
+#     for index,char in enumerate(s):
+#         if char in position_dict:
+#             position_dict[char].append(index)
+#         else:
+#             position_dict[char] = [index]
+#     return position_dict
+
+# word = 'mississippi'
+# ans = character_position(word)
+# print(ans)
+
+
+# Desktop Application 
+
+# Web Application - 
+
+# tkinter module helps us to build a desktop application
+
+
+from tkinter import *
+
+root = Tk()   #to achieve a screen
+root.title("Ayra's Application")
+
+root.geometry('400x300')
+
+
+
+root.mainloop()
+

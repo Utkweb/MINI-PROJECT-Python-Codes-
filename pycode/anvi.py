@@ -310,56 +310,195 @@
 # for i in range(len(thislist)):
 #     print(thislist[i])
 
+# array :
 
-import random
+# a = 14
+# b = 15
+# c = 16
+# d = 17
+# e = 18
+# f = 19
+# g = 20
+# h = 21
+# i = 22
+# j = 23
 
-def getuser_choice():
-    choices = ['rock','paper','scissors']
-    user_choice = input("Enter your choice (rock,paper,scissors): ").lower()
-    while user_choice not in choices:
-        print("Invalid choice. Please try again.")
-        user_choice = input("Enter your choice (rock,paper,scissors): ").lower()
-    return user_choice
+# arr = [14,15,16,17,18,19,20,21,22,23]
 
-def getcomputer_choice():
-    choices = ['rock','paper','scissors']
-    computer_choice = random.choice(choices)
-    return computer_choice
+# print(arr)
 
-def check_winner(user_choice,computer_choice):
-    if user_choice == computer_choice:
-        return "It's a tie!!!"
-    elif (user_choice == 'rock' and computer_choice == 'scissors') or \
-    (user_choice == 'scissors' and computer_choice == 'paper') or \
-    (user_choice == 'paper' and computer_choice == 'rock'):
-        return "User's win!!!"
-    else:
-        return "Computer's win!!!"
-    
-def play_game():
-    print("Welcome to the Rock-Paper-Scissors Game!")
 
-    user_score = 0
-    computer_score = 0
-    while True:
-        user = getuser_choice()
-        computer = getcomputer_choice()
-        print(f"User's choice: {user}")
-        print(f"Computer's choice: {computer}")
-        result = check_winner(user,computer)
+# we are going to learn about the Data type:-
 
-        if result == "User's win!!!":
-            user_score += 1
-        elif result == "Computer's win!!!":
-            computer_score += 1
-        else:
-            pass
+# 1. List : It is a collection of items which is ordered and changeable. Allows duplicate members.
 
-        print(f"Current Score -> User: {user_score}, Computer: {computer_score}")
-        play_again = input("Do you want to play again? (yes/no): ").lower()
-        if play_again != 'yes':
-            break
-    print(f"Final Score -> User: {user_score}, Computer: {computer_score}")
-    print("Thanks for playing the game!")
+# myList = ["apple","banana","cherry","apple","banana","cherry"]
 
-play_game()
+# l1 = [10,20,30,40,50]
+# print(max(l1))
+
+
+# 2. Tuples : It is a collection of items which is ordered and unchangeable. Allows duplicate members.
+# -> it is represented by round brackets ()
+
+# example :
+
+# t1 = ('apple', 'banana', 'cherry', 'watermelon')
+# print(t1[-1])
+
+# slicing
+
+# t1 = ('apple', 'banana', 'cherry', 'watermelon')
+# print(t1[1:])
+
+# input
+
+# l4=[1,1,1,2,2,3,3,4,5,6,7,6,8,0,6,4,2,1,1,1,0,0,0,0,3,3,3,2,4,]
+
+# ouput 
+
+# l4 = [1,2,3,4,5,6,7,8,0]
+
+# names = ['anvi','utkarsh','Joe','Bob','Johnson','David','Aanya','zuckerburg']
+
+
+# functions:-
+
+
+# it increases the functionality
+# code-reusability
+
+
+# num = 8
+# if num%2==0:
+#     print(num)
+
+# def function_name():
+#     #statements
+
+#     return something
+
+
+# def is_even(num):
+#     if num%2==0:
+#         print(num)
+
+# # main function
+# is_even(8)
+# is_even(15)
+
+# import tkinter as tk 
+
+# def cel_to_fah():
+#     try :
+#         celsius = float(entry.get())
+#         fahrenheit = (celsius * 9/5) + 32
+        
+#         result.config(text=f"Temperature in Fahrenheit: {fahrenheit}")
+#     except ValueError:
+#         result.config(text="Please enter a valid number.")
+
+# def fah_to_cel():
+#     try:
+#         fahrenheit = float(entry.get())
+#         celsius = (fahrenheit - 32) * 5/9
+        
+#         result.config(text=f"Temperature in Celsius: {celsius}")
+#     except ValueError:
+#         result.config(text="Please enter a valid number.")
+
+
+
+# root = tk.Tk()
+
+# root.title("Temperature Converter")
+
+# l1 = tk.Label(root,text="Temperature Converter",font=("Arial",20))
+# l1.grid(row=0,columnspan=3,padx=20,pady=20)
+
+# l1 = tk.Label(root,text="Enter the temperature in Celsius/fahrenhiet:",font=("Arial",15))
+# l1.grid(row=1,column=0,padx=20,pady=20)
+
+# entry = tk.Entry(root,font=("Arial",15))
+# entry.grid(row=1,column=1,padx=20,pady=20)
+
+# b1 = tk.Button(root,text="Convert to celsius :",font=("Arial",15),fg="white",bg="blue",command=cel_to_fah)
+# b1.grid(row=2,column=0,padx=20,pady=20)
+
+# b2 = tk.Button(root,text="Convert to fahrenhiet :",font=("Arial",15),fg="white",bg="blue",command=fah_to_cel)
+# b2.grid(row=2,column=1,padx=20,pady=20)
+
+# result_frame = tk.Frame(root,bd=2,relief=tk.GROOVE)
+# result_frame.grid(row=3,columnspan=2,padx=20,pady=20)
+
+# result = tk.Label(result_frame,text="Result",font=("Arial",15))
+# result.grid(padx=20,pady=20)
+
+# root.mainloop()
+
+
+# functions - > it increases the functionality of the code and also helps in code reusability.
+
+# syntax:
+
+# def function_name(arguments):
+#     # statements
+#     # return 
+
+# # main function
+# function_name(parameters)
+
+# def add(a,b):
+#     print(f"The addition of two numbers is {a+b}")
+
+# main function
+
+# add(10,20)
+
+
+# 1. Subtract
+# 2. Multiply
+# 3. Divide
+# 4. Modulus
+# 5. Exponent
+# 6. Floor Division
+
+
+# tkinter - It is a module that helps to make the desktop application
+
+from tkinter import *
+
+
+root = Tk()
+root.title("Calculator")
+root.geometry('300x400')
+
+label = Label(root,text="Sign Up ",font=("Arial",20))
+label.pack(pady=20)
+
+firstname = Label(root,text="First Name",font=("Arial",15))
+firstname.pack(pady=10)
+
+entry = Entry(root,font=("Arial",15))
+entry.pack(pady=10)
+
+lastname = Label(root,text="Last Name",font=("Arial",15))
+lastname.pack(pady=10)
+
+entry1 = Entry(root,font=("Arial",15))
+entry1.pack(pady=10)
+
+button = Button(root,text="Submit",font=("Arial",15),bg="blue",fg="white")
+button.pack(pady=10)
+
+root.mainloop()
+
+
+# 1. firstname
+# 2. lastname
+# 3. email
+# 4. Phone
+# 5. Address
+# 6. City
+# 7. Password
+# 8. Confirm Password

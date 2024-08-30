@@ -176,7 +176,450 @@
 # Python Nested Loops :
 
 
-for i in range(1,5):
-    for j in range(1,5):
-        print(j,end=" ")
-    print()
+# 1 2 3 4 5
+# 1 2 3 4 5
+# 1 2 3 4 5
+# 1 2 3 4 5
+# 1 2 3 4 5
+
+
+# Type casting : It changes the data type from one to another.
+
+# a = "10"
+
+# n = int(a)
+# print(type(n))
+
+# Arrays : 
+
+# 1. List
+
+# -> It is collection of items,which is ordered and changeable. Allow duplicate values.It is mutable
+# -> It is represented by square brackets []
+
+# l1 = [10,20,30,40,50] (int)
+# l2 = ["Anvi","Nidhi","Levin","Arnav"](str)
+# l3 = [10.587]
+# l4 = [10,20,30,"Utkarsh",51.058,True]
+
+# l1 = [10,20,30,40,50]
+
+# print(l1[2])
+
+# slicing : It is used to extract a part of the list
+
+
+# l1 = [10,20,30,40,50]
+# print(l1[:3])
+
+# l2 = ['a', 'b', 'c', 'd', 'e']
+# print(l2[2:])
+
+
+# What will be the output of the code?
+
+
+
+# **Options:**
+
+# a) ['a', 'b', 'c']  
+# b) ['a', 'b', 'c', 'd']  
+# c) ['c', 'd', 'e']  
+# d) ['d', 'e']  
+
+# ---
+
+# **Answer:**
+
+# The correct answer is **c) ['c', 'd', 'e']**.
+
+# l4 = [5, 10, 15, 20, 25, 30]
+# print(l4[2:5])
+
+# how to change the elements or update it 
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+
+# cars[1] = "Audi"
+
+# print(cars)
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+
+# l1 = [1,2,3,4,5]
+
+# names = ["Anvi","Levin","Nidhi","Arnav","Utkarsh"]
+
+# 2. tuple
+# 3. set
+# 4. Dictionaries
+
+
+
+# names = ["Anvi","Levin","Nidhi","Arnav","Utkarsh"]
+# count = 0
+# for name in names:
+#     vowels = "aeiouAEIOU"
+#     if name[0] in vowels:
+#         count +=1
+
+# print(f"The number of names starting with vowels are: {count}")
+
+
+# add item to the list
+
+# append() - It is used to add an element to the end of the list.
+# insert() - It is used to add an element at a specific index.
+
+# name = ["Anvi","Levin","Nidhi","Arnav","Utkarsh"]
+# name.append("Ture")
+
+# name.insert(2,"Apoorv")
+
+# print(name)
+
+
+# remove item from the list
+
+# remove() - It is used to remove the first occurrence of the element from the list.
+# pop() - It is used to remove the element from the specified index.
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+# cars.remove("Toyato")
+
+# cars.pop()
+
+# print("The updated list is: ",cars)
+
+# loop lists 
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+
+# for i in cars:
+#     print(i)
+
+# how to sort the list
+
+# sort() - It is used to sort the list in ascending order.
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+
+# cars.sort()
+
+# print("The sorted list is: ",cars)
+
+
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+
+# cars.sort(reverse = True)
+
+# print("The sorted list is: ",cars)
+
+
+# name = "Levin"
+# print(name[::-1])
+
+# cars = ["Ford","Toyato","BMW","Mercedes"]
+# trucks = cars.copy()
+
+# print(trucks)
+
+# l1 = [10,20,30,40,50]
+# l2 = [60,70,80,90,100]
+
+# print(l1+l2)
+
+# 2. Tuples : - It is collection of items,which is ordered and unchangeable. Allow duplicate values.It is immutable
+
+# It is represented by round brackets ()
+
+# t1 = (10,20,30,40,50)
+# print(t1)
+
+# bikes = ("Honda","Yamaha","Suzuki","Kawasaki")
+
+# # type casting
+# l1 = list(bikes)
+
+# l1[-1] = "Ducati"
+
+# bikes = tuple(l1)
+
+# print(bikes)
+
+
+# Sets : - It is collection of items,which is unordered and unindexed. It does not allow duplicate values.
+
+# It is represented by curly brackets {}
+
+# s1 = {10,20,30,40,50}
+# s2 = {"Anvi","Levin","Nidhi","Arnav","Utkarsh"}
+# s3 = {10,20,30,40,50,10,20,30,40,50}
+
+# print(s3)
+
+# cars = {"Ford","Toyato","BMW","Mercedes"}
+
+# print("BMW" not in cars)
+
+
+# fruits = {"apple","banana","cherry","orange","kiwi"}
+
+# fruits.add("mango")
+
+# print(fruits)
+
+# fruits = {"apple","banana","cherry","orange","kiwi"}
+# fruits2 = {"mango","papaya","grapes","orange","kiwi"}
+
+# fruits.update(fruits2)
+
+# print(fruits)
+
+# fruits = {"apple","banana","cherry","orange","kiwi"}
+
+# fruits.remove("cherry")
+
+# print(fruits)
+
+
+# join sets 
+
+# 1. union() - It is used to join two sets.
+
+# set1 = {1,2,3,4,5,'a'}
+# set2 = {'a','b','c','d','e',5}
+
+# set3 = set1.union(set2)
+
+# print(set3)
+
+
+# 2. intersection() - It is used to get the common elements from two sets.
+
+
+# set1 = {1,2,3,4,5,'a'}
+# set2 = {'a','b','c','d','e',5}
+
+
+# set3 = set1.intersection(set2)
+# print(set3)
+
+# & - joining two sets
+
+
+# dictionaries - 
+
+# example :
+
+# student = {
+#     "Name" : "Levin",
+#     "Age" : 15,
+#     "Class" : 10,
+#     "School" : "St. Mary's School",
+#     "Age" : 16
+# }
+
+
+# print(student["Name"])
+
+# x = student.get("Age")
+# print(x)
+
+# k = student.keys()
+# v = student.values()
+
+# print(k)
+# print(v)
+
+
+
+# student = {
+#     "Name" : "Levin",
+#     "Age" : 15,
+#     "Class" : 10,
+#     "School" : "St. Mary's School",
+#     "Age" : 16
+# }
+
+
+# student["RollNo"] = 101
+
+# print(student)
+
+
+# x = student.items()
+# print(x)
+
+
+# student.pop("Class")
+
+# print(student)
+
+
+
+# t1 = (5, 3, 8, 1, 2)
+# l1 = list(t1)
+
+# n = len(l1)
+
+# for i in range(n):
+#     for j in range(0,n-i-1):
+#         if l1[j] > l1[j+1]:
+#             l1[j],l1[j+1] = l1[j+1],l1[j]
+
+# t1 = tuple(l1)
+
+# print("The sorted tuple is: ",t1)
+
+# t1 = (5, 3, 8, 1, 2)
+# print("The sorted tuple is : ",tuple(sorted(t1)))
+
+
+
+# lst = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+
+# print("The original list is: ",lst)
+
+# n = len(lst)
+
+
+# for i in range(n):
+#     for j in range(0,n-i-1):
+#         if lst[j] > lst[j+1]:
+#             lst[j],lst[j+1] = lst[j+1],lst[j]
+
+# print("The sorted list is: ",lst)
+
+# class - It is a blueprint for creating objects. A class defines the attributes and methods that an object will have.
+
+# object - It is an instance of a class. An object is created using the constructor of the class.
+
+
+# create a class
+
+# class Class1:
+#     age = 15
+
+# # create an object
+
+# obj1 = Class1()
+# print(obj1.age)
+
+# class Student:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+    
+#     def print(self):
+#         return f"{self.name} is {self.age} years old"
+    
+# class test(Student):
+#     def __init__(self,name,age,rollno):
+#         super().__init__(name,age)
+#         self.rollno = rollno
+
+#     def print(self):
+#         return f"{self.name} is {self.age} years old and his roll no is {self.rollno}"
+    
+# s1 = Student("Levin",15)
+# s2 = test("Anvi",15,101)
+
+# print(s1.print())
+# print(s2.print())
+
+
+
+# Python polymorphism - 
+
+
+# class Car:
+#     def __init__(self,name,model):
+#         self.name = name
+#         self.model = model
+
+#     def move(self):
+#         print("Drive")
+
+# class Boat:
+#     def __init__(self,name,model):
+#         self.name = name
+#         self.model = model
+
+#     def move(self):
+#         print("Sail")
+# class Plane:
+#     def __init__(self,name,model):
+#         self.name = name
+#         self.model = model
+
+#     def move(self):
+#         print("Fly")
+
+# car1 = Car("Ford",2021)
+# boat1 = Boat("Yamaha",2021)
+# plane1 = Plane("Boeing",2021)
+
+
+# for i in (car1,boat1,plane1):
+#     i.move()
+
+        
+
+# class dog:
+#     def __init__(self, sound):
+#         self.sound = sound
+#     def sound(self):
+#         print(self.sound)
+# class cat:
+#     def __init__(self, sound):
+#         self.sound = sound
+#     def sound(self):
+#         print(self.sound)
+# class mouse:
+#     def __init__(self, sound):
+#         self.sound = sound
+#     def sound(self):
+#         print(self.sound)
+
+# dog1 = dog("bark")
+# cat1 = cat("meow")
+# mouse1 = mouse("squeak")
+# for i in (dog1, cat1, mouse1):
+#     i.sound()
+
+import math
+
+
+class Shape:
+    def area(self):
+        pass
+
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width
+
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+    
+    def area(self):
+        return math.pi * self.radius ** 2
+
+
+def print_area(shape):
+    print(f"Area: {shape.area()}")
+
+
+rect = Rectangle(4, 5)
+circ = Circle(3)
+
+print_area(rect)  
+
