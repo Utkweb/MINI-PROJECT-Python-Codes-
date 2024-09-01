@@ -140,7 +140,64 @@
 # 8 X 2 = 16
 # 8 X 3 = 24
 
-num = int(input("Enter the number of which you want the multiplication table of : "))
-print("Multiplication table of ",num,"\n")
-for i in range(1,11):
-    print(num," X ",i," = ",num*i)
+# num = int(input("Enter the number of which you want the multiplication table of : "))
+# print("Multiplication table of ",num,"\n")
+# for i in range(1,11):
+#     print(num," X ",i," = ",num*i)
+
+
+# 1 2 3 4 5 6 7 8 9 10
+
+
+# for i in range(1,11):
+#     print(i)
+
+
+# 2 4 6 8 10 12 14 16 18 20  -- Done
+
+# 5 10 15 20 25 30 35 40 45 50  --Done
+
+# for i in range(5,51,5):
+#     print(i)
+
+# 10 9 8 7 6 5 4 3 2 1 
+
+# for i in range(10,0,-1):
+#     print(i)
+
+# 1 4 9 16 25 36 49 64 81 100
+
+# for i in range(1,11):
+#     print(i**2)
+
+# 1*1 = 1
+# 2*2 = 4
+# 3*3 = 9
+# 4 = 16
+# 5 = 25 
+# 6 = 36 
+# 7 = 49 
+# 8 = 64
+# 9 = 81
+# 10 = 100
+
+
+
+# 1+2+3+4+5+6+7+8+9+10 = 55
+
+# piggy_bank = 0
+# for i in range(1,11):
+#     piggy_bank = piggy_bank+i
+
+# print(piggy_bank)
+
+
+# 5! = 5*4*3*2*1 = 120
+
+# num = int(input("Enter the number : "))
+# fact = 1
+
+# for i in range(1,num+1):
+#     fact = fact * i 
+
+# print(fact)

@@ -1144,3 +1144,22 @@
 
 # 1. Gym
 # 2. 
+
+
+# Database 
+
+# 1. We need to open the xampp
+# 2. You need to start the Apache and MySql
+
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+    host="localhost",
+    user='root',
+    password='',
+    database='utkarsh'
+)
+
+if mydb.is_connected():
+    print("Database connected successfully !!!")

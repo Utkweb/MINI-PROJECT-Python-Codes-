@@ -263,12 +263,67 @@
 
 # num = 123
 
-num = int(input("Enter the number : "))
-ans = 0
-while num>=0:
-    rem = num % 10  #rem = 1
-    ans = ans*10+rem   #ans = 321
-    num = num // 10    #num = 1
+# num = int(input("Enter the number : "))
+# ans = 0
+# while num>=0:
+#     rem = num % 10  #rem = 1
+#     ans = ans*10+rem   #ans = 321
+#     num = num // 10    #num = 1
 
-print(ans)
+# print(ans)
 
+
+
+# make a small game today
+
+# guess the number 
+
+
+# Number guessing game 
+
+# 1 - 50 
+
+# targetted number - and that is not known by us, we want to guess the secret number and we have only 5 chance
+# to do so.
+
+
+# random module 
+
+# import random
+
+# num = random.randint(1,20)
+
+
+# print(num)
+
+
+# Number guessing game
+
+
+# import random 
+
+# print("Welcome to Number Guessing Game 🔢")
+# print("Try to search up the random number between 1 - 50 and we have only 5 chances")
+
+# secret_number = random.randint(1,50)
+
+# attempts = 0
+# max_attempts = 5
+
+# while attempts < 5:
+#     guess = int(input('Guess the random number : '))
+#     attempts = attempts + 1
+
+#     if guess == secret_number:
+#         print('Congratulations you got the right number 😊 in {attempts} attempts.')
+#         break
+#     elif guess > secret_number:
+#         print('You guess too high 😶‍🌫️')
+#     else:
+#         print('You guess too low 😶‍🌫️')
+
+#     if attempts == max_attempts:
+#         print(f'You have no attempts left. Game Over! 😗. The secret number is {secret_number}')
+
+
+# 0 1 4 9 16 25 36 49 64 81 100
