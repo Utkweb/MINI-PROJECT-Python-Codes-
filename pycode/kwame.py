@@ -202,11 +202,98 @@
 
 
 
-num = int(input("Enter the number of which you want the multiplication table of : "))
+# num = int(input("Enter the number of which you want the multiplication table of : "))
 
-for i in range(1,11):
-    print(num," X ",i," = ",num*i)
+# for i in range(1,11):
+#     print(num," X ",i," = ",num*i)
 
 
 # 8 * 1 = 8
 # 8 * 2 = 16
+
+
+
+# while loop:
+
+# We are either known about the starting point or the ending point 
+
+# while conditions:
+#     statements
+
+
+# 1 2 3 4 5 6 7 8 9 10
+
+# i = 1
+
+# while i <= 10:
+#     print(i)
+#     i = i + 1  
+
+# 10 11 12 13 14 15 16 17 18 19 20
+
+# 10 9 8 7 6 5 4 3 2 1 
+
+# 5 10 15 20 25 30 35 40 45 50
+
+
+# 123 => 321
+
+# num = int(input("Enter the number : "))
+# ans = 0
+# while num > 0:
+#     rem = num%10      # num = 1 % 10 = 1
+#     ans = ans * 10 + rem   # ans = 32*10+1 = 321
+#     num = num // 10    # num = 12//10 = 1
+
+# print("The reverse of the number is ",ans)
+
+
+# Number guessing game
+
+# random module
+
+# import random
+
+# num = random.randint(1,30)
+# print(num)
+
+
+# import random
+
+# print("Welcome to the Number Guessing Game!!!")
+# print("You have only 5 chances to guess the number between 1 to 30")
+
+# secret_number = random.randint(1,30)
+
+# attempts = 0
+# max_attempts = 5
+
+# while attempts<5:
+
+#     guess = int(input("Guess the number : "))
+#     attempts = attempts + 1
+
+#     if guess == secret_number:
+#         print(f"Congratulation, You've won the game in {attempts} attempts.")
+#         break
+#     elif guess > secret_number:
+#         print("Your guess is too high")
+#     else:
+#         print("Your guess is too low")
+
+# if attempts == max_attempts:
+#     print(f"Game Over !!! . The secret number is {secret_number}")
+
+
+# 0 1 1 2 3 5 8 13 21 34 
+
+# prev = 0
+# current = 1
+
+# print(prev,current,end=" ")
+
+# for i in range(2,10):
+#     next = prev+current
+#     print(next,end=" ")
+#     prev = current
+#     current = next

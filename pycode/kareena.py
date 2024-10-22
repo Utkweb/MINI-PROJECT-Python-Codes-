@@ -326,4 +326,368 @@
 #         print(f'You have no attempts left. Game Over! 😗. The secret number is {secret_number}')
 
 
-# 0 1 4 9 16 25 36 49 64 81 100
+# 0 1 4 9 16 25 36 49 64 81 100\
+
+
+# Strings : they are the words or sentences
+
+
+
+# print(name[2:])
+
+# if we need to print in the reverse order
+
+# print(name[::-1])
+
+# concatenation - it refers to add two string
+
+# print(firstname+lastname)
+
+# replication - to print multiple one thing acc. to you
+
+# print(firstname*100)
+
+
+# format string 
+
+
+# firstname = "Kareena "
+# lastname = 'Patel'
+# age = 13
+# country = 'USA'
+
+# print("My name is ",firstname,lastname,"and I'm ",age,'years old and I live in',country,"country")
+
+# print(f"My name is {firstname}{lastname} and I'm {age} years old and I live in this {country} country")
+
+
+# membership operators 
+
+# in - like if something is there
+# not in  - the thing that you are asking is not there
+
+# name = 'Utkarsh'
+
+# if 'z' in name:
+#     print("Yes it's there")
+
+
+# name = "Utkarsh"
+
+# for i in name:
+#     print(i)
+
+# name = 'Kareena'
+
+# vowel = 'aeiouAEIOU'
+# count = 0
+
+# for i in name:
+#     if i not in vowel:
+#         count = count+1
+
+# print(f"The count of consonant in {name} is {count}")
+
+# in the email @,.
+
+
+# email = str(input("Enter the email : "))
+
+# abc@gmail.com
+
+# name = "Utkarsh"
+# print(name[2:5])
+
+# print(f"")
+
+# Python Casting : when i want to change the data type from one to another then it's called as type casting
+
+# int
+# bool
+# float
+# String
+
+# num = 35.88
+# print(int(num))
+
+
+# 1. List
+# 2. tuple
+# 3. set
+# 4. Dictionary
+
+# type()
+
+
+# list - it is a data type to store multiple variables in it 
+# The list would look like enclsoed in [] brackets.
+
+# cars = ["Toyato","Honda","Audi","Tesla","Jeep","Mercedez"]
+# print(type(cars))
+
+
+# cars = ["Toyato","Honda","Audi","Tesla","Jeep","Mercedez"]
+# print(cars[::-1])
+
+
+
+# anything[0] = "Student"
+
+# print(anything)
+
+
+# changeable
+# allow duplicate values
+
+
+# kareena
+# aneeraK
+
+
+# len() - it helps you to find the length of the list
+
+# anything = ["Kareena",13,10.55,True,59,50.2,45,78,"Utkarsh","Mercedez","apple"]
+
+# print(anything[-2])
+
+
+# fruits = ["apple","orange","banana","watermelon","grapes","mango","pineapple","cherry","papaya","Strawberry"]
+
+# addding the elements
+
+# append() - it adds the elements at the last of the list
+# insert() - it adds the elements at the desired position
+
+# fruits.append("blueberries")
+# fruits.insert(3,"blueberries")
+
+# print(fruits)
+
+
+# import random
+
+# def get_user_choice():
+#     print("Make the choices from below : ")
+#     print("1. Rock")
+#     print("2. Paper")
+#     print("3. Scissors")
+#     choice = (input("Enter your choice : "))
+
+#     if choice == "Rock":
+#         return 'Rock'
+#     elif choice == "Paper":
+#         return 'Paper'
+#     elif choice == "Scissors":
+#         return 'Scissors'
+#     else:
+#         print("Invalid Input!")
+
+# def get_computer_choice():
+#     return random.choice(['Rock','Paper','Scissors'])
+
+# def determine_winner(user,computer):
+
+#     if user == computer:
+#         return "It's a tie"
+#     elif (user == "Rock" and computer == "Scissors") or \
+#     (user == "Paper" and computer == "Rock") or \
+#     (user == "Scissors" and computer == "Paper"):
+#         return "User Wins"
+#     else:
+#         return "Computer Wins"
+
+# print("Welcome to the Rock,Paper and Scissors Game!")
+
+# user_choice = get_user_choice()
+# computer_choice = get_computer_choice()
+
+# print("Users choice : ",user_choice)
+# print("Computer Choice : ",computer_choice)
+
+# result = determine_winner(user_choice,computer_choice)
+# print(result)
+
+
+
+# name = ["Kareena","Utkarsh","Piyush","Aaron","Eden"]
+# vowels = "AEIOUaeiou"
+
+# for i in name:
+
+# string
+
+
+
+
+
+# name = ["Kareena","Utkarsh","Piyush","Aaron","Eden"]
+# vowels = "AEIOUaeiou"
+
+# count = 0
+
+# for i in name:
+#     if i[0] in vowels:
+#         count = count+1
+
+# print("The count of names that are starting up with vowels are ",count)
+
+
+# num = [2,4,6,8,9,5,3,7]
+
+# sum = 0
+
+# for i in num:
+#     if i%2==0:
+#         sum=sum+i
+
+# print("The sum of only even element are : ",sum)
+
+
+# number = [2,4,6,8,3,2,8]
+
+# if 7 in number:
+#     print("Exists")
+# else:
+#     print("Not exists")
+
+
+
+
+# num = int(input("Enter the number of which you wanna check the occurenece of :"))
+# count = 0
+# for i in number:
+#     if i == num:
+#         count=count+1
+# print("The number of occurences of an element",count)
+
+
+# num = [1,8,9,3,5,7,4,2,6,14]
+
+# max_num = num[0]
+
+# for i in num:
+#     if i > max_num:
+#         max_num = i
+
+# print("LArgest Element : ",max_num)
+
+
+# num = [1,3,5,6,3,7,3,6]
+# min_num=num[0]
+# for i in num:
+#     if i < min_num:
+#         min_num = i
+# print("Minimum element: ",min_num)
+
+
+# num = [1,3,5,6,3,7,3,6]
+
+# num1 = []
+
+# for i in num:
+#     if i not in num1:
+#         num1.append(i)
+
+
+# print(num1)
+
+# Bubble Sort : it allows you to sort the elements in ascending or descending order.
+
+# 1st pass complete
+
+# 7 3 6 1
+# 3 7 6 1
+# 3 6 7 1
+# 3 6 1 7
+
+
+# 2nd pass
+
+# 3 6 1 7 
+# 3 1 6 7 
+
+# 3 rd pass
+
+# 3 1 6 7
+# 1 3 6 7
+
+
+# arr = [7,3,6,1]
+
+# n = len(arr)
+
+# for i in range(n):
+#     for j in range(n-i-1):
+#         if arr[j]>arr[j+1]:
+#             arr[j],arr[j+1] = arr[j+1],arr[j]   #swapped the numbers
+# print(arr)
+
+
+# arr = [7,8,5,1,4,3,6,9,4]
+
+# n = len(arr)
+
+# count = 0
+# for i in range(n+1):
+#     if i%2!=0:
+#         count = count+1
+
+# print(count)
+
+
+# num = [4,6,2,8,7,23,55]
+
+# print(num[::-1])
+
+
+
+# [start:end:steps]
+
+# accessing the lists with loops
+
+# num = [4,6,2,8,7,23,55]
+
+# for i in num:
+#     print(i)
+
+
+# 1.  We need to add all the elements of the list 
+
+# num = [4,6,2,8,7,23,55]
+
+# piggy_bank = 0
+# for i in num:
+#     piggy_bank = piggy_bank + i
+
+# print(f"The sum of all elements in the list are {piggy_bank}")
+
+
+# We need to know how many even numbers are there in the list
+
+
+# num = [4,2,5,1,6,7]
+# count = 0
+# for i in num:
+#     if i%2!=0:
+#         count = count+1
+
+# print(f"The count of even numbers in the list are {count}")
+
+# We need to find the whether a number exists in the list or not 
+
+# num = [2,3,1,6,7,4]
+# target = int(input("Enter the number to search: "))
+# flag = False
+# for i in num:
+#     if i == target:
+#         flag = True
+#     else:
+#         flag = False
+
+# if flag == True:
+#     print("The element exist")
+# else:
+#     print("The elements doesn't exists")
+
+
+# We need to find out the maximum and minimum number in the list

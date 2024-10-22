@@ -201,3 +201,185 @@
 #     fact = fact * i 
 
 # print(fact)
+
+
+# while loop : We arr either not known about the starting or the ending point
+
+# while condition:
+#     statements
+
+
+# 1 10
+
+# i = 1
+# while i <= 10:
+#     print(i)
+#     i = i+1
+
+
+# 123 => 321
+
+# 123 % 10 = 3 * 10 = 30 + 2 =32*10 = 320+1 =321
+# 12 % 10 = 2 
+
+# 1 % 10 = 1
+
+# num = int(input("Enter the number : "))    #num = 123
+# ans = 0
+# while num > 0:
+#     rem = num % 10     # rem = 1 % 10 = 1
+#     ans = ans * 10 + rem   #ans = 32*10+1 = 321
+#     num = num // 10     #num = 12//10 = 1
+
+
+# print("The reverse number is",ans)
+
+
+# 324 = 3+2+4=9
+
+# 0 1 1 2 3 5 8 13 21 34 
+
+
+# prev = 0
+# current = 1
+
+# print(prev,current, end = " ")
+# for i in range(2,10):
+#     next = prev+current
+#     print(next,end =" ")
+#     prev = current
+#     current = next
+
+
+# Number Guessing game :
+
+# random module
+
+# import random
+
+# num = random.randint(1,30)
+# print(num)
+
+
+# import random 
+
+# print("Welcome to the Number Guessing Game 🔢")
+# print("You have only 5 chances. The number is in between 1 to 30")
+
+# secret_number = random.randint(1,30)
+# attempts = 0
+# max_attempts = 5
+
+# while attempts < 5:
+#     guess = int(input("Guess the number : "))
+#     attempts = attempts + 1
+
+#     if guess == secret_number:
+#         print(f"Congratulation you won the game in {attempts} attempts.")
+#         break
+#     elif guess > secret_number:
+#         print("Your guess is too high")
+#     else:
+#         print("Your guess is too low")
+
+# if attempts == max_attempts:
+#     print(f"You've lost the game. The secret number is {secret_number}.")
+
+
+# four data types :
+
+# int
+# float
+# string
+# boolean
+
+
+
+# 1. list - it is used to store multiple items in one variable
+# The list is enclosed by []
+# It allows duplicate values
+
+
+# example:
+
+# num = [1,2,3,4,5,6,7,8]
+# num1 = [1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0]
+# num2 = ["Kwame","Kwarteng","Kwaku","James","Bob"]
+# num3 = [True, False]
+
+# num4 = ["Kwame",14,34.8,True]
+
+
+
+# num = [1,2,3,4,5]
+
+# print(num[-1])
+
+
+# index 
+
+# 1. Positive index - it always start from zero
+# 2. Negative index - it starts from the backwards of th list and it starts with -1
+
+
+
+
+# 2. tuple
+# 3. set
+# 4. Dictionary
+
+
+# slicing 
+
+# num = [1,2,3,4,5,6,7,8,9,10]
+# print(num[2:6])
+
+
+
+# We are gonna access the list with loops
+
+# num = [1,2,3,4,5,6,7,8,9,10]
+
+# for i in num:
+#     print(i)
+
+# num = [48,56,12,70,16,34,66,87,94]
+
+# target = int(input("Enter the number to check :"))
+
+# if target in num:
+#     print("The number is present")
+# else:
+#     print("The number is not present")
+
+
+# num = [48,56,12,70,16,34,66,87,94]
+# WAP to find the count of even numbers and odd numbers are there in the above list?
+
+
+
+
+# num = [48,56,12,70,16,34,66,87,94]
+# even_count = 0
+# odd_count = 0
+
+# for i in num:
+#     if i%2==0:
+#         even_count+=1
+#     else:
+#         odd_count+=1
+
+
+# print(f"The count of even number in the list are : {even_count}")
+# print(f"The count of odd number in the list are : {odd_count}")
+
+
+# Write a program to add all the number of the list?
+# num = [48,56,12,70,16,34,66,87,94]
+
+
+# Find the maximum and minimum number in the list ?
+
+
+# remove duplicates 
+

@@ -373,27 +373,45 @@
 
 # Number guessing game
 
-import random
+# import random
 
-secret = random.randint(1,20)
+# secret = random.randint(1,20)
 
-print("I am thinking of a number between 1 and 20")
+# print("I am thinking of a number between 1 and 20")
 
-print("You have only 5 chances to guess the number")
+# print("You have only 5 chances to guess the number")
 
-for i in range(1,6):
-    guess  = int(input("Enter the number  : "))
+# for i in range(1,6):
+#     guess  = int(input("Enter the number  : "))
 
-    if guess == secret:
-        print("Congratulations! You have guessed the number in",i,"attempts")
-        break
-    elif guess < secret:
-        print("Your guess is too low")
-    elif guess > secret:
-        print("Your guess is too high")
-    else:
-        print("Invalid Choice ")
+#     if guess == secret:
+#         print("Congratulations! You have guessed the number in",i,"attempts")
+#         break
+#     elif guess < secret:
+#         print("Your guess is too low")
+#     elif guess > secret:
+#         print("Your guess is too high")
+#     else:
+#         print("Invalid Choice ")
     
-if guess != secret:
-    print("Sorry! You have not guessed the number. The number was",secret)
+# if guess != secret:
+#     print("Sorry! You have not guessed the number. The number was",secret)
  
+
+# name = "Abdullah"
+
+# name = str(input("Enter the name :"))
+# print(f"My name is {name}")
+
+
+# formatted string
+# print("My name is ",name)
+
+# firstname
+# lastname 
+# age 
+# city
+# standard
+
+
+# My name is firstname lastname .I'm age years old. I live in this city. And I study in grade standrad.

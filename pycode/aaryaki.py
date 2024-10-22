@@ -1152,14 +1152,188 @@
 # 2. You need to start the Apache and MySql
 
 
+# import mysql.connector
+
+# mydb = mysql.connector.connect(
+#     host="localhost",
+#     user='root',
+#     password='',
+#     database='utkarsh'
+# )
+
+# if mydb.is_connected():
+#     print("Database connected successfully !!!")
+
+# user = rock computer = scissor
+# user = scissor  computer = paper
+# user = paper computer = rock
+
+
+
+# from tkinter import *
+# import random
+
+# def decide_winner(user_choice):
+#     choices = ['rock','paper','scissors']
+#     computer_choice = random.choice(choices)
+#     result =""
+
+#     if user_choice == computer_choice:
+#         result = "It's a Tie"
+#     elif (user_choice == 'rock' and computer_choice == 'scissors') or \
+#     (user_choice == 'scissors' and computer_choice == 'paper') or \
+#     (user_choice == 'paper' and computer_choice == 'rock'):
+#         result = "User Wins 😎"
+#     else:
+#         result = "Computer Wins 💻"
+
+
+#     result_label.config(text=f"User Choice : {user_choice} \n Computer Choice : {computer_choice} \n {result}")
+
+# root = Tk()
+# root.title("Rock Paper Scissor's Game ")
+# root.geometry('500x400')
+
+
+
+# rock_button = Button(root,text="Rock",width=10,command = lambda: decide_winner('rock'))
+# scissor_button = Button(root,text="Scissors",width=10,command = lambda: decide_winner('scissors'))
+# paper_button = Button(root,text="Paper",width=10,command = lambda: decide_winner('paper'))
+
+# result_label = Label(root,text="",font=("Arial",20))
+
+
+# rock_button.pack(pady=10)
+# scissor_button.pack(pady=10)
+# paper_button.pack(pady=10)
+# result_label.pack(pady=20)
+
+
+# root.mainloop()
+
+
+
+
+# from tkinter import *
+# import mysql.connector
+# from tkinter import messagebox
+
+# def Signup():
+#     email = e1.get()
+#     password = e2.get()
+
+#     if email == "" or password == "":
+#         messagebox.showwarning("Error","All fields are required")
+#     else:
+#         try:
+#             mydb = mysql.connector.connect(
+#                 host="localhost",
+#                 user="root",
+#                 password="",
+#                 database="utkarsh"
+#             )
+#             cursor = mydb.cursor()
+#             cursor.execute("INSERT into user_data (email,password) values (%s,%s)",(email,password))
+#             mydb.commit()
+
+#             messagebox.showinfo("Success","Signup Successful!")
+
+#             e1.delete(0,END)
+#             e2.delete(0,END)
+        
+#         except mysql.connector.Error as err:
+#             messagebox.showerror("Database Error",str(err))
+#         finally:
+#             if mydb.is_connected():
+#                 cursor.close()
+#                 mydb.close()
+
+
+# root=Tk()
+# root.title("Registration form")
+# root.geometry('300x200')
+
+
+# email_label = Label(root,text="Email")
+# email_label.pack()
+
+# e1 = Entry(root)
+# e1.pack()
+
+# password_label = Label(root,text="Password")
+# password_label.pack()
+
+# e2 = Entry(root,show="*")
+# e2.pack()
+
+# b1 = Button(root,text="Submit",fg='white',bg='green',command=Signup)
+# b1.pack()
+
+# root.mainloop()
+
+
+# # Password : Aaryaki@1234
+
+
+
+from tkinter import *
+from tkinter import messagebox
 import mysql.connector
 
 mydb = mysql.connector.connect(
     host="localhost",
-    user='root',
-    password='',
-    database='utkarsh'
+    user="root",
+    password="",
+    database = "todo_db"
 )
 
-if mydb.is_connected():
-    print("Database connected successfully !!!")
+cursor = mydb.cursor()
+
+def add_task():
+    task = expression_field.get()
+    if task!= '':#< != means not equal to
+        cursor.execute("Insert into task1 (task) values (%s)",(task,))
+        mydb.commit()
+        expression_field.delete(0,END) #clears the entry field
+    else:
+        messagebox.showwarning('warning','please enter a task')
+
+def delete_task():
+    try:
+        task_index = list_box.curselection()[0]
+        task_text = list_box.get(task_index).split('. ',1)[1]
+
+        cursor.execute("Select id from task1 where task = %s",(task_text))
+        
+    except IndexError:
+        messagebox.showwarning('warning','Please select a task to delete')
+root = Tk()
+root.title('todolist')
+root.geometry("450x450")
+root.configure(bg = '#C8A2C8')
+
+t1 = Label(root,text='Welcome to the To Do List', bg='pink',fg='black',font=('Arial',20))
+t1.pack(pady=20)
+frame_task = Frame(root)
+frame_task.pack(fill=BOTH, expand=True)
+
+
+
+
+list_box = Listbox(frame_task,
+height=10,
+width=50,
+bg='beige',
+fg='black',
+borderwidth=1)
+list_box.pack(pady=20) 
+
+expression_field = Entry(root,text="",width=50)
+expression_field.pack(pady=20)
+
+b1 = Button(root,text='add task', fg='black', bg='white', height=1,width=7,command=add_task)
+b1.pack(pady=20)
+b2 = Button(root,text='delete task', fg='black', bg='white', height=1,width=7,command=delete_task)
+b2.pack(pady=20)
+
+root.mainloop()

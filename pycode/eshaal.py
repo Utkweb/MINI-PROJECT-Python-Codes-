@@ -948,3 +948,76 @@
 
 # my_tuple = (10, 20, 30, 40, 50)
 # print(my_tuple.index(30))
+
+
+# Conditional Statements
+
+# if statement
+
+# if conditon:
+#     statements
+
+# age = int(input("Enter the age : "))
+# if age > 18:
+#     print("The person is allowed to drive!")
+
+# if else statement
+
+# if conditions:
+#     statements
+# else:
+#     statements
+
+# age = int(input("Enter the age : "))
+# if age > 18:
+#     print("The person is allowed to drive!")
+# else:
+#     print("The person is not allowed to drive!")
+
+# if elif else statement
+
+# if condition:
+#     statements
+# elif condition:
+#     statements
+# else:
+#     statements
+
+# age = int(input("Enter the age : "))
+# if age > 18:
+#     print("The person is allowed to drive!")
+# elif age == 18:
+#     print("The person just got allowed to drive!")
+# else:
+#     print("The person is not allowed to drive!")
+
+
+# You need to check a number is a even or odd number
+# You need to check between two number which greater, equal
+
+
+num = int(input("Enter the first number : "))
+num1 = int(input("Enter the second number : "))
+
+if num > num1:
+    print("num is the greater number")
+elif num == num1:
+    print("Both numbers are equal ")
+else:
+    print("num1 is greater")
+
+
+
+
+
+
+# for loop
+
+# for variable_name in range(start,end,steps):
+#     statements
+
+# 1 2 3 4 5 6 7 8 9 10
+
+
+# while loop
+

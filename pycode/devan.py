@@ -537,10 +537,20 @@
 
 
 from tkinter import *
+from PIL import Image, ImageTk
+
 root = Tk()
 root.title("Devan's ipad")
-root.configure(bg='#FF00FF')
+# root.configure(bg='#FF00FF')
 root.geometry('400x1000')
+
+
+image = Image.open("pr.jpg")
+bg_image = ImageTk.PhotoImage(image)
+
+background_label = Label(root, image=bg_image)
+background_label.place(relwidth=1, relheight=1) 
+
 label =Label(root,text="sign in O_O",fg='white',bg='#FF00FF',font=('Merriweather',20))
 label.pack(pady=20)
 name_label = Label(root,text="name",fg='white',bg='#FF00FF')

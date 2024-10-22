@@ -466,33 +466,100 @@
 
 # tkinter - It is a module that helps to make the desktop application
 
-from tkinter import *
+# from tkinter import *
 
 
-root = Tk()
-root.title("Calculator")
-root.geometry('300x400')
+# root = Tk()
+# root.title("Calculator")
+# root.geometry('300x400')
 
-label = Label(root,text="Sign Up ",font=("Arial",20))
-label.pack(pady=20)
+# label = Label(root,text="Sign Up ",font=("Arial",20))
+# label.pack(pady=20)
 
-firstname = Label(root,text="First Name",font=("Arial",15))
-firstname.pack(pady=10)
+# firstname = Label(root,text="First Name",font=("Arial",15))
+# firstname.pack(pady=10)
 
-entry = Entry(root,font=("Arial",15))
-entry.pack(pady=10)
+# entry = Entry(root,font=("Arial",15))
+# entry.pack(pady=10)
 
-lastname = Label(root,text="Last Name",font=("Arial",15))
-lastname.pack(pady=10)
+# lastname = Label(root,text="Last Name",font=("Arial",15))
+# lastname.pack(pady=10)
 
-entry1 = Entry(root,font=("Arial",15))
-entry1.pack(pady=10)
+# entry1 = Entry(root,font=("Arial",15))
+# entry1.pack(pady=10)
 
-button = Button(root,text="Submit",font=("Arial",15),bg="blue",fg="white")
-button.pack(pady=10)
+# button = Button(root,text="Submit",font=("Arial",15),bg="blue",fg="white")
+# button.pack(pady=10)
 
-root.mainloop()
+# root.mainloop()
 
+
+
+
+# from tkinter import *
+# root = Tk()
+# root.title("calculator")
+# root.geometry('300x400')
+# label=Label(root,text="calculator",font=("caveat",20))
+# label.pack(pady=20)
+
+# firstname = Label(root,text="First Name",font=("caveat",15))
+# firstname.pack(pady=10)
+# entry1 = Entry(root,font=("caveat",15))
+# entry1.pack(pady=10)
+# lastname = Label(root,text="last Name",font=("caveat",15))
+# lastname.pack(pady=10)
+# entry2 = Entry(root,font=("caveat",15))
+# entry2.pack(pady=10)
+# email = Label(root,text="email",font=("caveat",15))
+# email.pack(pady=10)
+# entry3 = Entry(root,font=("caveat",15))
+# entry3.pack(pady=10)
+# phone = Label(root,text="phone")
+# city= Label(root,text="city",font=("caveat",15))
+# city.pack(pady=10)
+# entry4 = Entry(root,font=("caveat",15))
+# entry4.pack(pady=10)
+# password = Label(root,text="password",font=("caveat",15))
+# password.pack(pady=10)
+# entry5 = Entry(root,font=("caveat",15))
+# entry5.pack(pady=10)
+# confirmpassword  = Label(root,text="confirm password",font=("caveat",15))
+# confirmpassword.pack(pady=10)
+# entry6 = Entry(root,font=("caveat",15))
+# entry6.pack(pady=10)
+
+# b1 = Button(root,text="Submit",fg="white",bg="green")
+# b1.pack(pady = 10)
+# root.mainloop()
+
+# counter - if we are clicking the button it will increase the count by 1 
+
+# from tkinter import *
+
+# def click():
+#     global counter
+#     counter=counter+1
+#     label.config(text=f"Clicks :{counter}")
+    
+# counter = 0
+
+# root = Tk()
+# root.title('Counter')
+# root.geometry('400x300')
+# root.configure(bg='green')
+
+# label = Label(root,text="Clicks: 0")
+# label.pack()
+
+# button = Button(root,text="Click me!",command=click)
+# button.pack()
+
+# root.mainloop()
+
+
+# you need to make the counter and increase by 5 everytime
+# and put the clear button as well for clearing up the fields
 
 # 1. firstname
 # 2. lastname
@@ -502,3 +569,78 @@ root.mainloop()
 # 6. City
 # 7. Password
 # 8. Confirm Password
+
+
+# l1 = [14,89,65,71,23,45,63]
+
+# max = l1[0]
+
+# for i in range(0,len(l1)):
+#     if l1[i] >max:
+#         max = l1[i]
+
+
+# print(max)
+
+
+
+
+
+
+
+# from tkinter import *
+
+# root = Tk()
+
+# root.title('Counter')
+# root.geometry('200x300')
+
+
+# l1 = Label(root,text="Utkarsh Singh")
+# l1.pack()
+
+# b1 = Button(root,text="Click me!")
+# b1.pack()
+
+
+# root.mainloop()
+
+
+
+from tkinter import *
+
+root = Tk()
+root.title("Signup Page")
+root.geometry('400x400')
+
+l1 = Label(root,text="Email")
+l1.pack()
+
+e1 = Entry(root)
+e1.pack()
+
+l2 = Label(root,text="Password")
+l2.pack()
+
+e2 = Entry(root,show='*')
+e2.pack()
+
+b1 = Button(root,text="Submit",fg="white",bg="green")
+b1.pack()
+
+root.mainloop()
+
+
+
+# Just create a signup page with the below entries
+
+# Username
+# Email
+# contact
+# address
+# password
+# confirm password 
+
+
+# submit button 
+

@@ -711,3 +711,57 @@
 # 4. bool -> True, False
 
 # opencv
+
+
+
+
+# print("Welcome to the demo class of Python Programming")
+
+# a = 7
+# b = 5
+
+# print(a+b)
+
+# data types:
+
+# 1. Integer : 
+
+# examples: 7,5,9,12,etc.
+
+# 2. Float: it stores the values that is having decimals in it
+# examples:4.37,3.14,etc
+
+# 3. String : It stores characters,words and even sentences.
+
+# example: "Pratik","Python Programming",etc
+
+
+
+
+# We can solve problems 
+# We can make desktop application,web application
+
+
+# print("Harman")
+
+
+
+# Desktop Application
+# Machine Learning / AI
+# Web Application
+
+
+
+# print("Welcome to the Python Classes Ninad!")
+
+# Variables : 
+
+# num = 15
+
+# data types:
+
+# 1. Integer: 
+
+
+
+

@@ -189,3 +189,154 @@
 # 1 - 150 
 
 # you need to add all the even numbers from 1 - 150
+
+
+
+# random module
+
+# import random 
+
+
+# num = random.randint(1,15)
+
+# print(num)
+
+# import random
+
+# print("Welcome to the Number Guessing Game 🔢")
+# print("You need to guess the number between 1 to 30 in 5 chances")
+
+
+# secret_number = random.randint(1,30)
+
+# max_attempts = 5
+# attempts = 0
+
+# while attempts < 5 :
+#     guess = int(input("Guess the number : "))
+#     attempts = attempts + 1
+
+
+#     if guess == secret_number:
+#         print("Congratulations, You've won the game in",attempts,"attempts.")
+#         break
+#     elif guess > secret_number:
+#         print("Your guess is too high")
+#     else:
+#         print("Your guess is too low")
+
+
+# if attempts == max_attempts:
+#     print("Game Over!!! The secret number is",secret_number)
+
+
+# either our starting point is not fixed or ending point
+
+
+# while condition:
+#     statements
+
+# 1 - 10
+
+# i = 1
+# while i <= 10:
+#     print(i)
+#     i = i+1
+
+# 10 11 12 13 14 15 16 17 18 19 20
+
+# 10 9 8 7 6 5 4 3 2 1 0
+
+# 5 10 15 20 25 30 35 40 45 50
+
+
+# boolean,float,string,int
+
+
+# new data types:
+
+# 1. List - It stores multiple items in it.
+# It is being enclosed by []
+# It allows duplicate values
+
+# example:
+
+# addition = [1,2,3,4,5,6,7,8]
+# l1 = [1.0,2.0,5.0,6.0,4.8]
+# l2 = ["Will","Utkarsh","Max","Aryan"]
+# l3 = [True,False,False]
+
+# l4 = ["Will",11,24.87,True]
+
+# num = [51,48,97,5,6,7,2]
+
+# print(num[-2])
+
+
+# indexes - are the identity of the numbers to access them
+# positive indexing starts from 0 to n
+# negative indexing starts from -1 to n
+
+# num = [51,48,97,5,6,7,2]
+# print(num[1:5])
+
+# Given the list 
+# colors = ['red', 'green', 'blue', 'yellow', 'purple']
+# what is the output of 
+# print(colors[1:4])
+
+
+# Given the list 
+# animals = ['cat', 'dog', 'elephant', 'giraffe', 'lion'],
+# what is the output of animals[-4:-1]?
+
+
+# Given the list 
+# students = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'], 
+# what is the output of students[1:-1]?
+
+# students = ['Alice', 'Bob', 'Charlie', 'David', 'Eve'] 
+# print(students[::-1])
+
+
+# num = [14,94,66,29,21,37]
+# for i in num:
+#     print(i)
+
+
+
+# add all elements
+# count of how many even and how many odd numbers are there in the list?
+
+
+# 2. Tuple
+# 3. set
+# 4. Dictionary
+
+
+import random 
+
+def user_choice():
+    user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
+    while user_choice not in ['Rock','Paper','Scissors']:
+        print("Invalid input Try Again!")
+        user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
+    return user_choice
+
+def computer_choice():
+    choices = ['Rock','Paper','Scissors']
+    return random.choice(choices)
+
+
+def determine_winner(user_choice,computer_choice):
+    if user_choice == computer_choice:
+        return "It's a Tie!"
+    elif (user_choice == 'Rock' and computer_choice == 'Scissor') or \
+    (user_choice == 'Scissor' and computer_choice == 'Paper') or \
+    (user_choice == 'Paper' and computer_choice == 'Rock'):
+        return "User Wins 😎"
+    else:
+        "Computer Wins 💻"
+
+print("Welcome to the Rock, Paper and Scissors Game!")
+

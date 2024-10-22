@@ -991,3 +991,452 @@
 
 # if mydb.is_connected():
 #     print("Connected to the database")
+
+
+
+# from tkinter import * 
+# from tkinter import messagebox
+# import mysql.connector
+
+
+# def signup():
+#     username = e1.get()
+#     password = e2.get()
+
+#     if not username or not password:
+#         messagebox.showwarning("Input error","All fields are required!")
+#         return 
+    
+#     mydb = mysql.connector.connect(
+#         host="localhost",
+#         user="root",
+#         password="",
+#         database = "utkarsh"
+#     )
+
+#     if mydb.is_connected():
+#         cursor = mydb.cursor()
+#         cursor.execute('Insert into users (username,password) values (%s,%s)',(username,password))
+
+#         mydb.commit()
+#         messagebox.showinfo("Success"," Signup Successful")
+# root = Tk()
+# root.title('Sign Up Page')
+# root.geometry('400x300')
+
+# l1 = Label(root,text="Username")
+# l1.pack()
+
+# e1 = Entry(root)
+# e1.pack()
+
+# l2 = Label(root,text="Password")
+# l2.pack()
+
+# e2 = Entry(root)
+# e2.pack()
+
+
+# b1 = Button(root,text="Create Account",bg="green",fg="white",command =signup)
+# b1.pack()
+# root.mainloop()
+
+
+# from tkinter import *
+# from tkinter import messagebox
+# import mysql.connector
+
+
+# def signup():
+#     FN = e1.get()
+#     LN = e2.get()
+#     Email = e3.get()
+#     password = e4.get()
+#     CP = e5.get()
+
+#     # Check if any field is empty
+#     if not FN or not LN or not Email or not password or not CP:
+#         messagebox.showwarning("Input error", "All fields are required")
+#         return
+    
+#     # Check if passwords match
+#     if password != CP:
+#         messagebox.showerror('Error', "Password doesn't match")
+#         return
+
+#     # Connect to the database
+#     try:
+#         mydb = mysql.connector.connect(
+#             host="localhost",
+#             user="root",
+#             password="",
+#             database="utkarsh"
+#         )
+
+#         if mydb.is_connected():
+#             cursor = mydb.cursor()
+
+#             # Insert data into the database
+#             cursor.execute(
+#                 'INSERT INTO users (FN, LN, Email, password, CP) VALUES (%s, %s, %s, %s, %s)', 
+#                 (FN, LN, Email, password, CP)
+#             )
+            
+#             mydb.commit()
+#             messagebox.showinfo("Success", "Signup Successful")
+
+#     except mysql.connector.Error as err:
+#         messagebox.showerror('Database Error', f"Error: {str(err)}")
+
+
+# # Create the main window
+# root = Tk()
+# root.title("Hacker's GUI")
+# root.geometry("400x400")
+
+# # Create and pack widgets
+# l1 = Label(root, text="Sign Up", font=("Arial", 20))
+# l1.pack()
+
+# l2 = Label(root, text="First Name", font=("Arial", 10))
+# l2.pack()
+# e1 = Entry(root)
+# e1.pack()
+
+# l3 = Label(root, text="Last Name", font=("Arial", 10))
+# l3.pack()
+# e2 = Entry(root)
+# e2.pack()
+
+# l4 = Label(root, text="Email", font=("Arial", 10))
+# l4.pack()
+# e3 = Entry(root)
+# e3.pack()
+
+# l5 = Label(root, text="Password", font=("Arial", 10))
+# l5.pack()
+# e4 = Entry(root, show='*')  # Hide password input
+# e4.pack()
+
+# l6 = Label(root, text="Confirm Password", font=("Arial", 10))
+# l6.pack()
+# e5 = Entry(root, show='*')  # Hide confirm password input
+# e5.pack()
+
+# b1 = Button(root, text='Create Account', fg='white', bg='Green', font=('Arial', 15), command=signup)
+# b1.pack()
+
+# root.mainloop()
+
+# import mysql.connector
+# from tkinter import *
+# from tkinter import messagebox
+
+# # MySQL connection
+# conn = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="",
+#     database="user_info"
+# )
+# cursor = conn.cursor()
+
+# def inputError():
+#     if enterTaskField.get() == "":
+#         messagebox.showerror("Input Error", "Please enter a task")
+#         return 0
+#     return 1
+
+# def clear_taskNumberField():
+#     taskNumberField.delete(0.0, END)
+
+# def clear_taskField():
+#     enterTaskField.delete(0, END)
+
+# def insertTask():
+#     global counter
+#     value = inputError()
+#     if value == 0:
+#         return
+    
+#     content = enterTaskField.get()
+
+    
+#     cursor.execute("INSERT INTO tasks (task) VALUES (%s)", (content,))
+#     conn.commit()
+
+   
+#     cursor.execute("SELECT id, task FROM tasks ORDER BY id DESC LIMIT 1")
+#     result = cursor.fetchone()
+
+#     task_id = result[0]
+#     task_content = result[1]
+
+#     TextArea.insert('end', "[ " + str(task_id) + " ] " + task_content + "\n")
+#     clear_taskField()
+
+# def deleteTask():
+#     global counter
+#     if taskNumberField.get(1.0, END).strip() == "":
+#         messagebox.showerror("Input Error", "Please enter a task number")
+#         return
+    
+#     task_no = taskNumberField.get(1.0, END).strip()
+#     clear_taskNumberField()
+
+#     try:
+#         task_id = int(task_no)
+#         cursor.execute("DELETE FROM tasks WHERE id = %s", (task_id,))
+#         conn.commit()
+
+        
+#         TextArea.delete(1.0, END)
+#         cursor.execute("SELECT id, task FROM tasks")
+#         for task in cursor.fetchall():
+#             TextArea.insert('end', "[ " + str(task[0]) + " ] " + task[1] + "\n")
+#     except ValueError:
+#         messagebox.showerror("Input Error", "Invalid task number")
+
+# def loadTasks():
+#     cursor.execute("SELECT id, task FROM tasks")
+#     for task in cursor.fetchall():
+#         TextArea.insert('end', "[ " + str(task[0]) + " ] " + task[1] + "\n")
+
+# if __name__ == "__main__":
+#     gui = Tk()
+#     gui.configure(background="light green")
+#     gui.title("ToDo App")
+#     gui.geometry("250x300")
+
+#     enterTask = Label(gui, text="Enter Your Task", bg="light green")
+#     enterTaskField = Entry(gui)
+#     Submit = Button(gui, text="Submit", fg="Black", bg="Red", command=insertTask)
+#     TextArea = Text(gui, height=5, width=25, font="lucida 13")
+#     taskNumber = Label(gui, text="Delete Task Number", bg="blue")
+#     taskNumberField = Text(gui, height=1, width=2, font="lucida 13")
+#     delete = Button(gui, text="Delete", fg="Black", bg="Red", command=deleteTask)
+#     Exit = Button(gui, text="Exit", fg="Black", bg="Red", command=gui.quit)
+
+#     enterTask.grid(row=0, column=2)
+#     enterTaskField.grid(row=1, column=2, ipadx=50)
+#     Submit.grid(row=2, column=2)
+#     TextArea.grid(row=3, column=2, padx=10, sticky=W)
+#     taskNumber.grid(row=4, column=2, pady=5)
+#     taskNumberField.grid(row=5, column=2)
+#     delete.grid(row=6, column=2, pady=5)
+#     Exit.grid(row=7, column=2)
+
+#     loadTasks()  
+#     gui.mainloop()
+
+    
+#     cursor.close()
+#     conn.close()
+
+
+
+# from tkinter import *
+# from tkinter import messagebox
+# import pyperclip
+# import string
+# import random
+
+# def gen_pwd():
+#     length = pass_len.get()
+#     inc_upper = include_uppercase.get()
+#     inc_lower = include_lowercase.get()
+#     inc_digits = include_number.get()
+#     inc_symbols = include_symbol.get()
+
+#     if not (inc_upper or inc_lower or inc_digits or inc_symbols):
+#         messagebox.showwarning("Selection Error","Select at least one option!")
+#         return 
+    
+#     char = ""
+#     if inc_upper:
+#         char = char + string.ascii_uppercase
+#     if inc_lower:
+#         char = char + string.ascii_lowercase
+#     if inc_digits :
+#         char = char + string.digits
+#     if inc_symbols:
+#         char = char + string.punctuation
+    
+#     password = ''.join(random.choice(char) for _ in range(length))
+#     pwd_entry.delete(0,END)
+#     pwd_entry.insert(0,password)
+
+
+
+# def copy_pwd():
+#     password = pwd_entry.get()
+#     if password :
+#         pyperclip.copy(password)
+#         messagebox.showinfo("Copied","Password copied to clipboard!")
+#     else:
+#         messagebox.showwarning("No Password","Generate a password first")
+
+# root=Tk()
+# root.title("Tech Code Yeah")
+# root.geometry("500x300")
+# label=Label(root,text="Password Length :")
+# label.pack()
+
+# pass_len = IntVar(value=8)
+# Scale(root,from_=4,to_=32,orient=HORIZONTAL,variable=pass_len).pack()
+
+# include_uppercase = BooleanVar()
+# include_lowercase = BooleanVar()
+# include_number = BooleanVar()
+# include_symbol = BooleanVar()
+
+
+# check=Checkbutton(root,text="Upper Case Letter's",variable=include_uppercase)
+# check.pack()
+# check1=Checkbutton(root,text="Lower Case Letter's",variable=include_lowercase)
+# check1.pack()
+# check2=Checkbutton(root,text="Numbers",variable=include_number)
+# check2.pack()
+# check3=Checkbutton(root,text="Symbols",variable=include_symbol)
+# check3.pack()
+
+# pwd_entry = Entry(root)
+# pwd_entry.pack(pady = 10)
+
+# Button(root,text="Generate Password",command=gen_pwd).pack(pady=10)
+# Button(root,text="Copy Password",command=copy_pwd).pack(pady=10)
+# root.mainloop()
+
+
+# Snake Game :
+
+# A food for snake.
+# if it hits the walls and eats itself game over
+# increase the length by 1 when it eats 
+# a background
+# snake 
+# score 
+# start button 
+
+
+import turtle
+import random
+import time
+
+delay = 0.1
+score = 0
+high_score = 0
+
+root = turtle.Screen()
+root.title("Snake Game")
+root.bgcolor("black")
+root.setup(width=600,height=600)
+root.tracer(0)
+
+# snake's head
+
+head = turtle.Turtle()
+head.shape("square")
+head.color("green")
+head.penup()
+head.goto(0,0)
+head.direction = "Stop"
+
+# food
+
+food = turtle.Turtle()
+colors = random.choice(['red','green','pink','orange','white','yellow'])
+shapes = random.choice(['square','triangle','circle'])
+food.speed(0)
+food.shape(shapes)
+food.color(colors)
+food.penup()
+food.goto(0,100)
+
+pen = turtle.Turtle()
+pen.speed(0)
+pen.shape("square")
+pen.color("White")
+pen.penup()
+pen.hideturtle()
+pen.goto(0,250)
+pen.write("Score : 0   High Score : 0",align="center",font=("Arial",24,"bold"))
+
+
+# key directions
+
+def goUp():
+    if head.direction!="down":
+        head.direction="up"
+def goDown():
+    if head.direction!="up":
+        head.direction="down"
+def goLeft():
+    if head.direction!="right":
+        head.direction="left"
+def goRight():
+    if head.direction!="left":
+        head.direction="right"
+
+def move():
+    if head.direction == "up":
+        y = head.ycor()
+        head.sety(y+20)
+    if head.direction == "down":
+        y = head.ycor()
+        head.sety(y-20)
+    if head.direction == "left":
+        x = head.xcor()
+        head.setx(x+20)
+    if head.direction == "right":
+        x = head.xcor()
+        head.setx(x-20)
+
+root.listen()
+root.onkeypress(goUp,"w")
+root.onkeypress(goDown,"s")
+root.onkeypress(goLeft,"a")
+root.onkeypress(goRight,"d")
+
+segments = []
+
+
+
+while True:
+    root.update()
+    if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "Stop"
+        colors = random.choice(['red','green','pink','orange','white','yellow'])
+        shapes = random.choice(['square','triangle','circle'])
+        for segment in segments:
+            segment.goto(1000,1000)
+        segment.clear()
+        score = 0
+        delay = 0.1
+        pen.clear()
+        pen.write("Score : {} High Score : {}",format(
+            score,high_score),align="center",font=("Arial",24,"bold"))
+    if head.distance(food) < 20:
+        x = random.randint(-270,270)
+        y = random.randint(-270,270)
+        food.goto()
+
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("orange")
+        new_segment.penup()
+        segment.append(new_segment)
+        delay = delay -0.001
+        score = score + 10
+        if score > high_score:
+            high_score = score 
+        pen.clear()
+        pen.write("Score : {} High Score : {}",format(
+            score,high_score),align="center",font=("Arial",24,"bold"))
+
+
+
+root.mainloop()

@@ -148,6 +148,151 @@ lti line comment
 
 
 
-num = int(input("Enter the value :"))
+# num = int(input("Enter the value :"))
 
-print(num)
+# print(num)
+
+
+# random module -
+
+# import random
+
+# num = random.randint(1,10)
+
+# print(num)
+
+
+# Number guessing game
+
+# import random
+
+# print("Welcome to the Number Guessing Game 🔢")
+# print("You are gonna guess the number between 1 to 20. You have only 5 chances.")
+
+# secret_number = random.randint(1,20)
+
+# max_attempts = 5
+# attempts = 0
+
+# while attempts < 5:
+
+#     guess = int(input("Guess the number : "))
+#     attempts = attempts + 1    # attempts = 5
+
+#     if guess == secret_number:
+#         print("Congratulations You've won the game in ",attempts,"attempts!!!")
+#         break
+#     elif guess > secret_number:
+#         print("Your guess is to high!!!")
+#     else:
+#         print("Your guess is too low!!!")
+
+# if attempts == max_attempts:
+#     print("You ran out of chances. Game Over !!!")
+
+
+# list 
+
+# rock , paper , scissor game!!!
+
+# rock paper
+# paper scissor
+# scissor rock
+
+
+# name = "Aarohi"
+# age = 11
+
+# print("My name is",name,"and I'm ", age,"old")
+
+# formatting string
+
+# print(f"My name is {name} and I'm {age} years old")
+
+# My name is Aarohi and I'm 11 years old
+
+# name = "Aarohi"
+
+# name = str(input("Enter the name : "))
+# age = int(input("Enter the age : "))
+
+# print(name)
+
+
+# name = "circumstances"
+
+# print(name[-1])
+
+# Slicing
+# name = "circumstances"
+
+# print(name[7:-3])
+
+# index -> it helps you to access the characters
+
+
+# positiving inndexing - # It starts from 0 as always and go ahead
+# Negative indexing - it starts from -1 at the last character of the variable 
+
+# word = "Stats"
+
+# print(word[::-1])
+
+
+# name = "circumstances"
+
+# print(f"The length of the {name} is {len(name)}")
+
+
+# name = "Aarohi"
+# age = 11
+
+# print("My name is",name,"and I'm",age,"years old")
+
+
+
+# print(f"My name is {name} and I'm {age} years old")
+
+
+# name = "Aarohi"
+
+# for i in name:
+#     print(i)
+
+
+
+# Membership Operators
+
+# in - including 
+# not in - excluding 
+
+
+# name = str(input("Enter the name : "))
+# vowel='AEIOUaeiou'
+# count = 0
+# for i in name:
+#     if i in vowel:
+#         count = count + 1
+
+# print(f"My name consist of {count} vowels.")
+
+
+# name = "Utkarsh"
+# print(len(name))
+
+
+# name = "Alexander"
+# print(name[-8:-3])
+
+
+# using the loops with strings
+
+name = "Alexander"
+count = 0
+
+for i in name:
+    if i == 'e':
+        count = count+1
+
+print(count)
+    

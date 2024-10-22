@@ -210,30 +210,202 @@
 
 # 1 20
 
-import random
+# import random
 
-print("Welcome to the Number guessing game!!!")
-print("You need to guess the number between 1 to 30")
-print("You have only 3 attempts")
+# print("Welcome to the Number guessing game!!!")
+# print("You need to guess the number between 1 to 30")
+# print("You have only 3 attempts")
 
 
-secret_number = random.randint(1,30)
-attempts = 0
+# secret_number = random.randint(1,30)
+# attempts = 0
 
-max_attempts = 5
+# max_attempts = 5
 
-while attempts < max_attempts:
-    guess = int(input("Enter your guess : "))
+# while attempts < max_attempts:
+#     guess = int(input("Enter your guess : "))
 
-    attempts = attempts+1
-    if guess == secret_number:
-        print("You won the Jackpot")
-        break
-    elif guess>secret_number:
-        print("Too high.. Try again!!!")
-    else:
-        print("Too low.. Try again!!!")
+#     attempts = attempts+1
+#     if guess == secret_number:
+#         print("You won the Jackpot")
+#         break
+#     elif guess>secret_number:
+#         print("Too high.. Try again!!!")
+#     else:
+#         print("Too low.. Try again!!!")
         
-    if attempts == max_attempts:
-        print("ohhoooo You lost the game !!!!!!!!!!!. The sceret number is",secret_number)
-        break
+#     if attempts == max_attempts:
+#         print("ohhoooo You lost the game !!!!!!!!!!!. The sceret number is",secret_number)
+#         break
+
+
+# 123 =>  321
+
+# /
+# //
+# %
+
+# 123 % 10 = 3*10 = 30 + 2 = 32*10 =320+ 1 = 321
+
+# 123 // 10 = 12%10 = 2
+
+# 12 // 10 = 1%10 = 1
+
+# num = int(input("Enter the number : "))   #num = 123
+# ans = 0
+
+# while num>0:
+
+#     rem = num%10    #rem = 1%10 = 1
+#     ans = ans*10+rem    #ans = 32*10 + 1 = 321
+#     num = num // 10    #num = 12//10 = 1
+
+
+# print("The reverse of the number is",ans)
+
+
+# 123 = 1+2+3 = 6
+
+# 0 1 1 2 3 5 8 13 21 34 
+
+# previous = 0
+# current = 1
+
+# print(previous,current,end= " ")
+
+# for i in range(1,11):
+#     next = previous+current
+#     print(next,end=" ")
+#     previous = current
+#     current = next
+
+
+
+# formatting strings
+
+# My name is Navya
+
+# name = "Navya"
+# age = 11
+
+# # print("My name is",name,"and I'm",age,"years old.")
+
+# print(f"My name is {name} and I'm {age} years old.")
+
+
+
+# name = "Navya"
+
+# for i in name:
+#     print(i)
+
+# length of the word
+
+# word = "circumstances"
+# print(len(word))
+
+# memberships operators
+
+# in : including
+# not in : excluding
+
+# name = "Navya"
+
+# if 'z' not in name:
+#     print("present")
+
+# name = str(input("Enter the name :"))
+# vowel = "AEIOUaeiou"
+
+# count = 0
+
+# for i in name:
+#     if i not in vowel:
+#         count = count+1
+
+# print(f"The name consists {count} consonants.")
+
+
+# data types:
+
+# string
+# int
+# float
+# boolean
+
+
+
+# Arrays:
+
+# 1. list - it can store multiple values in it.
+# They are enclosed by [].
+# It allows duplicate values
+
+# num = [1,2,3,4,5,7,8,9,10]
+# names = ["Navya","Utkarsh","Izzy","Ele","Molly"]
+# num1 = [10.2,15.2,78.0,89.21]
+# num2 = [True,False,True]
+# num3 = ["Navya",11,15.0,True]
+
+
+# names = ["Navya","Utkarsh","Izzy","Ele","Molly"]
+# print(names)
+
+# for finding the length of the list we can use len():
+
+# names = ["Navya","Utkarsh","Izzy","Ele","Molly"]
+# print(len(names))
+
+# if we need to access a particluar element we can access them with the index
+# negative indexing - it starts from -1 to -n and goes from right to left
+
+# names = ["Navya","Utkarsh","Izzy","Ele","Molly"]
+
+# print(names[-1])
+
+# slicing 
+
+# names = ["Navya","Utkarsh","Izzy","Ele","Molly"]
+
+# print(names[1::3])
+
+# num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# print(num[-8:-2:2])
+
+# items = ['first', 'second', 'third', 'fourth']
+# print(items[::-1])
+
+# movies = ['Inception', 'Titanic', 'Avatar', 'The Godfather', 'Pulp Fiction']
+# print(movies[-4:-1])
+
+# [start:end:steps]
+
+# how to find the length of the list
+
+# num = [ 17,14,23,11,12,30]
+# print(len(num))
+
+
+
+# today we learn about how to print the list with the loops
+
+# num = [ 17,14,23,11,12,30]
+# for i in num:
+#     print(i)
+
+# movies = ['Inception', 'Titanic', 'Avatar', 'The Godfather', 'Pulp Fiction']
+# for i in movies:
+#     print(i)
+
+num = [ 17,14,23,11,12,30]
+piggy_bank = 0
+
+for i in num:
+    piggy_bank = piggy_bank + i
+
+print(f"The sum of the list is {piggy_bank}")
+
+
+# 2. tuple
+# 3. set
+# 4. Dictionary

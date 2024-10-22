@@ -589,37 +589,194 @@
 # for i in (dog1, cat1, mouse1):
 #     i.sound()
 
-import math
+# import math
 
 
-class Shape:
-    def area(self):
-        pass
+# class Shape:
+#     def area(self):
+#         pass
 
 
-class Rectangle(Shape):
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+# class Rectangle(Shape):
+#     def __init__(self, length, width):
+#         self.length = length
+#         self.width = width
     
-    def area(self):
-        return self.length * self.width
+#     def area(self):
+#         return self.length * self.width
 
 
-class Circle(Shape):
-    def __init__(self, radius):
-        self.radius = radius
+# class Circle(Shape):
+#     def __init__(self, radius):
+#         self.radius = radius
     
-    def area(self):
-        return math.pi * self.radius ** 2
+#     def area(self):
+#         return math.pi * self.radius ** 2
 
 
-def print_area(shape):
-    print(f"Area: {shape.area()}")
+# def print_area(shape):
+#     print(f"Area: {shape.area()}")
 
 
-rect = Rectangle(4, 5)
-circ = Circle(3)
+# rect = Rectangle(4, 5)
+# circ = Circle(3)
 
-print_area(rect)  
+# print_area(rect)  
+
+# import tkinter as tk
+
+# def click():
+#     global counter
+#     counter +=1
+#     label.config(text=f"Clicks : {counter}")
+
+
+# counter = 0
+
+# root = tk.Tk()
+# root.title("Click Counter")
+# root.geometry('400x300')
+
+# root.configure(bg='blue')
+
+# label = tk.Label(root,text="Clicks : 0")
+# label.grid(row = 0,column=1)
+
+# button = tk.Button(root,text="Click Me!",command = click)
+# button.grid(row =0 ,column=2)
+
+# root.mainloop()
+
+
+# import tkinter as tk
+# import math
+
+# expression = ""
+
+# def press(num):
+#     global expression
+#     expression +=str(num)
+#     equation.set(expression)
+
+# def equal():
+#     try:
+#         global expression
+#         total = str(eval(expression))
+#         equation.set(total)
+#         expression = ""
+#     except:
+#         equation.set("Error")
+#         expression = ""
+
+# def delete():
+#     global expression
+#     expression = expression[:-1]
+#     equation.set()
+
+
+# def clear():
+#     global expression
+#     expression = ""
+#     equation.set("")
+
+# root = tk.Tk()
+# root.geometry("190x150")
+
+# equation = tk.StringVar()
+# expression_field = tk.Entry(root,textvariable=equation)
+# expression_field.grid(columnspan=4,ipadx=10)
+
+# e = tk.Label(root,text="")
+# e.grid(row=1, column=1)
+# b1 = tk.Button(root, text="1",command = lambda : press(1))
+# b1.grid(row=2, column=1)
+# b2 = tk.Button(root, text="2",command = lambda : press(2))
+# b2.grid(row=2, column=2)
+# b3 = tk.Button(root, text="3",command = lambda : press(3))
+# b3.grid(row=2, column=3)
+# bp = tk.Button(root, text="+",command = lambda : press("+"))
+# bp.grid(row=2, column=4)
+# b4 = tk.Button(root, text="4",command = lambda : press(4))
+# b4.grid(row=3, column=1)
+# b5 = tk.Button(root, text="5",command = lambda : press(5))
+# b5.grid(row=3, column=2)
+# b6 = tk.Button(root, text="6",command = lambda : press(6))
+# b6.grid(row=3, column=3)
+# bm = tk.Button(root, text="-",command = lambda : press("-"))
+# bm.grid(row=3, column=4)
+# b7 = tk.Button(root, text="7",command = lambda : press(7))
+# b7.grid(row=4, column=1)
+# b8 = tk.Button(root, text="8",command = lambda : press(8))
+# b8.grid(row=4, column=2)
+# b9 = tk.Button(root, text="9",command = lambda : press(9))
+# b9.grid(row=4, column=3)
+# bt = tk.Button(root, text="*",command = lambda : press("*"))
+# bt.grid(row=4, column=4)
+# b0 = tk.Button(root, text="0",command = lambda : press(0))
+# b0.grid(row=5, column=1)
+# bc = tk.Button(root, text="C",command = clear)
+# bc.grid(row=5, column=2)
+# bb = tk.Button(root, text="<-",command = delete)
+# bb.grid(row=5, column=3)
+# bd = tk.Button(root, text="/",command = lambda : press("/"))
+# bd.grid(row=5, column=4)
+# equal1 = tk.Button(root, text='=', fg="black", bg="white", command=equal, height=1, width=7)
+# equal1.grid(row=5, column=2)
+
+# root.mainloop()
+
+
+
+
+
+# from tkinter import*
+# from PIL import Image, ImageTk # type: ignore
+  
+  
+# root = Tk()
+# root.title("TKINDER BANK")
+# root.configure(bg=('#FFFFFF'))
+# root.geometry('400x1000')
+
+
+
+# image = Image.open("Ohsama-Sentai-King-Ohger")
+# bg_image = ImageTk.PhotoImage(image)
+
+
+
+
+
+
+
+
+
+
+# name_label = Label(root,text="name",fg='black')
+# name_label.pack(pady=10)
+# name_entry = Entry(root)
+# name_entry.pack(pady=10)
+# email_label = Label(root,text='email',fg='black')
+# email_label.pack(pady=10)
+# email_entry = Entry(root)
+# email_entry.pack(pady=10)
+# phonenumber_label = Label(root,text="phone number",fg='black')
+# phonenumber_label.pack(pady=10)
+# phonenumber_entry = Entry(root)
+# phonenumber_entry.pack(pady=10)
+# root.mainloop()
+
+
+
+
+# for i in range(1,11):
+#     print("Danish")
+
+
+# CRUD - 
+
+# Create 
+# Read
+# Update
+# Delete
 

@@ -1099,14 +1099,144 @@
 # tkinter module helps us to build a desktop application
 
 
-from tkinter import *
+# from tkinter import *
 
-root = Tk()   #to achieve a screen
-root.title("Ayra's Application")
+# root = Tk()   #to achieve a screen
+# root.title("Ayra's Application")
 
+# root.geometry('400x300')
+
+
+
+# root.mainloop()
+
+# from tkinter import *
+
+# root = Tk()
+# root.title("Counter Application")
+# root.geometry('400x300')
+# # root.configure(bg="#FF11FF")
+
+# label1 = Label(root,text="First Name",font=("Times New Roman",10),fg="green")
+# label1.pack()
+
+# e1 = Entry(root,fg='blue')
+# e1.pack()
+
+# root.mainloop()
+
+
+
+# Firstname
+# Last Name
+# Email 
+# Contact
+
+
+# from tkinter import*
+
+# def countdown(time_left):
+#     if time_left > 0:
+#         label2.config()
+        
+
+
+# def click():
+#     global counter
+#     counter = counter+1
+#     label1.config(text=f"Click counter: {counter}")
+
+# counter = 0
+
+
+# root=Tk()
+# root.title("click counter")
+# root.geometry('200x200')
+# root.configure(bg="#BC544B")
+# label = Label(root,text="Click Counter",font=("Arial",15))
+# label.pack(pady=20)
+# label1=Label(root,text="Click counter: 0",font=("Arial"),bg=x"black",fg="white")
+# label1.pack()
+# label2 = Label(root,text="Time left : 30 sec ",font=("Arial"))
+# label2.pack()
+# b1 = Button(root,text="Click ME",fg="black",bg="dark red",width=15,command=click)
+# b1.pack()
+# root.mainloop()
+
+
+
+# Password Genenator
+
+
+from tkinter import * 
+from tkinter import messagebox
+import random 
+import string
+
+def gen_pwd():
+    length = pwdslider.get()
+    include_uppercase = uppercase_var.get()
+    include_lowercase = lowercase_var.get()
+    include_numbers = numbers_var.get()
+    include_symbols = symbols_var.get()
+
+    if not (include_uppercase or include_lowercase or include_numbers or include_symbols):
+        messagebox.showerror("Selection Error","Select at least one option!.")
+        return 
+    
+    character = ""
+    if include_uppercase:
+        character+= string.ascii_uppercase
+    if include_lowercase:
+        character+= string.ascii_lowercase
+    if include_numbers:
+        character+= string.digits
+    if include_symbols:
+        character+= string.punctuation
+
+    password = ''.join(random.choice(character) for _ in range(length))
+    output.delete(0,END)
+    output.insert(0,password)
+
+def copy_password():
+    password = output.get()
+    if password:
+        root.clipboard_clear()   #clear the clipboard
+        root.clipboard_append(password)
+        messagebox.showinfo("Copied","Password copied to Clipboard")
+    else:
+        messagebox.showerror("Error","No password to copy!")
+
+
+
+
+root = Tk()
+root.title("PAssword Generator")
 root.geometry('400x300')
 
+Label(root,text="Password Length : ").pack()
+pwdslider = Scale(root,from_=8,to_=32,orient="horizontal")
+pwdslider.pack()
 
+uppercase_var = BooleanVar()
+lowercase_var = BooleanVar()
+numbers_var = BooleanVar()
+symbols_var = BooleanVar()
+
+Checkbutton(root,text="Include Upercases",variable=uppercase_var).pack()
+Checkbutton(root,text="Include Lowercasse",variable=lowercase_var).pack()
+Checkbutton(root,text="Include Numbers",variable=numbers_var).pack()
+Checkbutton(root,text="Include Symbols",variable=symbols_var).pack()
+
+
+b1 = Button(root,text="Generate Password",command=gen_pwd)
+b1.pack(pady=10)
+
+
+output = Entry(root,width=40)
+output.pack(pady=10)
+
+b2 = Button(root,text="Copy Password",command=copy_password)
+b2.pack()
 
 root.mainloop()
-
