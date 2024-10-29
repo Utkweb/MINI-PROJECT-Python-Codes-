@@ -336,7 +336,32 @@ def determine_winner(user_choice,computer_choice):
     (user_choice == 'Paper' and computer_choice == 'Rock'):
         return "User Wins 😎"
     else:
-        "Computer Wins 💻"
+        return "Computer Wins 💻"
 
 print("Welcome to the Rock, Paper and Scissors Game!")
+user_score = 0 
+computer_score = 0
+
+while True:
+    user = user_choice()
+    computer = computer_choice()
+
+    print(f"Computer Choice : {computer}")
+
+    result = determine_winner(user,computer)
+
+    if result == "User Wins 😎":
+        user_score = user_score + 1
+    elif result == "Computer Wins 💻":
+        computer_score = computer_score +1
+    
+    print(f"Score:    User: {user_score}   ||      Computer : {computer_score}")
+
+    play_again = input("Do you want to play the game again> (yes/no)").lower()
+    if play_again!='yes':
+        break
+
+print("Thanks for playing the game")
+
+print(f"Final Score:    User: {user_score}   ||      Computer : {computer_score}")
 

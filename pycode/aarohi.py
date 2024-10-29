@@ -287,12 +287,12 @@ lti line comment
 
 # using the loops with strings
 
-name = "Alexander"
-count = 0
+# name = "Alexander"
+# count = 0
 
-for i in name:
-    if i == 'e':
-        count = count+1
+# for i in name:
+#     if i == 'e':
+#         count = count+1
 
-print(count)
+# print(count)
     

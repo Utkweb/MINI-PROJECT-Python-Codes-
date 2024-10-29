@@ -765,3 +765,19 @@
 
 
 
+
+
+# print("Aditya")
+
+# a = 9
+# name = "Aditya"
+# pi = 3.14
+# flag = True
+
+# Data types:
+
+# 1. Integers (int) : You can suppose all the values that doesn't have decimals 
+# 2. Float (float) : It contains the number with decimals in it
+# 3. String (str) : It contains characters,words and even sentences 
+# 4. Boolean (bool) : It contains the value as True or False
+

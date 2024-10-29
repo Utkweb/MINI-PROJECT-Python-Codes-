@@ -181,8 +181,49 @@
 
 # 1 - 10 = 55
 
-piggy_bank = 0
-for i in range(1,11):
-    piggy_bank = piggy_bank + i
+# piggy_bank = 0
+# for i in range(1,11):
+#     piggy_bank = piggy_bank + i
 
-print("The sum of all elements in the list : ",piggy_bank)
+# print("The sum of all elements in the list : ",piggy_bank)
+
+
+# 567% = 7*10 = 70+6=76*10=760+5=765
+# 56%10 = 6
+
+# 5%10 = 5
+
+# 765
+
+
+# num = int(input("Enter the number to make it reverse : "))  #num = 123
+# ans = 0
+# while num != 0:
+#     rem = num % 10    # rem = 1% 10 = 1
+#     ans = ans * 10 + rem   #ans = 321
+#     num = num // 10   #num = 1
+
+# print(f"The reverse : {ans}")
+
+
+# 854 = 8+5+4 =     
+
+
+# == : used for comparing 
+# != : not equals to 
+
+
+# 0 1 1 2 3 5 8 13 21 34 55
+
+# prev = 0
+# current = 1
+
+# print(prev,current,end= " ")
+
+# for i in range(2,101):
+#     next = prev + current 
+#     print(next,end= " ")
+#     prev = current    #prev = 1
+#     current = next   #current = 2
+
+# 0 1 1 2 3 5 8

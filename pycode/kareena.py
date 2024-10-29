@@ -691,3 +691,92 @@
 
 
 # We need to find out the maximum and minimum number in the list
+
+
+# Adding up the items in the list 
+
+# 1. append() - It helps us to add the element at the last of the list 
+# 2. insert() - It helps us to add the element at the desired location
+
+# fruits = ["Banana","Apple","Orange","kiwi","Cantaloupe","Cherry"]
+# print(fruits)
+
+# fruits.append("Watermelon")
+# print(fruits)
+
+# fruits.insert(3,"Blueberry")
+# print(fruits)
+
+
+# Removing the elements of the list
+
+# 1. remove() - It helps you to rmeove the elements
+
+# fruits = ["Banana","Apple","Orange","kiwi","Cantaloupe","Cherry"]
+# fruits.remove("Apple")
+# print(fruits)
+
+# 2. pop() -
+
+# fruits = ["Banana","Apple","Orange","kiwi","Cantaloupe","Cherry"]
+# fruits.pop(3)
+# print(fruits)
+
+
+
+# num = [1,8,9,6,7,2,5,8,6,4,1,8,3,48,1,5]
+
+# ans = []
+
+# for i in num:
+#     if i not in ans:
+#         ans.append(i)
+
+# print(ans)
+
+
+# num = [1,3,5,2,1,4,7,2,3,4,4,7]
+# ans = []
+
+# for i in num:
+#     if i%2 == 0 and i not in ans:
+#         ans.append(i)
+
+# print(ans)
+
+
+# tuples:
+
+# it is ordered and unchangeable
+# it is identifiable by round brackets ()
+
+# num = (2,4,5,8,9)
+
+# print(type(num))
+
+# join tuples
+
+# a = (1,2,3,4,5)
+# b = (6,7,8,9,10)
+
+# print(a+b)   #concatenation
+
+# Replication
+
+# a = (1,2,3)
+# print(a*3)
+
+# Type casting
+
+
+# fruits = ("Banana","Apple","Orange","kiwi","Cantaloupe","Cherry")
+
+# f = list(fruits)
+
+# f[3]="Strawberry"
+
+# fruits = tuple(f)
+
+# print(fruits)
+
+num = (2,4,7,3,2,9,1)

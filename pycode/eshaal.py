@@ -996,15 +996,16 @@
 # You need to check between two number which greater, equal
 
 
-num = int(input("Enter the first number : "))
-num1 = int(input("Enter the second number : "))
+# num = int(input("Enter the first number : "))
+# num1 = int(input("Enter the second number : "))
 
-if num > num1:
-    print("num is the greater number")
-elif num == num1:
-    print("Both numbers are equal ")
-else:
-    print("num1 is greater")
+# if num > num1:
+#     print("num is the greater number")
+# elif num == num1:
+#     print("Both numbers are equal ")
+# else:
+#     print("num1 is greater")
+
 
 
 
