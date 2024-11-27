@@ -779,4 +779,201 @@
 
 # print(fruits)
 
-num = (2,4,7,3,2,9,1)
+# num = (2,4,7,3,2,9,1)
+
+
+
+# names = ["Kareena","Utkarsh","Adam","Jacob","Mark","henry","James"]
+# vowels = "AEIOUaeiou"
+# count = 0
+# for i in names:
+#     if i[0] in vowels:
+#         count = count +1
+# print(f"The names starting with vowels are {count}")
+
+# how many names are starting with vowel?
+
+# print(names)
+
+
+# Kareena
+# Utkarsh
+# Adam
+# Jacob
+# Mark
+# henry
+# James
+
+
+
+# Set - it helps you to store multiple elements in a single variable
+
+# it is uncordered, unchangeable, and unindexed
+# it is indentified as {}
+# it doesn't allow duplicate values
+
+# print(fruits)
+
+
+# num = [1,3,6,2,1,5,3,9,8]
+
+# ans = set(num)
+# print(ans)
+
+
+# fruits = {"apple","papaya","orange","Mango","cherry","cherry","orange"}
+# print("orange" not in fruits)
+
+# add the item to the sets
+
+# fruits = {"apple","papaya","orange","Mango","cherry","cherry","orange"}
+
+# fruits.add("pomegranate")
+# print(fruits)
+
+
+# add two sets
+
+# fruits = {"apple","papaya","orange","Mango","cherry","cherry","orange"}
+# vegetables = {"peppers","lettuce","tomato","potatoes","lady finger"}
+
+# fruits.update(vegetables)
+
+# print(fruits)
+
+# delete an element from the sets 
+# fruits = {"apple","orange","Mango","cherry","cherry","orange"}
+# fruits.remove("papaya")
+
+# print(fruits)
+
+# discard() - to delete element
+
+# fruits = {"apple","orange","Mango","cherry","cherry","orange"}
+# x = fruits.pop()
+
+# print(x)
+# print(fruits)
+
+# resturants = {"Burger King", "Mcdonalds", "KFC", "Sonic", "Wendy's"}
+# for i in resturants:
+#     print(i)
+
+# dictionaries
+
+# It is used to store data values in terms of key:value pairs
+# it is ordered and do not allow duplicate value and they are chageable 
+
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2015,
+#     "year" : 2019
+# }
+
+# print(cars["year"])
+
+# len() -  it is used to find the length of the dictionary 
+
+
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2019,
+#     "colors" : ["red","black","white","Green"]
+# }
+
+# print(cars["colors"][2])
+
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2019,
+#     "colors" : ["red","black","white","Green"]
+# }
+
+# if "Model" not in cars:
+#     print("Present")
+
+# Access the items 
+
+# .get() - 
+
+# car_name = cars.get("Model")
+
+# print(car_name)
+
+# print(f"All the keys {cars.keys()}")
+# print(f"All the values {cars.values()}")
+
+# items
+
+# print(cars.items())
+
+
+
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2019,
+#     "colors" : ["red","black","white","Green"]
+# }
+
+# # Add a new key:value pairs
+
+# # cars["Owner"] = "kareena"
+# # cars.update({"owner":"Kareena"})
+# print(cars)
+
+
+# deleting
+
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2019,
+#     "colors" : ["red","black","white","Green"]
+# }
+
+# it deletes the specific key value pair
+# cars.pop("colors")
+
+# it deletes the last key:value pairs
+# cars.popitem()
+
+# it deletes the dictionary completely
+# del cars
+
+# it clears up the dictionary and shows up the empty dictionary 
+# cars.clear()
+
+# print(cars)
+
+
+cars = {
+    "brand" : "Mercedez",
+    "Model" : "GWagon",
+    "year" : 2019,
+    "colors" : ["red","black","white","Green"]
+}
+
+# for i in cars:
+#     print(f"{i} : {cars[i]}")
+
+# for i in cars.keys():
+#     print(i)
+
+# for i in cars.values():
+#     print(i)
+
+# for i in cars.items():
+#     print(i)
+
+# family = {
+#     "child1" : {"name" : "Kareena", "Year":2011},
+#     "child2" : {"name" : "XYZ", "year":2099},
+#     "child3" : {"name" : "XYZ1", "year":2079},
+
+# }
+
+# print(family["child1"]["name"])

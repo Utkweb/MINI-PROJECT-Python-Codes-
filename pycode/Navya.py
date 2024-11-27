@@ -397,15 +397,159 @@
 # for i in movies:
 #     print(i)
 
-num = [ 17,14,23,11,12,30]
-piggy_bank = 0
+# num = [ 17,14,23,11,12,30]
+# piggy_bank = 0
 
-for i in num:
-    piggy_bank = piggy_bank + i
+# for i in num:
+#     piggy_bank = piggy_bank + i
 
-print(f"The sum of the list is {piggy_bank}")
+# print(f"The sum of the list is {piggy_bank}")
 
 
-# 2. tuple
-# 3. set
-# 4. Dictionary
+# import random 
+
+# choices = ["Rock","Paper","Scissors"]
+
+# def determine_winner(player,computer):
+#     if player == computer:
+#         return "It's a tie"
+#     elif (player == "Rock" and computer == "Scissors") or \
+#         (player == "Scissors" and computer == "Paper") or \
+#         (player == "Paper" and computer == "Rock"):
+#         return "Daddada wins"
+#     else:
+#         return "Computer wins"
+
+
+
+# while True:
+#     # user choices
+#     user_choice = input("Enter Rock, Paper & Scissors (or 'quit' to exit ) : ")
+#     if user_choice == 'quit':
+#         print("Thanks for playing!")
+#         break
+#     elif user_choice not in choices:
+#         print("Invalid Choice. Please try it again.")
+#         continue 
+#     # computer choices
+
+#     computer_choice = random.choice(choices)
+#     print(f"Computer Choice : {computer_choice}")
+
+#     result = determine_winner(user_choice,computer_choice)
+#     print(result)
+#     print()
+
+# change the element of the list
+
+# names = ["Navya","John","Robert","James","Austin"]
+# names[0:2] = "Utkarsh"
+
+# print(names)
+
+# add the element into the list 
+
+# We have two ways to do it 
+
+# 1. append() -  It adds the element into the last of the list 
+
+# names = ["Navya","John","Robert","James","Austin"]
+# names.append("Utkarsh")
+
+# print(names)
+
+# 2. insert() -  it helps you to adds the element into the specific position
+
+# names = ["Navya","John","Robert","James","Austin"]
+# names.insert(1,"Utkarsh")
+
+# print(names)
+
+# Remove the element from the list
+
+# We have again two ways to remove the element 
+
+# 1. remove() - It removes the specific element from the list 
+
+
+# names = ["Navya","John","Robert","James","Austin"]
+# names.remove("Robert")
+
+# print(names)
+
+# 2. pop() - It helps you to rmeove the element from the list by specifying the index of the element. And if you are not specifying the index it will remove the last element of the list
+
+# names = ["Navya","John","Robert","James","Austin"]
+# names.pop(2)
+
+# print(names)
+
+
+
+# 2. tuple - It also stores multiple element in it.
+# It is immutable (CAN'T BE CHANGED)
+# It's identified by ()
+
+# names = ("Navya","James","Tony","David","Jessica")
+# print(names)
+
+# names = ("Navya","James","Tony","David","Jessica")
+
+# for i in names:
+
+#     print(i)
+
+
+# names = ("Navya","James","Tony","David","Jessica")
+
+# names[2] = "Austin"
+
+# print(names)
+
+# Type Casting 
+
+# So changing the data type from one to another
+
+# Tuple - > list 
+
+# names = ("Navya","James","Tony","David","Jessica")
+# print(f"Before : {names}")
+# x = list(names)
+
+# x[2] = "Austin"
+
+# names = tuple(x)
+
+# print(f"After : {names}")
+
+
+
+
+
+# 3. set : - It's a set of item collected in a variables
+# It doesn't allow duplicate values
+# It is unindexed
+# It is unordered
+# It is identified when the elements are enclosed by {}
+
+# fruits = {"Apples","Banana","Apples","Cherry","Blueberries","Pineapple","Pineapple","Cherry"}
+# print(fruits)
+
+
+# for accesing the sets 
+
+
+# fruits = {"Apples","Banana","Apples","Cherry","Blueberries","Pineapple","Pineapple","Cherry"}
+
+# for i in fruits:
+#     print(i)
+
+# remove duplicate elements 
+
+# num = [1,4,8,9,5,2,4,9,63,12,1,4,58,25,28,5,2,5,4,5]
+
+# ans = set(num)
+
+# print(ans)
+
+# 4. Dictionary     

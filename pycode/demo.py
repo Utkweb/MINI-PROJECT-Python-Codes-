@@ -781,3 +781,12 @@
 # 3. String (str) : It contains characters,words and even sentences 
 # 4. Boolean (bool) : It contains the value as True or False
 
+
+
+import numpy 
+
+marks = [94,86,42,68,98,22,56,28]
+
+x = numpy.mode(marks)
+
+print(x)

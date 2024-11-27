@@ -607,28 +607,28 @@
 
 
 
-from tkinter import *
+# from tkinter import *
 
-root = Tk()
-root.title("Signup Page")
-root.geometry('400x400')
+# root = Tk()
+# root.title("Signup Page")
+# root.geometry('400x400')
 
-l1 = Label(root,text="Email")
-l1.pack()
+# l1 = Label(root,text="Email")
+# l1.pack()
 
-e1 = Entry(root)
-e1.pack()
+# e1 = Entry(root)
+# e1.pack()
 
-l2 = Label(root,text="Password")
-l2.pack()
+# l2 = Label(root,text="Password")
+# l2.pack()
 
-e2 = Entry(root,show='*')
-e2.pack()
+# e2 = Entry(root,show='*')
+# e2.pack()
 
-b1 = Button(root,text="Submit",fg="white",bg="green")
-b1.pack()
+# b1 = Button(root,text="Submit",fg="white",bg="green")
+# b1.pack()
 
-root.mainloop()
+# root.mainloop()
 
 
 
@@ -643,4 +643,17 @@ root.mainloop()
 
 
 # submit button 
+
+
+
+# list 
+
+# printing the list in reverse order 
+
+# names = ["Anvi","Bob","Arshia","Nicky","Jeff"]
+
+# print(names[::-1])
+
+# [::steps]
+
 

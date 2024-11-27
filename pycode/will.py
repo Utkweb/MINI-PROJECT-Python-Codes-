@@ -314,54 +314,123 @@
 # 4. Dictionary
 
 
-import random 
+# import random 
 
-def user_choice():
-    user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
-    while user_choice not in ['Rock','Paper','Scissors']:
-        print("Invalid input Try Again!")
-        user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
-    return user_choice
+# def user_choice():
+#     user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
+#     while user_choice not in ['Rock','Paper','Scissors']:
+#         print("Invalid input Try Again!")
+#         user_choice = input("Enter your choice (Rock,Paper,Scissors) : ")
+#     return user_choice
 
-def computer_choice():
-    choices = ['Rock','Paper','Scissors']
-    return random.choice(choices)
+# def computer_choice():
+#     choices = ['Rock','Paper','Scissors']
+#     return random.choice(choices)
 
 
-def determine_winner(user_choice,computer_choice):
-    if user_choice == computer_choice:
-        return "It's a Tie!"
-    elif (user_choice == 'Rock' and computer_choice == 'Scissor') or \
-    (user_choice == 'Scissor' and computer_choice == 'Paper') or \
-    (user_choice == 'Paper' and computer_choice == 'Rock'):
-        return "User Wins 😎"
-    else:
-        return "Computer Wins 💻"
+# def determine_winner(user_choice,computer_choice):
+#     if user_choice == computer_choice:
+#         return "It's a Tie!"
+#     elif (user_choice == 'Rock' and computer_choice == 'Scissor') or \
+#     (user_choice == 'Scissor' and computer_choice == 'Paper') or \
+#     (user_choice == 'Paper' and computer_choice == 'Rock'):
+#         return "User Wins 😎"
+#     else:
+#         return "Computer Wins 💻"
 
-print("Welcome to the Rock, Paper and Scissors Game!")
-user_score = 0 
-computer_score = 0
+# print("Welcome to the Rock, Paper and Scissors Game!")
+# user_score = 0 
+# computer_score = 0
 
-while True:
-    user = user_choice()
-    computer = computer_choice()
+# while True:
+#     user = user_choice()
+#     computer = computer_choice()
 
-    print(f"Computer Choice : {computer}")
+#     print(f"Computer Choice : {computer}")
 
-    result = determine_winner(user,computer)
+#     result = determine_winner(user,computer)
 
-    if result == "User Wins 😎":
-        user_score = user_score + 1
-    elif result == "Computer Wins 💻":
-        computer_score = computer_score +1
+#     if result == "User Wins 😎":
+#         user_score = user_score + 1
+#     elif result == "Computer Wins 💻":
+#         computer_score = computer_score +1
     
-    print(f"Score:    User: {user_score}   ||      Computer : {computer_score}")
+#     print(f"Score:    User: {user_score}   ||      Computer : {computer_score}")
 
-    play_again = input("Do you want to play the game again> (yes/no)").lower()
-    if play_again!='yes':
-        break
+#     play_again = input("Do you want to play the game again> (yes/no)").lower()
+#     if play_again!='yes':
+#         break
 
-print("Thanks for playing the game")
+# print("Thanks for playing the game")
 
-print(f"Final Score:    User: {user_score}   ||      Computer : {computer_score}")
+# print(f"Final Score:    User: {user_score}   ||      Computer : {computer_score}")
 
+# List is Mutable 
+
+# We are gonna learn how to add the elements and delete them 
+
+# Adding the elements into the list 
+
+# there are two ways how we can add the elements 
+
+# 1. append() - It adds the element at the last of the list.
+
+# names = ["Will","Sharon","Timmy","Jack"]
+
+# names.append("Jimmy")
+# print(names)
+
+# 2. insert() -  It also adds the elements into the list but at the desired position 
+
+# names = ["Will","Sharon","Timmy","Jack"]
+
+# names.insert(2,"Jimmy")
+# print(names)
+
+
+# delete elements 
+
+# 1. remove() - it delete the element in the bracket whatever you are writing 
+
+
+# names = ["Will","Sharon","Timmy","Jack"]
+
+# names.remove("Sharon")
+# print(names)
+
+# 2. pop()
+
+# names = ["Will","Sharon","Timmy","Jack"]
+
+# names.pop(2)
+# print(names)
+
+
+
+
+
+
+# l1 = [1,2,5,6,8,9,3,2,1,4,5,6,8,0]
+
+# new = []
+
+# for i in l1:
+#     if i not in new:
+#         new.append(i)
+
+# print(new)
+
+
+
+from tkinter import * 
+
+root = Tk()
+root.title("Will's Application")
+root.geometry('400x400')
+
+name = Label(root,text="Will Wijekoon",font=("Arial",22),fg="Red")
+name.pack()
+
+
+
+root.mainloop()

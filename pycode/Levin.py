@@ -773,6 +773,8 @@
 #     print("Danish")
 
 
+
+
 # CRUD - 
 
 # Create 
@@ -780,3 +782,90 @@
 # Update
 # Delete
 
+
+
+# import mysql.connector
+
+
+# mydb = mysql.connector.connect(
+#     host="localhost",
+#     root="user",
+#     password="",
+#     database = ""
+# )
+
+# if mydb.is_connected():
+#     print("Database is connected")
+
+
+# from tkinter import *
+
+# def center_window(root, width=300, height=200):
+    
+#     root.geometry(f"{width}x{height}")
+#     screen_width = root.winfo_screenwidth()
+#     screen_height = root.winfo_screenheight()
+#     x = (screen_width // 2) - (width // 2)
+#     y = (screen_height // 2) - (height // 2)
+#     root.geometry(f"{width}x{height}+{x}+{y}")
+
+# root = Tk()
+# root.title("Sign Up form")
+
+
+# center_window(root, 800, 500) 
+
+# l1 = Label(root,text="Name")
+# l1.pack()
+
+# e1 = Entry(root)
+# e1.pack()
+
+# l2 = Label(root,text="Email")
+# l2.pack()
+
+# e2 = Entry(root)
+# e2.pack()
+
+# l3 = Label(root,text="Email")
+# l3.pack()
+
+# e3 = Entry(root)
+# e3.pack()
+
+# b1 = Button(root,text="Submit",fg="white",bg="green")
+# b1.pack()
+
+# root.mainloop()
+
+
+
+from tkinter import *
+
+def center_window(root, width=300, height=200):
+    root.geometry(f"{width}x{height}")
+    screen_width = root.winfo_screenwidth()
+    screen_height = root.winfo_screenheight()
+    x = (screen_width // 2) - (width // 2)
+    y = (screen_height // 2) - (height // 2)
+    root.geometry(f"{width}x{height}+{x}+{y}")
+
+root = Tk()
+root.title("Prove your identity")
+center_window(root, 800, 500)
+root.configure(bg="black")
+
+items = []
+
+items.append(Label(root, text="Hello", font=("RubikIso-Regular", 50), fg="cyan", bg="black"))
+items.append(Label(root, text="This is an application used for checking your identity", font=("RubikIso-Regular", 20), fg="lime", bg="black"))
+items.append(Label(root, text="***For parents only***", font=("RubikIso-Regular", 20), fg="yellow", bg="black"))
+items.append(Label(root, text="You can create an identity for your child here", font=("RubikIso-Regular", 30), fg="orange", bg="black"))
+items.append(Button(root, text="Sign up", font=("RubikIso-Regular", 20), fg="red", bg="black"))
+items.append(Label(root, text="You can prove you really exist here", font=("RubikIso-Regular", 30), fg="orange", bg="black"))
+items.append(Button(root, text="Log in", font=("RubikIso-Regular", 20), fg="red", bg="black"))
+
+for i in items:
+    i.pack()
+
+root.mainloop()

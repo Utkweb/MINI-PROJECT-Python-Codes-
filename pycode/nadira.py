@@ -275,53 +275,517 @@
 
 
 
-# Constructor 
+# Constructor
+
+# class Queue:
+#     def __init__(self, size):
+#         self.queue = []
+#         self.size = size
+
+#     def isFull(self):
+#         return len(self.queue) == self.size
+
+#     def isEmpty(self):
+#         return len(self.queue) == 0
+
+#     def enqueue(self, item):
+#         if not self.isFull():
+#             self.queue.append(item)
+#         else:
+#             print("Queue is full")
+
+#     def dequeue(self):
+#         if not self.isEmpty():
+#             return self.queue.pop(0)
+#         else:
+#             print("Queue is empty")
+
+# q = Queue(3)
+# q.enqueue(10)
+# q.enqueue(20)
+# q.enqueue(30)
+# print(q.isFull())
+# q.dequeue()
+# q.enqueue(40)
+# print(q.queue)
+
+
+# a) True, [20, 30, 40]
+# b) False, [10, 20, 30]
+# c) True, [10, 40, 30]
+# d) False, [20, 30, 40]
+
+
+
+# list  
+
+# it allow duplicate elements , mutable, changeable
+
+# names = ["James","David","John","Jessica","Bellard"]
+# print(len(names))
+
+# print(names[4])
+# print(names[-1])
+
+# indexing :
+
+# 1. positive indexing - it starts from left to right from 0 to n-1
+# 2. negative indexing - it starts from right tot left from -1 to -n
+
+# slicing
+
+# names = ["James","David","John","Jessica","Bellard"]
+# print(names[::-1])
+
+
+# adding the element in the list 
+
+# 1. append() -  It adds the element at the last of the list
+
+# cars = ["Toyato","Mercedez","Audi","Lamborghini"]
+# cars.append("Honda")
+
+# print(cars)
+
+# 2. insert() - it adds the element at the desired location of user
+
+
+# cars = ["Toyato","Mercedez","Audi","Lamborghini"]
+# cars.insert(2,"Honda")
+
+# print(cars)
+
+
+# how to delete the element as well in the list 
+
+# 1. remove()-
+
+# cars = ["Toyato","Mercedez","Audi","Lamborghini","Honda"]
+# cars.remove("Toyato")
+# print(cars)
+
+
+# 2. pop()-
+
+
+# cars = ["Toyato","Mercedez","Audi","Lamborghini","Honda"]
+# cars.pop(2)
+# print(cars)
+
+
+# fruits = ["Cherry","banana","Apple","Orange","blueberry"]
+
+# for i in range(0,len(fruits)):
+#     print(fruits[i])
+
+# for i in fruits:
+#     print(i)
+
+# num = [1,4,8,9,6,3,2,7,7,8,9,2,4,4]
+
+# odd_count = 0
+# even_count = 0 
+
+# for i in num:
+#     if i%2 == 0:
+#         even_count = even_count + 1
+#     else:
+#         odd_count +=1
+
+# print(f"The even count is : {even_count}")
+# print(f"The odd count is : {odd_count}")
+
+# num = [1,4,8,9,6,3,2,7,7,8,9,2,4,4]
+
+# ans = []
+
+# for i in num:
+#     if i not in ans:
+#         ans.append(i)
+
+# print(f"Unique element list : {ans}")
+
+
+# names = ["Utkarsh","Nadira","Mario","Dave","Sarah","Angela"]
+
+# vowels = "AEIOUaeiou"
+# count = 0
+
+# for i in names:
+#     if i[0] in vowels:
+#         count = count + 1
+
+# print(f"The total names that are starting with the vowels are : {count}")
+
+# In an array 
+
+# deletion of an element is difficult 
+# addition of an element is difficult
+
+# due to contiguous memory allocation 
+
+# Linked list 
+
+
+# class Node:
+#     def __init__(self,data):
+#         self.data = data 
+#         self.next = None
+
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+    
+#     def insert_at_beginning(self,data):
+#         new_node = Node(data)
+#         new_node.next = self.head
+#         self.head = new_node
+
+#     def delete_node(self,key):
+#         if self.head is None:
+#             print("list is empty!")
+        
+#         if self.head.data == key:
+#             self.head = self.head.next
+#             return 
+        
+#         current = self.head
+#         while current.next is not None:
+#             if current.next.data == key:
+#                 current.next = current.next.next
+#                 return 
+#             current= current.next
+#         print("Node with data ",key,"not found")
+
+    
+#     def print_list(self):                                                 
+#         current = self.head
+#         while current:
+#             print(current.data,end = "->")
+#             current = current.next
+        
+#         print("None")
+
+# l1 = LinkedList()
+# l1.insert_at_beginning(5)
+# l1.insert_at_beginning(15)
+# l1.insert_at_beginning(25)
+# l1.insert_at_beginning(35)
+
+# l1.print_list()
+
+# l1.delete_node(25)
+# l1.print_list()
+
+
+# push() - It helps you to add the element 
+# pop() - IT HELPS TO REMOVE THE ELEMENT 
+# PEEK() - IT HELPS YOU TO GET THE TOP ELEMENT 
+# ISFULL() - TO CHECK WHETHER THE LIST IF FULL OR NOT 
+# ISEMPTY() - TO CHECK WHETHER THE LIST IS EMPTY OR NOT 
+ 
+# class Stack:
+#     def __init__(self):
+#         self.stack = []
+    
+#     def is_empty(self):
+#         return len(self.stack) == 0
+    
+#     def push(self,item):
+#         self.stack.append(item)
+#         print(f"Pushed {item} onto the stack")
+    
+#     def pop(self):
+#         if self.is_empty():
+#             print("Stack is empty cannot take out an element.(Underflow)")
+#             return None 
+#         item = self.stack.pop()
+#         print(f"popped {item} from the stack ")
+#         return item 
+
+#     def peek(self):
+#         if self.is_empty():
+#             print("Stack is empty no top element")
+#             return None
+#         return self.stack[-1]
+    
+#     def display(self):
+#         print(f"Stack : {self.stack}")
+
+
+# s = Stack()
+# s.push(5)
+# s.push(15)
+# s.push(25)
+# s.push(35)
+# s.push(45)
+# s.push(55)
+
+# s.display()
+
+
+# Write a program to find the maximum number in a list
+
+
+# l1 = [12,34,65,11,9,88,54]
+
+# min = l1[0]
+
+# for i in l1:
+#     if i < min:
+#         min = i
+
+# print(f"The minimum number in the list is : {min}")
+
+# import math
+
+# num = int(input("Enter the number : "))
+
+# print(math.sqrt(num))
+
+# num = int(input("Enter the number : "))
+# print(num**0.5)
+
+
+
+# Is easy to learn and use as well
+# Web application and desktop application as well
+# You can make graph,drawing and game also \
+
+
+
+# print("Hassan")
+
+# print(9+11)
+
+# a = 99
+# b = 11
+
+# print(a//b)
+
+# num = 920
+
+# print(num**2)
+
+
+# A hash table is a dta structure that provides an efficient way to store and retrieve  data using keys.
+
+
+# Key features of Hash Tables:
+
+# 1. Fast lookups: Average time complexity for insertions,deletions and lookup is O(1).
+# 2. collision handling: Python uses separate chaining or open addressing to handle key collisions.
+# 3. Dynamic Resizing: Python's dictionary resizes itself to maintain the performnce.
+
+
+# lst = [1,4,8,7,5,9,6,5,4,8,2,4,2,3,5,4,8,9,6,3,2,5,1]
+# freq = {}
+# for i in lst:
+#     if i in freq:
+#         freq[i] +=1
+#     else:
+#         freq[i]=1
+
+
+# print(f"The count of each element in the list is : {freq}")
+
+
+
+# create a dictionary
+
+# hash_table = {}
+
+# # adding key value pair 
+
+# hash_table['name'] = "Nadira"
+# hash_table['age'] = 18
+# hash_table['city'] = "United Kingdom"
+
+# # Access a value 
+
+# print(hash_table['name'])
+
+# # updating a value 
+
+# hash_table['age']= 19
+
+# print(hash_table)
+
+# # deleting a value 
+
+# del hash_table['age']
+
+# if 'age' in hash_table:
+#     print("key age exists in the hash tables")
+# else:
+#     print("key age doesn't exists in the hash tables")
+
+
+# hash_table={}
+# hash_table['job']="teacher"
+# hash_table['city']="London"
+# hash_table['name']="'Nadira"
+# hash_table['age']="21"
+
+# print(hash_table['job'])
+
+# print(f"Hash Table : {hash_table}")
+
+# del hash_table['city']
+
+# print(f"After deletion : {hash_table}")
+
+# if 'city' in hash_table:
+#     print("The key city is in the hash table")
+# else:
+#     print("The key city doesnt exist in the hash table")
+
+
+# SHA-256
+
+# import hashlib
+
+# # original message 
+# message = "Welcome to the class of Python"
+
+# # creating up a new SHA-256 hash object
+# sha256_hash = hashlib.sha256()
+
+# # Encode the data to bytes and update the hash object 
+# sha256_hash.update(message.encode('utf-8'))
+
+# # get the hexadecimal representation of the hash
+# hash_value = sha256_hash.hexdigest()
+
+# print(f"Original value : {message}")
+# print(f"Hashed Value : {hash_value}")
+
+
+# ASCII - it is the American Standard Code for Information Interchange
+
+# A-Z : 65-90
+# a-z:97 -122   
+
+
+# adjancency List - 
+
+# graph = {
+#     'A' : ['B','C'],
+#     'B' : ['A','D'],
+#     'C' : ['A','D'],
+#     'D' : ['B','C'],
+# }
+
+# # add an edge (A->B)
+
+# graph['A'].append('E')
+# graph['E'] = ['A']
+
+# print(graph)
+
+# adjacency matrix:
+
+# vertex = 1 to vertex 3 
+
+
+# graph = [
+#     [0,1,1,0],
+#     [1,0,0,1],
+#     [1,0,0,1],
+#     [0,1,1,0]
+# ]
+
+
+# from collections import deque
+
+# def bfs(graph,start):
+#     visited = set()
+#     queue = deque([start])
+
+#     while queue:
+#         node = queue.popleft()
+#         if node not in visited:
+#             print(node,end=" ")
+#             visited.add(node)
+#             queue.extend(graph[node])
+
+# graph = {
+#     'A':['B',"C"],
+#     'B':['D','E'],
+#     'C':['F'],
+#     'D':[],
+#     'E':[],
+#     'F':[]
+# }
+
+# bfs(graph,'C')
+
+
+# def dfs(graph,start,visited=None):
+#     if visited is None:
+#         visited =set() #to track visited nodes
+
+#     print(start,end= " ") # process the node
+#     visited.add(start) # mark as visited
+
+#     for neighbor in graph[start]: # explore nighbours
+#         if neighbor not in visited:
+#             dfs(graph,neighbor,visited)
+# graph = {
+#     'A':['B',"C"],
+#     'B':['D','E'],
+#     'C':['F'],
+#     'D':[],
+#     'E':[],
+#     'F':[]
+# }
+
+# dfs(graph,'A')
+
+
+# 15,56,48,27,30
+
+# O(1)
+# num = [1,2,3,4,5]
+
+# print(num[4])
+
+
+# O(n)
+# num = [1,2,3,4,5]
+
+# for i in num:
+#     print(i)
+
+
+# O(n log n)
+
+
+# O(n^2)
+
+
+# for i in range(n):
+#     for j in range(n):
+#         print(i,j)
+
+# O(2^n)
+
+# def fibo(n):
+#     if n<=1:
+#         return n
+#     return fibo(n-1)+fibo(n-2)
+
+# O(2n)
+
+
+# for i in range(n):
+#     print(i)
+
+# for j in range(n):
+#     print(j)
+
+# dijikstra algorithm 
 
 
 
 
-
-
-
-
-
-
-
-
-class Queue:
-    def __init__(self, size):
-        self.queue = []
-        self.size = size
-
-    def isFull(self):
-        return len(self.queue) == self.size
-
-    def isEmpty(self):
-        return len(self.queue) == 0
-
-    def enqueue(self, item):
-        if not self.isFull():
-            self.queue.append(item)
-        else:
-            print("Queue is full")
-
-    def dequeue(self):
-        if not self.isEmpty():
-            return self.queue.pop(0)
-        else:
-            print("Queue is empty")
-
-q = Queue(3)
-q.enqueue(10)
-q.enqueue(20)
-q.enqueue(30)
-print(q.isFull())
-q.dequeue()
-q.enqueue(40)
-print(q.queue)
-
-
-a) True, [20, 30, 40]
-b) False, [10, 20, 30]
-c) True, [10, 40, 30]
-d) False, [20, 30, 40]

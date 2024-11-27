@@ -295,4 +295,92 @@ lti line comment
 #         count = count+1
 
 # print(count)
+
+
     
+# name = "Utkarsh"
+# print(name[-1])
+
+
+# slicing - 
+
+# word = "Grand"
+
+# print(word[::-1])
+
+# [::-1]
+
+# checking the length 
+
+
+# name = "UtkarshSingh1478523690"
+
+# print(len(name))
+
+
+# word = str(input("Enter the words : "))
+
+# vowel = "AEIOUaeiou"
+# count = 0
+
+# for i in word:
+#     if i in vowel:
+#         count = count + 1
+
+# print(f"The number of vowels the word '{word}' consists are : {count}")
+
+# for loop - 
+
+# for i in range(1,21):
+#     print(i)
+
+# 5 10 15 20 25 30 35 40 45 50
+
+# for i in range(5,51,5):
+#     print(i)
+
+# 10 9 8 7 6 5 4 3 2 1 
+
+# for i in range(10,0,-1):
+#     print(i,end=" ")
+
+# name = "Aarohi Gupta"
+
+# for i in range(1,11):
+#     print(f"{i} : {name}")
+
+# piggy_bank = 0
+
+# for i in range(1,22):
+#     piggy_bank = piggy_bank + i
+
+# print(f"The sum of all numbers are : {piggy_bank}")
+
+name = str(input("Enter your name : "))
+vcount = 0
+ccount = 0 
+
+vowels = "AEIOUaeiou"
+
+for i in name:
+    if i in vowels:
+        vcount = vcount + 1
+    else:
+        ccount = ccount + 1
+
+print(f"The vowel count in the name are : {vcount}")
+print(f"The consonants count in the name are : {ccount}")
+
+
+
+
+# while loop - 
+
+# Dynamic data types:
+
+# 1. list 
+# 2. tuple
+# 3. set
+# 4. Dictionary
+
+

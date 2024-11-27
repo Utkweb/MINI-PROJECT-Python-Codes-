@@ -1276,64 +1276,128 @@
 
 
 
-from tkinter import *
-from tkinter import messagebox
-import mysql.connector
+# from tkinter import *
+# from tkinter import messagebox
+# import mysql.connector
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database = "todo_db"
-)
+# mydb = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="",
+#     database = "todo_db"
+# )
 
-cursor = mydb.cursor()
+# cursor = mydb.cursor()
 
-def add_task():
-    task = expression_field.get()
-    if task!= '':#< != means not equal to
-        cursor.execute("Insert into task1 (task) values (%s)",(task,))
-        mydb.commit()
-        expression_field.delete(0,END) #clears the entry field
-    else:
-        messagebox.showwarning('warning','please enter a task')
+# def add_task():
+#     task = expression_field.get()
+#     if task!= '':#< != means not equal to
+#         cursor.execute("Insert into task1 (task) values (%s)",(task,))
+#         mydb.commit()
+#         expression_field.delete(0,END) #clears the entry field
+#     else:
+#         messagebox.showwarning('warning','please enter a task')
 
-def delete_task():
-    try:
-        task_index = list_box.curselection()[0]
-        task_text = list_box.get(task_index).split('. ',1)[1]
+# def delete_task():
+#     try:
+#         task_index = list_box.curselection()[0]
+#         task_text = list_box.get(task_index).split('. ',1)[1]
 
-        cursor.execute("Select id from task1 where task = %s",(task_text))
+#         cursor.execute("Select id from task1 where task = %s",(task_text))
         
-    except IndexError:
-        messagebox.showwarning('warning','Please select a task to delete')
+#     except IndexError:
+#         messagebox.showwarning('warning','Please select a task to delete')
+# root = Tk()
+# root.title('todolist')
+# root.geometry("450x450")
+# root.configure(bg = '#C8A2C8')
+
+# t1 = Label(root,text='Welcome to the To Do List', bg='pink',fg='black',font=('Arial',20))
+# t1.pack(pady=20)
+# frame_task = Frame(root)
+# frame_task.pack(fill=BOTH, expand=True)
+
+
+
+
+# list_box = Listbox(frame_task,
+# height=10,
+# width=50,
+# bg='beige',
+# fg='black',
+# borderwidth=1)
+# list_box.pack(pady=20) 
+
+# expression_field = Entry(root,text="",width=50)
+# expression_field.pack(pady=20)
+
+# b1 = Button(root,text='add task', fg='black', bg='white', height=1,width=7,command=add_task)
+# b1.pack(pady=20)
+# b2 = Button(root,text='delete task', fg='black', bg='white', height=1,width=7,command=delete_task)
+# b2.pack(pady=20)
+
+# root.mainloop()
+
+
+
+# Classes and Objects
+
+
+# class Aaryaki:
+#     name = "Aaryaki Mukherjee"
+#     age = 18
+
+# class Kate:
+#     name ="Kate Perry"
+#     age = 18
+
+
+
+# x = Aaryaki()
+# print(x.name)
+
+
+
+# Object oriented -  Python,Java,C,C++
+
+
+# class ABC:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age 
+
+# p1 = ABC("Utkarsh",22)
+# p2 = ABC("Aaryaki",18)
+
+
+# print(f"{p1.name}  |    {p1.age}")
+# print(f"{p2.name}  |    {p2.age}")
+
+# euros
+# usd
+# inr
+# pesos
+# pounds
+
+from tkinter import *
+# from tkinter import messagebox
+
+exchange_rates = {
+    "USD" :{"EUR": 0.95, "INR": 84.48, "PES" : 20.35 , "GBP": 0.79},
+    "INR" :{"EUR": 0.0113 , "USD": 0.012, "PES" : 0.21, "GBP": 0.0098},
+    "EUR" :{"USD":1.5, "INR" : 88.89, "PES" : 80.65, "GBP" : 0.86},
+    "GBP" :{"PES" :22.64 , "EUR":1.15 , "INR" :101.78 , "USD" :1.22},
+    "PES" :{"GBP": 0.045, "USD" : 0.056  , "EUR" : 0.052, "INR": 4.65 }
+}
 root = Tk()
-root.title('todolist')
-root.geometry("450x450")
-root.configure(bg = '#C8A2C8')
+root.title("Currency Converter")
+root.geometry("600x600")
 
-t1 = Label(root,text='Welcome to the To Do List', bg='pink',fg='black',font=('Arial',20))
-t1.pack(pady=20)
-frame_task = Frame(root)
-frame_task.pack(fill=BOTH, expand=True)
-
-
-
-
-list_box = Listbox(frame_task,
-height=10,
-width=50,
-bg='beige',
-fg='black',
-borderwidth=1)
-list_box.pack(pady=20) 
-
-expression_field = Entry(root,text="",width=50)
-expression_field.pack(pady=20)
-
-b1 = Button(root,text='add task', fg='black', bg='white', height=1,width=7,command=add_task)
-b1.pack(pady=20)
-b2 = Button(root,text='delete task', fg='black', bg='white', height=1,width=7,command=delete_task)
-b2.pack(pady=20)
+title_label = Label(root,text="Currency Conversion",font=("Lobster",25))
+title_label.pack()
+amount_label = Label(root,text="Enter your amount : ")
+amount_label.pack()
+entry = Entry(root)
+entry.pack()
 
 root.mainloop()

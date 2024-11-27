@@ -1168,75 +1168,117 @@
 # Password Genenator
 
 
-from tkinter import * 
-from tkinter import messagebox
-import random 
-import string
+# from tkinter import * 
+# from tkinter import messagebox
+# import random 
+# import string
 
-def gen_pwd():
-    length = pwdslider.get()
-    include_uppercase = uppercase_var.get()
-    include_lowercase = lowercase_var.get()
-    include_numbers = numbers_var.get()
-    include_symbols = symbols_var.get()
+# def gen_pwd():
+#     length = pwdslider.get()
+#     include_uppercase = uppercase_var.get()
+#     include_lowercase = lowercase_var.get()
+#     include_numbers = numbers_var.get()
+#     include_symbols = symbols_var.get()
 
-    if not (include_uppercase or include_lowercase or include_numbers or include_symbols):
-        messagebox.showerror("Selection Error","Select at least one option!.")
-        return 
+#     if not (include_uppercase or include_lowercase or include_numbers or include_symbols):
+#         messagebox.showerror("Selection Error","Select at least one option!.")
+#         return 
     
-    character = ""
-    if include_uppercase:
-        character+= string.ascii_uppercase
-    if include_lowercase:
-        character+= string.ascii_lowercase
-    if include_numbers:
-        character+= string.digits
-    if include_symbols:
-        character+= string.punctuation
+#     character = ""
+#     if include_uppercase:
+#         character+= string.ascii_uppercase
+#     if include_lowercase:
+#         character+= string.ascii_lowercase
+#     if include_numbers:
+#         character+= string.digits
+#     if include_symbols:
+#         character+= string.punctuation
 
-    password = ''.join(random.choice(character) for _ in range(length))
-    output.delete(0,END)
-    output.insert(0,password)
+#     password = ''.join(random.choice(character) for _ in range(length))
+#     output.delete(0,END)
+#     output.insert(0,password)
 
-def copy_password():
-    password = output.get()
-    if password:
-        root.clipboard_clear()   #clear the clipboard
-        root.clipboard_append(password)
-        messagebox.showinfo("Copied","Password copied to Clipboard")
-    else:
-        messagebox.showerror("Error","No password to copy!")
+# def copy_password():
+#     password = output.get()
+#     if password:
+#         root.clipboard_clear()   #clear the clipboard
+#         root.clipboard_append(password)
+#         messagebox.showinfo("Copied","Password copied to Clipboard")
+#     else:
+#         messagebox.showerror("Error","No password to copy!")
 
 
+
+
+# root = Tk()
+# root.title("PAssword Generator")
+# root.geometry('400x300')
+
+# Label(root,text="Password Length : ").pack()
+# pwdslider = Scale(root,from_=8,to_=32,orient="horizontal")
+# pwdslider.pack()
+
+# uppercase_var = BooleanVar()
+# lowercase_var = BooleanVar()
+# numbers_var = BooleanVar()
+# symbols_var = BooleanVar()
+
+# Checkbutton(root,text="Include Upercases",variable=uppercase_var).pack()
+# Checkbutton(root,text="Include Lowercasse",variable=lowercase_var).pack()
+# Checkbutton(root,text="Include Numbers",variable=numbers_var).pack()
+# Checkbutton(root,text="Include Symbols",variable=symbols_var).pack()
+
+
+# b1 = Button(root,text="Generate Password",command=gen_pwd)
+# b1.pack(pady=10)
+
+
+# output = Entry(root,width=40)
+# output.pack(pady=10)
+
+# b2 = Button(root,text="Copy Password",command=copy_password)
+# b2.pack()
+
+# root.mainloop()
+
+# USD
+# Japanese yen 
+# EUR
+# INR
+# Dhirahms
+# Korean 1
+
+
+# Humza:
+
+
+# yen -> USD,EUR,INR,DIR,WON
+# EUR -> USD,YEN,INR,DIR,WON
+
+
+
+from tkinter import *
+
+
+exchange_rates = {
+    "USD": {"EUR": 0.95, "YEN": 156.56, "INR": 84.45, "DIR": 3.67, "WON": 1405.53},
+    "EUR": {"USD": 1.05, "YEN": 165.32, "INR": 88.89, "DIR": 3.86, "WON": 1479.5},
+    "YEN": {"USD": 0.0064, "EUR": 0.0060, "INR": 0.54, "DIR": 0.023, "WON": 8.95},
+    "INR": {"USD": 0.0118, "EUR": 0.0113, "YEN": 1.85, "DIR": 0.043, "WON": 16.58},
+    "DIR": {"USD": 0.27, "EUR": 0.26, "YEN": 43.12, "INR": 23.18, "WON": 387.9},
+    "WON": {"USD": 0.00071, "EUR": 0.00068, "YEN": 0.11, "INR": 0.060, "DIR": 0.0026}
+}
 
 
 root = Tk()
-root.title("PAssword Generator")
-root.geometry('400x300')
+root.title("Currency exchanger 💰")
+root.geometry('300x200')
 
-Label(root,text="Password Length : ").pack()
-pwdslider = Scale(root,from_=8,to_=32,orient="horizontal")
-pwdslider.pack()
+amount_label = Label(root,text="Amount : ")
+amount_label.pack(pady=5)
 
-uppercase_var = BooleanVar()
-lowercase_var = BooleanVar()
-numbers_var = BooleanVar()
-symbols_var = BooleanVar()
+amount_entry = Entry(root)
+amount_entry.pack()
 
-Checkbutton(root,text="Include Upercases",variable=uppercase_var).pack()
-Checkbutton(root,text="Include Lowercasse",variable=lowercase_var).pack()
-Checkbutton(root,text="Include Numbers",variable=numbers_var).pack()
-Checkbutton(root,text="Include Symbols",variable=symbols_var).pack()
+currencies = list(exchange_rates.keys())
 
-
-b1 = Button(root,text="Generate Password",command=gen_pwd)
-b1.pack(pady=10)
-
-
-output = Entry(root,width=40)
-output.pack(pady=10)
-
-b2 = Button(root,text="Copy Password",command=copy_password)
-b2.pack()
-
-root.mainloop()

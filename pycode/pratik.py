@@ -227,3 +227,124 @@
 #     current = next   #current = 2
 
 # 0 1 1 2 3 5 8
+
+# import random 
+
+# print("Welcome to number guessing game!!!")
+
+# max_chances = 5
+
+# chances = 0
+
+# secret_number = random.randint(1,30)
+
+# while chances < max_chances:
+    
+#     guess = int(input("Guess the number : "))
+#     chances = chances + 1
+
+#     if guess == secret_number:
+#         print("COngrats")
+#         break
+#     elif guess > secret_number:
+#         print("Guess to high")
+#     else:
+#         print("Guess too low")
+
+# if chances == max_chances:
+#     print("You ran out of chances")
+
+
+
+
+# num = int(input("Enter the number : "))
+
+# count = 0
+
+# for i in range(2,(num//2+1)):
+#     if num % i == 0:
+#         count = count + 1
+
+
+# if count == 0:
+#     print("The number is prime")
+# else:
+#     print("The number is not prime")
+
+
+
+# Strings : Any characters ,words or sentences are said to be as strings 
+
+# name = "Utkarsh Singh"
+
+# index :
+
+# 1. positive indexing - it starts from left to right from 0 to n-1
+# 2. Negative indexing - It starts from right to left from -1 to -n
+
+
+# print(name[-1])
+
+# Slicing 
+
+# print(name[::2])
+
+# printing in reverse order
+# print(name[::-1])
+
+# [:end:steps]
+
+# len() - it helps you to find the length of the string 
+
+# name = "Pratik Karki"
+# print(f"The length of {name} is {len(name)}")
+
+# count = 0 
+
+# for i in name:
+#     count = count + 1
+
+# print(f"The length of {name} is {count}")
+
+
+# Arrays: It stores mutliples elements in it 
+
+# 1. List - It allow duplicate elements to store 
+# It is mutable
+# It is being identified as or enclosed by []
+
+# num = [7,8,9,5,3,4,1,2,6,9,8]
+# names = ["Pratik","Utkarsh","David","Jessica","Julia"]
+# radius = [47.8,85.3,9.04,55.63,77.49]
+# flag = [True,False,False,False,True]
+
+# student_info = ["Pratik",14,75.2,"Fairfes",True]
+
+
+# names = ["Pratik","Utkarsh","David","Jessica","Julia"]
+# # print(names[2])
+# print(names[1:4])
+
+
+# num = [7,8,9,5,3,4,1,2,6,9,8]
+# for i in num:
+#     print(i)
+
+# num = [7,8,9,5,3,4,1,2,6,9,8]
+# sum = 0 
+# for i in num:
+#     sum = sum + i 
+# print(f"The sum of all element in a list are {sum}")
+
+
+
+
+# 2. Tuple
+# 3. Set
+# 4. Dictionary 
+
+
+# 5 = 5*4*3*2*1
+
+
+

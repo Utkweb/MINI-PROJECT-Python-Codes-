@@ -2,6 +2,13 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Piyush",
+      "request": "launch",
+      "mainClass": "Piyush",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
       "type": "blazorwasm",
       "name": "Launch and Debug Blazor WebAssembly Application",
       "request": "launch"
