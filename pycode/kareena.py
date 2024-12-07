@@ -950,12 +950,12 @@
 # print(cars)
 
 
-cars = {
-    "brand" : "Mercedez",
-    "Model" : "GWagon",
-    "year" : 2019,
-    "colors" : ["red","black","white","Green"]
-}
+# cars = {
+#     "brand" : "Mercedez",
+#     "Model" : "GWagon",
+#     "year" : 2019,
+#     "colors" : ["red","black","white","Green"]
+# }
 
 # for i in cars:
 #     print(f"{i} : {cars[i]}")
@@ -977,3 +977,48 @@ cars = {
 # }
 
 # print(family["child1"]["name"])
+
+
+
+# num = [1,2,3,4,5]
+# num1 = [4,5,6,7,8]
+
+# print(set(num) & set(num1))
+
+# Kareena
+
+# k : 1,a:2,
+
+
+# name = "Kareena Patel"
+# freq= {}
+# for char in name.lower().replace(" ",""):
+#     if char in freq:
+#         freq[char] = freq[char] + 1
+#     else:
+#         freq[char] = 1
+    
+# print(freq)
+
+
+# functions : 
+
+# a = 7
+# b = 9 
+
+# print(a+b)
+
+# syntax:
+
+# def name_of_the_function():
+#     # statements 
+#     return 
+
+# defining the function 
+def add(a,b):
+    print(a+b)
+
+# calling the function 
+add(7,8)
+add(4,6)
+add(2,8)

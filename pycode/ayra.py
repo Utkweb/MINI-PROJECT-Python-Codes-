@@ -1259,6 +1259,8 @@
 
 from tkinter import *
 
+from tkinter import ttk
+
 
 exchange_rates = {
     "USD": {"EUR": 0.95, "YEN": 156.56, "INR": 84.45, "DIR": 3.67, "WON": 1405.53},
@@ -1274,6 +1276,22 @@ root = Tk()
 root.title("Currency exchanger 💰")
 root.geometry('300x200')
 
+def currency_convertor():
+    try:
+        amount = float(amount_entry.get())
+        f_currency = from_currency.get()
+        t_currency = to_currency.get()
+
+        if f_currency == t_currency:
+            converted_amount = amount
+        else:
+            converted_amount = amount * exchange_rates[f_currency][t_currency]
+        result_label.config(text=f"{converted_amount}")
+    except ValueError:
+        result_label.config(text=f"Please enter a valid amount!")
+    except KeyError:
+        result_label.config(text=f"Conversion rate not available!")
+
 amount_label = Label(root,text="Amount : ")
 amount_label.pack(pady=5)
 
@@ -1282,3 +1300,25 @@ amount_entry.pack()
 
 currencies = list(exchange_rates.keys())
 
+from_currency = StringVar(value="USD")
+to_currency = StringVar(value="INR")
+
+f_dropdown = Label(root,text="Convert from")
+f_dropdown.pack()
+from_dropdown = ttk.Combobox(root,textvariable=from_currency,value=currencies)
+from_dropdown.pack()
+
+
+t_dropdown = Label(root,text="Convert to")
+t_dropdown.pack()
+to_dropdown = ttk.Combobox(root,textvariable=to_currency,value=currencies)
+to_dropdown.pack()
+
+convertor_button = Button(root,text="Convert",command=currency_convertor)
+convertor_button.pack()
+
+result_label = Label(root)
+result_label.pack()
+
+
+root.mainloop()

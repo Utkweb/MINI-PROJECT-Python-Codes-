@@ -356,20 +356,20 @@ lti line comment
 
 # print(f"The sum of all numbers are : {piggy_bank}")
 
-name = str(input("Enter your name : "))
-vcount = 0
-ccount = 0 
+# name = str(input("Enter your name : "))
+# vcount = 0
+# ccount = 0 
 
-vowels = "AEIOUaeiou"
+# vowels = "AEIOUaeiou"
 
-for i in name:
-    if i in vowels:
-        vcount = vcount + 1
-    else:
-        ccount = ccount + 1
+# for i in name:
+#     if i in vowels:
+#         vcount = vcount + 1
+#     else:
+#         ccount = ccount + 1
 
-print(f"The vowel count in the name are : {vcount}")
-print(f"The consonants count in the name are : {ccount}")
+# print(f"The vowel count in the name are : {vcount}")
+# print(f"The consonants count in the name are : {ccount}")
 
 
 
@@ -378,7 +378,54 @@ print(f"The consonants count in the name are : {ccount}")
 
 # Dynamic data types:
 
-# 1. list 
+# 1. list - 
+
+# It is used to store multiple values in a single variable 
+# It allows duplicate values 
+# it is ordered,indexed and mutable
+# It is being identified by []
+
+# num = [4,5,8,9,6,3,1,47,56,3,1,6]
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# value = ["Aarohi",11,22.5,True]
+
+# how to print the list 
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# print(names)
+
+# we need to access an element 
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# print(names[-1])
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+
+# result:-
+
+# "Aarohi","Jack","Jimmy"
+# "Jimmy","Mark","henry","Julia"
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# print(f"The length of the list is : {len(names)}")
+
+# change elements in list 
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+
+# names[3] = "Bob"
+# print(names)
+
+# how we can access the list through loops
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# for i in names:
+#     print(i)
+
+num = [4,5,8,9,6,3,1,47,56,3,1,6]
+
+
+
+
 # 2. tuple
 # 3. set
 # 4. Dictionary

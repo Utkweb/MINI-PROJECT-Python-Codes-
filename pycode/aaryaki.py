@@ -1379,25 +1379,77 @@
 # pesos
 # pounds
 
-from tkinter import *
-# from tkinter import messagebox
+# from tkinter import *
+# # from tkinter import messagebox
 
-exchange_rates = {
-    "USD" :{"EUR": 0.95, "INR": 84.48, "PES" : 20.35 , "GBP": 0.79},
-    "INR" :{"EUR": 0.0113 , "USD": 0.012, "PES" : 0.21, "GBP": 0.0098},
-    "EUR" :{"USD":1.5, "INR" : 88.89, "PES" : 80.65, "GBP" : 0.86},
-    "GBP" :{"PES" :22.64 , "EUR":1.15 , "INR" :101.78 , "USD" :1.22},
-    "PES" :{"GBP": 0.045, "USD" : 0.056  , "EUR" : 0.052, "INR": 4.65 }
-}
-root = Tk()
-root.title("Currency Converter")
-root.geometry("600x600")
+# exchange_rates = {
+#     "USD" :{"EUR": 0.95, "INR": 84.48, "PES" : 20.35 , "GBP": 0.79},
+#     "INR" :{"EUR": 0.0113 , "USD": 0.012, "PES" : 0.21, "GBP": 0.0098},
+#     "EUR" :{"USD":1.5, "INR" : 88.89, "PES" : 80.65, "GBP" : 0.86},
+#     "GBP" :{"PES" :22.64 , "EUR":1.15 , "INR" :101.78 , "USD" :1.22},
+#     "PES" :{"GBP": 0.045, "USD" : 0.056  , "EUR" : 0.052, "INR": 4.65 }
+# }
+# root = Tk()
+# root.title("Currency Converter")
+# root.geometry("600x600")
 
-title_label = Label(root,text="Currency Conversion",font=("Lobster",25))
-title_label.pack()
-amount_label = Label(root,text="Enter your amount : ")
-amount_label.pack()
-entry = Entry(root)
-entry.pack()
+# title_label = Label(root,text="Currency Conversion",font=("Lobster",25))
+# title_label.pack()
+# amount_label = Label(root,text="Enter your amount : ")
+# amount_label.pack()
+# entry = Entry(root)
+# entry.pack()
 
-root.mainloop()
+# root.mainloop()
+
+
+
+
+
+
+from tkinter import * 
+from tkinter import messagebox,filedialog
+from PIL import Image,ImageTk,ImageEnhance
+
+class ImageEditor:
+    def __init__(self,root):
+        self.root = root
+        self.root.title("Photo Editor")
+
+        self.image_label = Label(self.root,text="No image loaded",bg="gray",width=80,height=25)
+        self.image_label.pack(pady =10)
+
+        # buttons 
+
+        self.buttons_frame = Frame(self.root)
+        self.buttons_frame.pack()
+
+        Button(self.buttons_frame,text="Load Image",command=self.load_image).grid(row=0,column=0,padx=5)
+        Button(self.buttons_frame,text="Rotate Left").grid(row=0,column=1,padx=5)
+        Button(self.buttons_frame,text="Rotate Right").grid(row=0,column=2,padx=5)
+        Button(self.buttons_frame,text="Increase Brightness").grid(row=0,column=3,padx=5)
+        Button(self.buttons_frame,text="Decrease Brightness").grid(row=0,column=4,padx=5)
+        Button(self.buttons_frame,text="Save Image").grid(row=0,column=5,padx=5)
+
+        self.image = None
+        self.tk_image = None 
+
+    def load_image(self):
+        file_path = filedialog.askopenfilename(filetypes=[("Image Files","*.jpg;*.png*.jpeg*.bmp")])
+        if not file_path:
+            return
+        
+        try:
+            self.image = Image.open(file_path)
+            # self.d    display image function needs to be make 
+        except Exception as e:
+            messagebox.showerror("Error",f"Failed to load Image : {e}")
+
+
+
+
+
+if __name__ == "__main__":
+    root=Tk()
+    app = ImageEditor(root)
+    root.mainloop()

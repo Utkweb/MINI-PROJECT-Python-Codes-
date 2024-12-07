@@ -814,10 +814,102 @@
 # plt.show()
 
 
-import matplotlib.pyplot as plt 
-import numpy as np
+# import matplotlib.pyplot as plt 
+# import numpy as np
 
-x = np.random.normal(160,10,250)
+# x = np.random.normal(160,10,250)
 
-plt.hist(x)
-plt.show()
+# plt.hist(x)
+# plt.show()
+
+
+# error handling :
+
+# try 
+# except 
+# else
+# finally
+
+
+# try:
+#     print(x)
+# except:
+#     print("X is not there")
+
+# # print(x)
+
+
+
+
+
+
+
+
+
+
+# print(x)
+# x = 8
+# try:
+#     print(x)
+# except:
+#     print("x is not defined")
+
+# names = ["Diva","Agarwal","Edin","David","James"]
+
+# try:
+#     print(names[4])
+# except:
+#     print("Out of range")
+
+# x = 7
+
+# try:
+#     print(x)
+# except NameError:
+#     print("Variable x is not defined")
+# except:
+#     print("Something else is wrong")
+
+
+
+# try:
+#     num = int(input("Enter 1st number : "))
+#     num1 = int(input("Enter 2nd number : "))
+
+#     result = num/num1
+#     print(result)
+
+# except ValueError:
+#     print("Error : Invalid Inputs")
+# except ZeroDivisionError:
+#     print("Error : Division by 0 is undefined")
+# else:
+#     print("No errors occured ")
+# finally:
+#     print("Execution Completed")
+
+
+
+
+# File Handling :
+
+# open() - to open the file 
+# two parameters for open() - filename and mode
+
+
+# "r" = read
+# "a" = append
+# "w" = write
+# "x" = create
+
+# f = open("F:\\diva\hey.txt","r")
+# print(f.readline())
+# print(f.readline())
+# f.close()
+
+f = open("test.txt","a")
+f.write("I'm adding a new line in it. It has more content now.")
+f.close()
+
+f = open("test.txt","r")
+print(f.read())

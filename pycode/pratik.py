@@ -337,7 +337,7 @@
 # print(f"The sum of all element in a list are {sum}")
 
 
-
+# Write a program to identify how many even and odd numbers are there in the list 
 
 # 2. Tuple
 # 3. Set
@@ -348,3 +348,21 @@
 
 
 
+# num = [7,8,9,5,3,4,1,2,6,9,8]
+
+# max = num[0]
+
+# for i in num:
+#     if max < i:
+#         max = i
+
+# print(f"The maximum number in the list is : {max}")
+
+
+# names = ["Pratik, Utkrash, David, Ryan, Emily, Matthew, Laith, Brandon"]
+# v_count = 0
+# vowels = "aeiouAEIOU"
+# for i in names:
+#     if i[0] in vowels:
+#         v_count = v_count + 1
+# print(f"The ammount of names starting up with vowels are {v_count}")

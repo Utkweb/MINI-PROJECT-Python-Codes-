@@ -789,3 +789,27 @@
 
 
 
+# data types: 
+
+# 1. Integer - It stores positive numbers and b=negative numbers as well.
+
+# a = 8,b = -8,etc
+
+# 2. Float: It stores the number with decimal point in it .
+
+# a = .14,5.089,etc
+
+# 3. String : It stores sentences or words .
+
+# name = "Nadira","Welcome to the programming language"
+
+# 4. Boolean: It stores the values in terms of True or False.
+
+# 5. Character: It stores a single character at a time .
+
+
+# decimal = 8
+# binary = 1000
+
+# decimal = 6
+# binary = 0110

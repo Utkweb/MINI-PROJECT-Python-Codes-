@@ -657,3 +657,43 @@
 # [::steps]
 
 
+
+
+# functions:
+
+# syntax:
+
+# def name_of_the_function():
+    # statements
+
+# define the function
+# def hello():
+#     print("Welcome to the functions")
+
+# # calling the function
+# hello()
+
+# def add(a,b):
+#     print(f"a:{a}  ||   b:{b}")
+#     print(a+b)
+
+# add(b=6,a=8)
+# add(8,9)
+# add(7,9)
+
+# def my_function(fname):
+#     print(f"{fname} Chugh")
+
+# my_function("Anvi")
+# my_function("Sandeep")
+# my_function("Arshia")
+
+
+def my_function(country = "Sweden"):
+    print(f"I am from {country}")
+
+my_function("India")
+my_function("US")
+my_function("Brazil")
+my_function("UK")
+my_function()
