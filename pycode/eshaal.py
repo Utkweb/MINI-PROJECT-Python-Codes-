@@ -1043,3 +1043,77 @@
 
 # while loop
 
+
+# intialization
+
+# while condition:
+#     statements
+
+
+# 1 - 10
+
+# i = 1
+# while i<=10:
+#     print(i,end= " ")
+#     i = i+1
+
+
+# 10 9 8 7 6 5 4 3 2 1
+
+# fibonacci Series : 
+
+# 0 1 1 2 3 5 8 13 21 34
+
+# previous = 0
+# current = 1
+
+# print(previous,current,end=" ")
+
+# for i in range(1,11):
+#     next = previous+current
+#     print(next,end=" ")
+
+#     previous = current 
+#     current = next
+
+
+# Strings :  
+
+# name = "Eshaal"
+# sen = "Welcome to the class of Python"
+
+# print(f"My name is {name}")
+
+# how you can identify the data type of a variable  -  type()
+
+# print(f"The data type of name is {type(name)}")
+
+# print(name )
+
+# if you want to identify the data type : type()
+# print (type(name))
+
+# indexes - the place at which the character is present 
+
+# there are two types of indexes:
+
+# 1. Positive indexes - it starts from left to right (0 to n-1)
+# 2. Negative indexes - it starts from right to left (-1 to -n)
+
+# name = "Eshaal"
+
+# print(name[-1])
+
+
+# substring -> slicing the string 
+
+# actor = "Tony Stark"
+# print(actor[0:6])
+
+# printing the string into the reverse order 
+
+# cheese = "chezzy cheese"
+# print(cheese[::-1])
+
+
+# [start:end:steps]

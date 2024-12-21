@@ -689,11 +689,23 @@
 # my_function("Arshia")
 
 
-def my_function(country = "Sweden"):
-    print(f"I am from {country}")
+# def my_function(country = "Sweden"):
+#     print(f"I am from {country}")
 
-my_function("India")
-my_function("US")
-my_function("Brazil")
-my_function("UK")
-my_function()
+# my_function("India")
+# my_function("US")
+# my_function("Brazil")
+# my_function("UK")
+# my_function()
+
+
+# 5 = 5*4*3*2*1
+# 7 = 7*6*5*4*3*2*1
+
+def fact(number):
+    result = 1 
+    for i in range(1,number+1):
+        result = result*i
+    return result
+
+print(fact(10))

@@ -366,3 +366,264 @@
 #     if i[0] in vowels:
 #         v_count = v_count + 1
 # print(f"The ammount of names starting up with vowels are {v_count}")
+
+
+# Remove item 
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# fruits.remove("Kiwi")
+
+# print(fruits)
+
+
+# remove element from specified index 
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# fruits.pop()
+
+# print(fruits)
+
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# del fruits[2]
+
+# print(fruits)
+
+
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# for i in fruits:
+#     print(i,end=" ")
+
+
+# Sort()- 
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# fruits.sort()        #ascending order 
+
+# print(fruits)
+
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# fruits.sort(reverse=True)    #descending order
+
+# print(fruits)
+
+
+# fruits = ["Mango","Orange","Kiwi","Pineapple"]
+# fruits.reverse()
+# print(fruits)
+
+# list1 = [1,2,3,4,5,6,7,8,9]
+# list2 = ["a","b","c","d","e","f"]
+
+# print(list1+list2)
+
+# list1 = [1,2,3,4,5,6,7,8,9]
+# list2 = ["a","b","c","d","e","f"]
+
+# for x in list2:
+#     list1.append(x)
+
+# print(list1)
+
+
+# list1 = [1,2,3,4,5,6,7,8,9]
+# list2 = ["a","b","c","d","e","f"]
+
+# list1.extend(list2)
+# print(list1)
+
+# Tuples: It is another way of storing multiple elements
+# Tuples is immutable 
+# It allows duplicate values 
+# it is being identified by ()
+
+# cars = ("Tesla","Ford","BMW","Lamborghini","Mercedez")
+
+# print(cars)
+
+# access elements - the way we have access in list the same way we need to access over here 
+
+
+# cars = ("Tesla","Ford","BMW","Lamborghini","Mercedez")
+
+# print(cars[-1])
+
+
+# Type casting - It changes the data type of variable to another data type 
+
+# cars = ("Tesla","Ford","BMW","Lamborghini","Mercedez")
+
+# ans = list(cars)
+
+# ans[1] = "Mustang"
+
+# cars = tuple(ans)
+
+# print(cars)
+
+# Concatenation  - adding the tuples 
+
+# replication 
+
+# fruits = ("mango","Orange","Kiwi")
+# print(fruits*2)
+
+# Python Sets - used to store multiple variable in a single variable 
+
+# a set of collection which is unordered,unchangeable,and unindexed.
+# A set is being identified by {}
+# Set doesn't allow duplicate values
+
+# names = {"Pratik","David","Henry","Mark","Jessica","Jessica","David"}
+
+# print(names)
+
+
+# num = [1,5,8,7,4,9,1,5,6,3,4,2,6,2,6,3,5,8,9,2]
+
+# # type casting 
+# ans = set(num)
+
+# num = list(ans)
+
+# print(num)
+
+# if you need find the length of the set 
+
+# names = {"Pratik","David","Henry","Mark","Jessica","Jessica","David"}
+# print(len(names))
+
+# with the loops we can access 
+
+# names = {"Pratik","David","Henry","Mark","Jessica","Jessica","David"}
+# for i in names:
+#     print(i)
+
+# names = {"Pratik","David","Henry","Mark","Jessica","Jessica","David"}
+# print("Utkarsh" not in names)
+
+# in, not in are said to be as membership operators
+
+
+# fruits = {"Banana","Orange","mango","Pineapple","berries"}
+# fruits.add("Papaya")
+
+# print(fruits)
+
+
+# add the sets together 
+
+# num = {1,2,3,4,5}
+# char = {'a','b','c','d','e'}
+
+# char.update(num)
+
+# print(char)
+
+# remove() and discrad() - used to remove element from the set
+# pop() - it is going to remove random element 
+# clear() - it clears up the set 
+# del it deletes the set completely 
+
+
+# union() & update() - it joins up all the items from both sets 
+# intersection() - it keeps only the duplicate values from both sets 
+# difference() - it keeps the item from the first set that are not in the other set(s)
+# symmetric_difference()- it keeps all the items except the duplicates 
+
+# set1 = {'a','b','c'}
+# set2 = {1,2,3}
+
+# set3 = set1.union(set2)
+# print(set3)
+
+# num1 = {1,2,3,5}
+# num2 = {5,4,6,9}
+
+# set3 = num1.difference(num2)
+# print(set3)
+
+
+# Python Dictionaries 
+
+# Key,value
+
+# car_info = {
+#     "brand" : "Ford",
+#     "model" : "Mustang",
+#     "year" : 1954,
+#     "year" : 1974
+# }
+
+# print(car_info)
+
+# changeable
+# duplicates not allowed 
+
+
+# car_info = {
+#     "brand" : "Ford",
+#     "model" : "Mustang",
+#     "year" : 1974
+# }
+
+# x = car_info["model"]
+
+# that works with the help of get() 
+
+# x = car_info.get("model")
+# print(x)
+
+# to get the keys will use keys()
+
+# print(car_info.keys())    #before the change
+
+# car_info["colors"] = ["Yellow","Red","Blue"]
+
+# print(car_info.keys())    #after the change
+# print(car_info.values())
+
+
+# car_info = {
+#     "brand" : "Ford",
+#     "model" : "Mustang",
+#     "year" : 1974
+# }
+
+# print(car_info.items())
+
+# if "model1" in car_info:
+#     print("Yes it's present!")
+# else:
+#     print("No it's not present!")
+
+# change or update values
+
+# car_info["year"] = 1954
+
+# car_info.update({"colors":["Red","Blue"]})    #another way of updating the items 
+
+# print(car_info)
+
+
+
+# car_info = {
+#     "brand" : "Ford",
+#     "model" : "Mustang",
+#     "year" : 1974
+# }
+
+# car_info.popitem()
+
+# del car_info  it totally deletes the dictionary 
+# car_info.clear() #it deletes up all the items from the dict
+
+# print(car_info)
+
+
+# pop() - it remove the items what key you mention to it 
+# popitem() - it removes the last item of the dictionary 
+
+# loop in dictioanries 

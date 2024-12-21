@@ -1257,68 +1257,162 @@
 
 
 
-from tkinter import *
+# from tkinter import *
 
+# from tkinter import ttk
+
+
+# exchange_rates = {
+#     "USD": {"EUR": 0.95, "YEN": 156.56, "INR": 84.45, "DIR": 3.67, "WON": 1405.53},
+#     "EUR": {"USD": 1.05, "YEN": 165.32, "INR": 88.89, "DIR": 3.86, "WON": 1479.5},
+#     "YEN": {"USD": 0.0064, "EUR": 0.0060, "INR": 0.54, "DIR": 0.023, "WON": 8.95},
+#     "INR": {"USD": 0.0118, "EUR": 0.0113, "YEN": 1.85, "DIR": 0.043, "WON": 16.58},
+#     "DIR": {"USD": 0.27, "EUR": 0.26, "YEN": 43.12, "INR": 23.18, "WON": 387.9},
+#     "WON": {"USD": 0.00071, "EUR": 0.00068, "YEN": 0.11, "INR": 0.060, "DIR": 0.0026}
+# }
+
+
+# root = Tk()
+# root.title("Currency exchanger 💰")
+# root.geometry('300x200')
+
+# def currency_convertor():
+#     try:
+#         amount = float(amount_entry.get())
+#         f_currency = from_currency.get()
+#         t_currency = to_currency.get()
+
+#         if f_currency == t_currency:
+#             converted_amount = amount
+#         else:
+#             converted_amount = amount * exchange_rates[f_currency][t_currency]
+#         result_label.config(text=f"{converted_amount}")
+#     except ValueError:
+#         result_label.config(text=f"Please enter a valid amount!")
+#     except KeyError:
+#         result_label.config(text=f"Conversion rate not available!")
+
+# amount_label = Label(root,text="Amount : ")
+# amount_label.pack(pady=5)
+
+# amount_entry = Entry(root)
+# amount_entry.pack()
+
+# currencies = list(exchange_rates.keys())
+
+# from_currency = StringVar(value="USD")
+# to_currency = StringVar(value="INR")
+
+# f_dropdown = Label(root,text="Convert from")
+# f_dropdown.pack()
+# from_dropdown = ttk.Combobox(root,textvariable=from_currency,value=currencies)
+# from_dropdown.pack()
+
+
+# t_dropdown = Label(root,text="Convert to")
+# t_dropdown.pack()
+# to_dropdown = ttk.Combobox(root,textvariable=to_currency,value=currencies)
+# to_dropdown.pack()
+
+# convertor_button = Button(root,text="Convert",command=currency_convertor)
+# convertor_button.pack()
+
+# result_label = Label(root)
+# result_label.pack()
+
+
+# root.mainloop()
+
+
+from tkinter import *
 from tkinter import ttk
 
-
-exchange_rates = {
-    "USD": {"EUR": 0.95, "YEN": 156.56, "INR": 84.45, "DIR": 3.67, "WON": 1405.53},
-    "EUR": {"USD": 1.05, "YEN": 165.32, "INR": 88.89, "DIR": 3.86, "WON": 1479.5},
-    "YEN": {"USD": 0.0064, "EUR": 0.0060, "INR": 0.54, "DIR": 0.023, "WON": 8.95},
-    "INR": {"USD": 0.0118, "EUR": 0.0113, "YEN": 1.85, "DIR": 0.043, "WON": 16.58},
-    "DIR": {"USD": 0.27, "EUR": 0.26, "YEN": 43.12, "INR": 23.18, "WON": 387.9},
-    "WON": {"USD": 0.00071, "EUR": 0.00068, "YEN": 0.11, "INR": 0.060, "DIR": 0.0026}
+# Unit conversion dictionary
+conversion = {
+    "Length": {
+        "inch": {"centimeter": 2.54, "meter": 0.0254, "kilometer": 0.0000254, "mile": 0.0000157},
+        "centimeter": {"inch": 0.393701, "meter": 0.01, "kilometer": 0.00001, "mile": 0.00000621},
+        "meter": {"centimeter": 100, "inch": 39.3701, "kilometer": 0.001, "mile": 0.000621371},
+        "kilometer": {"centimeter": 100000, "meter": 1000, "inch": 39370.1, "mile": 0.621371},
+        "mile": {"centimeter": 160934, "meter": 1609.34, "kilometer": 1.60934, "inch": 63360},
+    },
+    "Weight": {
+        "pounds": {"kilograms": 0.453592, "tons": 0.0005, "ounces": 16, "grams": 453.592},
+        "kilograms": {"pounds": 2.20462, "tons": 0.00110231, "ounces": 35.274, "grams": 1000},
+        "tons": {"kilograms": 907.18474, "pounds": 2000, "ounces": 32000, "grams": 907184.74},
+        "ounces": {"kilograms": 0.0283495, "tons": 0.00003125, "pounds": 0.0625, "grams": 28.3495},
+        "grams": {"kilograms": 0.001, "tons": 0.00000110231, "ounces": 0.035274, "pounds": 0.00220462},
+    }
 }
 
-
+# Initialize the Tkinter window
 root = Tk()
-root.title("Currency exchanger 💰")
-root.geometry('300x200')
+root.title("Unit Converter")
+root.geometry('400x300')
 
-def currency_convertor():
+def unit_changer():
     try:
         amount = float(amount_entry.get())
-        f_currency = from_currency.get()
-        t_currency = to_currency.get()
+        category = category_combobox.get()
+        f_unit = from_unit_combobox.get()
+        t_unit = to_unit_combobox.get()
 
-        if f_currency == t_currency:
+        if category not in conversion:
+            result_label.config(text="Invalid Category")
+            return
+        if f_unit not in conversion[category] or t_unit not in conversion[category][f_unit]:
+            result_label.config(text="Invalid Inputs!")
+            return
+
+        if f_unit == t_unit:
             converted_amount = amount
         else:
-            converted_amount = amount * exchange_rates[f_currency][t_currency]
-        result_label.config(text=f"{converted_amount}")
+            converted_amount = amount* conversion[category][f_unit][t_unit]
+        result_label.config(text=f"Converted Amount : {converted_amount:.2f} {t_unit}")
     except ValueError:
-        result_label.config(text=f"Please enter a valid amount!")
-    except KeyError:
-        result_label.config(text=f"Conversion rate not available!")
+        result_label.config(text="Please enter a valid number")
 
-amount_label = Label(root,text="Amount : ")
-amount_label.pack(pady=5)
+amount_label= Label(root,text="Amount : ")
+amount_label.pack(pady = 5)
 
 amount_entry = Entry(root)
-amount_entry.pack()
+amount_entry.pack(pady=5)
 
-currencies = list(exchange_rates.keys())
+category_label = Label(root,text="Category : ")
+category_label.pack(pady=5)
 
-from_currency = StringVar(value="USD")
-to_currency = StringVar(value="INR")
+category_combobox= ttk.Combobox(root,values=list(conversion.keys()),state="readonly")
+category_combobox.pack(pady=5)
 
-f_dropdown = Label(root,text="Convert from")
-f_dropdown.pack()
-from_dropdown = ttk.Combobox(root,textvariable=from_currency,value=currencies)
-from_dropdown.pack()
+from_unit_label = Label(root, text="From Unit:")
+from_unit_label.pack(pady=5)
 
+from_unit_combobox = ttk.Combobox(root, state="readonly")
+from_unit_combobox.pack(pady=5)
 
-t_dropdown = Label(root,text="Convert to")
-t_dropdown.pack()
-to_dropdown = ttk.Combobox(root,textvariable=to_currency,value=currencies)
-to_dropdown.pack()
+# Update units based on category selection
+def update_units(event):
+    category = category_combobox.get()
+    if category in conversion:
+        units = list(conversion[category].keys())
+        from_unit_combobox.config(values=units)
+        to_unit_combobox.config(values=units)
+        from_unit_combobox.set("")
+        to_unit_combobox.set("")
 
-convertor_button = Button(root,text="Convert",command=currency_convertor)
-convertor_button.pack()
+category_combobox.bind("<<ComboboxSelected>>", update_units)
 
-result_label = Label(root)
-result_label.pack()
+to_unit_label = Label(root, text="To Unit:")
+to_unit_label.pack(pady=5)
 
+to_unit_combobox = ttk.Combobox(root, state="readonly")
+to_unit_combobox.pack(pady=5)
 
+convert_button = Button(root, text="Convert", command=unit_changer)
+convert_button.pack(pady=10)
+
+result_label = Label(root, text="")
+result_label.pack(pady=5)
+
+# Run the application
 root.mainloop()

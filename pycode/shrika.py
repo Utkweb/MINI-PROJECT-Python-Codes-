@@ -2337,3 +2337,185 @@ arr = ["Shrika","Aella","Utkweb"]
 # root.mainloop()
 
 
+
+
+# import tkinter as tk
+# from tkinter import messagebox
+# import mysql.connector
+# class QuizApp:
+#     def __init__(self,root):
+#         self.root = root
+#         self.root.title("Simple Quiz Application")
+
+#         self.conn = mysql.connector.connect(
+#         host='localhost',
+#         user='root',
+#         password='',
+#         database='quiz_db'
+#         )
+#         self.cursor = self.conn.cursor()
+
+#         self.current_question_index = 0
+#         self.score = 0
+
+
+#         self.label_title = tk.Label(root, text="Quiz Application", font=("Arial", 20))
+#         self.label_title.grid(pady=20)
+
+#         self.label_question = tk.Label(root, text="Question", font=("Arial", 16))
+#         self.label_question.grid(row=1, column=0, pady=10,padx=10,sticky="w")
+#         self.entry_question = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_question.grid(row=1, column=1, pady=10,padx=10,sticky="w")
+
+
+#         self.label_option1 = tk.Label(root, text="Option 1", font=("Arial", 16))
+#         self.label_option1.grid(row=2, column=0, pady=10,padx=10,sticky="w")
+#         self.entry_option1 = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_option1.grid(row=2, column=1, pady=10,padx=10,sticky="w")
+
+#         self.label_option2 = tk.Label(root, text="Option 2", font=("Arial", 16))
+#         self.label_option2.grid(row=3, column=0, pady=10,padx=10,sticky="w")
+#         self.entry_option2 = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_option2.grid(row=3, column=1, pady=10,padx=10,sticky="w")
+
+#         self.label_option3 = tk.Label(root, text="Option 3", font=("Arial", 16))
+#         self.label_option3.grid(row=4, column=0, pady=10,padx=10,sticky="w")
+#         self.entry_option3 = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_option3.grid(row=4, column=1, pady=10,padx=10,sticky="w")
+
+#         self.label_option4 = tk.Label(root, text="Option 4", font=("Arial", 16))
+#         self.label_option4.grid(row=5, column=0, pady=10,padx=10,sticky="w")
+#         self.entry_option4 = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_option4.grid(row=5, column=1, pady=10,padx=10,sticky="w")
+
+#         self.label_answer = tk.Label(root, text="Correct Answer (1-4): ", font=("Arial", 16))
+#         self.label_answer.grid(row=6, column=0, pady=10,padx=10,sticky="w")
+#         self. entry_answer = tk.Entry(root, width=50, font=("Arial", 14))
+#         self.entry_answer.grid(row=6, column=1, pady=10,padx=10,sticky="w")
+
+#         self.add_button = tk.Button(root, text="Add Question", font=("Arial", 16))
+#         self.add_button.grid(row=7, column=0, columnspan=2, pady=10,padx=10,sticky="w")
+
+#         self.start_button = tk.Button(root, text="Start Quiz", font=("Arial", 16))
+#         self.start_button.grid(row=8, column=0, columnspan=2, pady=10,padx=10,sticky="w")
+
+        
+
+# if __name__ == "__main__":
+#     root = tk.Tk()
+#     app = QuizApp(root)
+#     root.mainloop()
+
+
+
+from tkinter import *
+from tkinter import messagebox
+import mysql.connector
+
+db = mysql.connector.connect(
+    host="Localhost",
+    user="root",
+    password="",
+    database = "quiz_db"
+)
+
+cursor = db.cursor()
+
+current_user_id = None
+current_question = 0
+score = 0
+
+def signup():
+    username = entry_signup_user.get()
+    password = entry_signup_pass.get()
+
+    if not username or not password:
+        messagebox.showwarning("Input Error","All Fields are required!")
+        return 
+    try:
+        cursor.execute("insert into users (username,password) Values (%s,%s)",(username,password))
+        db.commit()
+        messagebox.showinfo("Success","Sigup Successfully.Please login")
+        signup_frame.destroy()
+    except mysql.connector.IntegrityError:
+        messagebox.showerror("Error","Username already exists.")
+
+def login():
+    global current_user_id
+    username = entry_login_user.get()
+    password = entry_login_pass.get()
+    cursor.execute("Select id from users WHERE username=%s AND password=%s",(username,password))
+    result = cursor.fetchone()
+
+    if result:
+        current_user_id = result[0]
+        messagebox.showinfo("Success","Login Successfully!")
+        login_frame.destroy()
+        start_quiz()
+
+    else:
+        messagebox.showerror("Error","Invalid Username and Password!")
+
+def start_quiz():
+    global quiz_window, question_label ,option_buttons,current_question,score
+
+    quiz_window = Tk() 
+    quiz_window.title("Quiz Application!")
+
+    current_question = 0
+    score = 0
+
+    load_question()   #we need to work on that
+    quiz_window.mainloop()
+
+
+def load_question(question_id):
+    global question_label,option_buttons,current_question
+    cursor.execute("Select * from quiz_questions WHERE id=%s",(question_id+1),)
+    question = cursor.fetchone()
+
+    if not question:
+        save_score_to_db()
+        messagebox.showinfo("Quiz Completed",f"You scored {score} points.")
+        quiz_window.destroy()
+        return
+    
+    q_id,text,opt1,opt2,opt3,opt4,correct = question
+
+    if 'question_label' in globals():
+        question_label.config(text=text)
+        for i, button in enumerate(option_buttons):
+            button.config(text=[opt1,opt2,opt3,opt4][i] )
+    else:
+        question_label = Label(quiz_window,text=text,font=("Arial",20),wraplength=400)
+        question_label.pack(pady=20)
+
+        option_buttons = []
+
+        for i, option in enumerate([opt1 ,opt2,opt3,opt4]):
+            btn = Button(quiz_window,text=option,font=("Arial",20))
+            btn.pack(fill="x",pady=5)
+            option_buttons.append(btn)
+# gui for login and signup 
+
+root = Tk()
+root.title("Quiz Application")
+
+
+# login frame 
+login_frame = Frame(root)
+login_frame.pack(pady=20)
+
+
+Label(login_frame,text="Login",font=("Arial",20)).grid(row=0,columnspan=2,pady=10)
+Label(login_frame,text="Username : ").grid(row=1,column=0,padx=10,pady=5)
+entry_login_user = Entry(login_frame)
+entry_login_user.grid(row=1,column=1,padx=10,pady=5)
+
+
+Label(login_frame,text="Password : ").grid(row=2,column=0,padx=10,pady=5)
+entry_login_pass = Entry(login_frame,show="*")
+entry_login_pass.grid(row=2,column=1,padx=10,pady=5)
+
+
+Button(login_frame,text="Login",command =login).grid(row=3,columnspan=2,pady=10)

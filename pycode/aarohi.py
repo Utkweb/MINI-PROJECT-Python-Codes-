@@ -421,7 +421,44 @@ lti line comment
 # for i in names:
 #     print(i)
 
-num = [4,5,8,9,6,3,1,47,56,3,1,6]
+# num = [4,5,8,9,6,3,1,47,56,3,1,6]
+# sum = 0
+
+# for i in num:
+#     sum = sum + i
+# print(f"The sum of elements are : {sum}")
+
+# how to add the elements into the list ?
+
+# 1. append()-  It adds the elements to the last of the list 
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# names.append("David")
+
+# print(names)
+
+# 2. insert() - it adds the elements at the desired location of the user.
+
+# names = ["Aarohi","Jack","Jimmy","Mark","henry","Julia"]
+# names.insert(1,"lilliona")
+
+# print(names)
+
+num = [1,3,7,5,4,6,3,8,1,9]
+ans = []
+
+for i in num:
+    if i not in ans:
+        ans.append(i)
+
+print(ans)
+
+
+# input:
+# language = ["Python","Ruby","Java"]
+
+# output:
+# language = ["nohtyP","ybuR","avaJ"]
 
 
 

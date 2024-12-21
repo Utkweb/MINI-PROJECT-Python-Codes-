@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "harish",
+      "request": "launch",
+      "mainClass": "harish",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
+      "type": "java",
+      "name": "hairsh",
+      "request": "launch",
+      "mainClass": "hairsh",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
+      "type": "java",
       "name": "Piyush",
       "request": "launch",
       "mainClass": "Piyush",

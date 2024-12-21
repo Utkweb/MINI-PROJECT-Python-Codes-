@@ -1425,10 +1425,10 @@ class ImageEditor:
         self.buttons_frame.pack()
 
         Button(self.buttons_frame,text="Load Image",command=self.load_image).grid(row=0,column=0,padx=5)
-        Button(self.buttons_frame,text="Rotate Left").grid(row=0,column=1,padx=5)
-        Button(self.buttons_frame,text="Rotate Right").grid(row=0,column=2,padx=5)
-        Button(self.buttons_frame,text="Increase Brightness").grid(row=0,column=3,padx=5)
-        Button(self.buttons_frame,text="Decrease Brightness").grid(row=0,column=4,padx=5)
+        Button(self.buttons_frame,text="Rotate Left",command=lambda : self.rotate_image(-90)).grid(row=0,column=1,padx=5)
+        Button(self.buttons_frame,text="Rotate Right",command=lambda : self.rotate_image(90)).grid(row=0,column=2,padx=5)
+        Button(self.buttons_frame,text="Increase Brightness",command = lambda : self.adjust_brightness(1.2)).grid(row=0,column=3,padx=5)
+        Button(self.buttons_frame,text="Decrease Brightness",command = lambda : self.adjust_brightness(0.8)).grid(row=0,column=4,padx=5)
         Button(self.buttons_frame,text="Save Image").grid(row=0,column=5,padx=5)
 
         self.image = None
@@ -1441,9 +1441,38 @@ class ImageEditor:
         
         try:
             self.image = Image.open(file_path)
-            # self.d    display image function needs to be make 
+            self.display_image()
         except Exception as e:
             messagebox.showerror("Error",f"Failed to load Image : {e}")
+
+    def display_image(self):
+        if self.image is None:
+            return
+        
+        max_width, max_height = 600,400
+        img_width, img_height = self.image.size
+        scale = min(max_width/img_width,max_height/img_height,1)
+        resized_image = self.image.resize((int(img_width*scale), int(img_height*scale)))
+
+        self.tk_image = ImageTk.PhotoImage(resized_image)
+        self.image_label.config(image=self.tk_image,text="")
+
+    def rotate_image(self,angle):
+        if self.image is None:
+            messagebox.showwarning("Warning","No image loaded")
+            return
+        self.image = self.image.rotate(angle,expand=True)
+        self.display_image()
+
+    def adjust_brightness(self,factor):
+        if self.image is None:
+            messagebox.showwarning("Warning","No image loaded")
+            return
+        
+        enhancer = ImageEnhance.Brightness(self.image)
+        self.image= enhancer.enhance(factor)
+        self.display_image()
+        
 
 
 

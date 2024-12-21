@@ -783,10 +783,47 @@
 
 
 
-import numpy 
+# import numpy 
 
-marks = [94,86,42,68,98,22,56,28]
+# marks = [94,86,42,68,98,22,56,28]
 
-x = numpy.mode(marks)
+# x = numpy.mode(marks)
 
-print(x)
+# print(x)
+
+
+
+
+
+# print("Nihal")
+# print("Nihira")
+
+
+
+# modules : numpy,pandas
+
+# print(8+9)
+
+
+# a = 8
+# b = 9
+
+# print(a-b)
+
+
+# -1,2,5,8,3,4,-5,-9,-147,,etc
+
+# +,-,*,/,//,%,**
+
+# a = 21
+# b = 5
+
+# print(a/b)
+# print(a//b)
+# print(a%b)
+
+
+# base = 4
+# power = 3
+
+# print(base**power)

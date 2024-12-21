@@ -907,9 +907,59 @@
 # print(f.readline())
 # f.close()
 
-f = open("test.txt","a")
-f.write("I'm adding a new line in it. It has more content now.")
-f.close()
+# f = open("test.txt","a")
+# f.write("I'm adding a new line in it. It has more content now.")
+# f.close()
 
-f = open("test.txt","r")
-print(f.read())
+# f = open("test.txt","r")
+# print(f.read())
+
+
+# Create a new file 
+
+# x = it will create a new file
+# w = write into the file 
+# a = append
+
+
+# f = open("mytest.txt","w")   # it creates a file if it doesn't exists it's not going to show you any error if the file exists already.
+
+
+# Delete a file 
+
+# import os 
+
+# if os.path.exists("mytest.txt"):
+#     os.remove("mytest.txt")
+# else:
+#     print("The file doesn't even exists")
+
+
+# remove the files 
+
+# import os 
+
+# os.rmdir("testing")
+
+
+
+# creating a virtual environment 
+
+# command -> python -m venv <env_name>
+
+# Activate the virtual encironment 
+
+# windows:  .\<env_name>\Scripts\activate
+# macOS/Linux: source <env_name>/bin/activate
+
+# Deactiavting the virtual environment 
+
+# deactivate
+
+
+
+# pip3 install module_name 
+
+# if you want to view all your isntalled packages
+
+pip list
