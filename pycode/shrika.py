@@ -2408,114 +2408,152 @@ arr = ["Shrika","Aella","Utkweb"]
 
 
 
-from tkinter import *
-from tkinter import messagebox
-import mysql.connector
+# from tkinter import *
+# from tkinter import messagebox
+# import mysql.connector
 
-db = mysql.connector.connect(
-    host="Localhost",
-    user="root",
-    password="",
-    database = "quiz_db"
-)
+# db = mysql.connector.connect(
+#     host="Localhost",
+#     user="root",
+#     password="",
+#     database = "quiz_db"
+# )
 
-cursor = db.cursor()
+# cursor = db.cursor()
 
-current_user_id = None
-current_question = 0
-score = 0
+# current_user_id = None
+# current_question = 0
+# score = 0
 
-def signup():
-    username = entry_signup_user.get()
-    password = entry_signup_pass.get()
+# def signup():
+#     username = entry_signup_user.get()
+#     password = entry_signup_pass.get()
 
-    if not username or not password:
-        messagebox.showwarning("Input Error","All Fields are required!")
-        return 
-    try:
-        cursor.execute("insert into users (username,password) Values (%s,%s)",(username,password))
-        db.commit()
-        messagebox.showinfo("Success","Sigup Successfully.Please login")
-        signup_frame.destroy()
-    except mysql.connector.IntegrityError:
-        messagebox.showerror("Error","Username already exists.")
+#     if not username or not password:
+#         messagebox.showwarning("Input Error","All Fields are required!")
+#         return 
+#     try:
+#         cursor.execute("insert into users (username,password) Values (%s,%s)",(username,password))
+#         db.commit()
+#         messagebox.showinfo("Success","Sigup Successfully.Please login")
+#         signup_frame.destroy()
+#     except mysql.connector.IntegrityError:
+#         messagebox.showerror("Error","Username already exists.")
 
-def login():
-    global current_user_id
-    username = entry_login_user.get()
-    password = entry_login_pass.get()
-    cursor.execute("Select id from users WHERE username=%s AND password=%s",(username,password))
-    result = cursor.fetchone()
+# def login():
+#     global current_user_id
+#     username = entry_login_user.get()
+#     password = entry_login_pass.get()
+#     cursor.execute("Select id from users WHERE username=%s AND password=%s",(username,password))
+#     result = cursor.fetchone()
 
-    if result:
-        current_user_id = result[0]
-        messagebox.showinfo("Success","Login Successfully!")
-        login_frame.destroy()
-        start_quiz()
+#     if result:
+#         current_user_id = result[0]
+#         messagebox.showinfo("Success","Login Successfully!")
+#         login_frame.destroy()
+#         start_quiz()
 
-    else:
-        messagebox.showerror("Error","Invalid Username and Password!")
+#     else:
+#         messagebox.showerror("Error","Invalid Username and Password!")
 
-def start_quiz():
-    global quiz_window, question_label ,option_buttons,current_question,score
+# def start_quiz():
+#     global quiz_window, question_label ,option_buttons,current_question,score
 
-    quiz_window = Tk() 
-    quiz_window.title("Quiz Application!")
+#     quiz_window = Tk() 
+#     quiz_window.title("Quiz Application!")
 
-    current_question = 0
-    score = 0
+#     current_question = 0
+#     score = 0
 
-    load_question()   #we need to work on that
-    quiz_window.mainloop()
+#     load_question()   #we need to work on that
+#     quiz_window.mainloop()
 
 
-def load_question(question_id):
-    global question_label,option_buttons,current_question
-    cursor.execute("Select * from quiz_questions WHERE id=%s",(question_id+1),)
-    question = cursor.fetchone()
+# def load_question(question_id):
+#     global question_label,option_buttons,current_question
+#     cursor.execute("Select * from quiz_questions WHERE id=%s",(question_id+1),)
+#     question = cursor.fetchone()
 
-    if not question:
-        save_score_to_db()
-        messagebox.showinfo("Quiz Completed",f"You scored {score} points.")
-        quiz_window.destroy()
-        return
+#     if not question:
+#         save_score_to_db()
+#         messagebox.showinfo("Quiz Completed",f"You scored {score} points.")
+#         quiz_window.destroy()
+#         return
     
-    q_id,text,opt1,opt2,opt3,opt4,correct = question
+#     q_id,text,opt1,opt2,opt3,opt4,correct = question
 
-    if 'question_label' in globals():
-        question_label.config(text=text)
-        for i, button in enumerate(option_buttons):
-            button.config(text=[opt1,opt2,opt3,opt4][i] )
-    else:
-        question_label = Label(quiz_window,text=text,font=("Arial",20),wraplength=400)
-        question_label.pack(pady=20)
+#     if 'question_label' in globals():
+#         question_label.config(text=text)
+#         for i, button in enumerate(option_buttons):
+#             button.config(text=[opt1,opt2,opt3,opt4][i] )
+#     else:
+#         question_label = Label(quiz_window,text=text,font=("Arial",20),wraplength=400)
+#         question_label.pack(pady=20)
 
-        option_buttons = []
+#         option_buttons = []
 
-        for i, option in enumerate([opt1 ,opt2,opt3,opt4]):
-            btn = Button(quiz_window,text=option,font=("Arial",20))
-            btn.pack(fill="x",pady=5)
-            option_buttons.append(btn)
-# gui for login and signup 
+#         for i, option in enumerate([opt1 ,opt2,opt3,opt4]):
+#             btn = Button(quiz_window,text=option,font=("Arial",20))
+#             btn.pack(fill="x",pady=5)
+#             option_buttons.append(btn)
+# # gui for login and signup 
 
-root = Tk()
-root.title("Quiz Application")
-
-
-# login frame 
-login_frame = Frame(root)
-login_frame.pack(pady=20)
+# root = Tk()
+# root.title("Quiz Application")
 
 
-Label(login_frame,text="Login",font=("Arial",20)).grid(row=0,columnspan=2,pady=10)
-Label(login_frame,text="Username : ").grid(row=1,column=0,padx=10,pady=5)
-entry_login_user = Entry(login_frame)
-entry_login_user.grid(row=1,column=1,padx=10,pady=5)
+# # login frame 
+# login_frame = Frame(root)
+# login_frame.pack(pady=20)
 
 
-Label(login_frame,text="Password : ").grid(row=2,column=0,padx=10,pady=5)
-entry_login_pass = Entry(login_frame,show="*")
-entry_login_pass.grid(row=2,column=1,padx=10,pady=5)
+# Label(login_frame,text="Login",font=("Arial",20)).grid(row=0,columnspan=2,pady=10)
+# Label(login_frame,text="Username : ").grid(row=1,column=0,padx=10,pady=5)
+# entry_login_user = Entry(login_frame)
+# entry_login_user.grid(row=1,column=1,padx=10,pady=5)
 
 
-Button(login_frame,text="Login",command =login).grid(row=3,columnspan=2,pady=10)
+# Label(login_frame,text="Password : ").grid(row=2,column=0,padx=10,pady=5)
+# entry_login_pass = Entry(login_frame,show="*")
+# entry_login_pass.grid(row=2,column=1,padx=10,pady=5)
+
+
+# Button(login_frame,text="Login",command =login).grid(row=3,columnspan=2,pady=10)
+
+
+
+# Python Lambda : A small anonymous function 
+
+# syntax:
+
+# lambda arguments : expression
+
+# x = lambda a : a+10
+
+# print(x(5))
+
+
+# x = lambda a, b : a * b
+# print(x(5, 6))
+
+# x = lambda a, b, c : a + b + c
+# print(x(5, 6, 2))
+
+
+# File handling 
+
+# open() 
+
+# "r" : Read
+# "a" : Append
+# "w" : Write
+# "x" : Create 
+
+f = open("F://Shrika/test.txt","r")
+
+# print(f.read())   #while content 
+# print(f.read(5))    #reading starting 2 words
+# print(f.readline())  #reading first line
+print(f.readline())  #reading first 3 words
+print(f.readline())  #reading first 3 words
+print(f.readline())  #reading first 3 words

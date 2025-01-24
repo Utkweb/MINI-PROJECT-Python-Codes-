@@ -129,7 +129,6 @@
 //     }
 // }
 
-
 // while (conditions){
 //     Statements
 // }
@@ -169,14 +168,188 @@
 
 // Output : 154
 
-
 // sum of digits :
 // num = 123 = 1+2+3 = 6
 // 
 // result = 6
 
+// class harish{
+//     public static void main(String args[]){
 
+//         // Automatic conversion/implicit conversion
+//         // int a = 9;
+//         // double b = a;    //automatic conversion
+//         // System.out.println(a);
+//         // System.out.println(b);
 
+//         // manual conversion/explicit conversion
 
+//         // double a = 9;
+//         // float b = (float) a;    
+//         // System.out.println(a);
+//         // System.out.println(b);
 
+//         // break/continue
 
+//         // for(int i=0;i<=9;i++){
+//         //     if(i==4){
+//         //         continue;
+//         //     }
+//         //     System.out.println(i);
+//         // }
+
+//         // int i = 0;
+//         // while(i<10){
+//         //     System.out.println(i);
+
+//         //     if(i==7){
+//         //         break;
+//         //     }
+//         //     i++;
+//         // }
+
+//         // Nested Loops: 
+
+//         // for(int i =0;i<=6;i++){  //outer loop 
+//         //     for(int j = 0;j<6;j++){   //inner loop
+
+//         //     }
+//         // }
+
+//     }
+// }
+
+// class harish{
+//     public static void main(String[] args) {
+//         for(int i = 0; i<=6; i++){  
+//             for(int j = 0; j<=6; j++){
+//                 System.out.println(i+ "\t" +j);
+//             }
+//         }
+//     }
+// }
+
+// *
+// * *
+// * * *
+// * * * *
+// * * * * *
+
+// 1
+// 1 2
+// 1 2 3
+// 1 2 3 4 
+// 1 2 3 4 5
+
+// class harish {
+//     public static void main(String[] args) {
+//         for (int i = 1; i <=5; i++) {
+//             for (int j = 1; j <=i; j++) {
+//                 System.out.print(j + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+// 1
+// 1 2
+
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+// 1 2 3 4 5
+
+// class LearnJava{
+//     public static void main(String args[]){
+//         boolean flag = true;
+//         int a = 11;
+//         if (a > 10){
+//         flag = false;`
+//         }
+//         else{
+//         flag = true;
+//         }
+//         System.out.println(flag);
+//     }
+// }
+
+// input:
+
+// a = 11
+// b = 15
+
+// output:
+
+// a = 15
+// b = 11
+
+// a = 9-2
+// b = 7+2
+
+// 1
+// 2 3
+// 4 5 6 
+// 7 8 9 10
+// 11 12 13 14 15
+
+// class Pattern {
+//     public static void main(String[] args) {
+//         int num = 1;
+//         for (int i = 1; i <= 5; i++) {
+//             for (int j = 1; j <= i; j++) {
+//                 System.out.print(num + " ");
+//                 num++;
+//             }
+//             System.out.println();
+//         }
+//     }
+// }
+// 1
+// 0 1
+// 1 0 1
+// 0 1 0 1
+// 1 0 1 0 1
+
+// 1 2 3 4 5 6 
+//  2 3 4 5 6 
+//   3 4 5 6 
+//    4 5 6 
+//     5 6 
+//      6 
+//     5 6 
+//    4 5 6 
+//   3 4 5 6 
+//  2 3 4 5 6 
+// 1 2 3 4 5 6 
+
+// class Pattern2 {
+//     public static void main(String[] args) {
+//         int n = 6;
+//         int i, j;
+//         // upper part
+//         for (i = 1; i <= n; i++) {
+//             // inner loop for printing up the spaces
+//             for (j = 1; j < i; j++) {
+//                 System.out.print(" ");
+//             }
+//             // inner loop for printing up the values
+//             for (j = i; j <= n; j++) {
+//                 System.out.print(j + " ");
+//             }
+//             System.out.println();
+//         }
+//         // lower part
+//         for (i = n - 1; i >= 1; i--) {
+//             // inner loop for printing up the spaces
+//             for (j = 1; j < i; j++) {
+//                 System.out.print(" ");
+//             }
+//             // inner loop for printing up the values
+//             for (j = i; j <= n; j++) {
+//                 System.out.print(j + " ");
+//             }
+//             System.out.println();
+//         }
+//     }
+// }

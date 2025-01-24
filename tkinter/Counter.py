@@ -18,3 +18,10 @@ button = tk.Button(root,text="Click me!",command=click)
 button.pack()
 
 root.mainloop()
+
+
+# color = f"#{random.randint(0,255):02x}{random.randint(0,255):02x}{random.randint(0,255):02x}"
+
+# red = 255 green = 87 blue = 51
+
+# #ff5733

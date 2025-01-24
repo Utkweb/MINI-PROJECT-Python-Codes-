@@ -702,10 +702,64 @@
 # 5 = 5*4*3*2*1
 # 7 = 7*6*5*4*3*2*1
 
-def fact(number):
-    result = 1 
-    for i in range(1,number+1):
-        result = result*i
-    return result
 
-print(fact(10))
+# def fact(number):
+#     result = 1 
+#     for i in range(1,number+1):
+#         result = result*i
+#     return result
+
+# print(fact(10))
+
+# prime numbers : 
+
+
+# def add(a,b):
+#     print(f"The sum of two variables are : {a+b}")
+
+# add(7,8)
+
+# multiply
+# sub
+# div
+
+
+# 5 = 1*2*3*4*5 = 120
+
+
+# def fact(num):
+#     fact = 1
+#     for i in range(1,num+1):
+#         fact = fact*i
+#     return fact
+
+# print(f"The factorial of a number is : {fact(5)}")
+
+
+
+#defining the function
+# def funct(num): #parameter
+#     statement 
+
+# # calling a function
+# funct(6) #argument
+
+
+# recursion : 
+
+# def recur_func():
+#     if base_condition:
+#         return result
+#     else:
+#         return recur_func(modified_parameters)
+
+# defining a function
+
+def fact(n):
+    if n == 1:
+        return 1
+    else:
+        return n*fact(n-1)
+    
+# calling a function
+fact(5)

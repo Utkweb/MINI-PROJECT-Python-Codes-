@@ -1,0 +1,25 @@
+{
+    "intents":[{
+        "tag":"greetings",
+        "patterns": ["hello", "hey", "hi", "hiya", "howdy", "greetings", "sup", "what's good", "yo",
+                    "how are you doing", "how's it going", "how have you been", "how do you do", "what's new",
+                    "what's up", "wassup", "what's happening", "what's going on",
+                    "good day", "good morning", "good afternoon", "good evening", "hope you're well"],
+        "responses" : [
+                    "Hello! How are you doing today?",
+                    "I am doing well, thank you for asking! How about you?",
+                    "I'm great, thanks! How can I assist you today?",
+                    "Greetings! How are things going on your end?",
+                    "I'm doing fine, thank you! What can I help you with today?",
+                    "Hi there! How's everything with you?",
+                    "I'm doing well, thanks! What can I do for you today?",
+                    "Hello, how are you today? Anything I can help with?",
+                    "I'm feeling good! How can I be of service to you?",
+                    "Hey! How's it going? What do you need help with today?"]
+    },
+    {
+        "tag"
+    }
+
+]
+}

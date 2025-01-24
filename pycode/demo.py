@@ -827,3 +827,76 @@
 # power = 3
 
 # print(base**power)
+
+
+
+
+
+# Code and solve problems 
+# Application development 
+# Web Development 
+# ML/AI
+# Data Science 
+
+
+# variables/
+
+# a = 8
+
+# age = 17
+
+# Data types : 
+
+# Integers (int) : -ve infinity to +ve infinity (without the decimals)
+# Float (float) : 4.18.3.14,etc 
+# Strings (str) : It stores words,characters and sentences . name = "Welcome to the class of Python"
+# Boolean (bool) : It stores the value in terms of true or false
+
+
+# a = 9.025
+# print(type(a))
+
+
+
+
+
+
+# print("Hello How are you?")
+
+# loops :   They are being used to make the code more efficient and less time consuming and also you can multiple times
+
+
+# 1. for loop - 
+
+# Syntax : 
+# for variable_name in range(start,stop,steps):
+    #statements
+
+# for i in range(1,11):
+#     print(i,"Kush")
+
+# 2. while loop - 
+
+# syntax:
+
+# while condition:
+    # statements
+
+# num = 10
+
+# while num!=0:
+#     print(num,end=" ")
+#     num = num - 1
+
+
+# for i in range(5):
+#     for j in range(5):
+#         print("*",end=" ")
+#     print()
+
+
+# num = [1,5,7,6,2,9,3,5,8]
+
+# print(num[2])
+
+

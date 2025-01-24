@@ -7,7 +7,7 @@
 //     printf("Hello world");
 //     return 0;
 // }
-// FIRST PROGRAM 
+// FIRST PROGRAM
 
 // #include <stdio.h>
 // #include <conio.h>
@@ -24,10 +24,9 @@
 
 //     SI=(principal*rate*time)/100;
 //     printf("The Simple interest is",SI);
-// }   
+// }
 
-
-// SECOND PROGRAM 
+// SECOND PROGRAM
 
 // #include<stdio.h>
 // #include<conio.h>
@@ -43,19 +42,18 @@
 
 // }
 
+// THIRD PROGRAM
+#include <stdio.h>
+#include <conio.h>
 
-// THIRD PROGRAM 
-//  #include<stdio.h>
-//  #include<conio.h>
-
-//  void main()
-//  {
-// int num,sum=0,A,B;
-// printf("enter four digit number to be calculated =");
-// scanf("%d",&num);
-// A=num/1000;
-// B=num%10;
-// sum=A+B;
-// printf("the sum of the first and last digit of the entered number is= %d",sum);
-// getch();
-//  }
+void main()
+{
+    int num, sum = 0, A, B;
+    printf("enter four digit number to be calculated =");
+    scanf("%d", &num);
+    A = num / 1000;
+    B = num % 10;
+    sum = A + B;
+    printf("the sum of the first and last digit of the entered number is= %d", sum);
+    getch();
+}

@@ -626,4 +626,197 @@
 # pop() - it remove the items what key you mention to it 
 # popitem() - it removes the last item of the dictionary 
 
-# loop in dictioanries 
+# loops in dictioanries 
+
+# car_info = {
+#     "brand" : "Ford",
+#     "model" : "Mustang",
+#     "year" : 1974
+# }
+
+# for i in car_info:
+#     print(i)
+
+# for i in car_info:
+#     print(car_info[i])
+
+# for i in car_info.values():
+#     print(i)
+
+# for i in car_info.keys():
+#     print(i)
+
+# for x,y in car_info.items():
+#     print(f"{x} : {y}")
+
+# Nested Dictionaries
+
+# myfamily = {
+#     "child1": {
+#         "name":"Prateek",
+#         "year":2010
+#     },
+#     "child2": {
+#         "name":"henry",
+#         "year":2011
+#     },
+#     "child3": {
+#         "name":"David",
+#         "year":2009
+#     }
+# }
+
+# child1 = {
+#         "name":"Prateek",
+#         "year":2010
+#     }
+
+# child2 = {
+#         "name":"henry",
+#         "year":2011
+#     }
+
+# child3 = {
+#         "name":"David",
+#         "year":2009
+#     }
+
+# myfamily = {
+#     "child1": child1,
+#     "child2": child2,    
+#     "child3": child3
+# }
+
+# print(myfamily["child2"]["name"])
+
+
+
+# import random 
+
+# print("Welcome to Rock,Paper, Scissor Game!!!")
+# choices = ['Rock','Paper','Scissors']
+
+# while True:
+#     user_choice = input("Enter your choice (rock,paper, scissors or quit to exit)")
+#     if user_choice == "quit":
+#         print("Thanks for playing the game!!!")
+#         break
+
+#     if user_choice not in choices:
+#         print("Invalid Choice. Please choose Rock,Paper, Scissors")
+#         continue
+
+#     computer_choice = random.choice(choices)
+
+#     print(f"You choose : {user_choice}")
+#     print(f"Computer choose : {computer_choice}")
+
+#     if user_choice == computer_choice:
+#         print("It's a tie")
+
+#     elif (user_choice == "Rock" and computer_choice == "Scissors") or \
+#    (user_choice == "Scissors" and computer_choice == "Paper") or \
+#     (user_choice == "Paper" and computer_choice == "Rock"):
+#         print("You WIN!!!")
+#     else:
+#         print("Computer Win")
+    
+#     print("-"*30)
+    
+
+# functions 
+
+
+# creating a function 
+# def function_name(parameters):
+#     statements
+#     return 
+
+# # calling a function
+# function_name(arguments)
+
+
+# def p():
+#     print("Pratik")
+
+# p()
+
+# def add(a,b):
+#     return a+b
+
+# num = int(input("Enter the 1st number :"))
+# num1 = int(input("Enter the 2nd number :"))
+# print(f"The summation of two numbers is : {add(num,num1)}")
+
+# is_prime() - to check whether a number is a prime number or not 
+
+# def is_prime(num):
+#     count = 0
+#     for i in range(1,num+1):
+#         if num % i == 0:
+#             count = count+1
+#     if count == 2:
+#         print("It's a prime number")
+#     else:
+#         print("It's composite number")
+
+# num = int(input("Enter the number to check whether it's prime or not : "))
+# is_prime(num)
+
+# def find_gcd(a,b):
+#     while b!=0:
+#         a,b = b,a%b   #a = 15, b = 3
+#     return a
+
+# result = find_gcd(12,15)
+# print("The GCD",result)
+
+# from tkinter import * 
+
+# root = Tk()   #adding things to the screen
+# root.title("Pratik's Application")
+# root.geometry('450x300')
+
+# heading = Label(root,text="Login Form",font=('Arial',20,"bold"),fg= "Red",bg="Black")
+# heading.pack(pady=10)
+
+# email_label = Label(root,text="Email")
+# email_label.pack(pady = 5)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+
+# email_input = Entry(root)
+# email_input.pack(pady = 5)
+
+# root.mainloop()
+
+
+from tkinter import *
+
+root = Tk()
+root.title("Calci")
+root.geometry('300x400')
+root.resizable(False,False)
+
+entry = Entry(root,font=('Arial',14))
+entry.grid(row=0,column=0,columnspan=4,pady=10)
+
+buttons = [
+    ('7',1,0),('8',1,1),('9',1,2),('/',1,3),
+    ('4',2,0),('5',2,1),('6',2,2),('*',2,3),
+    ('1',3,0),('2',3,1),('3',3,2),('-',3,3),
+    ('0',4,0),('C',4,1),('=',4,2),('+',4,3)
+]
+
+for (text,row,col) in buttons:
+    if text == 'C':
+        Button(root,text=text,padx = 20,pady=20,font=('Arial',14)).grid(row=row,column=col,sticky=N+S+E+W)
+    elif text == '=':
+        Button(root,text=text,padx = 20,pady=20,font=('Arial',14)).grid(row=row,column=col,sticky=N+S+E+W)
+    else:
+        Button(root,text=text,padx = 20,pady=20,font=('Arial',14)).grid(row=row,column=col,sticky=N+S+E+W)
+
+
+for i in range(5):
+    root.grid_rowconfigure(i,weight=1)
+    root.grid_columnconfigure(i,weight=1)
+
+root.mainloop()

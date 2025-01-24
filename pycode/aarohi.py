@@ -444,14 +444,14 @@ lti line comment
 
 # print(names)
 
-num = [1,3,7,5,4,6,3,8,1,9]
-ans = []
+# num = [1,3,7,5,4,6,3,8,1,9]
+# ans = []
 
-for i in num:
-    if i not in ans:
-        ans.append(i)
+# for i in num:
+#     if i not in ans:
+#         ans.append(i)
 
-print(ans)
+# print(ans)
 
 
 # input:
@@ -461,9 +461,29 @@ print(ans)
 # language = ["nohtyP","ybuR","avaJ"]
 
 
+# Sorting : 
+# 1. Ascending order
+# 2. Descneding order
+
+# bubble sort :
+
+# num = [18,15,94,25,36,75]
+# n = len(num)
+# for i in range(n):
+#     for j in range(0,n-i-1):
+#         if num[j] > num[j+1]:
+#             num[j],num[j+1] = num[j+1],num[j]
+
+# print(f"The list in sorted order looks like : {num}")
 
 
-# 2. tuple
+
+
+# num[0] > num[0+1]
+
+# time complexity and space complexity
+
+# 2. tuple :b 
 # 3. set
 # 4. Dictionary
 

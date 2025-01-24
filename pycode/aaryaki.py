@@ -1403,13 +1403,16 @@
 # root.mainloop()
 
 
+# name = "Aaryaki"
+# print(len(name))
 
 
 
 
-from tkinter import * 
-from tkinter import messagebox,filedialog
-from PIL import Image,ImageTk,ImageEnhance
+
+from tkinter import *
+from tkinter import filedialog, messagebox
+from PIL import Image, ImageTk, ImageEnhance
 
 class ImageEditor:
     def __init__(self,root):
@@ -1429,7 +1432,7 @@ class ImageEditor:
         Button(self.buttons_frame,text="Rotate Right",command=lambda : self.rotate_image(90)).grid(row=0,column=2,padx=5)
         Button(self.buttons_frame,text="Increase Brightness",command = lambda : self.adjust_brightness(1.2)).grid(row=0,column=3,padx=5)
         Button(self.buttons_frame,text="Decrease Brightness",command = lambda : self.adjust_brightness(0.8)).grid(row=0,column=4,padx=5)
-        Button(self.buttons_frame,text="Save Image").grid(row=0,column=5,padx=5)
+        Button(self.buttons_frame,text="Save Image",command=self.save_image).grid(row=0,column=5,padx=5)
 
         self.image = None
         self.tk_image = None 
@@ -1447,15 +1450,20 @@ class ImageEditor:
 
     def display_image(self):
         if self.image is None:
-            return
-        
-        max_width, max_height = 600,400
-        img_width, img_height = self.image.size
-        scale = min(max_width/img_width,max_height/img_height,1)
-        resized_image = self.image.resize((int(img_width*scale), int(img_height*scale)))
+            return  
 
+        max_width, max_height = 800, 600  
+        img_width, img_height = self.image.size
+        scale = min(max_width / img_width, max_height / img_height, 1)  
+        resized_image = self.image.resize((int(img_width * scale), int(img_height * scale)))
+
+        
         self.tk_image = ImageTk.PhotoImage(resized_image)
-        self.image_label.config(image=self.tk_image,text="")
+        
+        self.image_label.config(image=self.tk_image, text="")
+        
+        self.image_label.config(width=resized_image.width, height=resized_image.height)
+
 
     def rotate_image(self,angle):
         if self.image is None:
@@ -1472,11 +1480,20 @@ class ImageEditor:
         enhancer = ImageEnhance.Brightness(self.image)
         self.image= enhancer.enhance(factor)
         self.display_image()
+    def save_image(self):
+        if self.image is None:
+            messagebox.showwarning("Warning","No image loaded")
+            return
         
+        filepath = filedialog.asksaveasfilename(defaultextension=".png",filetypes=[("PNG files","*.png"),("JPEG files","*.jpg"),("All files","*.*")])
+        if not filepath:
+            return
 
-
-
-
+        try:
+            self.image.save(filepath)
+            messagebox.showinfo("Success","Image saved successfully!!")
+        except Exception as e:
+            messagebox.showinfo("Error",f"Failed to save image {e}")
 
 if __name__ == "__main__":
     root=Tk()

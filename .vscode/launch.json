@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Pattern2",
+      "request": "launch",
+      "mainClass": "Pattern2",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
+      "type": "java",
+      "name": "Pattern",
+      "request": "launch",
+      "mainClass": "Pattern",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
+      "type": "java",
+      "name": "LearnJava",
+      "request": "launch",
+      "mainClass": "LearnJava",
+      "projectName": "MINI PROJECT_d9d2d418"
+    },
+    {
+      "type": "java",
       "name": "harish",
       "request": "launch",
       "mainClass": "harish",
@@ -34,8 +55,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/programs/MINI PROJECT/Apoorv",
+      "program": "c:/programs/MINI PROJECT/Apoorv/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1117,3 +1117,185 @@
 
 
 # [start:end:steps]
+
+
+# format the strings
+
+# name = "Eshaal"
+# age = 11
+
+# print("My name is",name,"and I'm ",age,"years old")
+# print(f"My name is {name} and I'm {age} years old")
+
+# functions
+
+# function is a like block of code which only runs when it is called.
+# a functon can also return the result 
+
+
+# creating a function
+
+# def keyword
+
+# def my_function():
+#     print("Hello Welcome to my function")
+
+# # calling a function 
+# my_function()
+
+# def my_function(fname):
+#     print(f"My name is {fname} Khan")
+
+# my_function("Eshaal")
+# my_function("Sharukh")
+# my_function("Amir")
+
+
+# def add(a,b):
+#     return a+b
+
+# def sub(a,b):
+#     return a-b
+
+# def mul(a,b):
+#     return a*b
+
+# def div(a, b):
+#     if b == 0:
+#         return "Error: Division by zero is not allowed."
+#     return a / b
+
+# print('''
+
+#     Welcome to Simple Calculator !
+      
+#       1. Addition
+#       2. Subtraction
+#       3. Multiplication
+#       4. Division
+#       5. Exit
+
+# ''')
+
+# num = int(input("Enter the number which operation you need to perform : "))
+
+# if num >= 1 and num <= 4:
+#     pass
+# elif num == 5:
+#     print("Thank you for using the calculator! Goodbye!")
+# else:
+#     pass
+
+
+
+# a = int(input("Enter the first number : "))
+# b = int(input("Enter the second number : "))
+
+# if num == 1:
+#     print(f"The summation of two numbers will be {add(a,b)}")
+# elif num == 2:
+#     print(f"The difference of two numbers will be {sub(a,b)}")
+# elif num == 3:
+#     print(f"The multiplication of two numbers will be {mul(a,b)}")
+# elif num == 4:
+#     print(f"The division of two numbers will be {div(a,b)}")
+
+# else:
+#     print(f"The input number is out of our range!!!!!!!")
+
+
+
+
+
+# def is_prime(num):
+#     count = 0
+#     for i in range(1,num+1):
+#         if num%i ==0 :
+#             count=count+1
+
+#     if count == 2:
+#         print("It's a prime number")
+#     else:
+#         print("It's composite")
+
+# is_prime(7)
+
+# def sum_of_digits(n):
+#     """Returns the sum of the digits of an integer n."""
+#     n = abs(n)
+#     return sum(int(digit) for digit in str(n))
+# number = int(input("Type Here."))
+# print(f"The sum of the digits of {number} is: {sum_of_digits(number)}")
+
+
+# name ="Eshaal"
+
+# print("Eshaal"[::-1])
+
+# List,tuples from back notes 
+
+# List store multiple elements in it.
+# It is mutable
+# It is being identified by []
+# We can access list elements via index
+
+# numbers = [1,2,3,4,5,6,7,8,9]
+# print(numbers)
+
+# index :
+
+# 1 . positive indexing - it starts from left to right 0 and goes upto n-1
+# 2 . Negative indexing - it starts from right to left -1 to -n
+
+# names = ["Eshaal","Victor","Joseph","Aryan","Marry"]
+# print(names[1:4])
+
+# print(names[-1])
+
+
+
+# cars = ["Honda", "Mercedes", "Automobile", "Electric", "Gas", "Fferrari", "My keyboard and lag is real"]
+# print(cars[::-1])
+# print(cars[4:9])
+
+# cars = ["Honda", "Mercedes", "Automobile", "Electric", "Gas"]
+# cars[2] = "Tesla"
+
+# print(cars)
+
+
+# nums = [5,7,61,9,3,4,56,6,21,5]
+
+# for i in range(len(nums)):
+#     for j in range(i+1,len(nums)):
+#         if nums[i] > nums[j]:
+#             nums[i],nums[j] = nums[j],nums[i]
+        
+# print(nums)
+
+# nums = [5,7,61,9,3,4,56,6,21,5]
+
+# for i in range (len(nums)):
+#     for j in range(i+1,len(nums)):
+#         if nums[i] < nums[j]:
+#             nums[i],nums[j] = nums[j],nums[i]
+# print(nums)
+
+import numpy
+
+
+def linear_search(arr,target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+nums = [5,7,61,9,3,4,56,6,21,5]
+target = int(input("Enter the number to be searched : "))
+
+print()
+
+
+
+
+
